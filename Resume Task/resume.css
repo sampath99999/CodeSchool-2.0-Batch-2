@@ -1,0 +1,32 @@
+body {
+    outline-style: dashed;
+    margin: 10px;
+    padding: 3% 3%;
+    background-image: url('background.jpg');
+    background-size: 100% 100%;
+  }
+  
+  
+  
+  .name {
+    margin-top: 10px;
+    text-align: center;
+    font-family: Montserrat;
+    color: #34495E;
+  }
+  
+  
+  img {
+    float: right;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 0.5px ;
+  }
+  
+  .skills {
+    font-family: Ubuntu;
+    padding-right: 10%;
+  }
+  .education {
+    font-family: sans-serif;
+  }

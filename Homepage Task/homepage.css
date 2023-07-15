@@ -1,0 +1,232 @@
+body {
+    background: url(https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png);
+  }
+  header {
+    background: url(https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg);
+    margin: -15px;
+    padding: 10px;
+  }
+  header img{
+    padding-left: 30px;
+  }
+  
+  nav{
+  background-color: #00498d;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: -20px;
+  padding: 0 25px;
+  }
+  
+  .navcontent li{
+    display: inline-block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Open Sans',sans-serif;
+    cursor: pointer;
+  }
+  
+  li:hover{
+    background-color: #0063c0;
+  }
+  
+  .icon {
+      margin-left: 10px;
+      margin-top: 10px;
+      display: inline-block;
+      width: 15%;
+      vertical-align: top;
+  }
+  
+  .userlogin {
+    font-family: sans-serif;
+    padding-top: 5px;
+    margin-left: 300px;
+    background-color: #fff;
+  }
+  
+  h4 {
+    font-size: 14px;
+      color: #856439;
+      font-weight: 600;
+      margin-bottom: 8px;
+    font-family: 'Open Sans',sans-serif;
+  }
+  
+  .username input {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+  
+   .capcha input {
+     padding: 10px;
+     margin-bottom: 10px;
+     margin-left: 45px;
+  }
+  
+  .forgot {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 9px;
+  margin-left: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  }
+  
+  a {
+      color: #000;
+    }
+  
+  .wrap{
+    display: flex;
+  }
+  
+  button {
+    font-size: 13px;
+      background: #00944d;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 700;
+      margin-right: 2px;
+  }
+  
+  .flex{
+    display: flex;
+    margin-right: 300px;
+    margin-top: -16px;
+    margin-left: -200px;
+  
+  }
+  
+  
+  h3{
+      color: red;
+      font-size: 14px;
+      margin-top: -15px;
+      font-family: 'Open Sans',sans-serif;
+  }
+  
+  .impnoti {
+    background: #fff3cd;
+      padding: 10px;
+  }
+  
+  .notification-top-strip {
+      background: #374659;
+      color: #fff;
+      padding: 13px 26px;
+      border: 2px dashed #a06800;
+      font-family: 'Open Sans',sans-serif;
+      font-size: 14px;
+      margin: -10px;
+  }
+  
+  .imp_title {
+      font-size: 14px;
+      color: #856439;
+      font-weight: 600;
+      margin-bottom: 8px;
+  }
+  
+  .imp{
+        color: red;
+      font-weight: 700;
+  }
+  
+  .imp_blog p b {
+      font-weight: 600;
+      display: block;
+      color: #6f4d21;
+      font-size: 12px;
+      line-height: 14px;
+      font-family: 'Open Sans',sans-serif;
+    }
+  
+  
+    .imp_blog p{
+      font-size: 12px;
+      line-height: 14px;
+    }
+  
+    .image {
+      background: #dedede;
+      padding: 20px;
+    }
+  
+    .text {
+    background: #08254f;
+    position: relative;
+    min-height: 1px;
+    padding: 5px 15px 5px 15px;
+    margin-top: -16px;
+    color: #fff;
+    font-family:'Open Sans',sans-serif;
+  }
+  
+  .hot_line {
+    background: url(phone_icon.jpg);
+      height: auto;
+      padding-top: 14px;
+      padding-bottom: 10px;
+      font-family: 'Open Sans',sans-serif;
+      color: #333;
+      margin-top: 10px;
+  }
+  
+  .phone_title {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 600;
+      text-align: left;
+      line-height: 36px;
+      padding-left: 20px;
+  }
+  .phone_info {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 22px;
+      text-align: left;
+      padding-left: 20px;
+  }
+  
+  .phone_number {
+      font-size: 45px;
+      font-weight: 600;
+      color: #fff;
+      text-align: right;
+      margin-top: -80px;
+      padding-right: 20px;
+      display: block;
+      font-family: sans-serif;
+  }
+  
+  .govt_div {
+      padding: 10px 15px;
+      background: #fff;
+      text-align: left;
+  
+  }
+  
+  .info_right {
+      width: 100%;
+      padding-bottom: 25px;
+      text-align: center;
+      background-color: #EEEEEE;
+  }
+  
+  
+    .middlepart {
+      margin-top: 20px;
+    }
+  
+    .govtsection {
+      display: inline-flex;
+    }
+  
+    .column3 {
+      background: url(cloud.jpg);
+      padding: 25px;
+      margin-top: 25px;
+  }

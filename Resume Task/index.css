@@ -1,0 +1,176 @@
+.resume{
+    display: flex;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightcyan  ; 
+}
+.resume-left-section{
+    width: 25%;
+    
+    height: 100vh;
+    margin-left: 20px;
+    
+}
+.resume-right-section{
+    width: 75%;
+}
+
+.candidate-image{
+    width:80%;
+    height: 10%;
+    border-radius: 50%;
+    padding-top:20px ;
+    
+   
+}
+.resume-profle-image-section{
+    background-color: #001933;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    text-align: center;
+    padding-bottom:20px;
+}
+.resume-profile-details-section{
+    background-color:#001933;
+    height: 100vh;
+}   
+
+.education-heading{
+    
+    display: inline-block;
+    border-top-right-radius:20px;
+    border-bottom-right-radius: 20px;
+    font-size:22px;
+    padding-left:10px;
+}
+.education-heading-container{
+    background-color: lightcyan;
+    width:60%;
+    padding-top:10px;
+   
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.education-list
+{
+    margin-bottom: 20px;
+}
+
+.education-list-collage-details{
+    color:white;
+    margin-left: 20px;
+}
+.education-list-collage-name{
+    
+    color:white;
+    font-size:22px;
+    margin-top:15px;
+}
+
+.contact-list{
+    list-style: none;
+}
+
+.contact-list-details{
+    display: flex;
+    align-items: center;
+    margin-top:20px;
+}
+
+.style-icon{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.linkedin-link{
+    font-size: 16px;
+    color:aqua;
+    color: lightcyan;
+}
+
+.technologies{
+    font-size:16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.resume-right-section{
+   
+    height: 100vh;
+}
+
+.resume-right-name{
+     margin-top:20px;
+    text-align: center;
+    font-size:45px;
+}
+
+.resume-objective{
+    font-size:24px;
+    margin-left: 30px;
+    margin-top:25px;
+    margin-bottom: 20px;
+    font-family: "Roboto";
+}
+
+.right-skills-heading{
+    background-color: #001933;
+    color: lightcyan;
+    padding:5px;
+    font-size:24px;
+    padding-left:10px;
+    width:50%;
+}
+.project-list{
+    color:#001933;
+    margin-left:40px;
+    margin-top:30px;
+}
+.each-project-container{
+    font-size:20px;
+    margin-bottom:30px;
+}
+.project-description{
+    color:#001933;
+    margin-left:40px;
+}
+.technologies-used{
+    font-weight: bold;
+}
+.each-project-text{
+    font-weight: bold;
+}
+
+.skills-list{
+    color:#001933;
+    display: flex;
+    font-size: 20px;
+    margin-left:40px;
+    margin-top:30px;
+}
+.skills-list-li{
+    margin-right: 60px;
+}
+
+.skills-technology{
+    font-size:20px;
+    font-weight: bold;
+    
+}
+.each-skill-technology{
+    margin-left:40px;
+    margin-top:10px;
+    font-size:16px;
+}
+.each-skill{
+    margin-bottom: 5px;
+}
+
+.hobbies{
+    color:white;
+    margin-left:20px;
+    font-size:18px;
+    margin-top:20px;
+}

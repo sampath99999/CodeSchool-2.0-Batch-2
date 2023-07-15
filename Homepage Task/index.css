@@ -1,0 +1,596 @@
+*{
+  margin: 0px;
+}
+.title-container{
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+  background-size : cover;
+  display         : flex;
+  justify-content : space-around;
+  align-items     : center;
+  padding-top     : 30px;
+  padding-bottom  : 5px;
+}
+
+.minster-card{
+  display: flex;
+}
+
+.minister-img{
+  padding-left: 10px;
+}
+
+.nav-bar-container{
+  background-color: #045091 ;
+  padding-left    : 100px;
+}
+
+.nav-list{
+  color          : white;
+  display        : flex;
+  list-style-type: none;
+  align-items    : center;
+  
+}
+
+.nav-list li{
+  padding-left  : 20px;
+  padding-right : 20px;
+  padding-top   : 15px;
+  padding-bottom: 15px;
+}
+
+.nav-list li:hover{
+  background-color: #2B81CD;
+}
+
+.chalan-ul{
+  display: none;
+  list-style-type: none;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding-left: 0px;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.chalan-ul li{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.chalan-ul li:hover{
+  background-color: #338FFF;
+}
+
+.chalan-card:hover .chalan-ul{
+  display: block;
+}
+
+.challan-cyber-li{
+  display: flex;
+}
+
+.cyber-ul{
+  display: none;
+  list-style-type: none;
+  margin-top: 15px;
+  margin-left: none;
+  padding-left: 0px;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.cyber-ul li{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.cyber-card:hover .cyber-ul{
+  display: block;
+}
+
+
+
+.cyber-ul li:hover{
+  background-color: #338FFF;
+}
+
+
+.arrow-img{
+  height: 5px;
+  padding-left: 5px;
+  padding-top: 8px;
+}
+
+.bottom-container{ 
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+  display         : flex;
+  flex-direction  : column;
+}
+
+.left-container{
+ width      : 25%;
+ margin-left: 150px;
+}
+.login-container{
+  padding-left    : 20px;
+  padding-right   : 20px;
+  background-color: white;
+  padding-top     : 10px;
+  font-family     : Georgia, 'Times New Roman', Times, serif;
+  padding-bottom  : 30px;
+}
+
+.login-heading{
+  margin-bottom: 10px;
+  font-weight  : 600;
+}
+
+.input-card{
+  display      : flex;
+  align-items  : center;
+  border       : 1px solid #E0E0E0;
+  color        : #E0E0E0;
+  padding-left : 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height       : 50px;
+}
+
+.input-el{
+  height      : 30px;
+  border      : none;
+  padding-left: 20px;
+  outline     : none;
+}
+
+.input-img{
+  height: 20px;
+  
+}
+
+.captcha-card{
+  display      : flex;
+  align-items  : center;
+  margin-bottom: 10px;
+}
+
+.reload-btn{
+  height: 40px;
+  width : 45px;
+  border: none;
+}
+
+.captcha-img{
+flex-grow: 1;
+}
+
+.captcha-input-el{
+  border       : 1px solid #E0E0E0;
+  color        : #E0E0E0;display: flex;
+  align-items  : center;
+  border       : 1px solid #E0E0E0;
+  color        : #E0E0E0;
+  padding-left : 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height       : 50px;
+  width        : 95%;
+  outline      : none;
+}
+
+.for-sign-card{
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.forgot-style{
+  color : gray;
+  cursor: pointer;
+}
+
+.forgot-style:hover{
+  color: darkblue;
+}
+
+.sign-btn{
+  background-color: #00944d;
+  border          : none;
+  color           : white;
+  height          : 40px;
+  width           : 80px;
+  border-radius   : 3px;
+  font-weight     : bold;
+}
+
+.anouncements-container{
+  background-color: #fff3cd;
+  padding-top     : 10px;
+  padding-bottom  : 20px;
+}
+
+.imp-anoun{
+  padding-left: 15px;
+}
+
+.imp-p{
+  color      : #856439;
+  font-weight: bold;
+}
+
+.imp-p-r{
+  color        : red;
+  font-weight  : bold;
+  margin-bottom: 20px;
+}
+
+.click-here-card{
+  background-color: #374659;
+  display         : flex;
+  align-items     : center;
+  padding-left    : 15px;
+  padding-top     : 10px;
+  padding-bottom  : 10px;
+  border          : 1px dashed orange;
+}
+
+.click-here-btn{
+  background-color: #00944d;
+  color           : white;
+  font-weight     : bold;
+  height          : 30px;
+  width           : 85px;
+  border          : none;
+}
+
+.click-p{
+  color       : white;
+  padding-left: 10px;
+}
+
+.click-here-container{
+  margin-bottom: 20px;
+}
+
+.imp-notif-container{
+  padding-left : 15px;
+  margin-bottom: 20px;
+}
+
+.bud-inst{
+  color      : #856439;
+  font-size  : 15px;
+  font-weight: bold;
+}
+
+.download-link{
+  color    : #856439;
+  font-size: 15px;
+}
+
+.download-link:hover{
+  color          : #2B81CD;
+  text-decoration: underline;
+}
+
+.atten-p{
+  border          : 1px solid #d4a855;
+  color           : #e80600;
+  background-color: #ffe9c1;
+  text-align      : center;
+  height          : 35px;
+  margin-left     : 15px;
+  margin-right    : 15px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  font-weight     : 600;
+  border-radius   : 5px;
+  margin-bottom   : 15px;
+}
+
+.dta-style{
+  color        : #856439;
+  font-size    : 15px;
+  padding-left : 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.officers-data-container{
+  padding-left  : 15px;
+  padding-right : 15px;
+  padding-bottom: 10px;
+}
+
+.officers-data-p{
+color      : red;
+font-weight: 600;
+font-size  : 15px;
+}
+
+.officers-data-btn{
+  background-color: #00944d;
+  border          : none;
+  color           : white;
+  font-weight     : bold;
+  height          : 30px;
+}
+
+.notes-para{
+  color        : #6f4d21;
+  font-size    : 15px;
+  margin-left  : 15px;
+  margin-right : 15px;
+  margin-bottom: 10px;
+}
+
+.notes-para-p{
+  text-decoration: underline;
+}
+
+.notes-para-p:hover{
+  color: #045091;
+}
+
+.step-p{
+  margin-left  : 15px;
+  margin-right : 15px;
+  margin-bottom: 10px;
+}
+
+.right-container{
+  background-color: #dedede;
+  background-size : cover;
+  margin-right    : 150px;
+  padding         : 20px;
+}
+
+.curosal-container{
+  background-color: #08254f;
+}
+
+
+
+.curosal-img{
+  width: 100%;
+}
+
+.budget-23-24-container{
+  padding-left  : 20px;
+  padding-right : 20px;
+  padding-bottom: 60px;
+  margin-bottom : 20px;
+}
+
+.budget-23-24{
+  color        : rgba(255,255,255,.6);
+  margin-bottom: 10px;
+  margin-top   : 10px;
+}
+
+.budget-23-24-p{
+  color: white;
+}
+
+.hotline-container{
+  background-image: url("https://ifmis.telangana.gov.in/images/newUi/phone_icon.png");
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  padding         : 20px;
+  color           : white;
+}
+
+.hotline-left-head{
+  font-size    : 24px;
+  font-weight  : 600;
+  margin-bottom: 10px;
+}
+
+.hotline-left-time{
+  font-size  : 18px;
+  font-weight: 600;
+}
+
+.googleplay-container{
+  display      : flex;
+  align-items  : center;
+  margin-bottom: 30px;
+}
+
+.fin-dep{
+  color         : #40464e;
+  font-size     : 24px;
+  font-weight   : 600;
+  padding-bottom: 5px;
+}
+
+.gplay-finace-card{
+  background-color: white;
+  padding-left    : 15px;
+  height          : 150px;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  
+}
+
+.rfp{
+  color: #40464e;
+}
+
+.gplay-down-card{
+  text-align      : center;
+  background-color: rgb(238, 238, 238);
+  height          : 150px;
+}
+
+.down-p{
+  color          : #40464e;
+  text-decoration: underline;
+}
+
+.down-p:hover{
+  color: #045091;
+}
+
+.gplay-img{
+  height    : 40px;
+  width     : 120px;
+  margin-top: 10px;
+}
+
+.gplay-down-card{
+  width          : 400px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+.ifmis-vide0-container{
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+}
+.video-img-t{
+  padding: 15px;
+  width  : 830px;
+}
+
+.ifmis-head{
+  color         : white;
+  padding-left  : 15px;
+  padding-bottom: 5px;
+  font-size     : 24px;
+}
+
+.hr-style{
+  width      : 50px;
+  height     : 4px;
+  background : #0073ae;
+  border     : none;
+  margin-left: 15px;
+}
+
+.ifmis-p{
+  padding-top   : 20px;
+  padding-bottom: 30px;
+  color         : white;
+  padding-left  : 15px;
+  font-size     : 20px;
+}
+
+.bottom-top-containers{
+  display: flex;
+}
+
+.bottom-bottom-containers{
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/footer_bg.png");
+  margin-left     : 150px;
+  margin-right    : 135px;
+  display         : flex;
+  
+}
+
+
+
+.news-container{
+color         : #40464e;
+padding       : 15px;
+padding-bottom: 40px;
+width         : 33%;
+}
+
+.video-container{
+  color         : #40464e;
+  padding       : 15px;
+  padding-bottom: 40px;
+  width         : 33%;
+  }
+
+.news-head{
+  padding-top   : 15px;
+  padding-bottom: 15px;
+}
+
+.news-p span:hover{
+  color: #08254f;
+}
+
+.news-p-card{
+  height    : 300px;
+  overflow-y: auto;
+}
+
+.news-hov{
+  color: #40464e;
+}
+
+.news-hov:hover{
+  color: #2B81CD;
+}
+
+.hr-style-b{
+  background-color: #40464e;
+  height          : 430px;
+  margin-top      : 10px;
+}
+
+.demo-h{
+  font-weight: 600;
+}
+
+.video-card{
+  display      : flex;
+  align-items  : center;
+  margin-top   : 20px;
+  margin-bottom: 20px;
+}
+
+.video-img{
+  width: 77px;
+}
+
+.video-c-r{
+  margin-left: 15px;
+}
+
+.video-c-h{
+  font-size  : 14px;
+  font-weight: 600;
+}
+
+.video-b{
+  display        : flex;
+  justify-content: space-between;
+  margin-top     : 6px;
+}
+
+.view-style{
+  text-decoration: underline;
+  margin-top     : 30px;
+}
+
+.view-style:hover{
+  color: #2B81CD;
+}
+
+.footer{
+  background-color: #06162e;
+  background-size : cover;
+  height          : 50px;
+  display         : flex;
+  align-items     : center;
+  justify-content : flex-end;
+}
+
+.footer-card{
+  color        : #959595;
+  display      : flex;
+  gap          : 10px;
+  padding-right: 150px;
+}
+

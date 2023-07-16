@@ -1,0 +1,60 @@
+body {
+    background-image: url(resume.jpg);
+    background-size: cover;
+  }
+  nav {
+    background-color:#f3eada;
+    background-image: url(img2.jpg);
+    width: 350px;
+    float: left;
+    min-height: 100vh;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 10px;
+  }
+  nav > img {
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 10px;
+    height: 300px;
+    width: 330px;
+  }
+  div {
+    margin: 0px 55px 0px 400px;
+    padding: 10px;
+    color: rgb(22, 98, 165);
+  }
+  h2{
+    height: 30px;
+    width: 200px;
+    background-image: url(img3.jpg);
+    object-fit: cover;
+    background-color: rgb(147, 247, 247);
+    color: #020f0b;
+    border-radius: 5%;
+    margin-left: 10px;
+    padding-left: 10px; ;
+    color: rgb(134, 174, 234);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  h1{
+    color: #05583d;
+  }
+  table{
+    margin-left: 45px;
+    color: #073c2a;
+  }
+  li{
+    margin-left: 20px;
+  }
+  .two{
+    float: right;
+  }
+  input[type="text"],
+    input[type="password"] {
+      width: 50%;
+      padding: 8px;
+      height: 20px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }

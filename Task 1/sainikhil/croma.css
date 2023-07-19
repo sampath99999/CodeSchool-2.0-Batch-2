@@ -1,0 +1,370 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+body {
+  background-color: #191919;
+}
+.nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+}
+.left-nav {
+  display: flex;
+  align-items: row-reverse;
+  justify-content: flex-start;
+  padding-left: 160px;
+}
+.left-nav img {
+  width: 160px;
+  padding: 15px 0px;
+}
+.menu {
+  margin-top: 30px;
+  padding: 0px 40px;
+  display: flex;
+}
+.menu div {
+  translate: 5px 7px;
+}
+.menu i {
+  font-size: 25px;
+}
+.menu-txt {
+  font-size: 20px;
+  translate: 28px -25px;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.search-bar input {
+  width: 500px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: white;
+  border: 0px;
+}
+.search-bar i {
+  background-color: white;
+  color: black;
+  padding: 17px 10px;
+  translate: -10px 4px;
+  border-radius: 6px;
+}
+.search-bar,
+.search-bar i {
+  margin-top: 5px;
+}
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding-right: 200px;
+}
+.right-nav i {
+  color: white;
+  width: 40px;
+  translate: 0px -35px;
+}
+.right-nav .lni-map-marker {
+  padding-right: 40px;
+}
+.right-nav .lni-pencil {
+  font-size: 10px;
+  translate: 25px -28px;
+}
+
+.view {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 80px;
+}
+.left-view {
+  padding-top: 15px;
+}
+.left-view ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 15px;
+}
+ul .img-action {
+  translate: 180px 40px;
+}
+.left-view img {
+  width: 400px;
+  margin-left: 180px;
+  margin-top: 80px;
+}
+.compare {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+.compare input {
+  background: #191919;
+}
+.compare a {
+  display: block;
+  translate: 22px -25px;
+}
+
+.right-view {
+  padding-top: 55px;
+  margin-right: 80px;
+}
+
+.right-view .pink-box {
+  padding: 10px;
+  color: #ff04b9;
+  border: 1px solid #ff04b9;
+  border-radius: 5px;
+  margin-right: 460px;
+  margin-top: 10px;
+}
+.right-view a {
+  display: inline-block;
+  color: #13daa8;
+}
+.right-view .translate {
+  translate: 0px 10px;
+}
+.price {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-top: 10px;
+}
+.price .or {
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0px;
+  border: 1px solid white;
+  margin-bottom: 25px;
+  text-align: center;
+  border-radius: 5px;
+  translate: 0px 9px;
+}
+.or-design,
+.or-design2 {
+  transform: rotate(90deg);
+  height: 20px;
+}
+.or-design {
+  translate: 30px 15px;
+}
+.or-design2 {
+  translate: -30px 15px;
+}
+
+.offer {
+  display: flex;
+  gap: 10px;
+}
+
+.card-offer {
+  display: flex;
+  justify-content: space-around;
+}
+.card-offer table {
+  width: 200px;
+  border: 1px solid #676767;
+  border-radius: 20px;
+  height: 30px;
+
+  margin-top: 10px;
+}
+.card-offer th {
+  border-bottom: 1px solid #676767;
+}
+.card-offer th i {
+  border-bottom: 1px solid #676767;
+  translate: -30px;
+}
+
+.card-offer .cl-3 {
+  translate: -55px;
+}
+.card-offer th i {
+  padding: 5px;
+  border-radius: 80px;
+  background-color: #ff04b9;
+}
+.scroll{
+  overflow: scroll;
+  white-space: nowrap;
+  height: 400px;
+}
+.delivery {
+  padding: 20px;
+  padding-left: 20px;
+  padding-right: 200px;
+  background-color: #353535;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.delivery div {
+  display: flex;
+}
+.delivery div a {
+  display: inline-block;
+  font-size: 13px;
+  padding-left: 5px;
+  translate: 0px -2px;
+}
+.delivery p {
+  font-size: 10px;
+}
+.features {
+  border: 1px solid #353535;
+  margin-top: 20px;
+  padding: 20px;
+  padding-left: 20px;
+  padding-right: 100px;
+  border-radius: 10px;
+}
+.features ul {
+  margin-left: 25px;
+  font-size: large;
+}
+.applecare div {
+  padding-left: 20px;
+}
+.plan-selection div {
+  display: flex;
+  gap: 20px;
+  translate: -20px;
+}
+.viewdetails {
+  display: flex;
+  justify-content: flex-end;
+  translate: 0px -20px;
+  font-size: 13px;
+}
+.plan-display {
+  display: flex;
+  gap: 30px;
+}
+.plan1 {
+  border: 1px solid #13daa8;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+.plan2 {
+  border: 1px solid white;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+.combo {
+  border: 1px solid #676767;
+}
+.cart-btn {
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color: #13daa8;
+  color: black;
+  margin-right: 400px;
+  margin-bottom: 20px;
+}
+.dropdown1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  border: 1px solid #676767;
+  margin: 0px 90px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: #1d1d1d;
+  display: flex;
+  margin-top: 40px;
+  padding-top: 60px;
+  padding-left: 140px;
+  padding-bottom: 100px;
+}
+.footer input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.icons {
+  display: flex;
+  padding-top: 40px;
+  font-size: 30px;
+  gap: 20px;
+  padding-left: 10px;
+}
+.footer h4 {
+  padding-top: 60px;
+}
+.left-footer {
+  padding-right: 40px;
+  border-right: 2px solid white;
+  padding-bottom: 90px;
+}
+.center-footer {
+  padding-left: 80px;
+  display: flex;
+}
+.center-footer ul {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.center-footer li:hover {
+  color: #13daa8;
+}
+.center-footer2 {
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-right: 40px;
+  border-right: 2px solid white;
+}
+.right-footer {
+  padding-left: 80px;
+  display: flex;
+}
+.right-footer ul {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.right-footer li:hover {
+  color: #13daa8;
+}
+.right-footer2 {
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+.left-footer .lni-arrow-right {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  translate: -10px 2px;
+}

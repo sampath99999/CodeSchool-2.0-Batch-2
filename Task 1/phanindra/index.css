@@ -1,0 +1,936 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg-container{
+    background-color: #191919;
+    background-size: cover;
+    width: 100%;
+    height: 300vh;
+}
+.navbar{
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 10vh;      
+}
+.bottom-container{
+   margin-top: 10vh;
+   float: left;
+}
+.bottom-top-container{
+    display: flex;
+    
+      
+}
+
+.navbar-content{
+    display: flex;
+    align-items: center;
+    padding:10px;
+    margin-left: 10%;
+}
+.logoimg{
+  margin-right: 60px;
+}
+
+.icon{
+    color:#ffffff;
+    font-size: 22px;
+}
+
+.menu-heading{
+    color: #ffffff;
+    font-family: Switzer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.input-container{
+   display: flex;
+   align-items: center;
+   background-color: #ffffff;
+   border-radius: 5px;
+   height: 40px;
+   width: 430px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: 50px;
+   margin-right:140px ;
+}
+.inputel{
+    border-width: 0px;
+    flex-grow: 1;
+    border: none;
+    border-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+    font-family: Switzer;
+}
+.locationicon{
+  color:#ffffff;
+  margin-right: 5px;
+}
+.editicon{
+    font-size: 9px;
+    margin-left: 4px;
+    margin-right: 40px;
+}
+.usericon{
+    margin-right:40px;
+}
+ 
+
+
+
+.left-container{
+    margin-left: 10%;
+    padding: 10px;
+    width: 50%;
+}
+.right-container{
+  margin-right: 10%;
+  padding: 10px;
+  width: 50%;
+  height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  
+}
+.right-container::-webkit-scrollbar{
+    display: none;
+  }
+.gadgetbox{
+    display: flex;
+    align-items: center;
+}
+.gadgetsboxdescription{
+    color: #ffffff;
+    font-family: Switzer;
+    font-size: 14px;
+}
+
+.greaterthanicon{
+    margin: 8px;
+    color: #fff;
+    font-size: 12px;
+}
+.col-container{
+    width:100px;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.upwardicon{
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-left: 70px;
+}
+.box{
+    height: 90px;
+    width: 90px;
+    border-width: 2px;
+    border-color:#00e9bf ;
+    border-style: solid;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+.lastbox{
+    margin-bottom: 0px;
+}
+.boximage{
+    height: 80px;
+    width: 80px;
+    margin-left: 6px;
+}
+.normalborder{
+  border-color:#808080 ;
+  border-width: 1px;
+}
+.iconscontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+.likeicon{
+    font-size: 19px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.shareicon{
+    color: #ffffff;
+    font-size: 20px;
+}
+.compare-description{
+    color: #ffffff;
+    font-family: Switzer;
+    font-size: 14px; 
+    display: inline-block;
+    
+}
+.compareandstorebox{
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+    justify-content: space-between;
+}
+
+ 
+.compareicon{
+ 
+    font-size: 19px;
+    color: #ffffff;
+    margin-right: 15px;
+    
+}
+.store-description{
+    color: #ffffff;
+    font-family: Switzer;
+    font-size: 14px; 
+    display: inline-block;
+    text-decoration: underline;
+}
+.store{
+    font-size: 25px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+.downwardicon{
+    margin-top: 10px;
+}
+.colboxandimage{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.large-image{
+    height: 350px;
+}
+.main-heading{
+    font-family: Switzer;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.pinkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ff02b9;
+    border-radius: 5px;
+    height: 20px;
+    font-family: Switzer;
+    color: #ff02b9;
+    font-size: 11px;
+    width:160px;
+    padding:5px;
+    margin-bottom: 10px;
+  
+}
+.review-heading{
+    color: #00e9bf;
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: "Switzer";
+    margin-bottom: 20px;
+}
+.price-emi-details-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+.pricebox{
+    margin-right: 40px;
+}
+.price{
+    color:#ffffff ;
+    font-family: Switzer;
+    font-size: 28px;
+    margin-bottom:3px ;
+   
+}
+.tax-text{
+    color: #ffffff;
+    font-size: 12px;
+    font-family: Switzer;
+}
+.hypen{
+    width: 10px;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #999;
+    
+}
+
+.orbox{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.or{
+  
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #999;
+  padding: 6px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+}
+.emibox{
+
+}
+.emi-text{
+    color:#ffffff ;
+    font-family: "Switzer";
+    font-size: 20px;
+    margin-bottom:3px ;
+    
+}
+.emioption-text{
+    color: #00e9bf;
+    font-family: "Switzer";
+    font-size: 12px; 
+    text-decoration: underline;
+   
+   
+}
+.h-line{
+    width: 98%;
+    border: 1px solid #353535;  
+}
+.left-line{
+    width: 600px;
+    border: 1px solid #353535;   
+    width: 400px;
+    margin-left: 150px;
+    
+    
+}
+.savings-box{
+  margin-top: 10px;
+}
+.savings-text{
+    color: #ffffff;
+    font-family: "Switzer";
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+ 
+}
+
+.old-price{
+    font-size: 15px;
+    text-decoration: line-through;
+    color: #9a9a9a;
+    margin-right: 8px;
+}
+.off-text{
+    color: #ffffff;
+    font-size: 16px;
+}
+.line{
+    width: 98%;
+    border: 1px solid #ffffff;
+}
+.offercards-box{
+   margin-top: 10px;
+   display: flex;
+  
+}
+
+.offer-card{
+    border: 1px solid #353535;
+    width: 160px;
+    border-radius: 8px;
+    padding: 12px;
+    margin-right: 20px;
+    
+    
+}
+
+.offer-image{
+    height: 30px;
+}
+
+.bankbox{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 5px;
+}
+.bank-text{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: 15px;
+}
+.offer-text{
+    font-size: 11px;
+    color: #ffffff;
+    font-family: "Switzer";
+    margin-top: 12px;
+   
+}
+.viewmore-text{
+    margin-top: 10px;
+    text-decoration: underline;
+}
+.location-card{
+  
+    border-radius:10px;
+    margin-top: 20px;
+    background-color: #353535;
+    padding: 10px;
+    color: #ffffff;
+}
+.locationtext{
+    font-size: 13px;
+    font-family: "Switzer";
+}
+.city-text{
+    color: #00e9bf;
+    text-decoration: underline;
+    font-size: 13px;
+    
+}
+.deliverytime{
+    margin-left: 12px;
+    margin-top: 4px;
+}
+.minilocation{
+    font-size: 12px;
+}
+.key-features-card{
+    border: 2px solid #353535;
+    margin-top: 25px;
+    font-family: "Switzer";
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+.key-features-heading{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.list{
+  padding-left: 0px;
+  margin-left: 16px;
+}
+.li-item{
+    padding: 2px;
+    font-size: 14px;
+}
+.applecaretext{
+    font-family: "Switzer";
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px;
+    margin-top:10px ;
+}
+.protectiontext{
+    font-family: "Switzer";
+    font-size: 13px;
+    color: #ffffff;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.applecare-plan-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.plandetailsbox{
+    display: flex;
+    align-items: center;
+}
+.planpricetext{
+    font-family: "Switzer";
+    font-size: 13px;
+    color: #ffffff;
+    padding: 5px;
+    margin-top:10px ;
+    margin-left: 6px;
+    
+     
+}
+.viewdetailstext{
+    font-family: "Switzer";
+    color: #00e9bf;
+    text-decoration: underline;
+    font-size: 10px; 
+    cursor: pointer;
+}
+.price-and-years-box{
+    border: 1px solid #353535;
+    width: 160px;
+    border-radius: 8px;
+    padding: 12px;
+    width: 90px;
+    height: 80px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Switzer";
+    font-size: 12px;
+    padding: 10px;
+}
+.price-and-years-box2{
+    border: 1px solid #00e9bf;
+    margin-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price-and-years-box-text{
+   margin-bottom: 3px;
+}
+.marginforline{
+   margin-top: 3px;
+   margin-bottom: 5px;
+}
+.priceyearboxescontainer{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 28px;
+    margin-bottom: 28px;
+    
+}
+.essential-combo-container{
+    border: 1px solid #353535;
+    border-radius: 8px;
+    padding: 15px;
+}
+.essential-header{
+    font-family: "Switzer";
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.essential-sub-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+}
+.essentialsbox{
+  display: flex;
+  align-items:center;
+}
+
+.comboimg{
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+}
+.combo-text{
+    font-family: "Switzer";
+    color: #ffffff;
+    font-size: 14px;
+    width: 300px;
+    margin-left: 15px;
+}
+.combo-price{
+    font-family: "Switzer";
+    color: #ffffff;
+    font-size: 14px; 
+}
+.checkbox{
+    color: #00e9bf;
+    font-size: 25px;
+}
+.plus{
+    color: #ffffff;
+    font-size:15px ;
+    font-weight: 800;
+    margin-left: 60px;
+}
+.button{
+    background-color: #12daa8;
+    border-radius:8px;
+    font-family: "Switzer";
+    cursor: pointer;
+    color: #121212;
+    font-size: 12px;
+    border: none;
+    border-width: 0px;
+    text-align: center;
+    height: 41px;
+    width: 250px;
+    margin-left: 5px;
+    font-weight: 700;
+  
+}
+
+
+.specification-container{
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 2px #00e9bf solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+.specifications-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.specification-heading{
+    color: #ffffff;
+    font-family:"Switzer";
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+.specification-header{
+    color: #ffffff;
+    font-family:"Switzer";
+    font-size: 17px;
+    margin-bottom: 20px;
+
+}
+.sh{
+    margin-top: 20px;
+}
+.specifications-box-icon{
+    font-size: 20px;
+    color: #ffffff;
+}
+.specification-sub-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+   
+    
+    
+}
+.detailsbox{
+ padding-right: 290px;   
+}
+.detailsbox2{
+    padding-right: 300px;
+}
+.detailsbox3{
+    padding-right: 270px;
+}
+.specificationtype{
+  font-family: "Switzer";
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.specificationdetails{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: "Switzer";
+}
+.button-container{
+    width: 100%;
+    text-align: center;
+}
+.specification-button{
+    border: 1px solid #fff;
+    font-family: "Switzer";
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 13px;
+    height: 38px;
+    width: 120px;
+    background-color: transparent;
+    color: #fff;
+    margin-top: 25px;
+
+}
+.overview-container{
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 2px #00e9bf solid;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Switzer";
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.overview-head{
+    color: #ffffff;
+    font-family:"Switzer";
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px; 
+}
+.why-text{
+    color: #ffffff;
+    font-family:"Switzer";
+    font-size: 18px;
+    margin-bottom: 20px;  
+}
+.ul-list{
+  padding-left: 0px;
+  list-style: none;
+  
+}
+.overview-li-item{
+    font-size: 17px;
+    line-height: 1.5;
+}
+.overview-li-item::before{
+    color:#088466;
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.5em
+}
+
+.overview-description{
+   font-size: 16px;
+   margin-top: 20px;
+   line-height: 1.5;
+}
+.reviews-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid #353535;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: "Switzer";
+    color: #ffffff;  
+    margin-bottom: 70px;
+}
+.overview-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: transparent;
+    border-radius:8px;
+    font-family: "Switzer";
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-width: 0px;
+    text-align: center;
+    height: 41px;
+    width: 250px;
+    font-weight: 700;
+    border: solid #fff 2px;
+    padding: 20px;
+    margin-bottom: 30px;
+    
+}
+.review-text{
+    font-size: 18px;
+}
+.help-text{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.footer-container{
+    background-color: rgb(29, 29, 29);
+    padding: 20px;
+    font-family: "Switzer";
+    color: #ffffff; 
+    padding-bottom: 150px;
+  
+    
+   
+   
+}
+.footer-subcontainer{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.footerbox{
+    width: 33%;
+    border-right: solid 1px #ffffff;
+    padding: 20px;
+    height: 250px;
+    
+}
+.lastfooterbox{
+    width: 33%;
+    padding: 20px;
+    height: 250px;
+
+}
+
+.footer-input{
+  border-style: none;
+  border-width: 0px;
+  flex-grow: 1;
+  color: #999;
+  font-size: 16px;
+  font-family: "Switzer";
+}
+.contactus-heading{
+    color: #ffffff;
+    font-family: "Switzer";
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.usefullinks-heading{
+    margin-left: 25px;
+    margin-bottom: 3px;
+}
+.footerinput-container{
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 8px;
+    width: 280px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.arrow{
+   color: #999;
+}
+.footer-icons-container{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.footericon{
+    color: #ffffff;
+    font-size: 25px;
+    margin-right: 22px;
+    cursor: pointer;
+   
+}
+.Copyright-text{
+    margin-top: 50px;
+    color: #ffffff;
+    font-size: 14px;
+    width: 250px;
+}
+.link-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 250px;
+    margin-left: 25px;
+}
+
+.link-item{
+  margin-bottom: 14px;
+  font-weight: 600;
+  width: 150px;
+  cursor: pointer;
+}
+.link-item:hover{
+    color: #00e9bf;
+    cursor: pointer;
+}
+.youtubeicon:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.socialblue:hover{
+    color: #007aff;
+    cursor: pointer;
+}
+
+.buynow-box{
+    background-color: #191919;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    height: 10vh;
+    position: fixed;
+    height: 10vh;
+      
+}
+
+
+
+.buynow-box-img{
+    height: 30px;
+    margin-right: 20px;
+}
+.buynow-box-text{
+   color: #fff;
+   font-family: "Switzer";
+   font-weight: 800;
+   font-size: 14px;
+   width: 500px;
+}
+.buynow-sub{
+   display: flex;
+   align-items: center; 
+   
+}
+
+
+.buynow-button{
+    background-color: #12daa8;
+    border-radius:8px;
+    font-family: "Switzer";
+    cursor: pointer;
+    color: #121212;
+    font-size: 14px;
+    border: none;
+    border-width: 0px;
+    text-align: center;
+    height: 35px;
+    width: 130px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+.cart-button {
+    background-color: transparent;
+    border-radius:8px;
+    border: 2px solid white;
+    font-family: "Switzer";
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    height: 35px;
+    width: 130px;
+    margin-left: 5px;
+    font-weight: 700;
+    background-color: #353535;
+}

@@ -100,12 +100,15 @@ ul .img-action {
   margin-left: 180px;
   margin-top: 80px;
 }
+
 .compare {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 30px;
   font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .compare input {
   background: #191919;
@@ -284,13 +287,64 @@ ul .img-action {
   margin-bottom: 20px;
 }
 .dropdown1 {
-  display: flex;
-  justify-content: space-between;
+ 
   padding: 30px 40px;
-  border: 1px solid #676767;
+  border: 1px solid #13daa8;
   margin: 0px 90px;
   border-radius: 8px;
   margin-top: 20px;
+} 
+.dropdown1 h2{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.dropdown1 i{
+  display: inline-block;
+  translate:1400px -30px;
+}
+.dropdown1-row{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  translate: -200px;
+  
+}
+.gap1{
+  translate: 30px 0px;
+}
+.gap2{
+  translate: 120px 0px;
+}
+.gap3{
+  translate: 180px 0px;
+}
+.dropdown-row2 ul{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 60px;
+}
+.row3{
+  border:1px solid #676767;
+}
+.dropdown-row3 h5{
+  padding-top: 20px;
+}
+.viewmore-btn{
+  border:1px solid white ;
+  padding: 20px;
+  margin-left: 650px;
+  margin-right: 650px;
+  border-radius: 10px;
+  translate: 0px 15px;
+}
+.review-btn{
+  border: 1px solid white;
+  /* margin-right: 1200px; */
+  width: 180px;
+  padding: 20px;
+  border-radius: 10px;
+  padding-left: 80px;
+  translate: 0px 10px;
 }
 
 .footer {
@@ -367,4 +421,50 @@ ul .img-action {
   padding-bottom: 14px;
   border-radius: 5px;
   translate: -10px 2px;
+}
+.buynow{
+  background-color: black;
+  padding-left: 120px;
+  padding-right: 120px;
+  
+  
+}
+.left-buynow{
+  display: flex;
+  padding-top: 20px;
+}
+.left-buynow img{
+  width: 40px;
+}
+.left-buynow h5{
+  translate: 0px 15px;
+
+} 
+.mrp{
+  translate:40px;
+}
+.right-buynow{
+  display: flex;
+  justify-content: flex-end;
+  gap:10px;
+}
+.right-buynow .buynow{
+  padding: 20px;
+  background-color: #13daa8;
+  translate: -150px -40px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-radius: 10px;
+  color: black;
+  
+}
+.addtocart{
+  padding: 20px;
+  background-color:#676767;
+  translate: -150px -40px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
 }

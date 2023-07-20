@@ -766,6 +766,11 @@ body::-webkit-scrollbar{
 .fa-fb:hover{
   color: #3b5998;
 }
+
+.fa-insta:hover{
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
 .fa-linkedin:hover{
   color: #0077b5;
 }

@@ -423,8 +423,5 @@ body {
     gap: 10px;
   }
   
-  .last {
-    display: flex;
-    list-style-type: none;
-  }
+  
   

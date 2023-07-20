@@ -1,0 +1,276 @@
+body{
+    background-color:rgb(39, 32, 32);
+    margin: 0;
+    padding:0 ;
+}
+.header{
+    background-color:black;
+    height: 80px;
+    color: white;
+}
+.header > img{
+   margin-top: 20px;
+   margin-left: 40px;
+}
+.menu-holder{
+    margin-left: 20px;
+    color: white;
+    display:inline-block;
+    cursor: pointer;
+    position: relative;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 50px;
+  padding: 10px;
+  z-index: 1;
+}
+.menu_item{
+  color: white;
+  margin: 10px;
+}
+.menu_item:hover{
+  color: lightgray;
+}
+.input{
+  display: inline-flex;
+  margin-left: 100px;
+  height: 50px;
+  width: 60px;
+  color: white;
+  border-radius: 5px;
+  
+}
+.location{
+    display:inline-flex;
+    color: white;
+    margin-left: 320px;
+}
+.profile{
+    color: white;
+    display: inline-flex;
+    margin-left: 90px;
+}
+.cart{
+    color: white;
+    display: inline-flex;
+    margin-left: 20px;  
+}
+hr{
+  margin-top: 15px;
+
+}
+.div1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.div2{
+    display: flex;
+     width: 20%;
+     flex-direction: column;
+     padding: 20px;
+     gap: 15px;
+}
+.div3{
+    padding: 30px;
+    width: 30%;
+}
+.div3-0{
+    display:flex;
+    flex-direction: row;
+}
+label{
+    color: white;
+}
+.div4-1{
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+ 
+}
+.div4-1-1 ,.div4-1-2 ,.div4-1-3{
+  border-style: solid;
+  border-color: white;
+  width: 30%;
+  gap: 8px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  border-width: 1px;
+}
+.div4-2{
+  border-radius: 5px;
+  background-color:gray;
+  font-size: 14px;
+  margin: 20px;
+}
+.div4{
+  overflow: scroll;
+}
+.div4::-webkit-scrollbar{
+  display: none;
+  width: 0px;
+}
+u{
+ color: white;
+}
+h2 , h3{
+  color: white;
+}
+.div4 > p{
+  color: white;
+  font-size: 15px;
+  margin: 20px;
+}
+.div4 > span{
+    font-size: 12px;
+    color:rgb(161, 5, 83);
+    border-style: solid;
+    border-color:rgb(161, 5, 83);
+}
+.div4-0{
+  display:flex;
+  flex-direction: row;
+  margin: 20px;
+  color: white;
+  gap: 50px;
+  font-weight: bold;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+.specifications{
+  display: block;
+  border: solid;
+  border-color: rgb(5, 100, 56) ;
+  height: 450px;
+  width: 1100px;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+.item6 , .item10 , .item14{
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  color: white;
+  margin-left: 25px;
+}
+.btn{
+  border-radius: 5px;
+  border: solid;
+  color: white;
+  width: 90px;
+  margin-left: 500px;
+}
+h3, h5{
+  font-weight: bold;
+  margin-left: 25px;
+ color: white;
+}
+.overview{
+  margin-top: 70px;
+  display: block;
+  border: solid;
+  border-color: rgb(5, 100, 56) ;
+  height: 350px;
+  width: 1100px;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+li{
+  color: white;
+}
+p{
+  margin-left: 25px;
+  color: white;
+}
+.review{
+  margin-top: 70px;
+  display: block;
+  border: solid;
+  border-color:white ;
+  height: 200px;
+  width: 1100px;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+.btn2{
+width: 150px;
+border: solid;
+color: white;
+margin-left: 25px;
+border-radius: 5px;
+}
+.see_more{
+  width: 1000px;
+}
+.see{
+  display: flex;
+  flex-direction:row ;
+  gap: 10px;
+  color: white;
+}
+.item20 ,.item21 ,.item22 ,.item23{
+  background-color:rgb(17, 16, 16) ;
+  height: 300px;
+  width: 25%;
+  margin: 10px;
+}
+.stars{
+  color: darkslategray;
+  font-size: 20px;
+}
+.footer{
+  display: flex;
+  flex-direction:row;
+  margin-top: 20px;
+  gap: 80px;
+  
+}
+.icons li{
+  display: inline-block;
+  margin-top: 20px;
+  gap: 15px;
+  margin-right: 10px;
+}
+.icons i{
+  color: white;
+  font-size: 20px;
+}
+.email_id{
+  margin-left: 15px;
+  width: 80px;
+}
+.connect{
+  display:flex;
+  flex-direction: column;
+}
+.item24 ,.item27{
+  display: inline-flex;
+  flex-direction: row;
+}
+.vertical-line{
+  border-right: 1px solid white;
+}
+.email-id{
+  margin-left: 10px
+}

@@ -1,0 +1,61 @@
+
+.main{
+    display: flex;
+    border-style: solid;
+}
+
+.left{
+    padding-left: 2vw;
+    width: 30%;
+    height:100%;
+    /* background-color: aqua */
+}
+
+.right{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 70%;
+    height: 100%;
+    /* background-color: blueviolet */
+}
+
+.intro{
+    height: 20vh;
+    /* background-color: yellow; */
+}
+
+.about{
+    height: 10vh;
+    /* background-color: orange; */
+}
+
+.skills{
+    height: 20vh;
+    /* background-color: greenyellow; */
+}
+
+.education{
+    height: 18vh;
+    /* background-color: crimson; */
+}
+
+.projects{
+    height: 58vh;
+    /* background-color: coral; */
+}
+
+.others{
+    height: 10vh;
+    /* background-color: cornflowerblue; */
+}
+
+h4{
+    font-size: larger;
+}
+h5{
+    font-size: large;
+}
+
+p{
+    font-size: large;
+}

@@ -1,0 +1,235 @@
+
+
+body{
+background-color: #191919;
+font-family: 'Open Sans', sans-serif;
+}
+
+.headerleft {
+    background-color: black;
+    padding: 10px;
+    margin: -10px -40px;
+    display: flex;
+    align-self: center;
+} 
+
+
+.headerleft input[type=text] {
+    width: 45%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+  .orderedlist ol li ::marker {
+    list-style: circle;
+    color: #00e9bf;
+    cursor: default;
+}
+
+li {
+    list-style: none;
+    
+}
+
+ol {
+    cursor: pointer;
+    padding: 20px; 
+    margin-top: 70px;
+}
+
+.hoverimage li:hover {
+border: 4px solid #00e9bf;
+border-radius: 5px;
+}
+
+.orderedlist {
+    display: flex;
+    padding: 0 50px;
+    margin-top: -50px;
+    margin-right:-50px;
+    margin-left: -50px;
+}
+
+.secondpart {
+    border: 2px solid;
+    border-color: #12daa8;
+    border-radius:10px;
+    margin: -20px 30px 20px 50px;
+    padding: 5px 30px;
+}
+
+.secondpart {
+    color: #fff;
+}
+
+.secondpart li {
+    margin-top: 20px;
+}
+
+.thirdpart {
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: -10px;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+
+.combo-section {
+   color: #fff;
+   border: 0.5px solid gray;
+   border-radius: 10px;
+   padding-left: 10px;
+   padding-right: 20px;
+}
+
+.combo-product-price {
+    margin-top: 20px;
+}
+
+.key-features-box {
+    color: #fff;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-item {
+    color: #fff;
+}
+
+.combo-section ::-webkit-scrollbar {
+    display: none;
+}
+
+.details-container {
+    display:flex
+}
+
+.combo-cart-button {
+    margin-right: 1px;
+    line-height: 1.3rem;
+    min-width: 8.5rem;
+    background: #12daa8;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #121212;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 1rem;
+    display: flex;
+    height: 41px;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-combo-details {
+    display: flex;
+} 
+
+.write-review-text {
+    width: 263px;
+    height: 40px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: -.1px;
+    color: #fff;
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+}
+.firsthalf{
+    display: flex;
+    margin-top:-50px;
+    padding: 30px;
+}
+
+.pricing {
+    display: flex;
+}
+
+.column {
+    display: flex;
+}
+
+.bankoffers {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 0px;
+}
+
+.centerpart {
+    flex-direction: column;
+}
+ .specs ol {
+  margin-top: -20px; 
+  margin-left: -20px;
+  width: 33%;
+  cursor: default;
+ }
+
+ .btn-viewmore-click {
+ text-align: center;
+ border-radius: 8px;
+ border: 1px solid #fff;
+ padding: 0.8rem 2.5rem;
+ cursor: pointer;
+ color: #fff;
+ margin: 20px 470px;
+ cursor: pointer;
+ }
+
+ .lastpart2 ol {
+    margin-left: 20px;
+    cursor: pointer;
+    line-height: 1.8rem;
+    padding: 0px 10px;
+}
+
+.check1 {
+    margin-top: -60px;
+    margin-left: 10px;
+
+}
+
+.specs {
+    margin-top: -20px;
+}
+
+
+.lastpart1 input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+ .info button {
+margin-top: 150px;
+color: #fff;
+ }
+
+ .buy button {
+    margin-right: 1px;
+    line-height: 1.3rem;
+    min-width: 8.5rem;
+    background: #12daa8;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #121212;
+    font-size: 12px;
+    font-weight: 700;
+    height: 41px;
+    align-items: center;
+    justify-content: center;
+
+ }

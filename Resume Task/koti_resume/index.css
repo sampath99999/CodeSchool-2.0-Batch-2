@@ -1,0 +1,124 @@
+*{
+  margin: 0px;
+}
+.resume-main-container{
+  display: flex;
+  font-family: 'Times New Roman';
+}
+
+.resume-left-container{
+  width: 25%;
+  background-color: #6A77A2;
+  padding: 20px;
+  color: white;
+}
+
+.profile-img-card{
+  text-align: center;
+  
+}
+
+.profile-img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  
+  border: 2px solid white;
+}
+
+.left-card-head{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #F2C08E;
+  border-radius: 50px;
+  padding: 5px;
+  
+}
+
+.contact-card{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contact-detail{
+  padding-left: 15px; 
+}
+
+.link{
+  text-decoration: none;
+  color: white;
+}
+
+.ul-head-style{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.li-style{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.resume-right-container{}
+
+.name-card{
+  margin-top: 90px;
+  background-color: #F2C08E;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 700px;
+  padding-left: 10px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.right-head{
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #F2C08E;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 700px;
+  padding-left: 10px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.education-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.school-name{
+  color: #6A77A2;
+}
+
+.education-card{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.year-pass{
+  font-weight: bold;
+}
+
+.project-detail{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tech-style{
+  font-weight: bold;
+  color: #6A77A2;
+}
+
+.project-style{
+  text-decoration: none;
+}
+

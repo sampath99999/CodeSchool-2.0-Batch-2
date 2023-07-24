@@ -1,0 +1,480 @@
+*{
+    margin: 0px;
+}
+.upper-container{
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    padding: 35px;
+    
+
+}
+.item{
+   
+    font-family: sans-serif;
+    padding-right: 40px;
+    cursor: pointer;
+    
+    
+}
+
+.box{
+   margin-left: 9%;
+   display: flex;
+}
+
+.bottom-container{
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+          
+}
+
+.contains-left-rigt-contaiers{
+    display: flex;
+    
+}
+
+.right-container{
+    background-color: #dedede;
+    padding: 15px;
+    margin-right: 8%;
+    
+    
+}
+.left-container{
+    margin-left: 8%;
+    padding: 15px;
+    
+}
+.form{
+   background-color: #ffffff; 
+   border: 8px;
+   padding: 20px;
+  /* display: flex;
+   flex-direction: column;
+   justify-content: center; */
+   
+     
+}
+.form-head{
+    color: black;
+    font-family: "Roboto";
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: start;
+}
+.input{
+    border-style: none;
+    border-width: 0px;
+    margin-left: 15px;
+    
+
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: gray;
+    height:40px;
+    border-radius: 5px;
+    
+    
+}
+.captcha-container{
+   
+    display: flex;
+    justify-content: space-between;
+    background-color: #374659;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+.icon{
+    margin-left: 10px;
+}
+.refresh{
+    background-color: #cf9a3e;
+   
+    padding: 14px;
+}
+.signin-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.forget-text{
+    color: gray;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.forget-text:hover{
+   color: blue;
+}
+.button{
+    color: #ffffff;
+    background-color: green;
+    height: 35px;
+    width: 100px;
+    border-radius: 3px;
+    border-width: 0px;
+    cursor: pointer;
+}
+.imp-card{
+    background-color: #fff3cd;
+    padding: 20px;
+    text-align: start;
+}
+.imp-card-text{
+    color: #856439;
+    font-size: 18px;
+    margin-bottom: 5px;
+    
+}
+.blinking-text{
+    color: red;
+    font-size: 19px;
+}
+.clickhere-card{
+    background-color: #374659;
+    padding: 10px;
+    border-bottom: #856439;
+    border-style: dotted;
+    border-width: 1px;
+}
+.clickhere-button{
+    color: #ffffff;
+    background-color: green;
+    height: 28px;
+    width: 100px;
+    border-radius: 3px;
+    border-width: 0px;
+    cursor: pointer; 
+    margin-right: 15px;
+}
+.clickhere-text{
+    color: #ffffff;
+    font-size: 16px;
+    display: inline-block;
+}
+.budget-container{
+    background-color: #fff3cd;
+    padding: 20px;
+    text-align: start; 
+}
+.span{
+    color: red;
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+.budjet-desc{
+    text-decoration: underline;
+    color: #856439;
+    margin-top: 10px;
+    
+}
+.attention-heading{
+    color: #e80600;
+    border: 1px solid #d4a855;
+    padding: 1px 5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    background: #ffe9c1;
+    text-align:center;
+    border-radius: 5px;
+    margin-top:12px;
+
+}
+.description{
+    font-family: "Roboto";
+    color: #856439;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom:10px ;
+}
+.red-description{
+    color: #e80600;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.red-button{
+    color: #ffffff;
+    background-color: green;
+    height: 35px;
+    width: 180px;
+    border-radius: 3px;
+    border-width: 0px;
+    cursor: pointer; 
+    
+}
+.budjet-bottom-description{
+    color: #6f4d21;
+    font-family: "Roboto";
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.img-bottom-container{
+    background-color: #08254f;
+    padding: 15px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.budget-year-text{
+    color: rgba(255,255,255,.6);
+    font-family: 14px;
+    margin-bottom: 8px;
+}
+.img-bottom-text{
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 15px;
+    margin-top: 8px;
+}
+.big-img{
+    width: 100%;
+}
+.helpline-container{
+    background-image: url("https://ifmis.telangana.gov.in/images/newUi/phone_icon.png");
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Roboto";
+    color: #ffffff;
+    align-items: flex-start;
+    
+    
+}
+.helpline-inner-container{
+    font-size: 20px;
+}
+.number{
+    display: flex;
+    align-self: flex-end;
+    font-size: 25px;
+}
+.finance-dep-container{
+    background-color: #ffffff;
+    
+    display: flex;
+}
+.finance-dep-description-container{
+    padding: 15px;
+}
+.finance-dep-heading{
+  color: #08254f;
+  font-family: "Roboto";
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.finance-dep-description{
+    color: #08254f;
+  font-family: "Roboto";
+  font-size: 16px;
+  ccolor: #0073ae;
+  
+}
+.logo-container{
+    background-color:rgb(238, 238, 238) ;
+    
+    padding: 15px;
+    
+    
+}
+.downloadtext{
+    color:#40464e ;
+    text-decoration: underline;
+    font-family: serif;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+.video-container{
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+    padding: 25px;
+    text-align: start;
+}
+.video-head{
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 25px;
+    margin-bottom: 6px; 
+    margin-top: 15px;
+}
+.video-text{
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 18px;
+    margin-top: 15px; 
+    
+}
+.footer-container{
+    display: flex;
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/footer_bg.png");
+    margin-left: 9%;
+    margin-right: 8%;
+}
+
+.news-demo-vision-container{
+    width: 33%;
+    padding: 30px;
+    
+    
+}
+
+.footer-head{
+    color: #06162e;
+    font-family: "Roboto";
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.footer-text{
+    color: #06162e;
+    font-family: "Roboto";
+    font-size: 17px; 
+    margin-bottom: 15px;
+}
+
+.scroll-container{
+    overflow: auto;
+    height: 350px;
+   
+      
+}
+.demo-heading{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.demo-inner-container{
+    display: flex;
+    align-items: flex-start;
+    margin-top:15px;
+    margin-bottom: 20px;
+    
+}
+.demo-inner-container-heading{
+    font-size: 18px;
+    font-weight: 600;
+    color:#06162e;
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+.employeedetailsbox{
+    display: flex;
+    justify-content: flex-end;
+}
+.edbox{
+    display: flex;
+    margin-left: 18px;
+    align-items: flex-start;
+}
+.emp{
+    margin-right: 20px;
+    font-size: 15px;
+    color: #06162e;
+}
+.viewmoretext{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #06162e;
+    font-size: 17px;
+    margin-top: 50px;
+}
+.viewmoretext:hover{
+    color: blue;
+}
+.final-footer{
+    background-color:#06162e; ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 40px;
+    padding: 15px;
+}
+.privacypolicytext{
+    color: #ffffff;
+    margin-right: 8%;
+    cursor: pointer;
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+
+.navbar {
+    background-color: #045091;
+    height: 40px;
+    padding: 10px;
+  }
+.navbar-content li:hover{
+    background: #0063c0;
+  }
+  
+  .navbar-content {
+    display: flex;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    margin-left: 100px;
+    list-style: none;
+  }
+  .active{
+    background: #0063c0;
+  }
+  
+  .navbar-content li {
+    margin-right: 70px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .dropbtn{
+    background-color:transparent;
+    outline:none;
+    color:white;
+    border:none;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    padding:0;
+    margin-top:10px;
+    margin-left:-10px;
+    z-index:1;
+    
+    
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size:14px;
+   
+    
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+  .dropdown:hover .dropdown-content :hover{
+    background-color: #0073ae;
+    width: 94%;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }

@@ -610,7 +610,6 @@
     font-family:"Switzer";
     font-size: 17px;
     margin-bottom: 20px;
-
 }
 .sh{
     margin-top: 20px;
@@ -622,10 +621,7 @@
 .specification-sub-box{
     display: flex;
     align-items: center;
-    margin-bottom: 18px;
-   
-    
-    
+    margin-bottom: 18px;   
 }
 .detailsbox{
  padding-right: 290px;   
@@ -664,7 +660,6 @@
     background-color: transparent;
     color: #fff;
     margin-top: 25px;
-
 }
 .overview-container{
   margin-left: 10%;
@@ -690,20 +685,15 @@
     margin-bottom: 20px;  
 }
 .ul-list{
-  padding-left: 0px;
-  list-style: none;
-  
+  padding-left: 20px 
 }
 .overview-li-item{
     font-size: 17px;
     line-height: 1.5;
 }
-.overview-li-item::before{
+.overview-li-item::marker{
     color:#088466;
-    content: "\2022";
-    font-weight: bold;
-    display: inline-block; 
-    width: 1.5em
+   
 }
 
 .overview-description{
@@ -779,7 +769,6 @@
     width: 33%;
     padding: 20px;
     height: 250px;
-
 }
 
 .footer-input{
@@ -811,7 +800,6 @@
     align-items: center;
     padding-right: 10px;
     padding-left: 10px;
-
 }
 
 .arrow{
@@ -880,12 +868,8 @@
     padding: 15px;
     height: 10vh;
     position: fixed;
-    height: 10vh;
-      
+    height: 10vh;      
 }
-
-
-
 .buynow-box-img{
     height: 30px;
     margin-right: 20px;
@@ -899,11 +883,8 @@
 }
 .buynow-sub{
    display: flex;
-   align-items: center; 
-   
+   align-items: center;   
 }
-
-
 .buynow-button{
     background-color: #12daa8;
     border-radius:8px;

@@ -636,3 +636,21 @@
   display: flex;
 
 }
+
+.buy_now{
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 10px 200px;
+  justify-content: space-between;
+}
+
+.amt{
+  /* padding-left: 30px; */
+}
+
+.buynow_img{
+  display: flex;
+  align-items: center;
+}

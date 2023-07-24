@@ -1,0 +1,296 @@
+body{
+    background-image: url(background.jpg);
+}
+.container{
+    display: flex;
+    background-image: url(telangana.jpg);
+    margin-top:20px;
+    height: 150px;
+    flex-direction: row;
+    margin: auto;
+    gap: 20px;
+}
+.item1{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    height: 80px;
+    width: 100px;
+}
+.item2{
+    margin-left: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+}
+.item3{
+  margin-left: 210px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  height: 80px;
+  width: 100px;
+}
+ .navbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    background-color: #231372;
+  }
+  
+  .navbar li {
+    display: inline-block;
+  }
+  
+  .navbar li a {
+    display: block;
+    margin-left: 100px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .dropdown-content li{
+    display: block;
+  }
+  .dropdown-content li a{
+    color: black;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover > a {
+    background-color: lightblue;
+  }
+  .dropdown-content a:hover {
+    background-color: skyblue;
+  }
+  .navbar li a:hover{
+    background-color: lightblue;
+    color: red;
+  }
+  .login-container {
+    display: inline;
+    position: absolute;
+    margin-left: 200px;
+    float: left;
+    background-color: #fff;
+    width: 400px;
+    height: 410px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .input-box { 
+    margin-bottom: 15px;
+  }
+  .input-box input {
+    padding-left: 30px;
+    width: 100%;
+  }
+  input[type="text"],
+input[type="password"] {
+  margin-top: 20px;
+  height: 25px;
+  width: 350px;
+  padding: 10px;
+}
+  
+  .captcha-image {
+    display: block;
+    height: 40px;
+    width: 300px;
+    margin: 20px auto;
+  }
+   .forgot-password a {
+    margin-left: 20px;
+    float: left;
+    font-size: large;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .sign-in-button {
+    display: block;
+    margin-right: 20px;
+    float: right;
+    width: 100px;
+    padding: 10px;
+    background-color: green;
+    color: #fff;
+    border-style: solid;
+    border-color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .sign-in-button:hover {
+    background-color: darkgreen;
+  }
+  .four{
+    display: inline;
+    position: absolute;
+    margin-top: 450px;
+    float: left;
+    background-color: wheat;
+    width: 400px;
+    margin-left: 200px;
+    height: 1335px;
+    padding: 20px;
+  }
+  .five{
+    font-size: 12px;
+    color: rgb(104, 66, 17);
+  }
+  .six{
+    color: red;
+  }
+  .seven{
+    display: block;
+    background-color: #231372;
+    border-style: dotted;
+  border-color: orange;
+  color: white;
+  margin: 0;
+  padding: 8px;
+  }
+  .eight{
+    background-color: green;
+    color: white;
+    height: 30px;
+    border-style: solid;
+    border-color: green;
+    border-radius: 2px;
+    /* margin-left: 15px; */
+  }
+  .ten{
+    font-size: 25px;
+    text-align: center;
+    color: orangered;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(222, 135, 152);
+    background-color: bisque;
+    border-radius: 5px;
+  }
+  .thirteen{
+    border-radius: 5px;
+  }
+  .tweleve{
+    color: red;
+    font-size: 12px;
+  }
+  .three{
+    display: inline;
+    float: right;
+    padding: 0;
+    margin-top: 0px;
+    margin-right: 235px;
+    border-style: solid;
+    border-color: #bbc1c6;
+    border-width: 15px;
+    border-bottom: none;
+    cursor: pointer;
+  }
+  .sixteen{
+    display: inline;
+    float: right;
+    background-color: #231372;
+    width: 580px;
+    height: 200px;
+    padding: 10px;
+    /* margin-left: 300px; */
+    margin-top: 0px;
+    margin-right: 235px;
+    border-style: solid;
+    border-color: #bbc1c6;
+    border-width: 15px;
+    border-top: none;
+  }
+  .seventeen{
+    color: #cac5c5;
+  }
+  .eighteen{
+    color: white;
+  }
+  .twenty{
+    display: inline;
+    float: right;
+    background-image: url(phone_icon.jpg);
+    width: 580px;
+    height: 110px;
+    padding: 10px;
+    margin: 0px;
+    margin-right: 235px;
+    border-style: solid;
+    border-color: #bbc1c6;
+    border-width: 15px;
+    border-bottom: none;
+    color: #f6eded;
+  }
+  .twentythree{
+    display: inline;
+    float:right;
+    color: #f6eded;
+    margin-top: 0;
+    margin-left: 300px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    font-size: 30px;
+  }
+  .twentyfour{
+    display: inline;
+    float: right;
+    width: 580px;
+    height: 110px;
+    background-color: #f0f2f4;
+    padding: 10px;
+    margin-right: 235px;
+    border-style: solid;
+    border-color: #bbc1c6;
+    border-width: 15px;
+    border-top: none;
+  }
+  .twentyfive{
+    display: inline;
+    float: right;
+    width: 580px;
+    height: 700px;
+    background-color: rgb(20, 20, 122);
+    padding: 10px;
+    margin-right: 235px;
+    border-style: solid;
+    border-color: #bbc1c6;
+    border-width: 15px;
+    border-bottom-width: 50px;
+  }
+  .twentysix{
+    margin-left: 200px;
+  }
+  .twentyseven{
+    background-color: rgb(12, 12, 67);
+    height: 60px;
+    margin: 0;
+  }
+  .twentyeight{
+    margin: 20px;
+    margin-right: 200px;
+    float: right;
+    color: #bbc1c6;
+    text-align: center;
+  }
+  

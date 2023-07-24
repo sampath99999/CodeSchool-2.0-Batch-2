@@ -1,0 +1,546 @@
+.city-background {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+  height: 18vh;
+  backdrop-filter: blur(51px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.political-leaders-images {
+  display: flex;
+}
+.ifmis-heading {
+  width: 400px;
+
+  height: 100px;
+  margin-right: 10%;
+}
+.city-background-content {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.kcr-image {
+  margin-right: 20px;
+}
+
+.navbar {
+  background-color: #045091;
+  height: 40px;
+}
+
+.navbar-content li:hover{
+  background: #0063c0;
+}
+
+.navbar-content {
+  display: flex;
+  color: white;
+  font-size: 16px;
+  align-items: center;
+  margin-left: 165px;
+  list-style: none;
+}
+.active{
+  background: #0063c0;
+}
+
+.navbar-content li {
+  margin-right: 70px;
+  cursor: pointer;
+  padding: 10px;
+}
+.dropbtn{
+  background-color:transparent;
+  outline:none;
+  color:white;
+  border:none;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  padding:0;
+  margin-top:10px;
+  margin-left:-10px;
+  z-index:1;
+  
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  font-size:16px;
+  
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+.dropdown:hover .dropdown-content :hover{
+  background-color: #0073ae;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* .dropdown-content{
+  display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+    z-index: 1;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+
+.content {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+  
+  padding-left: 205px;
+  margin: auto;
+  display: flex;
+}
+
+.content-left {
+  background-color: white;
+  width: 30%;
+}
+.user-login {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.user-login-text {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.input-container {
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+.input-field {
+  border: none;
+  outline: none;
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.captha-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+.captha-image {
+  flex-grow: 1;
+}
+.reload-button {
+  padding: 15px;
+}
+
+.sign-in-forget-password-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.forget-password-text {
+  color: grey;
+  font-weight: 500;
+  font-size: 18px;
+}
+.forget-password-text:hover {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.signin-button {
+  border: none;
+  background-color: green;
+  padding: 10px;
+  width: 25%;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.important-notification {
+  background-color: #fff3cd;
+  padding: 10px;
+}
+
+.important-notification-title {
+  color: #856439;
+  margin-right: 5px;
+}
+
+.important-notification-text {
+  color: red;
+  animation: blinker 1s linear infinite;
+ 
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }}
+
+.click-buttons-budget-container {
+  background-color: #374659;
+  display: flex;
+  align-items: center; 
+  padding: 10px;
+  border: 1px dotted orange;
+}
+.click-button-budget {
+  border: none;
+  background-color: green;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.click-button-text{
+   color:white;
+   margin-left:10px;
+
+   
+}
+.important-notification-budget-container{
+   background-color: #fff3cd;
+   padding-top:5px;
+   padding-bottom: 5px;
+   display: flex;
+}
+
+.download-link{
+  color:black;
+  font-size:14px;
+  cursor: pointer;
+  padding-top:5px;
+}
+.download-link:hover{
+  color:blue;
+}
+.attention-text{
+  color: #e80600;
+  border: 1px solid #d4a855;
+  padding: 1px 5px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  background: #ffe9c1;
+  text-align: center;
+  border-radius: 5px;
+  font-size:22px;
+  margin-top:10px;
+}
+
+.dta-text{
+ color: #856439;
+ font-size:14px;
+ margin-top:10px;
+ margin-bottom:20px;
+}
+
+.divisional-text{
+  font-size:14px;
+  margin-bottom:5px;
+  color: red;
+}
+
+.divisional-account-container{
+  margin-bottom:20px;
+}
+.central-text{
+  color:#6f4d21;
+  margin-bottom:5px;
+}
+.click-link{
+  color:black;
+  text-decoration: underline;
+}
+.click-link:hover{
+  color:blue;
+  cursor: pointer;
+}
+
+.content-right{
+  background-color: #dedede;
+  width:63%; 
+  padding:15px;
+  padding-bottom: 40px;;
+}
+
+.leaders-image{
+ width:100%;
+ margin:0;
+ background-color: #08254f;
+}
+.political-leaders-description{
+  background-color:#08254f;
+  padding:30px;
+  
+  
+}
+.political-budget-heading{
+  color:grey;
+}
+.political-budget-text{
+  color:white;
+}
+.political-leaders-image-text{
+  background-color: #08254f;
+  margin-bottom:40px;
+}
+.hotline-number-heading{
+  color:white;
+  font-size:26px;
+}
+
+
+.hotline-number-container{
+  background-image:url("https://ifmis.telangana.gov.in/images/newUi/phone_icon.png");
+  margin-top:40px;
+  height: 50px;
+  padding:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bold{
+  font-weight: bold;
+
+}
+.hotline-number-timings{
+  color:white;
+  margin-top:10px;
+}
+.hotline-number{
+  font-size:48px;
+  color:white;
+}
+.finance-department{  
+  display: flex;
+  align-items: center;
+  margin-bottom:40px;
+  
+}
+.finance-department-left-container{
+  background-color: white;
+  padding:30px;
+}
+.finance-department-heading{
+  font-size:22px;
+  margin-bottom: 10px;
+}
+.finance-department-text{
+  color:grey;
+}
+.download-app-container{
+  margin-left:20px;
+  background-color: #e2e2e2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.download-app-text{
+  text-decoration: underline;
+  font-size:20px;
+  
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  color:#494646;
+  cursor: pointer;
+}
+.download-app-text:hover{
+  color:rgb(152, 152, 220);
+
+}
+
+.integrated-management-image{
+  height: 420px;
+  width:100%;
+}
+
+.integrated-finance-management-heading{
+  color:white;
+  font-size:26px;
+  font-weight: bold;
+  margin-top:10px;
+}
+.integrated-management-container{
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+  padding:30px;
+  
+}
+.hr-line{
+  width: 50px;
+    height: 4px;
+    background: #0073ae;
+    margin-top:10px;
+}
+.integrated-management-info{
+  color:white;
+  font-size:18px;
+  margin-top:20px;
+}
+.content-bottom-container{
+
+  height: 600px;;
+  padding-left:205px;
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+  width:100%; 
+}
+
+
+.content-bottom-text-container{
+  background-image:url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/footer_bg.png");
+  height:600px;
+  margin-right:88px;
+  padding-top:15px;
+  display: flex;
+}
+.content-bottom-left-container{
+  width:33%;
+  padding:30px;
+  border-right: 1px solid rgb(196, 193, 193);
+}
+
+.content-bottom-middle-container{
+  width:33%;
+  padding:30px;
+  border-right: 1px solid rgb(196, 193, 193);
+}
+
+.content-bottom-right-container{
+  width:33%;
+  padding:30px;
+  
+}
+.bottom-icon-text{
+  font-size: 27px;
+    color: #494d52;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.bottom-scroll-container{
+  height: 300px;
+  overflow: auto;
+  padding:10px;
+}
+.bottom-scroll-text{
+  font-size:18px;
+  margin-bottom:20px;
+}
+.demo-text{
+  color:rgb(96, 95, 95);
+  
+  font-size:24px;
+}
+.text-link{
+  	text-decoration: underline;
+    font-size:18px;
+    color:rgb(96, 95, 95);
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.text-link:hover{
+  color:blue;
+}
+.link-heading{
+  font-size:20px;
+  color:rgb(96, 95, 95);
+  font-weight: 500;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.watch-text{
+  font-size:20px;
+  color:#282829;
+  margin-top:10px;
+}
+.youtube-link-container{
+  margin-top:10px;
+  display: flex;
+  
+}
+.youtube-image{
+  margin-right: 20px;
+}
+.youtube-check-employee-text{
+  font-size:18px;
+  color:rgb(38, 38, 38);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.date-container{
+  display: flex;
+  justify-content: space-between;
+
+}
+.employee-details-text{
+  color:grey;
+  font-weight: 500;
+}
+.employee-details-date{
+  color:grey;
+}
+.view-more-link{
+  color:black;
+  display: inline-block;
+  font-size:22px;
+  margin-top:50px;
+}
+.view-more-link:hover{
+  color:blue;
+}
+.footer{
+  background-color: #06162e;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer-text{
+  color:grey;
+  font-size:18px;
+  
+  text-align: right;
+  margin-right:80px;
+}
+.down-arrow{
+  margin-left:5px;
+  font-size:18px;
+}

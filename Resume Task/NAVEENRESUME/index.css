@@ -1,0 +1,127 @@
+.outline
+{
+  height: 1300px;
+  width: 1100px;
+  background-color: aqua;
+  display: flex;
+}
+
+div h2,h4{
+  text-align: left;
+  margin-left: 20%;
+  margin-bottom: -1px;
+}
+
+div li{
+ margin-left: 40px;
+ margin-top: 8px;
+}
+
+.box-1 hr{
+  width: 75%;
+}
+
+.box-1
+{
+ height: 1300px;
+ width: 400px;
+ background-color: rgb(14, 17, 17);
+ color:whitesmoke
+}
+
+
+
+.box-1 div{
+ margin-top: 60px;
+}
+
+img
+{
+   height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.box-1 .one{
+  height: 20px;
+  width: 250px;
+  border: 1px solid white;
+  margin-left: 30px;
+  margin-top: 10px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+
+
+
+.box-2
+{
+  height: 1300px;
+ width: 900px;
+ background-color: rgb(67, 201, 67);
+}
+
+.box-2 .one{
+  height: 100px;
+  width: 600px;
+  background-color: yellow;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.box-2 .one h1,h2{
+  float:left;
+  margin-left: 20px;
+  margin-bottom: -8px;
+  word-spacing: 8px;
+}
+
+.box-2 .two
+{
+  height: 1070px;
+  width: 750px;
+  background-color:#2918c9;
+  color: white;
+  padding: 10px;
+}
+
+.box-2 h3{
+  font-size:20pt;
+  margin-left:10%;
+}
+
+.box-2 h5{
+  font-size:18px;
+  margin-left: 55px;
+}
+
+
+table{
+  border: none;
+  height: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.box-2 div{
+  margin-top: 40px;
+}
+
+span{
+  display:inline-block;
+  text-align: left;
+  width: 40%;
+}
+
+a{
+  color:#f5f120
+}

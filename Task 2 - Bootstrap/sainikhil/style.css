@@ -36,6 +36,19 @@
     /* width: 111px !important;
 		height: 54px !important; */
   }
+  .right-nav .bi-moon{
+    translate: 4rem 0rem ;
+  }
+  .right-nav .nav-flag{
+    translate: 4rem 0rem ;
+  }
+  .right-nav .bi-search{
+    translate: 4rem 0rem ;
+  }
+  .right-nav .bi-gear{
+    translate: -1.5rem 0rem ;
+  }
+
 
   /* #header .header-logo {
 		width: auto !important;

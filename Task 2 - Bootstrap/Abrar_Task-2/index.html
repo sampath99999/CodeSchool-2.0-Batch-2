@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ynex Dashboard</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b4284854ee.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0 m-0">
+      <div class="row m-0">
+        <div class="dashboard-container col-lg-2 d-none d-lg-block p-0">
+          <div class="logo-container mb-3 text-center p-2">
+            <img
+              src="https://spruko.com/demo/ynex/dist/assets/images/brand-logos/desktop-dark.png"
+              alt="ynex-logo"
+              class="logo-image"
+            />
+          </div>
+          <div class="dashboard-main-container ps-3 pe-3">
+            <p class="main-para fw-semibold">MAIN</p>
+            <div
+              class="home-logo-container mb-3 p-0 d-flex flex-row justify-content-around align-items-center"
+            >
+              <div
+                class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-house-door text-light me-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"
+                  />
+                </svg>
+                <p class="text-light mt-3 fw-medium dash-para">
+                  Dashboard
+                  <span class="twelve pe-1 ps-1 pb-1 pt-1 fw-medium">12</span>
+                </p>
+              </div>
+              <i class="fa-solid fa-angle-down text-light"></i>
+            </div>
+            <ul>
+              <li class="text-light crm-list mb-2">CRM</li>
+              <li class="dashboard-list-items p-2 fw-medium">Ecommerce</li>
+              <li class="dashboard-list-items p-2 fw-medium">Crypto</li>
+              <li class="dashboard-list-items p-2 fw-medium">Jobs</li>
+              <li class="dashboard-list-items p-2 fw-medium">NFT</li>
+              <li class="dashboard-list-items p-2 fw-medium">Sales</li>
+              <li class="dashboard-list-items p-2 fw-medium">Analytics</li>
+              <li class="dashboard-list-items p-2 fw-medium">Projects</li>
+              <li class="dashboard-list-items p-2 fw-medium">HRM</li>
+              <li class="dashboard-list-items p-2 fw-medium">Stocks</li>
+              <li class="dashboard-list-items p-2 fw-medium">Courses</li>
+              <li class="dashboard-list-items p-2 fw-medium">Personal</li>
+            </ul>
+            <div class="pages-card p-0 mb-2">
+              <p class="main-para fw-semibold">PAGES</p>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-file-earmark me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Pages</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-fingerprint me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z"
+                    />
+                    <path
+                      d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115V7Zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z"
+                    />
+                    <path
+                      d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z"
+                    />
+                    <path
+                      d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z"
+                    />
+                    <path
+                      d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Authentication</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-exclamation-triangle me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"
+                    />
+                    <path
+                      d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Error</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+            </div>
+            <div class="pages-card p-0">
+              <p class="main-para fw-semibold">GENERAL</p>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-archive me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Ui Elements</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <i class="fa-solid fa-medal me-2"></i>
+                  <p class="mt-3 fw-medium">Utilities</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <i class="fa-solid fa-file-lines me-2"></i>
+                  <p class="mt-3 fw-medium">Forms</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 8.31c-.36-.41-.73-.82-1.12-1.21l-.29-.27l.14-.12a3.15 3.15 0 0 0 .9-3.49A3.91 3.91 0 0 0 14 1v2a2 2 0 0 1 1.76 1c.17.4 0 .84-.47 1.31c-.07.08-.15.13-.22.2c-3-2.41-6.29-3.77-7.9-2.16a2.16 2.16 0 0 0-.41.59v.1l-.18.53l-4.41 13.1A3.28 3.28 0 0 0 5.28 22a3.21 3.21 0 0 0 1-.17L20 17.28a1 1 0 0 0 .43-.31l.21-.18c1.43-1.44.51-4.21-1.41-6.9A6.63 6.63 0 0 1 23 9V7a8.44 8.44 0 0 0-5 1.31zM5.7 19.93a1.29 1.29 0 0 1-1.63-1.63l1.36-4.1a10.7 10.7 0 0 0 4.29 4.39zm7-2.33a8.87 8.87 0 0 1-6.3-6.29l1-3l.06.09c.11.22.25.45.39.68s.16.29.26.44s.33.48.51.73s.19.28.3.42s.43.55.66.82l.29.35c.34.39.7.77 1.08 1.16s.68.64 1 1l.33.28l.78.63l.37.28c.28.2.55.4.83.58l.31.2c.36.22.72.43 1.07.61h.05zm6.51-2.23h-.06c-.69.38-3.56-.57-6.79-3.81c-.34-.34-.66-.67-.95-1l-.29-.35l-.53-.64l-.29-.4c-.13-.19-.27-.37-.39-.55l-.26-.42l-.29-.47c-.08-.14-.14-.27-.21-.4s-.15-.26-.21-.4a3.31 3.31 0 0 1-.14-.36c-.05-.13-.11-.26-.15-.38S8.6 6 8.57 5.88s-.05-.22-.07-.32a2.26 2.26 0 0 1 0-.26a1 1 0 0 1 0-.24l.11-.31c.36-.36 2.23 0 4.73 1.9A4.13 4.13 0 0 1 12 7v2a6.45 6.45 0 0 0 3-.94l.48.46c.42.42.81.85 1.18 1.28a5.32 5.32 0 0 0-.6 3.4l2-.39a3.57 3.57 0 0 1 0-1.12a11.3 11.3 0 0 1 .81 1.45c.56 1.32.52 2.06.34 2.23z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium ms-2">Advanced Ui</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <i class="fa-solid fa-gift me-2"></i>
+                  <p class="mt-3 fw-medium">
+                    Widgets<span class="hot ms-2 text-danger fw-bold p-1"
+                      >Hot</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pages-card p-0 mb-2">
+              <p class="main-para fw-semibold">WEB APPS</p>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-grid me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Apps</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-stack me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"
+                    />
+                    <path
+                      d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Nested Menu</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+            </div>
+            <div class="pages-card p-0 mb-2">
+              <p class="main-para fw-semibold">TABLES & CHARTS</p>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-table me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">
+                    Tables
+                    <span class="three text-success p-1 fw-bolder pe-2 ps-2"
+                      >3</span
+                    >
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-bar-chart me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Charts</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+            </div>
+            <div class="pages-card p-0 mb-2">
+              <p class="main-para fw-semibold">MAPS & ICONS</p>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-alt me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                    />
+                    <path
+                      d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Maps</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+              <div
+                class="page-items-card dashboard-list-items p-0 d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+              >
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center m-0 p-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-shop-window me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"
+                    />
+                  </svg>
+                  <p class="mt-3 fw-medium">Icons</p>
+                </div>
+                <i
+                  class="fa-solid fa-angle-right text-light mt-1 right-icon"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-container col-12 col-lg-10 p-0">
+          <nav
+            class="navbar-container pe-4 ps-4 d-flex flex-row justify-content-between align-items-center shadow-sm mb-4 bg-white p-0"
+          >
+            <div class="left-side-container">
+              <img
+                src="https://spruko.com/demo/ynex/dist/assets/images/brand-logos/toggle-logo.png"
+                class="d-md-block d-lg-none"
+                alt="logo"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-list text-dark"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </div>
+            <div
+              class="right-side-container d-flex flex-row justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+              <img
+                src="https://spruko.com/demo/ynex/dist/assets/images/flags/us_flag.jpg"
+                alt="flag-image"
+                class="flag-image"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-moon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+                />
+              </svg>
+              <div class="d-none d-sm-block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cart2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                  />
+                </svg>
+                <sup class="text-light power pe-1 ps-1">5</sup>
+              </div>
+              <div class="d-none d-sm-block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-bell"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                  />
+                </svg>
+                <sup class="bg-info text-light power pe-1 ps-1">5</sup>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-grid me-2 d-none d-sm-block"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+                />
+              </svg>
+              <div class="empty-grid d-none d-sm-block"></div>
+              <div
+                class="men-icon-container d-flex flex-row align-items-center"
+              >
+                <img
+                  src="https://spruko.com/demo/ynex/dist/assets/images/faces/9.jpg"
+                  alt="men-icon"
+                  class="men-icon me-1"
+                />
+                <div class="m-0 d-none d-sm-block">
+                  <p class="user-name m-0 fw-semibold">Json Taylor</p>
+                  <p class="user-designation m-0 fw-normal">Web Designer</p>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-gear settings"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"
+                />
+                <path
+                  d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"
+                />
+              </svg>
+            </div>
+          </nav>
+          <div class="col-12 username-container d-flex pe-3 ps-3 mb-2">
+            <div class="user-container">
+              <h4 class="username fw-bold">Welcome back, Json Taylor !</h4>
+              <p class="user-desc text-muted">
+                Track your sales activity,leads and deals here.
+              </p>
+            </div>
+            <div class="user-buttons-container">
+              <button
+                type="button"
+                class="text-light filter-btn text-center me-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-filter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+                Filters
+              </button>
+              <button class="btn btn-outline-info text-center export">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cloud-arrow-up"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"
+                  />
+                  <path
+                    d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"
+                  />
+                </svg>
+                Export
+              </button>
+            </div>
+          </div>
+          <div class="bottom-left-container col-12 row m-0 pe-4 ps-2">
+            <div class="two-sided-partiton-container col-12 col-xl-9 m-0">  
+              <div class="partition-container col-12 row m-0 p-0 mb-3">
+                <div class="part-1 me-1 col-12 col-xl-4">
+                  <div class="first-card col-12 mb-3">
+                    <div
+                      class="partition-1 d-flex flex-row justify-content-between pt-3 pb-3 pe-3 ps-3 align-items-center"
+                    >
+                      <div class="left-details-card">
+                        <h6 class="text-light target-head m-0 mb-2">
+                          Your target is incomplete
+                        </h6>
+                        <p class="text-light target-para m-0 mb-2">
+                          You have completed
+                          <span class="percentage">48%</span> of the given
+                          target, you can also check your status
+                        </p>
+                        <a href="#" class="text-light fw-bold target-link"
+                          >Click here</a
+                        >
+                      </div>
+                      <div
+                        class="right-details-card text-light text-center pe-3 ps-3 pt-2 pb-2"
+                      >
+                        48%
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="second-card col-12 bg-white shadow-md pt-2 pb-1 mb-3"
+                  >
+                    <div
+                      class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 pt-1 pb-1 mb-3"
+                    >
+                      <div class="deal-card d-flex align-items-center">
+                        <hr class="hr-line me-1" />
+                        <h6 class="topdeal-head fw-semibold mt-1">Top Deals</h6>
+                      </div>
+                      <div class="three-dots-card pe-2 ps-2 pt-1 pb-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-three-dots-vertical bg-transparent"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="deal-user-container d-flex align-items-center pe-3 ps-3 mb-1"
+                    >
+                      <img
+                        src="https://spruko.com/demo/ynex/dist/assets/images/faces/10.jpg"
+                        alt="user"
+                        class="deal-user-image me-2"
+                      />
+                      <div class="deal-user-bio">
+                        <p class="deal-username m-0 fw-bold">Michael Jordan</p>
+                        <p
+                          class="deal-user-email m-0 fw-lighter text-secondary"
+                        >
+                          michael.jordan@example.com
+                        </p>
+                      </div>
+                    </div>
+                    <h6 class="rupee-head fw-semibold ms-3 mb-3">$2,893</h6>
+                    <div
+                      class="emigo-container d-flex justify-content-between align-items-center pe-3 ps-3 mb-3"
+                    >
+                      <div
+                        class="emigo-logo-container d-flex align-items-center"
+                      >
+                        <p
+                          class="emigo-logo m-0 bg-warning fw-lighter me-2 pe-1 ps-1 pt-1 pb-1 bg-opacity-25 text-warning"
+                        >
+                          EK
+                        </p>
+                        <div class="deal-user-bio">
+                          <p class="deal-username m-0 fw-semibold">
+                            Michael Jordan
+                          </p>
+                          <p
+                            class="deal-user-email m-0 fw-lighter text-secondary"
+                          >
+                            michael.jordan@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <h6 class="rupee-head fw-semibold">$4,289</h6>
+                    </div>
+                    <div
+                      class="emigo-container d-flex justify-content-between align-items-center pe-3 ps-3 mb-3"
+                    >
+                      <div
+                        class="emigo-logo-container d-flex align-items-center"
+                      >
+                        <img
+                          src="https://spruko.com/demo/ynex/dist/assets/images/faces/12.jpg"
+                          alt="deal-logo"
+                          class="deal-user-image me-2"
+                        />
+                        <div class="deal-user-bio">
+                          <p class="deal-username m-0 fw-semibold">
+                            Randy Origoan
+                          </p>
+                          <p
+                            class="deal-user-email m-0 fw-lighter text-secondary"
+                          >
+                            randy.origaon@gmail.com
+                          </p>
+                        </div>
+                      </div>
+                      <h6 class="rupee-head fw-semibold">$6,347</h6>
+                    </div>
+                    <div
+                      class="emigo-container d-flex justify-content-between align-items-center pe-3 ps-3 mb-3"
+                    >
+                      <div
+                        class="emigo-logo-container d-flex align-items-center"
+                      >
+                        <p
+                          class="emigo-logo m-0 bg-success fw-lighter me-2 pe-1 ps-1 pt-1 pb-1 bg-opacity-25 text-success"
+                        >
+                          GP
+                        </p>
+                        <div class="deal-user-bio">
+                          <p class="deal-username m-0 fw-semibold">
+                            George Piterson
+                          </p>
+                          <p
+                            class="deal-user-email m-0 fw-lighter text-secondary"
+                          >
+                            george.piterson@gmail.com
+                          </p>
+                        </div>
+                      </div>
+                      <h6 class="rupee-head fw-semibold">$3,894</h6>
+                    </div>
+                    <div
+                      class="emigo-container d-flex justify-content-between align-items-center pe-3 ps-3 mb-3"
+                    >
+                      <div
+                        class="emigo-logo-container d-flex align-items-center"
+                      >
+                        <p
+                          class="emigo-logo m-0 fw-lighter me-2 pe-1 ps-1 pt-1 pb-1 bg-opacity-25 bg-primary text-primary"
+                        >
+                          KA
+                        </p>
+                        <div class="deal-user-bio">
+                          <p class="deal-username m-0 fw-semibold">
+                            Kiara Advain
+                          </p>
+                          <p
+                            class="deal-user-email m-0 fw-lighter text-secondary"
+                          >
+                            kiaraadvain214@gmail.com
+                          </p>
+                        </div>
+                      </div>
+                      <h6 class="rupee-head fw-semibold">$2,679</h6>
+                    </div>
+                  </div>
+                  <div class="third-card col-12 bg-white mb-3">
+                    <div
+                      class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 mb-3"
+                    >
+                      <div class="deal-card d-flex align-items-center">
+                        <hr class="hr-line me-1" />
+                        <h6 class="topdeal-head fw-semibold mt-1">
+                          Profit Earned
+                        </h6>
+                      </div>
+                      <div class="view-all-card pe-2 ps-2 pt-2">
+                        <p class="view">
+                          View All
+                          <span>
+                            <i class="fa-solid fa-angle-down"></i>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="bar-graph-container">
+                      <img
+                        src="https://res.cloudinary.com/djlngo4cq/image/upload/v1690292100/Screenshot_7_dffawv.png"
+                        class="w-100 pe-2 ps-2 pb-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="partition-2 col-12 col-xl-7">
+                  <div class="first-one row m-0 p-0 ms-md-4 ms-lg-0">
+                    <div
+                      class="graph-card-1 col-12 col-md-6 m-0 ms-lg-0 bg-white pb-3 pt-3 ps-2 pe-2 mb-3"
+                    >
+                      <div class="customers-container d-flex flex-column mb-3">
+                        <div class="d-flex">
+                          <p
+                            class="customer-logo rounded-circle text-center pe-2 ps-2 pt-1 pb-1 me-2"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              class="bi bi-people text-light"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"
+                              />
+                            </svg>
+                          </p>
+                          <div
+                            class="total-customers-card d-flex justify-content-between w-100 align-items-center"
+                          >
+                            <div class="customer-head">
+                              <h6
+                                class="fw-medium text-secondary custom-head m-0"
+                              >
+                                Total Customers
+                              </h6>
+                              <p class="m-0 mb-2 text-dark fw-bold fs-4">
+                                1,02,890
+                              </p>
+                            </div>
+                            <div class="graph-image align-items-center">
+                              <img src="https://res.cloudinary.com/djlngo4cq/image/upload/v1690350551/Screenshot_8_blkm47.png" class="w-100"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="down-cont d-flex justify-content-between align-items-center"
+                        >
+                          <p class="customers-view ms-5 fw-medium">
+                            View All
+
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="10"
+                                height="10"
+                                fill="currentColor"
+                                class="bi bi-arrow-right"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                                />
+                              </svg>
+                            </span>
+                          </p>
+
+                          <div class="precent-container">
+                            <p
+                              class="percent-head m-0 text-success fw-semibold month-para"
+                            >
+                              +40%
+                            </p>
+                            <p
+                              class="month-para m-0 text-secondary month-para custom-head"
+                            >
+                              this month
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                    class="graph-card-1 col-12 col-md-5 m-0 ms-md-3 bg-white pb-3 pt-3 ps-2 pe-2 mb-3"
+                  >
+                    <div class="customers-container d-flex flex-column mb-3">
+                      <div class="d-flex">
+                        <p
+                          class="customer-logo rounded-circle text-center bg-info pe-2 ps-2 pt-1 pb-1 me-2"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-wallet text-light"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"
+                            />
+                          </svg>
+                        </p>
+                        <div
+                          class="total-customers-card d-flex justify-content-between w-100 align-items-center"
+                        >
+                          <div class="customer-head">
+                            <h6
+                              class="fw-medium text-secondary custom-head m-0"
+                            >
+                              Total Revenue
+                            </h6>
+                            <p class="m-0 mb-2 text-dark fw-bold fs-4">
+                              $56,562
+                            </p>
+                          </div>
+                          <div class="graph-image">
+                            <img src="https://res.cloudinary.com/djlngo4cq/image/upload/v1690351018/Screenshot_9_rrecg1.png" class="w-100"/>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="down-cont d-flex justify-content-between align-items-center"
+                      >
+                        <p class="customers-view ms-5 fw-medium text-info">
+                          View All
+
+                          <span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10"
+                              height="10"
+                              fill="currentColor"
+                              class="bi bi-arrow-right"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                              />
+                            </svg>
+                          </span>
+                        </p>
+
+                        <div class="precent-container">
+                          <p
+                            class="percent-head m-0 text-success fw-semibold month-para"
+                          >
+                            +25%
+                          </p>
+                          <p
+                            class="month-para m-0 text-secondary month-para custom-head"
+                          >
+                            this month
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="second-one row m-0 p-0 ms-md-4 ms-lg-0">
+                    <div
+                    class="graph-card-1 col-12 col-md-6 m-0 bg-white pb-3 pt-3 ps-2 pe-2 mb-3"
+                  >
+                    <div class="customers-container d-flex flex-column mb-3">
+                      <div class="d-flex">
+                        <p
+                          class="customer-logo bg-success rounded-circle text-center pe-2 ps-2 pt-1 pb-1 me-2 text-success"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-activity text-light"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"
+                            />
+                          </svg>
+                        </p>
+                        <div
+                          class="total-customers-card d-flex justify-content-between w-100 align-items-center"
+                        >
+                          <div class="customer-head">
+                            <h6
+                              class="fw-medium text-secondary custom-head m-0"
+                            >
+                              Conversion Ratio
+                            </h6>
+                            <p class="m-0 mb-2 text-dark fw-bold fs-4">
+                              12.08%
+                            </p>
+                          </div>
+                          <div class="graph-image">
+                            
+                            <img src="https://res.cloudinary.com/djjtzlcrx/image/upload/v1690351604/Screenshot_10_pegv1y.png" class="w-100"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="down-cont d-flex justify-content-between align-items-center"
+                      >
+                        <p class="customers-view text-success ms-5 fw-medium">
+                          View All
+
+                          <span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10"
+                              height="10"
+                              fill="currentColor"
+                              class="bi bi-arrow-right"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                              />
+                            </svg>
+                          </span>
+                        </p>
+
+                        <div class="precent-container">
+                          <p
+                            class="percent-head m-0 text-danger fw-semibold month-para"
+                          >
+                            -12%
+                          </p>
+                          <p
+                            class="month-para m-0 text-secondary month-para custom-head"
+                          >
+                            this month
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div
+                      class="graph-card-1 col-12 col-md-5 m-0 ms-lg-3 ms-md-3 bg-white pb-3 pt-3 ps-2 pe-2 mb-3"
+                    >
+                      <div class="customers-container d-flex flex-column mb-3">
+                        <div class="d-flex">
+                          <p
+                            class="customer-logo rounded-circle bg-warning text-center pe-2 ps-2 pt-1 pb-1 me-2"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-briefcase text-light"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"
+                              />
+                            </svg>
+                          </p>
+                          <div
+                            class="total-customers-card d-flex justify-content-between w-100 align-items-center"
+                          >
+                            <div class="customer-head">
+                              <h6
+                                class="fw-medium text-secondary custom-head m-0"
+                              >
+                                Total Deals
+                              </h6>
+                              <p class="m-0 mb-2 text-dark fw-bold fs-4">
+                                1,02,890
+                              </p>
+                            </div>
+                            <div class="graph-image">
+                              <img src="https://res.cloudinary.com/djjtzlcrx/image/upload/v1690351814/Screenshot_12_cvlyyd.png" class="w-100"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="down-cont d-flex justify-content-between align-items-center"
+                        >
+                          <p class="customers-view ms-5 fw-medium text-warning">
+                            View All
+
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="10"
+                                height="10"
+                                fill="currentColor"
+                                class="bi bi-arrow-right"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                                />
+                              </svg>
+                            </span>
+                          </p>
+
+                          <div class="precent-container">
+                            <p
+                              class="percent-head m-0 text-success fw-semibold month-para"
+                            >
+                              +19%
+                            </p>
+                            <p
+                              class="month-para m-0 text-secondary month-para custom-head"
+                            >
+                              this month
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="revenue-analysis-container bg-white col-12">
+                    <div
+                      class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 mb-3"
+                    >
+                      <div class="deal-card d-flex align-items-center">
+                        <hr class="hr-line me-1" />
+                        <h6 class="topdeal-head fw-semibold mt-1">
+                          Revenue Analytics
+                        </h6>
+                      </div>
+                      <div class="view-all-card pe-2 ps-2 pt-2">
+                        <p class="view">
+                          View All
+                          <span>
+                            <i class="fa-solid fa-angle-down"></i>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="revenue-sales-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2"
+                    >
+                      <p class="text-secondary custom-head fw-medium m-0">
+                        Revenue Analytics with sales & profit(USD)
+                      </p>
+                      <div class="all-btns-container align-items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-plus-circle icons"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                          />
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-dash-circle icons"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                          />
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-zoom-in text-info"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                          />
+                          <path
+                            d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
+                          />
+                        </svg>
+                        <i class="fa-regular fa-hand icons"></i>
+                        <i class="fa-solid fa-house icons"></i>
+                        <i class="fa-solid fa-bars icons"></i>
+                      </div>
+                    </div>
+                    <div class="revenue-graph-image mb-3">
+                      <img
+                        src="https://res.cloudinary.com/djlngo4cq/image/upload/v1690292094/Screenshot_6_tys0fz.png"
+                        class="w-100 pe-3 ps-3 pt-2 pb-2"
+                        alt="revenue-graph-image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 bg-white rounded main-table-container">
+                <div
+                  class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 mb-3"
+                >
+                  <div class="deal-card d-flex align-items-center">
+                    <hr class="hr-line me-1" />
+                    <h6 class="topdeal-head fw-semibold mt-1">
+                      Deals Statistics
+                    </h6>
+                  </div>
+                  <div class="view-all-card pe-2 ps-2 pt-2 d-flex align-items-center">
+                    <input type="text" placeholder="Search Here" class="form-control form-control-sm pe-3 ps-3 text-secondary"/>
+                    <button type="button" class="text-light sortby-btn text-center ms-1 fw-bold">Sort By 
+                      <i class="fa-solid fa-angle-down text-light"></i>
+                    </button>
+                    </p>
+                  </div>
+                </div>
+                <div class="table-container pb-0 mb-3 border-opacity-25 pe-2 ps-2">
+                  <table class="table total-font table-hover border table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col"><input type="checkbox" class="table-checkbox"/></th>
+                        <th scope="col">Sales Rep</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Mail</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-data-hover">
+                        <th scope="row"><input type="checkbox" class="table-checkbox"/></th>
+                        <td class="d-flex align-items-center text-center">
+                          <img src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg" alt="users-icons" class="table-icons-image"/>
+                          <p class="fw-medium m-0 table-username text-dark fw-bold">Mayor Kelly</p>
+                        </td>
+                        <td class="table-username">Manufacture</td>
+                        <td class="table-username">mayorkelly@gmail.com</td>
+                        <td>
+                          <p class="text-info bg-info bg-opacity-25 m-0 text-center country-name fw-bold p-1">Germany</p>
+                        </td>
+                        <td class="table-username">Sep 15 - Oct 12,2023</td>
+                        <td>
+                          <div class="action-icons-container">
+                            <p class="action-icons m-0">
+                              <span class="text-center download-icon pe-1 ps-2 pb-1 pt-1 me-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                              </span>
+                              <span class="edit-icon text-center pe-2 ps-1 pb-1 pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </span>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="table-data-hover">
+                        <th scope="row"><input type="checkbox" checked class="table-checkbox"/></th>
+                        <td class="d-flex align-items-center">
+                          <img src="https://spruko.com/demo/ynex/dist/assets/images/faces/15.jpg" alt="users-icons" class="table-icons-image"/>
+                          <p class="fw-medium m-0 table-username fw-semibold">Andrew Garfield</p>
+                        </td>
+                        <td class="table-username">Development</td>
+                        <td class="table-username">andrewgarfield@gmail.com</td>
+                        <td>
+                          <p class="text-primary bg-primary bg-opacity-25 m-0 text-center country-name fw-bold p-1">Canada</p>
+                        </td>
+                        <td class="table-username">Apr 10 - Dec 12,2023</td>
+                        <td>
+                          <div class="action-icons-container">
+                            <p class="action-icons m-0">
+                              <span class="text-center download-icon pe-1 ps-2 pb-1 pt-1 me-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                              </span>
+                              <span class="edit-icon text-center pe-2 ps-1 pb-1 pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </span>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="table-data-hover">
+                        <th scope="row"><input type="checkbox" class="table-checkbox"/></th>
+                        <td class="d-flex align-items-center">
+                          <img src="https://spruko.com/demo/ynex/dist/assets/images/faces/11.jpg" alt="users-icons" class="table-icons-image"/>
+                          <p class="fw-medium m-0 table-username fw-semibold">Simon Cowel</p>
+                        </td>
+                        <td class="table-username">Service</td>
+                        <td class="table-username">simoncowel234@gmail.com</td>
+                        <td>
+                          <p class="text-danger bg-danger bg-opacity-25 m-0 text-center country-name fw-bold p-1">Europe</p>
+                        </td>
+                        <td class="table-username">Sep 15 - Oct 12,2023</td>
+                        <td>
+                          <div class="action-icons-container">
+                            <p class="action-icons m-0">
+                              <span class="text-center download-icon pe-1 ps-2 pb-1 pt-1 me-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                              </span>
+                              <span class="edit-icon text-center pe-2 ps-1 pb-1 pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </span>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="table-data-hover">
+                        <th scope="row"><input type="checkbox" checked class="table-checkbox"/></th>
+                        <td class="d-flex align-items-center">
+                          <img src="https://spruko.com/demo/ynex/dist/assets/images/faces/8.jpg" alt="users-icons" class="table-icons-image"/>
+                          <p class="fw-medium m-0 table-username fw-semibold">Mirinda Hers</p>
+                        </td>
+                        <td class="table-username">Marketing</td>
+                        <td class="table-username">mirindahers@gmail.com</td>
+                        <td>
+                          <p class="text-warning bg-warning bg-opacity-25 m-0 text-center country-name fw-bold p-1">USA</p>
+                        </td>
+                        <td class="table-username">Apr 14 - Dec 14,2023</td>
+                        <td>
+                          <div class="action-icons-container">
+                            <p class="action-icons m-0">
+                              <span class="text-center download-icon pe-1 ps-2 pb-1 pt-1 me-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                              </span>
+                              <span class="edit-icon text-center pe-2 ps-1 pb-1 pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </span>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="table-data-hover">
+                        <th scope="row"><input type="checkbox" checked class="table-checkbox"/></th>
+                        <td class="d-flex align-items-center">
+                          <img src="https://spruko.com/demo/ynex/dist/assets/images/faces/9.jpg" alt="users-icons" class="table-icons-image"/>
+                          <p class="fw-medium m-0 table-username fw-semibold">Jacob Smith</p>
+                        </td>
+                        <td class="table-username">Social Platform</td>
+                        <td class="table-username">jacobsmith@gmail.com</td>
+                        <td>
+                          <p class="text-success bg-success bg-opacity-25 m-0 text-center country-name fw-bold p-1">Singapore</p>
+                        </td>
+                        <td class="table-username">Feb 25 - Nov 25,2023</td>
+                        <td>
+                          <div class="action-icons-container">
+                            <p class="action-icons m-0">
+                              <span class="text-center download-icon pe-1 ps-2 pb-1 pt-1 me-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                </svg>
+                              </span>
+                              <span class="edit-icon text-center pe-2 ps-1 pb-1 pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                </svg>
+                              </span>
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="entries-container d-flex justify-content-between align-items-center pe-2 ps-2 mb-3 pb-3">
+                  <div class="entries-left-container">
+                    <p class="text-secondary m-0 show-para">
+                      Showing 5 Entries <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="entries-right-container">
+                    <p class="entries-btns m-0">
+                      <span class="prev text-secondary me-1">Prev</span>
+                      <span class="one pe-2 ps-2 pb-1 pt-1 me-1">1</span>
+                      <span class="two me-1">2</span>
+                      <span class="next me-1">next</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right-side-partition col-12 col-xl-3 m-0 p-0">
+              <div class="right-container-1 bg-white pb-2 pt-2 mb-3">
+                <div
+                  class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 pt-1 pb-1 mb-3"
+                >
+                  <div class="deal-card d-flex align-items-center">
+                    <hr class="hr-line me-1" />
+                    <h6 class="topdeal-head fw-semibold mt-1">
+                      Leads By Source
+                    </h6>
+                  </div>
+                  <div class="three-dots-card pe-2 ps-2 pt-1 pb-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-three-dots-vertical bg-transparent"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                  <img
+                    src="https://res.cloudinary.com/djlngo4cq/image/upload/v1690277964/Screenshot_4_qo259v.png"
+                    class="mobile-survey-image"
+                  />
+                </div>
+                <ul
+                  class="total-analysis-data d-flex justify-content-between m-0 border-secondary border-opacity-25"
+                >
+                  <li
+                    class="li-item-1 text-secondary fw-lighter border-secondary border-opacity-25"
+                  >
+                    Mobile <br /><span class="amount text-dark fw-semibold"
+                      >1,624</span
+                    >
+                  </li>
+                  <li
+                    class="li-item-2 text-secondary border-secondary border-opacity-25"
+                  >
+                    Desktop <br /><span class="amount text-dark fw-semibold"
+                      >1,267</span
+                    >
+                  </li>
+                  <li
+                    class="li-item-3 text-secondary border-secondary border-opacity-25"
+                  >
+                    Laptop <br /><span class="amount text-dark fw-semibold"
+                      >1,153</span
+                    >
+                  </li>
+                  <li
+                    class="li-item-4 text-secondary border-secondary border-opacity-25"
+                  >
+                    Tablet <br /><span class="amount text-dark fw-semibold"
+                      >679</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="right-container-2 bg-white rounded">
+                <div
+                  class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 mb-3"
+                >
+                  <div class="deal-card d-flex align-items-center">
+                    <hr class="hr-line me-1" />
+                    <h6 class="topdeal-head fw-semibold mt-1">Deals Status</h6>
+                  </div>
+                  <div class="view-all-card pe-2 ps-2 pt-2">
+                    <p class="view">
+                      View All
+                      <span>
+                        <i class="fa-solid fa-angle-down"></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <p class="comparision-para ps-3 pe-3 text-center">
+                  <span
+                    class="comparision-amount text-dark fw-semibold fs-3 me-1"
+                    >4,289</span
+                  >
+                  <span
+                    class="comparision-percent bg-success bg-opacity-25 text-success pe-1 ps-1 pt-1 pb-1 text-center me-1 fw-bold"
+                    >1.02 ^</span
+                  >
+                  <span class="compared-para text-secondary fw-lighter"
+                    >compared to last week</span
+                  >
+                </p>
+                <img
+                  src="https://res.cloudinary.com/djlngo4cq/image/upload/v1690282494/Screenshot_5_kqmbzm.png"
+                  class="w-100 mb-3"
+                />
+                <ul class="deals-unordered fw-medium text-secondary pe-2">
+                  <li class="deal-li-1">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="item-para">Successful Deals</p>
+                      <p class="item-deals">978 deals</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-2">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="item-para">Pending Deals</p>
+                      <p class="item-deals">1078 deals</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-3">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="item-para">Rejected Deals</p>
+                      <p class="item-deals">1674 deals</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-4">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="item-para">Upcoming Deals</p>
+                      <p class="item-deals">921 deals</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-container-3 bg-white rounded">
+                <div
+                  class="top-deals-container d-flex flex-row justify-content-between align-items-center pe-2 ps-2 mb-3"
+                >
+                  <div class="deal-card d-flex align-items-center">
+                    <hr class="hr-line me-1" />
+                    <h6 class="topdeal-head fw-semibold mt-1">
+                      Recent Activity
+                    </h6>
+                  </div>
+                  <div class="view-all-card pe-2 ps-2 pt-2">
+                    <p class="view">
+                      View All
+                      <span>
+                        <i class="fa-solid fa-angle-down"></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="timeline-unordered fw-medium pe-2">
+                  <li class="deal-li-1">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para text-dark fw-semibold">
+                        Update of calender events &
+                        <span class="timeline-span-1"
+                          >Added new events in next week.</span
+                        >
+                      </p>
+                      <p class="time text-secondary fw-medium">4:45PM</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-2">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-2 text-dark fw-lighter">
+                        New theme for
+                        <span class="spruko-span fw-semibold"
+                          >spruko website
+                        </span>
+                        completed<br /><span class="time">
+                          Lorem ipsum,dolor sit amet.
+                        </span>
+                      </p>
+                      <p class="time text-secondary">3 hrs</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-3">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-2">
+                        Created a
+                        <span class="task-span text-success fw-semibold"
+                          >New Task</span
+                        >
+                        Today
+                        <span class="add-span rounded-circle p-1">
+                          <i class="fa-solid fa-plus"></i>
+                        </span>
+                      </p>
+                      <p class="time text-secondary">22 hrs</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-pink">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-2">
+                        New member
+                        <span
+                          class="andreo-span pe-1 ps-1 rounded pt-1 pb-1 fw-semibold"
+                          >@andreas gurrero</span
+                        >
+                        added today to AI summit
+                      </p>
+                      <p class="time text-secondary">today</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-5">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-2 fw-medium">
+                        32 New people joined summit.
+                      </p>
+                      <p class="time text-secondary">22 hrs</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-6">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-2">
+                        Neon Tarly added
+                        <span class="robert-span text-info fw-semibold"
+                          >Robert Bright </span
+                        >to AI summit project.
+                      </p>
+                      <p class="time text-secondary">12 hrs</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-7">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-4">
+                        Replied to new support request
+                        <span class="right-icon"
+                          ><i
+                            class="fa-regular fa-circle-check text-success"
+                          ></i
+                        ></span>
+                      </p>
+                      <p class="time text-secondary">4 hrs</p>
+                    </div>
+                  </li>
+                  <li class="deal-li-8">
+                    <div
+                      class="deal-item d-flex justify-content-between align-items-center"
+                    >
+                      <p class="timeline-para-4">
+                        Completed documentation of
+                        <span class="underline-span fw-semibold"
+                          >AI Summit.</span
+                        >
+                      </p>
+                      <p class="time text-secondary">4 hrs</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-container bg-white w-100 p-3 d-flex justify-content-center">
+            <p class="footer-data m-0 text-secondary">
+              Copyright
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+                </svg>
+              </span>
+              2023
+              <span class="ynex text-dark fw-bold">Ynex.</span>
+              Designed with ❤️ by
+              <span class="spruko fw-semibold">Spruko</span>
+              All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

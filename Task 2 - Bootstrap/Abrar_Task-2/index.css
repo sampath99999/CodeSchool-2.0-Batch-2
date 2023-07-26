@@ -1,0 +1,489 @@
+* {
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.dashboard-container {
+  background-color: #111c43;
+  position: fixed;
+  height: 100vh;
+  overflow-x: scroll;
+}
+.dashboard-container::-webkit-scrollbar {
+  display: none;
+}
+.logo-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  z-index: 1;
+  width: 17vw;
+  background-color: #111c43;
+}
+.dashboard-main-container {
+  margin-top: 10vh;
+}
+.main-para {
+  font-size: 9px;
+  opacity: 0.5;
+  color: #a3aed1;
+}
+.home-logo-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 7px;
+}
+.twelve {
+  color: rgb(245, 184, 73);
+  background-color: rgba(245, 184, 73, 0.1);
+  border-radius: 3px;
+  font-size: 12px;
+}
+.dash-para {
+  font-size: 14px;
+}
+.crm-list {
+  color: #ffffff;
+  list-style: circle;
+  font-size: 12px;
+}
+.dashboard-list-items {
+  font-family: montserrat, sans-serif;
+  list-style: circle;
+  font-size: 13px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+.dashboard-list-items:hover {
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 2;
+  background-color: rgba(245, 184, 73, 0.1);
+  border-radius: 8px;
+}
+.right-icon {
+  font-size: 12px;
+}
+.hot {
+  background-color: rgba(245, 184, 73, 0.1);
+  border-radius: 6px;
+}
+.three {
+  background-color: rgba(40, 167, 69, 0.1);
+  border-radius: 6px;
+  opacity: 1;
+}
+.data-container {
+  background-color: rgba(240, 241, 247, 1);
+}
+.flag-image {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.men-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.right-side-container {
+  gap: 20px;
+}
+.user-name {
+  font-size: 12px;
+  color: gray;
+}
+.user-designation {
+  font-size: 10px;
+  color: gray;
+}
+.empty-grid {
+  border: 2px dashed black;
+  height: 15px;
+  width: 15px;
+}
+.navbar-container {
+  justify-content: space-between;
+  height: 8vh;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+}
+.settings {
+  display: block;
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.export:hover {
+  color: white;
+}
+
+.power {
+  border-radius: 50%;
+  background-color: rgba(132, 90, 223, 1);
+}
+.username-container {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh;
+}
+.username {
+  font-size: 17px;
+}
+.user-desc {
+  font-size: 12px;
+}
+.filter-btn {
+  background-color: rgba(132, 90, 223, 1);
+  border: 0px solid;
+  border-radius: 4px;
+  height: 37px;
+  width: 90px;
+}
+.first-card {
+  background-image: url("https://spruko.com/demo/ynex/dist/assets/images/media/media-65.png");
+  background-size: cover;
+  opacity: 1;
+  border-radius: 6px;
+}
+.partition-1 {
+  opacity: 1;
+  border-radius: 6px;
+  background-color: rgba(132, 90, 223, 1);
+  opacity: 0.8;
+}
+.target-head {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.target-para {
+  opacity: 0.75;
+  font-size: 12px;
+}
+.target-link {
+  font-size: 14px;
+}
+.percentage {
+  color: orange;
+  font-weight: bold;
+  opacity: 1;
+}
+.right-details-card {
+  border: 4px solid;
+  border-color: linear-gradient(rgba(132, 90, 223, 1), white);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hr-line {
+  height: 20px;
+  width: 5px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(35, 183, 229, 0.8) 50%,
+    rgba(132, 90, 223, 0.5) 50%
+  );
+}
+.top-deals-container {
+  border-bottom: 1px solid lightgray;
+}
+.three-dots-card {
+  background-color: #cfe2ff;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+.second-card {
+  border-radius: 6px;
+}
+.deal-user-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.deal-username {
+  font-size: 10px;
+}
+.deal-user-email {
+  font-size: 9px;
+}
+.rupee-head {
+  font-size: 12px;
+}
+.emigo-logo {
+  font-size: 10px;
+  border-radius: 50%;
+}
+.view-all-card {
+  color: gray;
+  font-size: 13px;
+}
+.third-card {
+  border-radius: 6px;
+}
+.graph-card-1 {
+  border-radius: 6px;
+}
+.customer-logo {
+  background-color: rgba(132, 90, 223, 1);
+  height: 35px;
+  width: 35px;
+}
+.graph {
+  color: rgba(132, 90, 223, 1);
+}
+.month-para {
+  font-size: 14px;
+}
+.customers-view {
+  color: rgba(132, 90, 223, 1);
+  font-size: 15px;
+}
+.custom-head {
+  font-size: 13px;
+}
+.down-cont {
+  margin-top: 10%;
+}
+.partition-container {
+  display: inline-block;
+}
+.revenue-analysis-container {
+  border-radius: 6px;
+}
+.icons {
+  color: gray;
+}
+.icons:hover {
+  color: black;
+}
+.survey-image-container {
+  border: 10px solid saddlebrown;
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  border-color: rgba(132, 90, 223, 1);
+}
+.right-container-1 {
+  border-radius: 6px;
+}
+.mobile-survey-image {
+  width: 50%;
+}
+.total-analysis-data {
+  border: 1px dotted;
+}
+.total-analysis-data li {
+  font-size: 14px;
+  border-right: 1px dotted;
+  padding: 5;
+}
+.amount {
+  font-size: 16px;
+}
+.li-item-1::marker {
+  color: rgba(132, 90, 223, 1);
+}
+.li-item-2::marker {
+  color: skyblue;
+}
+.li-item-3::marker {
+  color: orange;
+}
+.li-item-4::marker {
+  color: green;
+}
+
+.comparision-percent {
+  font-size: 10px;
+  border-radius: 4px;
+}
+.compared-para {
+  font-size: 14px;
+}
+.deal-li-1::marker {
+  color: rgba(132, 90, 223, 1);
+}
+.deal-li-2::marker {
+  color: skyblue;
+}
+.deal-li-3::marker {
+  color: orange;
+}
+.deal-li-4::marker {
+  color: green;
+}
+.item-para {
+  font-size: 14px;
+}
+.item-deals {
+  font-size: 14px;
+}
+.timeline-para {
+  font-size: 13px;
+}
+.timeline-span-1 {
+  color: rgba(132, 90, 223, 1);
+}
+.time {
+  font-size: 14px;
+  opacity: 0.5;
+}
+.timeline-unordered {
+  font-size: 12px;
+}
+
+.timeline-unordered li::marker {
+  font-size: 25px;
+}
+.spruko-span {
+  color: black;
+  font-size: 14px;
+}
+.add-span {
+  background-color: #f5f0eb;
+  color: purple;
+}
+.andreo-span {
+  background-color: #fff6ed;
+  color: #d63385;
+  font-size: 12px;
+}
+.deal-li-pink::marker {
+  color: #d63385;
+}
+.deal-li-5::marker {
+  color: orange;
+}
+.deal-li-6::marker {
+  color: skyblue;
+}
+.deal-li-7::marker {
+  color: black;
+}
+.deal-li-8::marker {
+  color: #6f42c1;
+}
+.underline-span {
+  color: #6f42c1;
+  text-decoration: underline;
+}
+.sortby-btn {
+  background-color: rgba(132, 90, 223, 1);
+  border: 0px solid;
+  border-radius: 5px;
+  height: 30px;
+  width: 70px;
+  font-size: 9px;
+}
+.table-container {
+  border-bottom: 1px solid gray;
+}
+.table-icons-image {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.table-username {
+  font-size: 13px;
+}
+.total-font {
+  font-size: 14px;
+}
+.country-name {
+  font-size: 10px;
+  border-radius: 6px;
+  opacity: 0.75;
+}
+.table-data-hover:hover {
+  background-color: rgba(245, 184, 73, 0.1);
+}
+.download-icon {
+  border-radius: 4px;
+  background-color: rgb(221, 255, 221);
+  color: #14a44d;
+}
+.download-icon:hover {
+  background-color: #14a44d;
+  color: white;
+}
+.edit-icon {
+  background-color: #d1c4e9;
+  border-radius: 4px;
+  color: purple;
+}
+.edit-icon:hover {
+  background-color: #7e57c2;
+  color: white;
+}
+.table-checkbox {
+  accent-color: #7e57c2;
+}
+.show-para {
+  font-size: 13px;
+  font-weight: 500;
+}
+.prev {
+  font-size: 12px;
+}
+.next {
+  font-size: 12px;
+  color: #7e57c2;
+}
+.one {
+  background-color: #7e57c2;
+  color: white;
+  border-radius: 5px;
+}
+.two {
+  font-size: 12px;
+}
+.footer-data {
+  font-size: 14px;
+}
+.spruko {
+  color: #7e57c2;
+  text-decoration: underline;
+}
+.table-container {
+  overflow: auto;
+}
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .right-side-container {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .username-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 992px) {
+  .data-container {
+    margin-left: 16.7vw;
+  }
+  .navbar-container {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .mobile-survey-image {
+    width: 100%;
+  }
+}

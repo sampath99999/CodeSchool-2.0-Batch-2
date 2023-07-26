@@ -70,15 +70,25 @@
   flex-wrap: wrap;
   width: 100%;
   height:100%;
+  padding-left: 20px;
   
  }
  .right-top,.right-top-btn,.right-between,.center-card{
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 10px;
+ }
+ .profit-graph{
+  margin-bottom: 10px;
+
+ }
+ .centercard-2 {
+  margin-top: 180px;
  }
  .revenue-graph .card{
   width: 20rem;
-  margin-top: 10rem; 
+  margin-top: 220px; 
+  margin-bottom: 10px;
  }
  .right-bottom .card-header,.right-bottom .card-body{
   width: 20rem;

@@ -1,0 +1,284 @@
+* {
+  margin: 0%;
+}
+.page{
+  height: 100rem;
+}
+@media (min-width: 992px) {
+  .logo-default {
+    display: block !important;
+    
+  }
+  .logo-small {
+    display: none !important;
+  }
+  .left-nav{
+   height: 2.5rem;
+   background-color: #101c42;
+   width: 15.85rem;
+   translate: -1rem -0.6rem;
+   
+  }
+  .left-nav img{
+    translate: -6rem 1rem;
+    padding-bottom: 9px;
+    padding-left: 10rem;
+    padding-right: 5.6rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo-default {
+    display: none !important;
+  }
+  .logo-small {
+    display: block;
+    /* width: 111px !important;
+		height: 54px !important; */
+  }
+  .right-nav .bi-moon{
+    translate: 4rem 0rem ;
+  }
+  .right-nav .nav-flag{
+    translate: 4rem 0rem ;
+  }
+  .right-nav .bi-search{
+    translate: 4rem 0rem ;
+  }
+  .right-nav .bi-gear{
+    translate: -1.5rem 0rem ;
+  }
+
+
+  /* #header .header-logo {
+		width: auto !important;
+		height: auto !important;
+	} */
+  .profile-name div {
+    display: none;
+  }
+  .bi-cart2 {
+    display: none;
+  }
+  .bi-bell {
+    display: none;
+  }
+ .left-page,.left-page-total{
+  display: none;
+ }
+ .page{
+  flex-wrap: wrap;
+  width: 100%;
+  height:100%;
+  padding-left: 20px;
+  
+ }
+ .right-top,.right-top-btn,.right-between,.center-card{
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+ }
+ .profit-graph{
+  margin-bottom: 10px;
+
+ }
+ .centercard-2 {
+  margin-top: 180px;
+ }
+ .revenue-graph .card{
+  width: 20rem;
+  margin-top: 220px; 
+  margin-bottom: 10px;
+ }
+ .right-bottom .card-header,.right-bottom .card-body{
+  width: 20rem;
+  
+  
+ }
+ .right-bottom{
+  margin-top: 25rem;
+ }
+
+
+}
+.page-header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;
+  z-index: 100;
+}
+.left-page{
+  height: 55rem;
+}
+.left-page li:hover{
+  cursor: pointer;
+  background-color: #1d284d;
+
+}
+.left-nav {
+  margin: 0px;
+  gap: 30px;
+}
+.left-nav img {
+  display: inline-block;
+
+  background-color: #101c42;
+}
+
+.menu-nav i {
+  font-size: 25px;
+}
+.right-nav {
+  padding-right: 20px;
+  gap: 30px;
+  padding-top: 7px;
+}
+.right-nav i {
+  font-size: 18px;
+}
+.nav-flag {
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+}
+.profile-name {
+  font-size: 10px;
+}
+.page {
+  padding-top: 60px;
+}
+.left-page {
+  width: 250px;
+  background-color: #101c42;
+  color: white;
+}
+.left-page-header {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.dashboard {
+  padding-left: 20px;
+  gap: 10px;
+  background-color: #1d284d;
+  margin: 0px 10px;
+  padding-top: 6px;
+  border: 1px solid #1d284d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dashboard .bi-caret-down {
+  padding-left: 5px;
+}
+.dashboard .btn-button {
+  color: orange;
+  font-size: 8px;
+  background-color: #33374e;
+}
+.dashboard-content {
+  padding-left: 60px;
+  font-size: 15px;
+  list-style-type: circle;
+  line-height: 35px;
+}
+.remaning-elements {
+  color: #a3aed1;
+}
+.icon-listing {
+  color: #a3aed1;
+  gap: 10px;
+  padding-left: 15px;
+}
+.icon-listing .bi-caret-right {
+  padding-left: 50px;
+}
+.right-page {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f0f1f7;
+  width: 100%;
+}
+.welcome p {
+  font-size: 12px;
+}
+.right-top-btn {
+  gap: 15px;
+}
+.filter-btn {
+  background-color: #845ade;
+  color: white;
+
+  height: 40px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.export-btn {
+  color: #23b7e5;
+  border: 1px solid #23b7e5;
+  height: 40px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.graphcard-p{
+  font-size: 12px;
+}
+.graphcard-cust-count{
+  margin-bottom: 20px;
+}
+.graphimg{
+  width: 100px;
+  margin-top: 20px;
+}
+.graphcard-percent{
+  margin-top: 40px;
+  margin-left: 60px;
+  font-size: 12px;
+}
+.graphcard-link{
+  
+  font-size: 15px;
+  text-decoration: none;
+}
+.right-left{
+    width: 30%;
+}
+.right-center{
+    width: 90%; 
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.right-right{
+    width:70%;
+    
+   
+   
+}
+.activity{
+  font-size: 10px;
+}
+.time{
+  font-size: 8px;
+}
+.pie-info{
+  border-top:0.3px dashed rgba(0, 0, 0, 0.283) ;
+  border-right: 0.3px dashed rgba(0, 0, 0, 0.283);
+  
+}
+.right-bottom{
+  width: 65rem;
+  translate: 0px -370px;
+}
+footer{
+  background-color: #f0f1f7;
+  height:60px ;
+}
+.footer{
+ translate:0px 20px  ;
+  background-color: white;
+  height: 40px;
+  
+}

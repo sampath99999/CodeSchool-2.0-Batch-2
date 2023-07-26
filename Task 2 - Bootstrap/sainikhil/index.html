@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+    <header class="page-header">
+      <div
+        class="top-nav d-flex align-items-stretch justify-content-between h-100 container-fluid"
+      >
+        <div class="left-nav d-inline-block ">
+          <img
+            src="https://spruko.com/demo/ynex/dist/assets/images/brand-logos/desktop-dark.png"
+            alt=""
+            class="logo-default"
+          />
+          <img
+            src="	https://spruko.com/demo/ynex/dist/assets/images/brand-logos/toggle-logo.png"
+            alt=""
+            class="logo-small"
+          />
+          
+        </div>
+        <div class="menu-nav"><i class="bi bi-list text-dark d-inline-block" style="translate:-28rem"></i></div>
+
+        <div class="right-nav d-flex align-items-stretch">
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-search text-dark"></i>
+          </div>
+          <div class="d-flex align-items-stretch">
+            <img
+              src="https://spruko.com/demo/ynex/dist/assets/images/flags/us_flag.jpg"
+              alt="country"
+              class="nav-flag"
+            />
+          </div>
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-moon"></i>
+          </div>
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-cart2"></i>
+          </div>
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-bell"></i>
+          </div>
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-list-nested"></i>
+          </div>
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-person-square text-warning"></i>
+          </div>
+          <div class="d-flex align-items-stretch">
+            <div class="d-flex flex-column profile-name">
+              <div class="fw-bold">Json Taylor</div>
+              <div class="opacity-50">Web Designer</div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-stretch">
+            <i class="bi bi-gear"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page d-flex">
+      <div class="left-page-total">
+      <div class="left-page border-top">
+        <h6 class="left-page-header opacity-50">MAIN</h6>
+
+        <div class="dashboard d-flex">
+          <i class="bi bi-house-door"></i>
+          <p>Dashboards</p>
+          <p class="btn btn-button">12</p>
+          <i class="bi bi-caret-down"></i>
+        </div>
+        <ul class="dashboard-content">
+          <li class="curr-element">CRM</li>
+          <li class="remaning-elements">Ecommerce</li>
+          <li class="remaning-elements">Crypto</li>
+          <li class="remaning-elements">Jobs</li>
+          <li class="remaning-elements">NFT</li>
+          <li class="remaning-elements">Sales</li>
+          <li class="remaning-elements">Analytics</li>
+          <li class="remaning-elements">Projects</li>
+          <li class="remaning-elements">HRM</li>
+          <li class="remaning-elements">Stocks</li>
+          <li class="remaning-elements">Courses</li>
+          <li class="remaning-elements">Personal</li>
+        </ul>
+        <h6 class="left-page-header opacity-50">PAGES</h6>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-file-earmark"></i>
+          <p style="padding-right: 60px">Pages</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-fingerprint"></i>
+          <p>Authentication</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-exclamation-triangle"></i>
+          <p style="padding-right: 68px">Error</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+        <h6 class="left-page-header opacity-50">GENERAL</h6>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-archive"></i>
+          <p style="padding-right: 18px">Ui Elements</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-award"></i>
+          <p style="padding-right: 50px">Utilities</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-file-earmark"></i>
+          <p style="padding-right: 58px">Forms</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+        <div class="icon-listing d-flex">
+          <i class="bi bi-archive"></i>
+          <p style="padding-right: 13px">Advanced Ui</p>
+          <i class="bi bi-caret-right"></i>
+        </div>
+      </div>
+      <div style="background-color: #f0f1f7;height: 45rem;"><div class="icon-listing d-flex left-page-bottom" >
+        <i class="bi bi-gift-fill"></i>
+        <p style="padding-right: 58px">Widgets</p>
+        <p class="text-danger text-bg-danger bg-opacity-10 p-1" style="translate: -55px 0px;font-size: 13px;">Hot</p>
+      </div>
+      <h6 class="left-page-header opacity-50">GENERAL</h6>
+    </div></div>
+      <div class="right-page">
+        <div class="right-top d-flex justify-content-between">
+          <div class="welcome">
+            <h5>Welcome back, Json Taylor !</h5>
+            <p class="opacity-50">
+              Track your sales activity, leads and deals here.
+            </p>
+          </div>
+          <div class="right-top-btn d-flex">
+            <div class="d-flex filter-btn">
+              <i class="bi bi-filter"></i>
+              <h6>Filters</h6>
+            </div>
+            <div class="d-flex export-btn">
+              <i class="bi bi-cloud-arrow-up"></i>
+              <h6>Export</h6>
+            </div>
+          </div>
+        </div>
+     
+        <div class="right-between d-flex">
+          <div class="right-left">
+            <div
+              class="card"
+              style="width: 22rem; background-color: #8b72dc; color: white"
+            >
+              <div class="card-body">
+                <div class="d-flex">
+                  <div class="w-75">
+                    <h5 class="card-title">Your target is incomplete</h5>
+
+                    <p class="card-text">
+                      You have completed
+                      <span class="text-warning"> 48% </span>of the given
+                      target, you can also creck your status.
+                    </p>
+                    <a href="#" class="card-link text-white fw-bold"
+                      >Card link</a
+                    >
+                  </div>
+                  <div class="mt-4"><img src="progress.png" alt="" /></div>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group mt-4" style="width: 22rem; height: 360px">
+              <li class="list-group-item border-bottom" style="border: 0 none">
+                <div class="d-flex w-100 justify-content-between">
+                  <h6 style="margin-right: 120px">Top Deals</h6>
+                  <i
+                    class="bi bi-three-dots-vertical bg-body-secondary ps-2 pe-2"
+                  ></i>
+                </div>
+              </li>
+
+              <li class="list-group-item" style="border: 0 none">
+                <div class="d-flex w-100 justify-content-between">
+                  <i class="bi bi-person-circle text-primary fs-4"></i>
+                  <h6 style="margin-right: 120px">Michael Jordan</h6>
+                  <h6>$2,893</h6>
+                </div>
+                <p
+                  style="translate: 5px -20px; font-size: 12px"
+                  class="px-4 opacity-50"
+                >
+                  michael@gmail.com
+                </p>
+              </li>
+              <li
+                class="list-group-item"
+                style="border: 0 none; translate: 0px -30px"
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <i class="bi bi-person-circle text-warning fs-4"></i>
+                  <h6 style="margin-right: 120px">Emigo Kiarenar</h6>
+                  <h6>$4,290</h6>
+                </div>
+                <p
+                  style="translate: 5px -20px; font-size: 12px"
+                  class="px-4 opacity-50"
+                >
+                  emigo@gmail.com
+                </p>
+              </li>
+              <li
+                class="list-group-item"
+                style="border: 0 none; translate: 0px -60px"
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <i class="bi bi-person-circle text-success fs-4"></i>
+                  <h6 style="margin-right: 120px">Randy Origonor</h6>
+                  <h6>$6,347</h6>
+                </div>
+                <p
+                  style="translate: 5px -20px; font-size: 12px"
+                  class="px-4 opacity-50"
+                >
+                  randy@gmail.com
+                </p>
+              </li>
+              <li
+                class="list-group-item"
+                style="border: 0 none; translate: 0px -90px"
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <i class="bi bi-person-circle text-danger fs-4"></i>
+                  <h6 style="margin-right: 120px">George Thomas</h6>
+                  <h6>$3,894</h6>
+                </div>
+                <p
+                  style="translate: 5px -20px; font-size: 12px"
+                  class="px-4 opacity-50"
+                >
+                  george@gmail.com
+                </p>
+              </li>
+              <li
+                class="list-group-item"
+                style="border: 0 none; translate: 0px -120px"
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <i class="bi bi-person-circle text-info fs-4"></i>
+                  <h6 style="margin-right: 120px">Michael Jordan</h6>
+                  <h6>$2,893</h6>
+                </div>
+                <p
+                  style="translate: 5px -20px; font-size: 12px"
+                  class="px-4 opacity-50"
+                >
+                  michael@gmail.com
+                </p>
+              </li>
+            </ul>
+            <div class="profit-graph">
+              <ul class="list-group mt-4" style="width: 22rem">
+                <li
+                  class="list-group-item border-bottom"
+                  style="border: 0 none"
+                >
+                  <div class="d-flex w-100 justify-content-between">
+                    <h6 style="margin-right: 120px; margin-top: 10px">
+                      Profits Earned
+                    </h6>
+                    <div class="d-flex mt-2">
+                      <p style="font-size: 12px" class="opacity-50">View All</p>
+                      <i class="bi bi-caret-down opacity-50 fs-6"></i>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item border-bottom"
+                  style="border: 0 none"
+                >
+                  <div class="d-flex w-100 justify-content-between">
+                    <img src="graph.png" alt="" style="width: 20rem" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="right-center">
+            <div class="d-flex gap-3 center-card" style="height: 11rem">
+              <div class="card" style="width: 320px; height: 10rem">
+                <div class="card-body">
+                  <div class="d-flex gap-3">
+                    <i class="bi bi-people text-white text-bg-primary rounded-5" style="margin-bottom: 120px;padding: 4px 10px;"></i>
+                    <div class="me-5">
+                      <p class="graphcard-p opacity-50">Total Customers</p>
+                      <h5 class="graphcard-cust-count">1,06,569</h5>
+
+                      <a
+                        href="#"
+                        class="card-link graphcard-view graphcard-link"
+                        style="color: rgb(132 90 222)"
+                        >View All</a
+                      ><i
+                        class="bi bi-arrow-right-short"
+                        style="color: rgb(132 90 222)"
+                      ></i>
+                    </div>
+                    <div>
+                      <img src="graph1.png" alt="" class="graphimg" />
+                      <h6 class="graphcard-percent text-success">+40%</h6>
+                      <p
+                        style="font-size: 12px; margin-left: 40px"
+                        class="opacity-25"
+                      >
+                        this month
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 320px; height: 10rem">
+                <div class="card-body">
+                  <div class="d-flex gap-3">
+                    <i class="bi bi-wallet text-white text-bg-info rounded-5" style="margin-bottom: 120px;padding: 4px 10px"></i>
+                    <div class="me-5">
+                      <p class="graphcard-p opacity-50">Total Revenue</p>
+                      <h5 class="graphcard-cust-count">$56,562</h5>
+
+                      <a
+                        href="#"
+                        class="card-link graphcard-view graphcard-link"
+                        style="color: rgb(132 90 222)"
+                        >View All</a
+                      ><i
+                        class="bi bi-arrow-right-short"
+                        style="color: rgb(132 90 222)"
+                      ></i>
+                    </div>
+                    <div>
+                      <img src="graph2.png" alt="" class="graphimg" />
+                      <h6 class="graphcard-percent text-success">+25%</h6>
+                      <p
+                        style="font-size: 12px; margin-left: 40px"
+                        class="opacity-25"
+                      >
+                        this month
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 center-card" style="height: 11rem">
+              <div class="card" style="width: 320px; height: 10rem">
+                <div class="card-body">
+                  <div class="d-flex gap-3">
+                    <i class="bi bi-bezier2 text-white text-bg-success rounded-5 opacity-75" style="margin-bottom: 120px;padding: 4px 10px"></i>
+                    <div class="me-5">
+                      <p class="graphcard-p opacity-50">Conversion Ratio</p>
+                      <h5 class="graphcard-cust-count">12.08%</h5>
+
+                      <a
+                        href="#"
+                        class="card-link graphcard-view graphcard-link"
+                        style="color: rgb(132 90 222)"
+                        >View All</a
+                      ><i
+                        class="bi bi-arrow-right-short"
+                        style="color: rgb(132 90 222)"
+                      ></i>
+                    </div>
+                    <div>
+                      <img src="graph3.png" alt="" class="graphimg" />
+                      <h6 class="graphcard-percent text-danger">-12%</h6>
+                      <p
+                        style="font-size: 12px; margin-left: 40px"
+                        class="opacity-25"
+                      >
+                        this month
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width: 320px; height: 10rem">
+                <div class="card-body">
+                  <div class="d-flex gap-3">
+                    <i class="bi bi-briefcase text-white text-bg-warning rounded-5 opacity-75" style="margin-bottom: 120px;padding: 4px 10px"></i>
+                    <div class="me-5">
+                      <p class="graphcard-p opacity-50">Total Deals</p>
+                      <h5 class="graphcard-cust-count">2,543</h5>
+
+                      <a
+                        href="#"
+                        class="card-link graphcard-view graphcard-link"
+                        style="color: rgb(132 90 222)"
+                        >View All</a
+                      > <i
+                        class="bi bi-arrow-right-short"
+                        style="color: rgb(132 90 222)"
+                      ></i>
+                    </div>
+                    <div>
+                      <img src="graph4.png" alt="" class="graphimg" />
+                      <h6 class="graphcard-percent text-success">+19%</h6>
+                      <p
+                        style="font-size: 12px; margin-left: 40px"
+                        class="opacity-25"
+                      >
+                        this month
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="revenue-graph mt-4" style="width: 660px">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between border-bottom">
+                  <h5 class="card-title">Revenue Analytics</h5>
+                    <div class="d-flex">
+                    <p style="font-size: 12px" class="opacity-50">View All</p>
+                    <i class="bi bi-caret-down opacity-50 d-inline-block" style="translate: 0px -3px;"></i>
+                  </div>
+                </div>
+                  <p class="card-text">
+                    <small class=" text-opacity-25"
+                      >Revenue Analytics with sales and profits(USD)</small
+                    >
+                  </p>
+                </div>
+                <img
+                  src="revenue-graph.png"
+                  class="card-img-bottom"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <div class="right-right">
+            <div class="card" style="width: 21rem">
+              <div class="card-body border-bottom">
+                <div class="d-flex justify-content-between">
+                  <h6 class="card-title">Leads By Source</h6>
+
+                  <i class="bi bi-three-dots-vertical bg-body-secondary"></i>
+                </div>
+              </div>
+              <img src="piegraph.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="d-flex justify-content-between " style="translate: 0px 23px;">
+                    <div class="pie-info"> <p><i class="bi bi-circle-fill d-inline-block" style="font-size: 10px;translate: 0px -3px;color: #845ade;"></i>Mobile</p>
+                    <h6>1,624</h6></div>
+                    <div class="pie-info"><p style="translate:-10px;"><i class="bi bi-circle-fill d-inline-block text-info" style="font-size: 10px;translate: 0px -3px;"></i>Desktop</p>
+                      <h6>1,267</h6></div>
+                      <div class="pie-info"><p style="translate:-10px;"><i class="bi bi-circle-fill d-inline-block text-warning" style="font-size: 10px;translate: 0px -3px;"></i>Laptop</p>
+                        <h6>1,153</h6></div>
+                        <div class="pie-info"> <p style="translate:-10px;"><i class="bi bi-circle-fill d-inline-block text-success" style="font-size: 10px;translate: 0px -3px;"></i>Tablet</p>
+                          <h6>679</h6></div>
+                    
+                  </div>
+                </p>
+              </div>
+            </div>
+            <div class="card mt-3" style="width: 21rem">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title">Deal Status</h5>
+
+                  <div class="d-flex mt-1">
+                    <p style="font-size: 12px" class="opacity-50">View All</p>
+                    <i
+                      class="bi bi-caret-down opacity-50"
+                      style="font-size: 12px"
+                    ></i>
+                  </div>
+                  </div>
+                
+                <div class="d-flex justify-content-between">
+                  <h5>4289</h5>
+                  <p class="bg-opacity-10 bg-success text-success mb-5">1.02</p>
+                  <i
+                    class="bi bi-caret-up bg-opacity-10 bg-success text-success mb-5"
+                    style="translate: -16px; font-size: 12px"
+                  ></i>
+                  <p class="text-secondary">compared to last week</p>
+                </div>
+                <div class="progress-stacked">
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment one"
+                    aria-valuenow="15"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 15%"
+                  >
+                    <div class="progress-bar"></div>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment two"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 30%"
+                  >
+                    <div class="progress-bar bg-success"></div>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Segment three"
+                    aria-valuenow="20"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 20%"
+                  >
+                    <div class="progress-bar bg-info"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mt-2 text-secondary">
+                  <p ><i class="bi bi-circle-fill d-inline-block text-primary" style="font-size: 10px;"></i>Pending Deals</p>
+                  <p>921</p></div>
+                  <div class="d-flex justify-content-between mt-2 text-secondary">
+                    <p ><i class="bi bi-circle-fill d-inline-block text-success" style="font-size: 10px;"></i>Successful Deals</p>
+                    <p>1073</p></div>
+                    <div class="d-flex justify-content-between mt-2 text-secondary">
+                      <p ><i class="bi bi-circle-fill d-inline-block text-info" style="font-size: 10px;"></i>Rejected Deals</p>
+                      <p>987</p></div>
+                      <div class="d-flex justify-content-between mt-2 text-secondary">
+                        <p ><i class="bi bi-circle-fill d-inline-block text-secondary" style="font-size: 10px;"></i>Upocoming Deals</p>
+                        <p>1674</p></div>
+                </div>
+            </div>
+              <div class="card mt-3" style="width: 21rem">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Recent Activity</h5>
+  
+                    <div class="d-flex mt-1">
+                      <p style="font-size: 12px" class="opacity-50">View All</p>
+                      <i
+                        class="bi bi-caret-down opacity-50"
+                        style="font-size: 12px"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center gap-2">
+                    <p class="activity">
+                      Update of calendar events &
+                      <b style="color: #8b72dc"
+                        >Added new events in the next week</b
+                      >
+                    </p>
+                    <p class="text-secondary time">4:45PM</p>
+                  </div>
+                  <div class="d-flex justify-content-center gap-2">
+                    <div>
+                      <p class="activity"> 
+                         Update of calendar events &
+                        <b>Added new events in the next week</b>
+                      </p>
+                      <p class="text-secondary activity translate-middle-y">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Esse quia,
+                      </p>
+                    </div>
+                    <p class="text-secondary time">3 hrs</p>
+                  </div>
+                  <div class="d-flex justify-content-center gap-2" style="translate: 0px -8px;">
+                    <p class="activity">
+                      Update of calendar events &
+                      <b class="text-success"
+                        >Added new events in the next week</b
+                      >
+                    </p>
+                    <p class="text-secondary time">22 hrs</p>
+                  </div>
+                  <div class="d-flex justify-content-center gap-2">
+                    <p class="activity">
+                      New member <button class="text-danger text-bg-danger bg-opacity-10 opacity-75 border-0">@andrei</button>adeed to summit of Ai generation
+                    </p>
+                    <p class="text-secondary time">Today</p>
+                  </div>
+                  <div class="d-flex justify-content-between gap-2">
+                    <p class="activity">
+                      32 New people joined the summit
+                    </p>
+                    <p class="text-secondary time">22 hrs</p>
+                  </div>
+                  <div class="d-flex justify-content-between gap-2">
+                    <p class="activity">
+                     Neon tarly added <span class="text-info">Robert</span> to the project
+                     
+                     
+                    </p>
+                    <p class="text-secondary time">12 hrs</p>
+                  </div>
+                  <div class="d-flex justify-content-between gap-2">
+                    <p class="activity">
+                     Completed documentation of <a class="text-primary fw-bold">AI Summit</a> 
+                     
+                     
+                    </p>
+                    <p class="text-secondary time">12 hrs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+       
+  
+          
+        
+        <div class="card right-bottom bg-white">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">Deals Statistics</h5>
+              <div class="d-flex">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+                <button
+                  class="btn text-white"
+                  style="background-color: #845ade; padding-right: 20px"
+                >
+                  Sort By</button
+                ><i
+                  class="bi bi-caret-down text-white"
+                  style="translate: -17px 6px"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col"><input type="checkbox" /></th>
+                    <th scope="col">Sales Rep</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Mail</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"><input type="checkbox"style="accent-color:purple;" ></td>
+                    <td>Mayor Kelly</td>
+                    <td>Manufacture</td>
+                    <td>mayor@gmail.com</td>
+                    <td
+                      class="text-bg-primary text-primary bg-opacity-10 btn mt-2 mb-2 ms-2"
+                    >
+                      Germany
+                    </td>
+                    <td>Sep 15 - Oct 12,2023</td>
+                    <td>
+                      <i
+                        class="bi bi-download text-bg-success text-success bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                      <i
+                        class="bi bi-pencil-square text-bg-info text-info bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"><input type="checkbox"style="accent-color:purple" class="onoffswitch-checkbox" id="inline" checked="true"/></td>
+                    <td>Andrew</td>
+                    <td>Development</td>
+                    <td>andrew@gmail.com</td>
+                    <td
+                      class="text-bg-info text-info bg-opacity-10 btn mt-2 mb-2 ms-2"
+                    >
+                      Canada
+                    </td>
+                    <td>Sep 15 - Oct 12,2023</td>
+                    <td>
+                      <i
+                        class="bi bi-download text-bg-success text-success bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                      <i
+                        class="bi bi-pencil-square text-bg-info text-info bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td scope="row"><input type="checkbox"style="accent-color:purple;" ></td>
+                    <td>Simon</td>
+                    <td>Service</td>
+                    <td>simon@gmail.com</td>
+                    <td
+                      class="text-bg-danger text-danger bg-opacity-10 btn mt-2 mb-2 ms-2"
+                    >
+                      Europe
+                    </td>
+                    <td>Sep 15 - Oct 12,2023</td>
+                    <td>
+                      <i
+                        class="bi bi-download text-bg-success text-success bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                      <i
+                        class="bi bi-pencil-square text-bg-info text-info bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"><input type="checkbox"style="accent-color:purple" class="onoffswitch-checkbox" id="inline" checked="true"/></td>
+                    <td>Mirinda</td>
+                    <td>Marketing</td>
+                    <td>mirinda@gmail.com</td>
+                    <td
+                      class="text-bg-warning text-warning bg-opacity-10 btn mt-2 mb-2 ms-2"
+                    >
+                      USA
+                    </td>
+                    <td>Sep 15 - Oct 12,2023</td>
+                    <td>
+                      <i
+                        class="bi bi-download text-bg-success text-success bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                      <i
+                        class="bi bi-pencil-square text-bg-info text-info bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row"><input type="checkbox"style="accent-color:purple" class="onoffswitch-checkbox" id="inline" checked="true"/></td>
+                    <td>Jacob</td>
+                    <td>Social Platform</td>
+                    <td>jacob@gmail.com</td>
+                    <td
+                      class="text-bg-success text-success bg-opacity-10 btn mt-2 mb-2 ms-2"
+                    >
+                      Singapore
+                    </td>
+                    <td>Sep 15 - Oct 12,2023</td>
+                    <td>
+                      <i
+                        class="bi bi-download text-bg-success text-success bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                      <i
+                        class="bi bi-pencil-square text-bg-info text-info bg-opacity-10 btn mt-2 mb-2 ms-2"
+                      ></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <p class="text-center">
+          
+          Copyright © 2023 Ynex. Designed with ❤️ by Spruko All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

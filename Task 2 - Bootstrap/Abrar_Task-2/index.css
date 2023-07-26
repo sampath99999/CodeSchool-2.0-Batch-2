@@ -460,6 +460,9 @@ body::-webkit-scrollbar {
 .table-container::-webkit-scrollbar {
   display: none;
 }
+.graph-card-2 {
+  border-radius: 6px;
+}
 
 @media screen and (max-width: 576px) {
   .right-side-container {

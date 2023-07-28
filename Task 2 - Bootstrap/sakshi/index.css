@@ -533,13 +533,16 @@ main .deals-statistics .entry .item5{
 .right .events{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
 } 
 
 .right .events p{
     padding: 10px;
 }
 
+.right .events .muted-text{
+    margin-left: -70px;
+}
 
 @media screen and (max-width: 768px){
   .container{

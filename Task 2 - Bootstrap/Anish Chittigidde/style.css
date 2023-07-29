@@ -51,8 +51,13 @@
     background-color:#F0F1F7;
 }
 
-.con_right_header, .con_right{
+.con_right_header{
     background-color:#F0F1F7;
+}
+
+.con_right{
+    background-color:#F0F1F7;
+    padding-bottom: 20px;
 }
 
 .filter_btn{

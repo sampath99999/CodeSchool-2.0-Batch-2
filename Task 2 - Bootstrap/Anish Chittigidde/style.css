@@ -1,0 +1,122 @@
+
+.menubar_header{
+    border-bottom: 2px solid #1D284D;
+}
+
+.menubar_color{
+    background-color: #111C43;
+}
+
+.main_menu{
+    list-style-type: none;
+}
+
+.white{
+    color: white !important;;
+}
+
+.categories > ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.categories >:nth-of-type(2){  
+    padding-left: 0px;
+}
+
+
+.categories li{
+    display: flex;
+    align-items: center;
+}
+
+.cat_color{
+    color: #cfe2ff;
+    opacity: 0.5;
+}
+
+.cat_color li{
+    justify-content: start;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.dashboard{
+    background-color:#1D284D;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.con_left{
+    background-color:#F0F1F7;
+}
+
+.con_right_header, .con_right{
+    background-color:#F0F1F7;
+}
+
+.filter_btn{
+    background-color: #845adf;
+}
+
+.target{
+    background-color: #845adf;
+
+}
+
+.card-body{
+    border-radius: 10px;
+    color:white;
+}
+
+.card-body-stats, .card-body-activity{
+    border-radius: 10px;
+    background-color:white;
+}
+
+
+.card-body-top-deals, .card-body-leads{
+    color: black;
+}
+
+.avatar.avatar-sm {
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: .65rem;
+}
+
+.avatar.avatar-rounded {
+    border-radius: 50%;
+}
+
+.avatar {
+    position: relative;
+    height: 2.625rem;
+    width: 2.625rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.card-br{
+    border-radius: 50%;
+}
+
+.green{
+    color: #26BF94;
+}
+
+.td_font_size{
+    font-size: 12px;
+}
+
+.fs-12{
+    font-size: 12px;
+}
+.fs-10{
+    font-size: 10px;
+}

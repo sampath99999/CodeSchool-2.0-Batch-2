@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f1f7;
+}
+
+.aside-bar {
+  background-color: #111c43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.aside-bar-bg {
+  background-color: #111c43;
+  color: #6976a4;
+  border: none;
+}
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-flag {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.user {
+  font-size: 9px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.user-row {
+  width: 80px;
+}
+
+.my-hr {
+  color: rgb(162, 157, 157);
+}
+
+.section-headings {
+  font-size: 9px;
+  font-weight: 700;
+  color: #525a75;
+}
+
+.heading {
+  padding: 5px;
+  border-radius: 5px;
+}
+.heading:hover {
+  color: white;
+  background-color: #152358;
+}
+.pill {
+  background-color: #4e525e;
+  color: rgb(218, 150, 25);
+}
+.custom-list .list-group-item {
+  position: relative;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.custom-list .list-group-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px; /* Adjust the width of the rounded point */
+  height: 5px; /* Adjust the height of the rounded point */
+  background-color: #111c43; /* Adjust the color of the rounded point */
+  border-radius: 50%;
+  border: 1px solid #6976a4;
+}
+.custom-list .list-group-item:hover {
+  color: white;
+}
+
+.head-names {
+  font-size: 12px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.light {
+  font-weight: 300;
+}
+.right-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+.semi-bold{
+  font-weight: 600;
+}
+.purple {
+  background-color: #8a72db;
+  color: white;
+}
+.bg-purple{
+  background-color: #8a72db;
+}
+.color-purple{
+  color: #8a72db;
+}
+.target-img {
+  width: 50%;
+  height: 50%;
+}
+
+.small-font {
+  font-size: 9px;
+}
+
+.large-font {
+  font-size: 13px;
+}
+.smallm-font{
+  font-size: 10px;
+}
+.medium-font {
+  font-size: 11px;
+}
+.user-img {
+  width: 20px;
+  height: 20px;
+}
+
+.ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  border: 8px solid transparent;
+  border-top-color:var(--bs-primary);
+  border-right-color: var(--bs-info);
+  border-bottom-color: var(--bs-warning);
+  border-left-color: var(--bs-success)
+}
+
+.ring span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dashed{
+  border: 1px dashed rgb(236, 236, 236);
+  border-bottom: none;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: inline-block;
+}
+.ring p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-h{
+  height: 3px;
+}
+.color-1 {
+  background-color: var(--bs-primary)
+}
+.color-2 {
+  background-color: var(--bs-info)
+}
+.color-3 {
+  background-color: var(--bs-success)
+}
+.color-4 {
+  background-color: var(--bs-warning)
+}
+@media (max-width: 768px) {
+  .user-row {
+    width: auto;
+  }
+  .right-content {
+    justify-content: start;
+    margin-top: 10px;
+  }
+
+  .target-img{
+    width: 80px;
+    height: 65px;
+  }
+
+  .target{
+    margin-left: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .target-img {
+    width: 65px;
+    height: 50px;
+  }
+}

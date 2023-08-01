@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFMIS Login Page</title>
+    <link rel="stylesheet" href="ifmislogin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="ifmis-logo.png" alt="ifmis_logo" />
+        </div>
+        <div class="headerimages">
+            <img src="SRI-CHANDRASEKHAR-RAO.png" alt="cm" />
+            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/SRI-HARISH-RAO.png" alt="finmin" />
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">PAYSLIP</a></li>
+            <li><a href="">UTR REPORT</a></li>
+            <li><a href="">BUDGET VOLUMES</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="">CHALLANS <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/menu-arrow.png" /></a></button>
+                    <div class="dropdown-content">
+                        <a href="">CHALLAN FORM</a>
+                        <a href="">CHALLAN FORM FOR E-SEVA(TRANSPORT)</a>
+                        <a href="">CHALLAN FORM FOR TSTSL</a>
+                        <a href="">FOREIGN SERVICE REGISTRATION</a>
+                        <a href="">MANUAL CHALLAN SEARCH</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="">CYBER TREASERY <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/menu-arrow.png" /></a></button>
+                    <div class="dropdown-content">
+                        <a href="">CYBER CHALLAN DETAILS</a>
+                        <a href="">MINES AND GEOLOGY CHALLANS</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="">GPF LEDGER</a></li>
+        </ul>
+    </nav>
+    <div class="mainbox">
+        <div class="leftpart">
+            <div class="loginpart">
+                <form>
+                    <h2>User Login</h2>
+                    <div class="text_field">
+                        <div class="icon">
+                            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/user.png" alt="img">
+                        </div>
+                        <div class="text">
+                            <input type="text" placeholder="User Name" id="username" required="" fdprocessedid="0ulpeq">
+                        </div>
+                    </div>
+                    <div class="text_field">
+                        <div class="icon">
+                            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/pwd.png" alt="img">
+                        </div>
+                        <div class="text">
+                            <input type="password" placeholder="Password" id="password" required="" fdprocessedid="fvrkf9">
+                        </div>
+                    </div>
+                    <div class="refresh">
+                        <img src="data:image/png;base64,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"
+                             alt="captcha" />
+                        <button></button>
+                    </div>
+                    <br>
+                    <div class="text_field">
+                        <div class="text">
+                            <input type="text" placeholder="    Enter captcha" /><br>
+                        </div>
+                    </div>
+                    <div class="forgotpassword">
+                        <p>forgot password?</p>
+                        <button><a href="">SIGN IN</a></button>
+                    </div>
+                </form>
+            </div>
+            <div class="noticeboard">
+                <div class="notices">
+                    <p>Important Notification to all PAO Branches!</p>
+                    <div class="blink"><span style="animation: blinker 1s linear infinite;">All cheques numbers will now be same as token numbers in PAO.</span></div>
+                    <div class="noticestrips">
+                        <a href="">click here</a> <span>for Budget 2023-24</span>
+                    </div>
+                    <div class="noticestrips">
+                        <a href="">click here</a> <span> for Cadre Strength Data Entry</span>
+                    </div>
+                    <div class="noticestrips">
+                        <a href="">click here</a> <span> for Departments Bank Deposits</span>
+                    </div>
+                    <p><span>Important Notification ! </span><span style="color:red; font-weight:700; animation: blinker 1s linear infinite;">Budget 2023-24</span></p>
+                    <p>Budget Instructions 2023-24 G.O<p>
+                        <span><a href="">Click Here To Download</a></span><br><br>
+                        <button><span class="blink"><b>Attention DDO'S</b></span></button>
+                    <p>DTA - DDOs are required to fill their TAN numbers and employee’s PAN number</p>
+                    <div class="pdfname">Divisional Accounts Officers(W) Grade.II - Adopting the seniority published by the Director of Works Accounts, Andhra Pradesh - Provisional seniority list issued - Objections called for - Objections disposed - Final seniority list issued - Regarding.</div>
+                    <div class="download"><a href="">click here to download</a></div>
+                    <div class="pdfname">Divisional Accounts Officers(W) Grade.II - Adopting the seniority published by the Director of Works Accounts, Andhra Pradesh - Provisional seniority list issued - Objections called for - Submitted - Disposal of objections - Communicated - Regarding.</div>
+                    <div class="download"><a href="">click here to download</a></div>
+                    <div class="pdfname">Divisional Accounts Officers (Works) Gr.II -Adopting the Seniority published by the Director of Works Accounts, Andhra Pradesh – Provisional Seniority List issued - Objections called for - Regarding.</div>
+                    <div class="download"><a href="">click here to download</a></div>
+                    <div class="pdfname">Divisional Accounts Officer (W) Gr-II - Provisional Seniority list published for the panel years from 2014-15 to 2020-21- Objections called for - Regarding</div>
+                    <div class="download"><a href="">click here to download</a></div>
+                    <div class="pdfname">Divisional Accounts Officer (W) Gr. II - Provisional Seniority list for the panel year 2014-15 to 2020-21 - Disposal off objections - Communicated-Reg</div>
+                    <div class="download"><a href="">click here to download</a></div>
+                    <div class="pdfname">Divisional Accounts Officer (W) Gr.II - Final seniority list for the panel year 2014-15 to 2020-21-Issued-Reg</div>
+                    <div class="download"><a href="">click here to download</a></div>
+                    <p><span><a href="">click here</a></span><span>for the List of the central scheme head of accounts</span></p>
+                    <p>Note : All employees are requested to apply in Meeseva for Mutual Transfers</p><br>
+                    <div class="pdfname">Steps to follow For updating Latest DA (state scales)</div>
+                    <p>--> Go to DA enhancement module in HR Section and Update the DA of the employees.</p>
+                    <p>Once DA is updated you can check the changes in Employees Masters</p>
+                    <p>--> Salary bill for the month of January 2022 can be submitted with the latest DA payable on 1st February 2022</p>
+                </div>
+            </div>
+        </div>
+        <div class="rightpart">
+            <div>
+                <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/banners/13.jpg" alt="groupphotofinmin" />
+            </div>
+            <div class="tagline">
+                <span>Budget 2023-24</span>
+                <p>(From L to R) Secretary to Government Sri. D. Ronald Rose,the Hon'ble Minister of Roads, Buildings and Legislative Affairs & Housing Department of Telangana Sri.V. Prashanth Reddy,the Hon'ble Chairman of Legislative Council Sri.Gutha Sukendar Reddy,the Hon’ble Finance Minister Sri Harish Rao,Special Chief Secretary Sri. K. Ramakrishna Rao, Secretary to Government Dr. T.K. Sreedevi and others.</p>
+            </div>
+            <div class="contact">
+                <div class="leftsidecontact">
+                    <span>IFMIS HOTLINE NUMBER</span>
+                    <p>11AM-5PM On all working days</p>
+                </div>
+                <div class="rightsidecontact">
+                    <span>7042420033</span>
+                </div>
+            </div>
+            <div class="about">
+                <div class="leftabout">
+                    <h2>Finance Department, Telangana</h2>
+                    <p>
+                        Responsible for proper deployment of the State's Finances, the Telangana State
+                        Finance Department ensures maintenance of accounts of all the financial
+                        transactions. The Finance Department is also responsible for the administration
+                        of the fiscal policy of the State.
+                    </p>
+                </div>
+                <div class="rightabout">
+                    <a href="">Download Android App</a><br>
+                    <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/download_app.png" alt="playstoreimage" />
+                </div>
+            </div>
+            <div class="vidsection">
+                <div class="video">
+                    <video controls>
+                        <source src="https://d1enwwncs1sgu4.cloudfront.net/IFMIS.mp4" type="video/mp4" />
+                    </video>
+                    <div class="vidsection-content">
+                        <h4>Integrated Financial Management and Information System</h4>
+                        <p>
+                            IFMIS, as the name suggests, is a unified platform that aims to promote the efficiency of
+                            government financial management methodologies, secure data management, deep-financial
+                            analytics and customized visual reporting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lastpart">
+        <div class="lastpartbackground">
+            <div class="left">
+                <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/news_icon.png" />
+                <h2>LATEST NEWS/NOTE</h2>
+                <p>
+                    All the HODs and DDO are hereby informed that the remuneration pertains to Contract/Honorarium based services will be paid through IFMIS-DBT mode only from the month of November, 2022. All the departments hereby are requested to strictly adhered to update the information of the persons engaged on contract/honorarium basis in 27 column proforma in Finance (HRM.VII) Department with relevant information immediately. Updating of bills in regular pattern will not be entertained further.
+                    <br>
+                    New Districts & Mandals Details -03-09-2021
+                    <br>
+                    Circular Memo for PRC 2020:
+                    Pay Fixation Circular
+                </p>
+
+            </div>
+            <div class="vertical_dotted_line"></div>
+            <div class="middle">
+                <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/video_icon.png" />
+                <h2>VIEW DEMO</h2>
+                <h4>Demo:</h4>
+                <p> Watch the demo to know more about how to different products and services on IFMIS</p>
+                <div class="youtubeimage">
+                    <div class="leftyt"><img src="https://img.youtube.com/vi/swAbl9NY_u8/0.jpg" /></div>
+                    <div class="rightyt">
+                        <span><b>How to Check Employee Details - IFMIS/DDO Tutorial</b></span><br><br>
+                        <span>Employee details </span><span> 12 jan 2020</span>
+                    </div>
+                </div>
+                <div class="youtubeimage">
+                    <div class="leftyt"><img src="https://img.youtube.com/vi/swAbl9NY_u8/0.jpg" /></div>
+                    <div class="rightyt">
+                        <span><b>How to add new Agency - IFMIS/DDO Tutorial</b></span><br><br>
+                        <span>Ad Agency </span><span> &nbsp;&nbsp;12 jan 2020</span>
+                    </div>
+                </div><br>
+                <a href="">view more</a>
+
+            </div>
+            <div class="vertical_dotted_line"></div>
+            <div class="right">
+                <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/vison_icon.png" />
+                <h2>OUR VISION</h2>
+                <p>We have developed IFMIS with the vision that Financial Technology shall be able to function using cutting-edge technology that ensures data security, efficiency and transparency.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>privacy policy</span>
+    </footer>
+</body>
+</html>

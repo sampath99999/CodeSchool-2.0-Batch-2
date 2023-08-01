@@ -1,0 +1,223 @@
+.header {
+    background-color: #313C4E;
+    font-family: 'Noto Sans', sans-serif;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name{
+    margin-left: 50px;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.desc{
+    color: #449399;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+.contact {
+    display:flex;
+    justify-content: space-around;
+    height: 50px;
+    background-color: #222A33;
+    color: white;
+}
+
+.contact h3{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+.icon h3{
+    color: white;
+    margin-left: 10px;
+}
+
+.icon a{
+    text-decoration: none;
+}
+.header img{
+    border-radius: 50% ;
+    margin-right: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #E0E1E4;
+}
+
+.resume-body{
+    display: flex;
+    justify-content: space-around;
+    gap: 120px;
+}
+    
+
+.left{
+    width: 45%;
+    padding: 20px;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.experience h1{
+    color: #449399;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.experience h2{
+    margin: 0px;
+}
+
+.company{
+    display: flex;
+    flex-direction: column;
+}
+
+.company ul, .edu ul{
+    width: 78%;
+}
+
+.company h3{
+    margin: 0px;
+}
+
+.company h5{
+    margin: 3px;
+    font-style: italic;
+    color:#449399;
+}
+
+.chronicle{
+    display: flex;
+    justify-content: space-between;
+}
+
+li {list-style: none;}
+
+li::before {
+    content: '\2022';
+    padding-right: 1em;
+    color: #449399;
+}
+
+.edu{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.edu h1{
+    color: #449399;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.edu h2{
+    margin: 0px;
+}
+
+.edu h5{
+    margin: 3px;
+    font-style: italic;
+    color:#449399;
+}
+
+.clg{
+    font-weight: lighter;
+}
+.clg-roles{
+    display: block;
+}
+
+.right{
+    width: 45%;
+    padding: 20px;
+}
+
+.skillset{
+    display: flex;
+    flex-direction: column;
+}
+.skillset h1{
+    color: #449399;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.skill{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill button{
+    background-color: #989DA6; 
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.skill p{
+    margin: 0px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.projects h1{
+    color: #449399;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.projects h3{
+    margin: 0px;
+}
+
+.achievements{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.achievements h1{
+    color: #449399;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.achieve ul{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+}
+
+.achieve a{
+    display: flex;
+    margin:10px 0px;
+    color: #449399;
+}

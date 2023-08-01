@@ -30,12 +30,12 @@
     align-items: center;
 }
 
-.cat_color{
+.category_color{
     color: #cfe2ff;
     opacity: 0.5;
 }
 
-.cat_color li{
+.category_color li{
     justify-content: start;
     margin-left: 50px;
     margin-bottom: 8px;

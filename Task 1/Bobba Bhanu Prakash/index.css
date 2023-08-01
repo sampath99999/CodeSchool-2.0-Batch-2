@@ -1,0 +1,825 @@
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: -13px;
+    padding: 20px;
+    gap: 30px;
+    padding-left: 170px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+}
+
+.menu {
+    display: flex;
+}
+
+    .menu span {
+        padding: 13px 10px;
+    }
+
+.menuicon {
+    padding-top: 9px;
+}
+
+header .menu .bar {
+    width: 30px;
+    height: 1px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.menu :hover #bar1 {
+    transform: rotate(45deg);
+}
+
+.menu:hover #bar2 {
+    display: none;
+}
+
+.menu:hover #bar3 {
+    transform: rotate(315deg);
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    margin: 60px 0px;
+    margin-left: -260px;
+    min-width: 400px;
+    padding: 0px;
+    background-color: #353535;
+}
+
+    .dropdown-content ul li svg {
+        padding-right: 10px;
+        padding-top: 5px;
+    }
+
+    .dropdown-content ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        .dropdown-content ul li {
+            padding: 10px;
+        }
+
+            .dropdown-content ul li:hover {
+                background-color: turquoise;
+            }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+}
+
+.dropdown-content hr {
+    margin: 0px 20px;
+}
+
+.downdropdown {
+    background-color: black;
+    padding: 10px;
+}
+
+    .downdropdown ul li:hover {
+        background-color: black;
+    }
+
+    .downdropdown ul > li:nth-child(1) {
+        font-weight: 600;
+    }
+
+.dropdown-content i {
+    float: right;
+}
+
+.searchbox {
+    width: 430px;
+    height: 25px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .searchbox input {
+        border: none;
+        outline: none;
+        height: 25px;
+        width: 350px;
+    }
+
+    .searchbox i {
+        color: black;
+        float: right;
+        padding-right: 20px;
+    }
+
+.location {
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 0px;
+}
+
+    .location i {
+        color: white;
+        font-size: 15px;
+    }
+
+.cart {
+    padding: 20px 0px;
+    padding-right: 40px;
+}
+
+    .cart i {
+        padding: 0px;
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+body {
+    background-color: #191919;
+    font-family: sans-serif;
+    color: white;
+}
+
+.categories {
+    padding: 0px;
+    padding-left: 10px;
+    font-size: 12px;
+    margin-left: -85px;
+    margin-bottom: 0px;
+    margin-top: -15px;
+}
+
+body .categories ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+body ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    padding: 0px 180px;
+    padding-right: 160px;
+    margin: 0px;
+    gap: 0px;
+}
+
+.leftpart {
+    padding: 0px;
+    padding-top: 100px;
+    width: 45%;
+    margin: 0px;
+    /* position:fixed; */
+}
+
+.images {
+    display: flex;
+}
+
+.leftpart .images .leftimages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leftpart .images .box {
+    border: 1px solid grey;
+    padding: 10px;
+    width: 100px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+    .leftpart .images .box:hover {
+        border: 3px solid #12daa8;
+    }
+
+.leftpart .icons {
+    color: white;
+    padding: 0px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    margin: 0px;
+    font-size: 30px;
+    float: flex;
+}
+
+.leftpart .rightimages {
+    padding: 30px;
+    margin: 0px;
+}
+
+    .leftpart .rightimages img {
+        width: 300px;
+        height: 350px;
+        padding-bottom: 40px;
+    }
+
+hr {
+    color: gray;
+    /* opacity:0.2; */
+}
+
+.leftpart .rightimages .connstore {
+    display: flex;
+    padding: 20px 0px;
+    padding-right: 0px;
+    gap: 70px;
+}
+
+.connstore .storeimg a {
+    color: white;
+}
+
+.connstore input[type=checkbox] {
+    fill: #191919;
+}
+
+.rightpart {
+    /* padding-left:49%; */
+    padding: 0px;
+    padding-top: 110px;
+    width: 50%;
+    margin: 0px;
+    float: right;
+    padding-right: 10px;
+    overflow-y: scroll;
+    height: 580px;
+}
+
+    .rightpart::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rightpart h1 {
+        color: white;
+        font-size: 20px;
+    }
+
+    .rightpart .box {
+        padding: 5px;
+        width: 167px;
+        border: 1px solid #ff02B9;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+        .rightpart .box span {
+            color: #ff02B9;
+            font-size: 10px;
+        }
+
+    .rightpart a {
+        color: #12daa8;
+        font-size: 14px;
+    }
+
+    .rightpart .orbox {
+        width: 20px;
+        height: 20px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        color: white;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        padding-top: 10px;
+        font-size: 13px;
+    }
+
+    .rightpart .hypen hr {
+        width: 10px;
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+.hypen {
+    padding-top: 20px;
+}
+
+.hrhypen {
+    display: flex;
+}
+
+.price {
+    display: flex;
+    gap: 35px;
+    padding: 10px;
+    padding-left: 0px;
+    font-size: 26px;
+}
+
+.leftprice {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightprice {
+    display: flex;
+    flex-direction: column;
+}
+
+.price a {
+    color: #12daa8;
+    font-size: 12px;
+}
+
+.rightpart hr {
+    border: 1px solid grey;
+}
+
+.rightpart span del {
+    color: grey;
+    padding-right: 10px;
+}
+
+.rightpart .offerstat {
+    padding-top: 10px;
+}
+
+    .rightpart .offerstat hr {
+        border: 1px solid white;
+        /* opacity:1; */
+    }
+
+.discounts {
+    display: flex;
+    gap: 20px;
+    margin: 0px 3px;
+    margin-bottom: 25px;
+}
+
+.rightpart .discountbox {
+    border: 1px solid grey;
+    height: 132px;
+    width: 176px;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.discountbox img {
+    height: 30px;
+    width: 30px;
+    padding: 0px 5px;
+}
+
+.discountbox p {
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.discountbox .boxheader {
+    display: flex;
+}
+
+.boxheader span {
+    padding: 0 10px;
+    padding-top: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.discountbox a {
+    color: white;
+    padding: 3px 10px;
+    font-size: 11px;
+}
+
+.delivery .box {
+    border-radius: 5px;
+    background-color: #353535;
+    height: 40px;
+    width: 96%;
+    margin-top: 10px;
+    padding: 10px;
+    padding-right: 15px;
+    border: none;
+}
+
+    .delivery .box span {
+        color: white;
+    }
+
+    .delivery .box i {
+        height: 12px;
+        width: 12px;
+    }
+
+.keyfeatures {
+    width: 200px;
+    width: 100%;
+    margin: 20px 0px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+    .keyfeatures h4 {
+        padding: 0px;
+        padding-left: 25px;
+        font-size: 14px;
+    }
+
+.featuresline hr {
+    /* opacity:0.5; */
+    border: 1px solid gray;
+    margin-top: 50px;
+}
+
+.featuresline h4, span {
+    font-size: 12px;
+    padding: 0px 10px;
+}
+
+.featuresline h4 {
+    margin-bottom: 10px;
+}
+
+.appcare {
+    padding: 10px 0px;
+}
+
+    .appcare a {
+        float: right;
+        padding-right: 10px;
+    }
+
+    .appcare .boxes {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+        .appcare .boxes .box {
+            border: 1px solid gray;
+            width: 106px;
+            height: 82px;
+            text-align: center;
+        }
+
+    .appcare .box span {
+        color: white;
+        font-size: 12px;
+    }
+
+    .appcare .boxes .nonebox {
+        border: 1px solid #12DAA8;
+        width: 106px;
+        height: 32px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 30px 0px;
+    }
+
+    .appcare .nonebox span {
+        padding: 50px 0px;
+    }
+
+.essentialbox {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.essential {
+    display: flex;
+    gap: 10px;
+}
+
+.plussymbol {
+    padding: 15px 40px;
+    font-weight: 600;
+}
+
+.essentialbox button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: turquoise;
+    margin-top: 10px;
+    width: 240px;
+    height: 41px;
+}
+
+.accords {
+    padding: 30px 20px;
+    border: 1px solid turquoise;
+    margin: 30px 220px;
+    margin-left: 160px;
+    border-radius: 5px;
+}
+
+.accordrow1 {
+    display: flex;
+}
+
+.rowleft {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rowmiddle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 415px;
+}
+
+.rowright {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 200px;
+}
+
+.accords h3 {
+    padding-left: 10px;
+}
+
+.accords i {
+    font-size: 20px;
+}
+
+.accords hr {
+    padding: 0px;
+    border: 1px solid gray;
+    margin: 15px 8px;
+}
+
+.accordrow2 {
+    display: flex;
+}
+
+    .accordrow2 a {
+        color: white;
+    }
+
+.accordrow3 {
+    display: flex;
+}
+
+.accordbutton {
+    text-align: center;
+}
+
+    .accordbutton button {
+        background-color: #191919;
+        border-radius: 5px;
+        border: 1px solid white;
+        padding: 5px 20px;
+    }
+
+    .accordbutton a {
+        text-decoration: none;
+        color: white;
+    }
+
+.accordrow2 .rowmiddle {
+    padding-left: 430px;
+}
+
+.accordrow2 .rowright {
+    padding-left: 190px;
+}
+
+.middleaccords {
+    padding: 30px 20px;
+    border: 1px solid turquoise;
+    margin: 30px 220px;
+    margin-left: 160px;
+    border-radius: 5px;
+}
+
+    .middleaccords i {
+        font-size: 20px;
+    }
+
+    .middleaccords p {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+.lastaccords {
+    padding: 30px 20px;
+    padding-bottom: 140px;
+    border: 1px solid gray;
+    margin: 30px 220px;
+    margin-left: 160px;
+    border-radius: 5px;
+}
+
+    .lastaccords i {
+        font-size: 20px;
+    }
+
+    .lastaccords h4 {
+        padding: 30px 10px;
+        padding-bottom: 10px;
+        margin: 0px;
+        font-size: 14px;
+    }
+
+    .lastaccords p {
+        padding: 10px 10px;
+        padding-top: 0px;
+        margin: 0px;
+        font-size: 12px;
+    }
+
+    .lastaccords .accordbutton {
+        float: left;
+        margin: 10px;
+    }
+
+        .lastaccords .accordbutton button {
+            width: 263px;
+            height: 40px;
+            padding: 5px;
+        }
+
+.foot {
+    padding: 20px 160px;
+    background-color: #1d1d1d;
+    display: flex;
+    gap: 30px;
+}
+
+.leftfoot .emailbox {
+    width: 200px;
+    height: 25px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.emailbox input {
+    border: none;
+    outline: none;
+    height: 25px;
+    width: 140px;
+}
+
+.emailbox i {
+    color: black;
+    float: right;
+    padding-top: 5px;
+}
+
+.leftfoot ul {
+    display: flex;
+    padding-left: 0px;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.leftfoot #youtube:hover {
+    color: red;
+}
+
+#linkedin:hover {
+    color: blue;
+}
+
+#twitter:hover {
+    color: blue;
+}
+
+#facebook:hover {
+    color: blue;
+}
+
+.foot .verticalline {
+    border: 1px solid white;
+    height: 330px;
+}
+
+.middlefoot {
+    padding: 0px 50px;
+    margin: 0px;
+}
+
+    .middlefoot ul {
+        padding-left: 0px;
+        list-style-type: none;
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+        .middlefoot ul li a:hover {
+            color: turquoise;
+        }
+
+.middlefootcontent {
+    display: flex;
+    gap: 80px;
+}
+
+.rightfoot {
+    padding: 0px 50px;
+}
+
+    .rightfoot ul {
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+        .rightfoot ul li a:hover {
+            color: turquoise;
+        }
+
+.rightfootcontent {
+    display: flex;
+    gap: 20px;
+}
+
+.foot a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.foot h4 {
+    margin-bottom: 0px;
+}
+
+.lastfooter {
+    padding: 20px 160px;
+    padding-right: 300px;
+    display: flex;
+    background-color: #191919;
+    padding-bottom: 0px;
+    position: sticky;
+    bottom: 0;
+    overflow: hidden;
+}
+
+    .lastfooter img {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .lastfooter button {
+        padding: 0px 30px;
+        border-radius: 10px;
+        background-color: #353535;
+        height: 40px;
+    }
+
+        .lastfooter button a {
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            margin: 0px;
+        }
+
+    .lastfooter #buynow {
+        background-color: turquoise;
+        margin-right: 10px;
+    }
+
+#buynow a {
+    color: black;
+}
+
+.lastfooter span {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px;
+}
+
+.lastfootertext {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 260px;
+    gap: 0px;
+    padding-left: 5px;
+}
+
+    .lastfootertext p {
+        margin: 0px;
+    }

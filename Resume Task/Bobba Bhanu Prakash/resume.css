@@ -1,0 +1,71 @@
+b {
+    background:linear-gradient(#203A43,#0F2027,white);
+    background:fit-content;
+    color:white;
+    font-size: 40px;
+   }
+a
+   {
+       text-decoration:none;
+   }
+.container
+   {
+   background:linear-gradient(#203A43,#0F2027,white);
+   display:flex;
+   margin:0px;
+
+   }
+.container > div
+   {
+   margin-left:250px;
+   padding:10px;
+   color:white;
+   }
+.leftsection
+   {margin-top: 0px;
+    padding-left:70px;
+    width:50%;
+   }
+.rightsection
+   {
+       padding-left:0%;
+       width:50%;
+   }
+.bodycontainer
+   {
+       display:flex;
+       margin-top:0px;
+       margin-right:30px;
+
+   }
+img
+  {
+   height:150px;
+   width:130px;
+   border-radius:50%;
+  }
+body
+  {
+   font-size:20px;
+  }
+button
+{
+   border-radius:20px;
+}
+button:hover
+{
+   background-color:yellow;
+}
+#gmaillogo{
+   height:20px;
+   width:20px;
+}
+ul{
+   list-style-type: none;
+   padding:10px;
+}
+ul button{
+   background-color:lightgrey;
+   padding:15px;
+   margin:5px;
+}

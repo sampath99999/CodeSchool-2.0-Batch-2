@@ -1,0 +1,60 @@
+.maintable {
+  margin-top: 5%; 
+}
+ul {
+  list-style:none;
+}
+h1{
+    text-shadow: 2px 2px 3px rgb(85, 85, 110);
+    background-color:azure;
+}
+ul li::before {
+  content: "\2022"; /*it shows bullets*/
+  color: rgb(106, 106, 211);
+  display: inline-block;
+  width: 1em; /*1 em is equal to 16px*/
+  margin-left: -1em; /* distance between the margin and bullet*/
+}
+#header {
+  font-size: large;
+  color: rgb(106, 106, 211);
+  
+}
+table{
+    overflow: hidden;
+}
+
+p {
+  display: inline;
+}
+td, th {
+    
+    padding: 10px;
+    position: relative;
+}
+
+th {
+  background-color:#fff;
+}
+
+td:hover::after { 
+    background-color: #ffa;
+    content: ' ';
+    height: 10000px;   
+    left: 0;
+    position: absolute;  
+    top: -5000px;
+    width: 100%;
+    z-index: -1;  
+    border: 1px solid black;      
+}
+
+
+/*tbody:hover tr:hover td {/*color when hovered and that shadow
+	color: blue;
+	text-shadow: 0 1px 0 #fff;
+}
+tbody:hover td{ /*blur the backround focus on the body
+	color: transparent;
+	text-shadow: 0 0 1px #aaa;
+}*/

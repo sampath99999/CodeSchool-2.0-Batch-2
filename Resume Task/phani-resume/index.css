@@ -1,0 +1,149 @@
+.bg-container {
+    display: flex;
+    background-size: cover;
+
+
+}
+
+.left-container {
+    background-color: #625B5B;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.right-container {
+
+    background-color:#70ADAF ;
+    width: 65%;
+
+}
+
+.pro-image {
+    margin-top: 25px;
+    height: 150px;
+    width: 150px;
+    border-radius: 60%;
+    border-style: solid;
+    border-color: #70ADAF;
+    border-width: 5px;
+    text-align: center;
+
+}
+
+.img-container {
+    width: 100%;
+    text-align: center;
+}
+
+.left-heading {
+    font-family: "Roboto";
+    color: #70ADAF;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.right-heading{
+    font-family: "Roboto";
+    color:  #403939;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.icon {
+    color: #70ADAF;
+    height: 20px;
+    width: 40px;
+}
+
+.description {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #E0E0E0;
+}
+
+.icon-container {
+    color: #70ADAF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.course-heading {
+    padding-left: 18px;
+    color: #70ADAF;
+    font-weight: 600;
+    font-family: cursive;
+    margin-top: 0px;
+    text-decoration: underline;
+}
+
+.desc2 {
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #E0E0E0;
+    padding-left: 15px;
+    margin-top: 0px;
+    padding-bottom: 15px;
+}
+.name{
+    color: #000000;
+    font-weight: 800;
+    font-family: Roboto;
+    text-align: center;
+}
+.role{
+   color: #000000; 
+   font-size: 14px;
+   font-weight: 600;
+   margin-top:0px;
+   font-family: sans-serif;
+   text-align:center;
+}
+.side-heading {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.project-heading{
+    padding-left: 20px;
+    color:  #403939;
+    margin-right: 25px;
+}
+
+
+.description {
+    font-family: sans-serif;
+}
+.span{
+    font-weight: 500;
+    padding-left: 25px;
+}
+.p-bottom{
+    padding-bottom: 25px;
+}
+
+
+.project-link{
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-left: 25px;
+    color: #403939;
+}
+.right-description{
+    font-family: sans-serif;
+    font-size: 15px;
+    color:  #4D2C2C;
+    font-weight: 500; 
+    padding-left: 25px;
+}
+
+.list-item{
+    padding: 10px;
+}

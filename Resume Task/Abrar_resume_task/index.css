@@ -1,0 +1,178 @@
+body {
+  margin: 0px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-image: url("https://res.cloudinary.com/dshiw9hxc/image/upload/v1689308181/ab_m1ifcx.webp");
+}
+
+.main-head-container {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: navy;
+  font-family: monospace;
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+.designation {
+  font-family: monospace;
+  font-size: 18px;
+  font-style: italic;
+  color: navy;
+}
+
+.myImage {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: navy;
+  margin-top: 5px;
+}
+
+.details-container {
+  display: flex;
+}
+
+.side1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90vh;
+  width: 50%;
+  padding: 10px;
+}
+
+.edu-head {
+  color: navy;
+  background-color: #a0a199;
+  height: 20px;
+  width: 100px;
+  font-size: 20px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: black;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+.address {
+  color: navy;
+  font-family: Bree Serif;
+  font-size: 14px;
+}
+
+#icon {
+  background-color: #a0a199;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+}
+
+.educations {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edu-name {
+  font-family: Bree Serif;
+  font-size: 16px;
+  color: navy;
+}
+
+.edu-para {
+  font-size: 14px;
+  color: gray;
+}
+
+.duration {
+  color: navy;
+  font-family: Bree Serif;
+  font-size: 15px;
+}
+
+.line {
+  height: 700px;
+  width: 1px;
+}
+
+.side-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  color: navy;
+  font-family: Bree Serif;
+  font-size: 16px;
+}
+
+.techs {
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: italic;
+  color: gray;
+}
+
+.projects {
+}
+
+.pro-head {
+  color: navy;
+  font-family: Bree Serif;
+  font-size: 16px;
+}
+
+.link {
+  color: blue;
+}
+.heads {
+  color: navy;
+  font-family: Bree serif;
+  font-size: 16px;
+}
+.spanned {
+  color: gray;
+  font-family: Roboto;
+}
+.li-item {
+  color: navy;
+  font-family: Bree Serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.pro-desc {
+  color: gray;
+  font-family: Bree serif;
+  font-size: 15px;
+}
+.unordered {
+  color: gray;
+  font-family: Bree Serif;
+  font-size: 14px;
+}
+.li-item {
+  color: gray;
+  font-family: Bree serif;
+  font-size: 14px;
+}

@@ -1,0 +1,536 @@
+* {
+  margin: 0px;
+}
+.main-container {
+  width: 100%;
+}
+
+.backImageContainer {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.dropDownContainer {
+  background-color: #045091;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropMenu {
+  color: #ffffff;
+  list-style-type: none;
+  position: absolute;
+}
+
+.drop-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-menu-container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-image {
+  height: 8px;
+  padding-left: 10px;
+}
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Bree serif;
+  margin-right: 25px;
+}
+.drop-items-list {
+  position: absolute;
+  display: none;
+  margin-top: 24px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.drop-items-list-2 {
+  position: absolute;
+  display: none;
+  margin-top: 24px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.drop-items-list li:hover {
+  background-color: #338fff;
+}
+.drop-items-list-2 li:hover {
+  background-color: #338fff;
+}
+.challan-card:hover .drop-items-list {
+  display: block;
+  background-color: #f1f1f1;
+  color: black;
+  list-style-type: none;
+}
+.challan-card-2:hover .drop-items-list-2 {
+  display: block;
+  background-color: #f1f1f1;
+  color: black;
+  list-style-type: none;
+}
+.nav-list li {
+  padding: 20px;
+}
+.nav-list li:hover {
+  background-color: #2881cd;
+}
+.dropMenu {
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  width: 150px;
+  border-style: solid;
+  border-width: 0px;
+  margin-right: 25px;
+}
+.opt {
+  color: black;
+  font-family: Bree serif;
+}
+.sided-containers {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.side-1-main-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+.side-1 {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.login-container {
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-head {
+  color: #40464e;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  padding-left: 35px;
+  padding-top: 20px;
+}
+.bar-container {
+  border-style: solid;
+  border-width: 0.5px;
+  height: 25px;
+  width: 250px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.inputEl {
+  border-style: solid;
+  border-width: 0px;
+  background-color: transparent;
+  outline: none;
+  margin-left: 10px;
+}
+#icon {
+  height: 20px;
+  width: 0px;
+}
+.captcha-container {
+  background-color: #374659;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  width: 260px;
+  border-width: 1px;
+  border-color: black;
+  margin-bottom: 15px;
+}
+.btn-container {
+  background-color: #dedede;
+  text-align: center;
+  height: 60px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+#icon {
+  font-size: 20px;
+  background-color: transparent;
+}
+.rev-btn {
+  cursor: pointer;
+  border-style: solid;
+  border-width: 0px;
+  background-color: transparent;
+}
+.btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.forgot-link:hover {
+  text-decoration: none;
+  outline: none;
+  color: blue;
+}
+.signInBtn {
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: inherit;
+  background-color: green;
+  height: 40px;
+  width: 120px;
+  font-size: 15px;
+  padding: 5px;
+  margin-left: 20px;
+}
+.notifications-container {
+  background-color: #fff3cd;
+  padding: 10px;
+}
+.not {
+  font-size: 14px;
+  color: #856439;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  padding-top: 10px;
+}
+.red-note {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.imp-note-container {
+  background-color: #374659;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #a06800;
+}
+.imp-btn {
+  background-color: green;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 3px;
+  color: #ffffff;
+  height: 30px;
+  width: 100px;
+  margin-right: 5px;
+}
+.imp-note {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: Bree Serif;
+}
+.imp-cont-2 {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.bud-para {
+  color: #856439;
+  font-family: Bree Serif;
+  font-size: 14px;
+}
+.click-link {
+  color: #23527c;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.attention-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: #d4a855;
+  background-color: #ffe9c1;
+  margin-bottom: 15px;
+  margin: 15px;
+}
+.red-note-2 {
+  color: red;
+}
+.dta {
+  color: navy;
+  font-family: Bree serif;
+  font-size: 14px;
+  margin: 15px;
+}
+.all-warnings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.warning-head {
+  color: red;
+  font-family: Bree Serif;
+}
+.down-btn {
+  color: #ffffff;
+  background-color: green;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 3px;
+  padding: 5px;
+  align-self: flex-start;
+}
+.click-down-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.click-para {
+  color: #6f4d21;
+  font-family: Bree serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.steps-head {
+  color: red;
+  font-family: Bree serif;
+}
+.steps-para {
+  color: #6f4d21;
+  font-size: 14px;
+  font-family: Bree serif;
+  margin-bottom: 10px;
+}
+.side-2 {
+  background-color: #dedede;
+  margin-right: 30px;
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.image-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.image-desc {
+  background-color: #08254f;
+  color: white;
+  padding: 5px;
+}
+.head-3 {
+  color: rgba(255, 255, 255, 0.6);
+}
+.help-cont-1 {
+  background-image: url("https://ifmis.telangana.gov.in/images/newUi/phone_icon.png");
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+}
+.desk-head-1 {
+  color: #ffffff;
+  margin-right: 110px;
+}
+.help-container-2 {
+  display: flex;
+  align-items: center;
+  box-shadow: black;
+  margin-bottom: 15px;
+}
+.finance-container {
+  background-color: #ffffff;
+  color: #40464e;
+  padding: 5px;
+}
+.playstore-container {
+  background-color: rgb(238, 238, 238);
+  padding: 15px;
+}
+.playstore-link {
+  color: #40464e;
+  font-family: Bree serif;
+}
+.video-container {
+}
+.pic-container {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+  padding: 10px;
+}
+.video-image {
+  height: 450px;
+  width: 100%;
+}
+.system-container {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+  padding: 10px;
+}
+.system-head {
+  color: #ffffff;
+  font-family: Bree serif;
+  margin-bottom: 15px;
+}
+.system-para {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.hr-line {
+  width: 50px;
+  height: 4px;
+  background: #0073ae;
+  border-style: solid;
+  border-width: 0px;
+  margin-bottom: 15px;
+}
+.downSidedContainers {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/footer_bg.png");
+  width: 76%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.total-final-container {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.down-container-1 {
+  padding: 20px;
+  width: 350px;
+  margin-right: 10px;
+}
+.spannned-elements {
+  overflow-y: auto;
+  padding: 20px;
+  height: 300px;
+  width: 300px;
+  margin-right: 10px;
+}
+.news-head {
+  color: #40464e;
+  font-family: Bree serif;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.news-para {
+  color: #40464e;
+  font-family: Bree serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.hover-el {
+  margin-bottom: 10px;
+}
+.down-line {
+  height: 350px;
+  width: 1px;
+  margin-top: 10px;
+  background: gray;
+  border-style: solid;
+  border-width: 0px;
+  margin-bottom: 15px;
+}
+span:hover {
+  color: violet;
+  text-decoration: underline;
+}
+.down-container-2 {
+  padding: 20px;
+  height: 300px;
+  width: 350px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.youtube-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+.video-image-1 {
+  height: 70px;
+  width: 120px;
+  margin-right: 10px;
+}
+.date-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dt-1 {
+  margin-right: 10px;
+}
+.video-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.detail-head {
+  font-size: 14px;
+}
+.down-container-3 {
+  padding: 20px;
+  height: 300px;
+  width: 350px;
+  margin-right: 10px;
+}
+.bottom-container {
+  background-color: #06162e;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.policy {
+  color: #959595;
+  font-family: Bree serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 700px;
+}
+.captcha-image {
+  height: 30px;
+  width: 100%;
+}

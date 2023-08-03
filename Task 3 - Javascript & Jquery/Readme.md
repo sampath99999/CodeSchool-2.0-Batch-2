@@ -1,5 +1,9 @@
 # Task 3 - Javascript & Jquery
 
+Get News Posts from following API<br>
+`https://newsapi.org/`<br>
+Show that posts in this page as shown below, after cliking on Post modal should be shown with the title, author, and body
+
 ## 🖥️ Desktop View
 ![image](https://github.com/sampath99999/CodeSchool-2.0-Batch-2/assets/112122835/c10cea67-2119-45ad-9bd7-54aa2435d0c9)
 

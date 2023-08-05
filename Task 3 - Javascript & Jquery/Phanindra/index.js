@@ -257,17 +257,22 @@ $("document").ready(function () {
       //footer-container
 
       $(".footer-container span").css({
-        fontSize: "13px",
+        fontSize: "12px",
         color: "#999999",
         fontWeight: "600",
+    
       });
+      $(".footer-container-sub").css({
+        width:"85%",
+        flexWrap:"wrap"
+      })
       $(".backbtn").css({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         background: "transparent",
         border: "1px solid rgb(221, 217, 217)",
-        height: "35px",
+        height: "33px",
         width: "80px",
         padding: "6px",
         color: "#999999",

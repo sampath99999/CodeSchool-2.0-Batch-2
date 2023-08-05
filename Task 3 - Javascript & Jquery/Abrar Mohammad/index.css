@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+}
+.navCont {
+  position: fixed;
+  background-color: white;
+  margin-bottom: 15vh;
+  z-index: 1;
+}
+.linksContainer {
+  border-top: 1px solid lightgray;
+}
+.newsLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.facebookIcon {
+  height: 20px;
+  width: 20px;
+}
+.facebookIcon:hover {
+  color: #3b5998;
+}
+.twitterIcon {
+  height: 20px;
+  width: 20px;
+}
+.twitterIcon:hover {
+  color: #3b5998;
+}
+.instagramIcon {
+  height: 20px;
+  width: 20px;
+}
+.instagramIcon:hover {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  border-radius: 5px;
+}
+.pintrestIcon {
+  height: 20px;
+  width: 20px;
+}
+.pintrestIcon:hover {
+  color: red;
+}
+.tiktokIcon {
+  height: 20px;
+  width: 20px;
+}
+.tiktokIcon:hover {
+  color: red;
+}
+.youtubeIcon {
+  height: 20px;
+  width: 20px;
+}
+.youtubeIcon:hover {
+  color: red;
+}
+.searchIcon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  background-image: linear-gradient(to bottom, #ff6347, orange);
+}
+.hamburgerIcon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  background-image: linear-gradient(to bottom, #ff6347, orange);
+}
+.homeLink {
+  background-image: linear-gradient(to right, #ff6347, orange);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.oneBtn {
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #ff6347, orange);
+  color: white;
+}
+.helloPara {
+  font-family: Bree Serif;
+}
+.hrLine {
+  width: 90px;
+  color: red;
+  border: 4px solid #ff6347;
+  border-radius: 4px;
+  align-self: center;
+}
+.popularHead {
+  align-self: center;
+}
+.exploreData {
+  color: red;
+  font-weight: 800;
+  font-size: 14px;
+}
+.celebPara {
+  font-family: sans-serif;
+  color: black;
+}
+.joinPara {
+  font-size: 14px;
+}
+.ExploreImageContainer {
+  border-top: 1px solid lightgray;
+}
+.inputEl {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  text-align: center;
+  color: gray;
+}
+.signupBtn {
+  border: 0px solid;
+  background: linear-gradient(to right, #ff6347, orange);
+  color: white;
+  border-radius: 15px;
+}
+.policy {
+  color: orange;
+}
+.privacyText {
+  font-size: 14px;
+}
+.dots {
+  color: orangered;
+  font-size: 10px;
+}
+.angleButton {
+  border: 1px solid lightgray;
+  color: black;
+}
+.tagContainer {
+  flex-wrap: wrap;
+}
+.hamburgerButton {
+  background: linear-gradient(to right, #ff6347, orange);
+  outline: none;
+}
+.footPara {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+}
+.footerContainer {
+  border-top: 1px solid lightgray;
+}
+@media screen and (max-width: 776px) {
+  .homeLink {
+    background-image: none;
+    border: 0px solid;
+  }
+}

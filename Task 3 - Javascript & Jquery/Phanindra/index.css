@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.bg-container {
+    background-color: aquamarine;
+}
+
+.content-container {
+    width: 80%;
+    background-color: #fff;
+
+}
+
+@media screen and (max-width:768px) {
+    .content-container {
+        width: 100%;
+    }
+}
+.news-heading {
+    color: #ff7d66;
+    font-weight: 600;
+}
+
+.box i {
+    font-size: 15px;
+    flex-grow: 1;
+    color: #fff;
+}
+.fs-15 {
+    font-size: 15px;
+}
+.hamburger-icon {
+    font-size: 15px;
+    color: #fff;
+}
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 55%;
+   
+  }
+.coloured-circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ff9380;
+    border: none;
+    outline: none;
+}
+.icon-clr {
+    color: #fff;
+}
+
+.left-container {
+    padding: 20px;
+}
+
+.product-content {
+    border: 1px solid rgb(221, 217, 217);
+    margin-bottom: 20px;
+    border-radius: 12px;
+
+}
+
+.contact-box {
+    border: 1px solid rgb(221, 217, 217);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid rgb(221, 217, 217);
+}
+.signupbtn {
+    background-color: linear-gradient(to right, yellow, orange);
+}
+

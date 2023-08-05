@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary:#7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(154, 160, 214, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background:$cyan-100;
+    --color-btn:$indigo-400;
+    --color-sidebar:$blue-900;
+
+    --card-border-radius:2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    background:rgb(233, 239, 248);
+}
+
+a{
+    color: var(--color-info-dark);
+}
+
+hr{
+    color: darkgray;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    color: white;
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.muted-text{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+.indigo{
+    color: #6610f2;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    background:#11163f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+aside .logo{
+    display: flex;
+}
+
+aside .logo img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+aside .close{
+    display: none;
+}
+
+aside .sidebar{
+    background: #11163f;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+}
+
+aside h3{
+    font-weight: 300;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.5rem;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a:hover{
+   background-color:#182057;
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.8rem;
+}
+
+aside .sidebar .dashboard-count{
+    background-color: #1d286b;
+    color: var(--color-danger);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+.header{
+    display: inline-flex;
+    flex-direction: row;
+    padding-top: 5px;
+    background-color:white;
+    height: 3rem;
+    width: 150%;
+    margin: 0;
+}
+
+.right1{
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    margin-left: 600px;
+}
+
+.profile-photo >.name{
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+main{
+    width: 85%;
+}
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 1.6rem;
+}
+
+main .insights > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-2);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    height: 150px;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span{
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+main .insights > div.incomplete{
+    background-color: #ac8edd;
+}
+
+main .insights > div.incomplete span{
+    color: var(--color-danger);
+    font-size: 11px;
+    border-radius: 0;
+    border-color:#7b56b6;
+    padding: 0%;
+}
+
+main .insights > div.incomplete h3{
+    color: var(--color-white);
+}
+
+main .insights > div.incomplete p{
+    color: var(--color-white);
+    margin-bottom: 2px;
+}
+
+main .insights > div.customers span{
+    background-color: #7b56b6;
+}
+
+main .insights > div.customers h3{
+    font-weight: 150;
+    font-size: 14px;
+}
+
+main .insights > div.Conversion h3{
+    font-weight: 150;
+    font-size: 14px;
+}
+
+main .insights > div.revenue h3{
+    font-weight: 150;
+    font-size: 14px;
+}
+
+main .insights > div.Total h3{
+    font-weight: 150;
+    font-size: 14px;
+}
+
+main .insights > div.revenue span{
+    background:var(--color-primary)
+}
+
+main .insights > div.Conversion span{
+    background:var(--color-success);
+}
+
+main .insights > div.Total span{
+    background:var(--color-warning);
+}
+
+main .insights h3{
+    color: var(--color-dark-variant);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+main .insights > div .middle{
+    display: flex;
+    gap: 0px;
+    align-items:center;
+    justify-content: space-between;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 80px;
+    height: 50px;
+    border-radius: 20%;
+}
+
+main .insights .muted-text{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+main .insights .div.deals{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+main .insights .deals .photo1, .photo2, .photo3{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+main .insights .deals .p1{
+    line-height: 7px;
+}
+
+main .insights .deals h3{
+    margin-top: 0px;
+}
+
+main .graph{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+main .graph > div{
+    background: var(--color-white);
+    padding: 0px;
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    gap: 0px;
+}
+
+main .graph > .item2{
+    width: 250px;
+    height: 200px;
+}
+
+main .graph > .item3{
+    height: 200px;
+}
+.graph2 , .graph1{
+    height: 200px;
+}
+
+main .deals-statistics {
+     margin-top: 2rem;
+     background: var(--color-white);
+}
+
+main .deals-statistics .search{
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 15px 0 0 15px;
+}
+
+main .deals-statistics .search h2{
+    color: var(--color-dark);
+    margin-right: 150px;
+}
+
+main .deals-statistics .search .search1{
+    border-radius: var(--border-radius-1);
+}
+
+main .deals-statistics .search .search2{
+    border-radius: var(--border-radius-1);
+    background-color: #7b56b6;
+    color: white;
+    width: 100px;
+}
+
+main .deals-statistics table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--border-radius-2);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .deals-statistics table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+}
+
+main table tbody td:last-child td{
+    border: none;
+}
+main .deals-statistics .entry{
+    display: inline-flex;
+    gap: 600px;
+    background: var(--color-white);
+}
+
+main .deals-statistics .entry .item5{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.right{
+    margin-left: -150px;
+}
+
+.right .leads-by-source{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    margin-top: 80px;
+    background: var(--color-white);
+}
+
+.right h3{
+    color: var(--color-dark-variant);
+    font-size: 16px;
+    padding: 3px;
+}
+
+.right .leads-by-source .img{
+    margin-left: -90px;
+    height: 400px;
+    width: 400px;
+    align-items: center;
+}
+
+.right .leads-by-source .item6{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: -120px;
+}
+
+.right .leads-by-source .item6 span{
+    font-size: 12px;
+    color: var(--color-info-dark);
+    font-weight: bold;
+}
+
+.right .status{
+    background: var(--color-white);
+    margin-top: 1.5rem;
+}
+
+.right .status .num{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.right .status .num .primary{
+    background-color: #adb5e9;
+    color: var(--color-primary);
+    padding: 7px 5px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+    height: 25px;
+}
+
+.right .status .num small{
+    padding-top: 8px;
+}
+
+.right .status ul li{
+    padding: 5px;
+}
+
+.right .status ul li span{
+    color: var(--color-dark);
+    margin-right: 90px;
+    align-items: flex-end;
+}
+
+.right .activity{
+    background: var(--color-white);
+    margin-top: 1.5rem;
+}
+
+.right .events{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+} 
+
+.right .events p{
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 768px){
+  .container{
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  aside .logo h2{
+    display: inline;
+  }
+
+  aside .sidebar h3{
+    display: inline;
+  }
+
+  aside .sidebar a{
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .sidebar a:last-child{
+    position: absolute;
+    margin-top: 5rem;
+  }
+
+  aside{
+    position: fixed;
+    left: 0;
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+  }
+
+  aside .logo{
+    margin-left: 1rem;
+  }
+
+  aside .close{
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  main{
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+  main .insights{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main .graph{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main .deals-statistics{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin:3rem 0 0 0;
+  }
+
+  main .deals-statistics table{
+    width: 100%;
+    margin: 0;
+  }
+
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    align-items: center;
+  }
+  .right{
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+}

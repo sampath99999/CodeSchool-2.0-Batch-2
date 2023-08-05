@@ -280,6 +280,18 @@ $("document").ready(function () {
         background: "linear-gradient(to right, #ff6347,#ffa899)",
         color: "#fff",
       })
+      $("#home").css({
+        background: "linear-gradient(to right, #ff6347,#ffa899)",
+        color: "#fff",
+        width:"90px",
+        height:"35px",
+        borderRadius:"20px",
+        color:"#fff",
+        textAlign:"center",
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center"
+      })
       
 
       //-------------------------------------------------------------------------------------------------------//
@@ -322,7 +334,7 @@ $("document").ready(function () {
             } = alldata[i];
 
             let date = new Date(publishedAt);
-            console.log(date);
+          //  console.log(date);
 
             product = `
               <div class="product-content">
@@ -343,7 +355,7 @@ $("document").ready(function () {
                  <i class="fa-regular fa-comment"></i>
                  <span>(0)
               </div>
-              <h1 class="mb-3" >${title}</h1>
+              <h1 class="mb-4" >${title}</h1>
               <p class="mb-2">${description}</p>
               <hr class="line"/>
               <div class="card-bottom-container d-flex  align-items-center justify-content-between">
@@ -403,8 +415,8 @@ $("document").ready(function () {
             $(".product-box-description div").css({
               fontSize: "13px",
               color: "#999999",
-              marginBottom: "8px",
-              marginTop: "8px",
+              marginBottom: "20px",
+              marginTop: "30px",
             });
             $(".rounded-img").css({
               height: "25px",

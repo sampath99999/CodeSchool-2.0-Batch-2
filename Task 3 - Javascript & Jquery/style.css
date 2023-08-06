@@ -1,0 +1,118 @@
+
+.theme-button {
+    color: white;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(to right, #fe4f70 0%, #ffa387 100%);
+  }
+  
+  
+  #header {
+    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #ebebeb;
+  }
+  
+  
+  #header .title {
+    color: #fe4f70;
+  }
+  
+  .socialMedia li{
+    padding-right: 10px;
+  }
+  
+  .align-items-center{
+      display: flex; align-items: center; 
+      
+  }
+  
+  
+  @media (min-width: 800px) {
+      .custom-width-md {
+        width: 15%; /* Your custom width for large screens */
+      }
+    }
+  
+  
+    #carouselCard21 img {
+      height: 500px;
+      object-fit: fill;
+    }
+  
+    #carouselCard1 img {
+      height: 500px;
+      object-fit: fill;
+    }
+
+
+.hr-style {
+  border: none;
+  border-bottom: 5px solid orangered;
+  width: 100px;
+}
+
+/* navBar Style */
+
+.navBarContainer {
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+
+.navImgLogo {
+  height: 25px;
+}
+
+
+/* Nav Tab Container */
+
+.navTabContainer {
+  padding-top: 12vh;
+}
+
+
+
+
+
+/* carousel Container */
+
+#carouselCard1 img {
+  height: 500px;
+  object-fit: fill;
+}
+
+#carouselCard2 img {
+  height: 500px;
+  object-fit: fill;
+}
+
+/* post card */
+
+.postCardFooter div svg {
+  color: grey;
+  cursor: pointer;
+}
+
+.postCardFooter svg {
+  color: grey;
+}
+
+#page1 {
+  background: linear-gradient(to bottom, #f23800, #f48a43);
+  color: white;
+}
+
+/* newsletter */
+
+.signUpBtn {
+  height: 40px;
+  background: linear-gradient(to bottom, #f23800, #f48a43);
+}
+
+.footerContainer{
+    border-top: solid 1px #ebebeb;
+}

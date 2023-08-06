@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/4adea8e006.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <title>News</title>
+  </head>
+  <body class="mx-5">
+    <div class="newsBgContainer container-fluid p-0">
+      <!-- Navbar Container -->
+      <div id="header">
+        <div class="row-xl-12 d-flex justify-content-between align-items-center">
+          <div>
+            <a href="#" class="title" style="text-decoration: none">
+              <p style="font-size: 20px">News</p>
+            </a>
+          </div>
+          <div>
+            <ul class="col p-0 m-0 gap-1 socialMedia d-md-flex d-none" style="list-style: none;">
+              <li>
+                <a href="/"
+                  ><i
+                    class="fa fa-facebook"
+                    aria-hidden="true"
+                    style="color: #203656"
+                  ></i
+                ></a>
+              </li>
+              <li>
+                <a href="/"><i class="fa fa-twitter" aria-hidden="true" style="color: #203656"></i></a>
+              </li>
+              <li>
+                <a href="/"
+                  ><i class="fa fa-instagram" aria-hidden="true" style="color: #203656"></i
+                ></a>
+              </li>
+              <li>
+                <a href="/"
+                  ><i class="fa fa-pinterest" aria-hidden="true" style="color: #203656"></i
+                ></a>
+              </li>
+              <li><a href="/"><i class="fa-brands fa-tiktok" style="color: #203656"></i></i></a></li>
+              <li>
+                <a href="/"></a
+                ><i class="fa fa-youtube-play" aria-hidden="true" style="color: #203656"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav id="navbar" class="d-flex justify-content-between" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="d-md-flex d-none">
+            <ul class="d-flex list-unstyled" style="padding-left: 0; gap: 30px; margin: 0;">
+                <li style="display:flex; align-items:center;">
+                    <button class="theme-button">
+                        <a href="#"  style="color: white; text-decoration: none;">
+                            <p class="d-flex align-items-center m-1">Home<span class="material-symbols-outlined" style="font-size: small;">expand_more</span></p>
+                        </a>
+                    </button>
+                </li>
+                <li style="display:flex; align-items:center">
+                    <a href="#" style="color: #79889E; text-decoration: none;"><p style="margin: 0;">Lifestyle</p></a>
+                </li>
+                <li style="display:flex; align-items:center">
+                    <a href="#" style="color: #79889E; text-decoration: none;"><p style="margin: 0;">Culture</p></a>
+                </li>
+                <li style="display:flex; align-items:center">
+                    <a href="#" style="color: #79889E; text-decoration: none;">
+                        <p class="d-flex align-items-center m-0">Features<span class="material-symbols-outlined" style="font-size: small;">expand_more</span></p>
+                    </a>
+                </li>
+                <li style="display:flex; align-items:center">
+                    <a href="#" style="color: #79889E; text-decoration: none;"><p style="margin: 0;">Contact</p></a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex py-2 justify-content-between col-12 col-md-1">
+            <button class="theme-button mr-md-3 mr-0 float-left" style="border-radius: 50%;">
+                <a href="#" style="color: white; text-decoration: none;">
+                    <span class="material-symbols-outlined" style="font-size: small">search</span>
+                </a>
+            </button>
+            <button class="theme-button float-right" style ="border-radius: 50%;">
+                <a href="#" style="color: white; text-decoration: none;">
+                    <span class="material-symbols-outlined" style="font-size: small;">equal</span>
+                </a>
+            </button>
+        </div>
+      </nav>
+
+      <!-- Carousel Container -->
+
+      <div id="carouselExampleCaptions" class="carousel slide mb-3">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner carouselContainer">
+          <div class="carousel-item active" id="carouselCard1">
+            <img src="..." class="d-block w-100 rounded" alt="carouselImg1" />
+            <div class="carousel-caption">
+              <h5>First slide label</h5>
+              <div>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" id="carouselCard2">
+            <img src="..." class="d-block w-100 rounded" alt="carouselImg2" />
+            <div class="carousel-caption">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- News Main Container -->
+
+      <div
+        class="newsMainContainer row d-flex m-0 justify-content-around"
+      >
+        <div class="col-md-8 ps-0">
+          <div class="postsContainer"></div>
+          <div class="pageContainer d-flex justify-content-center gap-3">
+            <button
+              class="page1 rounded-circle pe-2 ps-2 border border-light-subtle bg-transparent"
+              id="page1"
+            >
+              1
+            </button>
+            <button
+              class="page2 rounded-circle pe-2 ps-2 border border-light-subtle bg-transparent"
+              id="page2"
+            >
+              2
+            </button>
+            <button
+              class="page3 rounded-circle pe-2 ps-2 border border-light-subtle bg-transparent"
+              id="page3"
+            >
+              3
+            </button>
+            <button
+              class="rounded-circle border border-light-subtle text-muted bg-transparent"
+              id="page4"
+            >
+            <span class="material-symbols-outlined" style="font-size: small;">
+                keyboard_double_arrow_right
+                </span>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4 postsFilterContainer">
+          <div
+            class="objectiveCard border border-light-subtle rounded text-center p-3 mt-3 mt-md-0"
+          >
+            <p class="text-muted">
+              Hello, We're content who is fascinated by content fashion,
+              celebrity and lifestyle. We helps clients bring the right content
+              to the right people.
+            </p>
+            <div class="navIconContainer d-flex gap-3 justify-content-center">
+                <div>
+                    <ul class="col p-0 m-0 gap-1 socialMedia d-flex" style="list-style: none;">
+                        <li>
+                          <a href="/"
+                            ><i
+                              class="fa fa-facebook"
+                              aria-hidden="true"
+                              style="color: #203656"
+                            ></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="/"><i class="fa fa-twitter" aria-hidden="true" style="color: #203656"></i></a>
+                        </li>
+                        <li>
+                          <a href="/"
+                            ><i class="fa fa-instagram" aria-hidden="true" style="color: #203656"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="/"
+                            ><i class="fa fa-pinterest" aria-hidden="true" style="color: #203656"></i
+                          ></a>
+                        </li>
+                        <li><a href="/"><i class="fa-brands fa-tiktok" style="color: #203656"></i></i></a></li>
+                        <li>
+                          <a href="/"></a
+                          ><i class="fa fa-youtube-play" aria-hidden="true" style="color: #203656"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+          <div
+            class="popularContainer border border-light-subtle rounded d-flex flex-column p-3 mt-3 shadow-sm"
+          >
+          <h3 class="text-center">Popular Posts</h3>
+          <div class="d-flex justify-content-center my-4"><img src="assets/wave.svg" alt="" style="height: 10px;width:60px"></div>
+          
+          </div>
+          <div
+            class="exploreContainer border border-light-subtle rounded d-flex flex-column p-3 mt-3 shadow-sm"
+          >
+            <h3 class="text-center">Explore Topics</h3>
+            <div class="d-flex justify-content-center my-4"><img src="assets/wave.svg" alt="" style="height: 10px;width:60px"></div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Celebration
+              </p>
+              <p>(2)</p>
+            </div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Culture
+              </p>
+              <p>(2)</p>
+            </div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Fashion
+              </p>
+              <p>(1)</p>
+            </div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Inspiration
+              </p>
+              <p>(2)</p>
+            </div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between mb-2 pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Lifestyle
+              </p>
+              <p>(6)</p>
+            </div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between mb-2 pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Politic
+              </p>
+              <p>(2)</p>
+            </div>
+            <div
+              class="exploreCard border-top border-light-subtle d-flex justify-content-between mb-2 pt-3"
+            >
+              <p class="text-black fw-bold">
+                <span class="fw-normal me-2 text-danger">></span>Trending
+              </p>
+              <p>(2)</p>
+            </div>
+          </div>
+          <div
+            class="newsLetterContainer border border-light-subtle rounded text-center d-flex flex-column p-3 mt-3 shadow-sm"
+          >
+            <h3 class="text-center">Newsletter</h3>
+            <div class="d-flex justify-content-center my-4"><img src="assets/wave.svg" alt="" style="height: 10px;width:60px"></div>
+            <p class="text-black fw-bold mt-5">Join 70,000 Subscribers!</p>
+            <input
+              type="email"
+              class="rounded-5 border border-light-subtle text-center mt-2"
+              style="height: 40px"
+              placeholder="Email address..."
+            />
+            <button
+              class="rounded-5 border border-0 text-center text-white signUpBtn mt-3"
+            >
+              Sign Up
+            </button>
+            <p class="mt-3 text-muted">
+              By signing up, you agree to our
+              <span style="color: #f23800">Privacy Policy</span>
+            </p>
+          </div>
+          <div
+            class="celebrationContainer border border-light-subtle rounded d-flex flex-column p-3 mt-3 shadow-sm"
+          >
+            <h3 class="text-center">Celebration</h3>
+            <div class="d-flex justify-content-center my-4"><img src="assets/wave.svg" alt="" style="height: 10px;width:60px"></div>
+            <img src="" class="celebrationImg rounded mt-5" />
+            <h4 class="celebrationTitle mt-3"></h4>
+            <p class="celebrationDate m-0"></p>
+            <div class="d-flex justify-content-center celebrationBtnCard gap-2">
+              <p
+                class="text-muted border border-light-subtle bg-transparent rounded-circle pe-2 ps-2"
+              >
+                <
+              </p>
+              <p
+                class="text-muted border border-light-subtle bg-transparent rounded-circle pe-2 ps-2"
+              >
+                >
+              </p>
+            </div>
+          </div>
+          <div
+            class="tagContainer border border-light-subtle rounded d-flex flex-column p-3 mt-3 shadow-sm"
+          >
+            <h3 class="text-center">Tag Clouds</h3>
+            <div class="d-flex justify-content-center my-4"><img src="assets/wave.svg" alt="" style="height: 10px;width:60px"></div>
+            <div class="tagCard d-flex flex-wrap"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer Img Container -->
+
+      <div
+        class="footerImgContainer d-flex flex-wrap gap-1 mt-5 pe-4 ps-4 justify-content-center align-items-center"
+      ></div>
+
+      <!-- Footer -->
+
+      <div
+        class="footerContainer col-12 d-flex flex-column justify-content-center d-md-flex flex-md-row justify-content-md-between align-items-center pe-md-4 ps-md-4 mt-5 pt-3 pb-3"
+      >
+        <p class="text-muted">
+            <span class="material-symbols-outlined" style="font-size: small;">
+                copyright
+                </span>
+          2023 News
+        </p>
+        <div class="navIconContainer d-flex gap-3">
+          <div>
+            <ul class="col p-0 m-0 gap-1 socialMedia d-flex" style="list-style: none;">
+                <li>
+                  <a href="/"
+                    ><i
+                      class="fa fa-facebook"
+                      aria-hidden="true"
+                      style="color: #203656"
+                    ></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="/"><i class="fa fa-twitter" aria-hidden="true" style="color: #203656"></i></a>
+                </li>
+                <li>
+                  <a href="/"
+                    ><i class="fa fa-instagram" aria-hidden="true" style="color: #203656"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="/"
+                    ><i class="fa fa-pinterest" aria-hidden="true" style="color: #203656"></i
+                  ></a>
+                </li>
+                <li><a href="/"><i class="fa-brands fa-tiktok" style="color: #203656"></i></i></a></li>
+                <li>
+                  <a href="/"></a
+                  ><i class="fa fa-youtube-play" aria-hidden="true" style="color: #203656"></i>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <a
+          class="border border-light-subtle text-muted bg-transparent p-2 rounded-5 mt-3 mt-md-0"
+          style="text-decoration: none"
+          href="#carouselExampleCaptions"
+          >^ Back to Top</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

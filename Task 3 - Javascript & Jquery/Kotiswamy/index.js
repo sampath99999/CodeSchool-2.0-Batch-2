@@ -6,7 +6,6 @@ $(document).ready(function () {
       for (let i of data.articles) {
         postData = [...postData, i];
       }
-      console.log(postData[0]);
 
       // carousel Container
 
@@ -32,10 +31,6 @@ $(document).ready(function () {
       // News Main Container
 
       // posts container
-
-      let postsList1 = postData.slice(31, 41);
-      let postsList2 = postData.slice(51, 61);
-      let postsList3 = postData.slice(61, 71);
 
       let pageFunction = function (postsList) {
         for (let i in postsList) {
@@ -181,39 +176,16 @@ $(document).ready(function () {
         });
       };
 
-      pageFunction(postsList1);
+      pageFunction(postData.slice(0, 10));
 
-      $("#page1").click(function () {
+      $(".pageBtn").click(function () {
         $(".postsContainer").empty();
-        pageFunction(postsList1);
-        $(this).css({
-          background: "linear-gradient(to bottom,#f23800,#f48a43)",
-          color: "white",
-        });
-        $(this).siblings().css({
-          background: "transparent",
-          color: "grey",
-          border: "1px solid grey",
-        });
-      });
-
-      $("#page2").click(function () {
-        $(".postsContainer").empty();
-        pageFunction(postsList2);
-        $(this).css({
-          background: "linear-gradient(to bottom,#f23800,#f48a43)",
-          color: "white",
-        });
-        $(this).siblings().css({
-          background: "transparent",
-          color: "grey",
-          border: "1px solid grey",
-        });
-      });
-
-      $("#page3").click(function () {
-        $(".postsContainer").empty();
-        pageFunction(postsList3);
+        let activeBtnVal = parseInt($(this).text());
+        let postsList = postData.slice(
+          0 + activeBtnVal * 10,
+          10 + activeBtnVal * 10
+        );
+        pageFunction(postsList);
         $(this).css({
           background: "linear-gradient(to bottom,#f23800,#f48a43)",
           color: "white",
@@ -228,7 +200,7 @@ $(document).ready(function () {
       // popular container
 
       for (let i = 0; i < 3; i++) {
-        let { urlToImage, title, publishedAt } = postsList1[i];
+        let { urlToImage, title, publishedAt } = postData[i];
 
         let date = new Date(publishedAt);
 
@@ -246,11 +218,11 @@ $(document).ready(function () {
       }
 
       $(".popularCard img").css({ height: "60px", width: "60px" });
-      $(".popularCard p").css({ color: "grey  " });
+      $(".popularCard p").css({ color: "grey " });
 
       // celebration container
 
-      const celebrationItem = postsList2[5];
+      const celebrationItem = postData[5];
 
       let { urlToImage, title, publishedAt, author } = celebrationItem;
 
@@ -270,8 +242,8 @@ $(document).ready(function () {
 
       // Tag Clouds
 
-      for (let i of postsList2) {
-        let { source } = i;
+      for (let i = 0; i < 10; i++) {
+        let { source } = postData[i];
         $(".tagCard").append(
           `<p class="m-1 border border-light-subtle text-muted rounded-5 p-2">#${source.name}</p>`
         );
@@ -279,8 +251,8 @@ $(document).ready(function () {
 
       // footer img container
 
-      for (let i = 0; i < 10; i++) {
-        let { urlToImage } = postsList3[i];
+      for (let i = 11; i < 21; i++) {
+        let { urlToImage } = postData[i];
         $(".footerImgContainer").append(`
         <img src=${urlToImage} alt="footerImg" class="rounded shadow-sm" />
         `);

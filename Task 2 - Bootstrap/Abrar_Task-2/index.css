@@ -2,9 +2,7 @@
   margin: 0px;
   font-family: "Inter", sans-serif;
 }
-body::-webkit-scrollbar {
-  display: none;
-}
+
 .dashboard-container {
   background-color: #111c43;
   position: fixed;
@@ -481,10 +479,10 @@ body::-webkit-scrollbar {
 }
 @media screen and (min-width: 992px) {
   .data-container {
-    margin-left: 16.7vw;
+    margin-left: 16.3vw;
   }
   .navbar-container {
-    width: 83%;
+    width: 84%;
   }
 }
 @media screen and (min-width: 1199px) {

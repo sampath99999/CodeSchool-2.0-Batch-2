@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/0e1ba3dc39.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid pt-2">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex ms-3 logoDiv">
+                <i class="fa-solid fa-earth-americas ms-1 mt-1 logo"></i>
+                <p class="ms-2 fw-semibold news">NEWS</p>
+            </div>
+            <div class="d-none d-md-flex me-3 socialMediaIcons">
+                <i class="fa-brands fa-facebook-f m-1 "></i>
+                <i class="fa-brands fa-twitter m-1"></i>
+                <i class="fa-brands fa-instagram m-1"></i>
+                <i class="fa-brands fa-pinterest m-1"></i>
+                <i class="fa-brands fa-tiktok m-1"></i>
+                <i class="fa-brands fa-youtube m-1"></i>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="d-flex justify-content-md-between me-3">
+            <div class="d-none d-md-flex">
+                <ul class="nav ms-3 ">
+                    <li class="nav-item dropdown bg-danger-subtle home "><a class="nav-link disabled dropdown-toggle"
+                            href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Lifestyle</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Culture</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link disabled dropdown-toggle" href="#">Features</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Contact</a></li>
+                </ul>
+
+            </div>
+            <div class="d-flex searchAndHomeIcons">
+                <div class="me-2 bg-danger-subtle search d-flex align-items-center">
+                    <i class="fa-solid fa-magnifying-glass ps-1 "></i>
+                </div>
+
+                <div class="dropdown bg-danger-subtle menu  d-flex align-items-center">
+                    <i class="fa-solid fa-grip-lines ps-1" data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu homeDropDown"><button type="button" class="btn-close closeButton "
+                            aria-label="Close"></button>
+                        <li><a class="dropdown-item text-danger-emphasis" href="#">Home</a></li>
+                        <li><a class="dropdown-item" href="#">Lifestyle</a></li>
+                        <li><a class="dropdown-item" href="#">Culture</a></li>
+                        <li><a class="dropdown-item" href="#">Features</a></li>
+                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Image slideshow  -->
+
+    <div class="row mainBlock mt-2">
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active bg-danger-subtle ">
+                    <img src="" class="card-img w-100 h-100 imgOne" alt="...">
+
+                    <div class="carousel-caption  ">
+                        <h6 class="imgOnetitle carouselItemTitle  text-black"></h6>
+                        <span class="authorOne  carouselItemAuthor text-black"></span>
+                        <span class="imgOneDate carouselItemDate  text-black"></span>
+                    </div>
+                </div>
+
+                <div class="carousel-item bg-dark-subtle">
+                    <img src="" class="card-img w-100 h-100 imgTwo" alt="...">
+                    <div class="carousel-caption  ">
+                        <h6 class="imgTwoTitle carouselItemTitle  text-black"></h6>
+                        <span class="authorTwo carouselItemAuthor   text-black"></span>
+                        <span class="imgTwoDate carouselItemDate   text-black"></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div>
+                <button class="carousel-control-prev ms-2" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon  bg-dark-subtle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark-subtle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Image slideshow ends here -->
+
+
+    <!-- Main Block starts here -->
+    <div class="ms-2  ms-md-4 me-2 mt-5 row block2 MainBLock ">
+        <div class="col-md-7 leftBlock">
+            <div class="newsItems">
+
+            </div>
+
+            <div class="pagenation mt-3 ">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item "><a class="page-link" onclick="displayPage(1)" href="#">1</a></li>
+                        <li class="page-item ms-2"><a class="page-link" onclick="displayPage(2)" href="#">2</a></li>
+                        <li class="page-item ms-2"><a class="page-link" onclick="displayPage(3)" href="#">3</a></li>
+                        <li class="page-item ms-2">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="ms-2 col-md-4 rightBlock  pt-3">
+            <div class="card">
+                <div class="card-body cardOneText text-black-50">
+                    Hello we are who is fascinated by content, fashion, celebrity and lifestyle. we help clients bring
+                    right content to right people.
+                </div>
+                <div class="card-text d-flex ms-5 cardOneSocialIcons pb-1">
+                    <i class="fa-brands fa-facebook-f m-1 "></i>
+                    <i class="fa-brands fa-twitter m-1"></i>
+                    <i class="fa-brands fa-instagram m-1"></i>
+                    <i class="fa-brands fa-pinterest m-1"></i>
+                    <i class="fa-brands fa-tiktok m-1"></i>
+                    <i class="fa-brands fa-youtube m-1"></i>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-title ms-5 pt-1 popularPostsTitle">
+                    Popular Posts
+                </div>
+                <div class="card-body popularPosts">
+
+                </div>
+
+            </div>
+
+            <div class="card exploreTopics mt-3">
+                <div class="card-title exploreTopicsTitle ms-5 pt-1">Explore Topics</div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between">
+
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Celebrations</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Culture</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Celebrations</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Fashion</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Inspiration</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Lifestyle</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Politic</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+
+                    <div class="card-text d-flex justify-content-between pt-1">
+
+                        <span class="topic"><i class="fa-solid fa-angle-right text-danger me-4"></i>Trending</span>
+                        <span class="numberOfTopics text-black-50">(2)</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-text newsLetterTitle ms-5 pt-1">
+                    NewsLetter
+                </div>
+                <div class="card-body">
+                    <p class=" newsLetter ms-4 p-0 m-0">Join 70,000 subscribers!</p>
+                    <input type="email" class="form-label email pt-0 rounded-pill" placeholder="email address">
+                    <button class="btn w-100 bg-danger-subtle signUp pt-0">Sign Up</button>
+                    <p class="privacyPolicy card-text pt-1">By signing up you need to agree our <span
+                            class="text-danger-emphasis">Privacy Policy</span></p>
+                </div>
+
+            </div>
+
+            <div class="card celebrationsCard mt-3">
+
+            </div>
+
+            <div class="card tagClouds mt-3">
+                <div class="card-title tagCloudsTitle ms-5 pt-1">TagClouds</div>
+                <div class="card-body">
+                    <button class="btn btn-sm btn-light tagBtn">#audio</button>
+                    <button class="btn btn-sm btn-light tagBtn">#content</button>
+                    <button class="btn btn-sm btn-light tagBtn">#featured</button>
+                    <button class="btn btn-sm btn-light tagBtn">#image</button>
+                    <button class="btn btn-sm btn-light tagBtn">#inspiration</button>
+                    <button class="btn btn-sm btn-light tagBtn">#lifestyle</button>
+                    <button class="btn btn-sm btn-light tagBtn">#photo</button>
+                    <button class="btn btn-sm btn-light tagBtn">#pic</button>
+                    <button class="btn btn-sm btn-light tagBtn">#slide</button>
+                    <button class="btn btn-sm btn-light tagBtn">#trending</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Main Block ends here -->
+
+    <!-- footer -->
+    <div class="row col-11  ps-1 ms-md-3 mt-3">
+        <div class="col-12 col-md-12 d-flex footer flex-wrap ms-5 me-5 ms-md-0 me-md-0">
+
+            <button class="btn footerBtn bg-danger-subtle mt-0 pt-1">@katen on Instagram</button>
+        </div>
+    </div>
+
+    <div class="row col-11 ms-2 ms-md-3 me-5 mt-3 d-md-flex d-block justify-content-between">
+        <div class="col footerText  ms-md-0 text-black-50">2023 News</div>
+        <div class="col card-text d-flex  cardOneSocialIcons pb-1 footerIcons">
+            <i class="fa-brands fa-facebook-f ms-1 "></i>
+            <i class="fa-brands fa-twitter ms-1"></i>
+            <i class="fa-brands fa-instagram ms-1"></i>
+            <i class="fa-brands fa-pinterest ms-1"></i>
+            <i class="fa-brands fa-tiktok ms-1"></i>
+            <i class="fa-brands fa-youtube ms-1"></i>
+        </div>
+
+        <button type="button" class="col btn  backTotop ">back to top</button>
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

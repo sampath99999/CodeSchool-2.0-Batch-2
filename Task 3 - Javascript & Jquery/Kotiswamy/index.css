@@ -1,0 +1,114 @@
+.hr-style {
+  border: none;
+  border-bottom: 5px solid orangered;
+  width: 100px;
+}
+
+/* navBar Style */
+
+.navBarContainer {
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+
+.navImgLogo {
+  height: 25px;
+}
+
+.fbIcon:hover {
+  color: #3b5998;
+}
+
+.twitterIcon:hover {
+  color: #00acee;
+}
+
+.instaIcon:hover {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+
+.pinterestIcon:hover {
+  color: #c8232c;
+}
+
+.ticktokIcon:hover {
+  color: #ff0050;
+}
+
+.youtubeIcon:hover {
+  color: red;
+}
+
+/* Nav Tab Container */
+
+.navTabContainer {
+  padding-top: 12vh;
+}
+
+.homeTab {
+  background: linear-gradient(#f23800, #f48a43);
+  color: white;
+  border-radius: 25px;
+}
+
+.menuBtn {
+  background: linear-gradient(#f23800, #f48a43);
+  border-radius: 50%;
+  padding: 0px;
+  outline: none;
+}
+
+.navTabIconCard svg,
+i {
+  background: linear-gradient(#f23800, #f48a43);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .homeTab {
+    background: white;
+    color: #f23800;
+    border-radius: 25px;
+  }
+}
+
+/* carousel Container */
+
+#carouselCard1 img {
+  height: 500px;
+  object-fit: fill;
+}
+
+#carouselCard2 img {
+  height: 500px;
+  object-fit: fill;
+}
+
+/* post card */
+
+.postCardFooter div svg {
+  color: grey;
+  cursor: pointer;
+}
+
+.postCardFooter svg {
+  color: grey;
+}
+
+/* newsletter */
+
+.signUpBtn {
+  height: 40px;
+  background: linear-gradient(to bottom, #f23800, #f48a43);
+}

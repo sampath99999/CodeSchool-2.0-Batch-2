@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+
+
+    <!-- bootstrap cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- j query cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- style sheet link -->
+
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <div class="heading">
+        <h4> contact our sales team </h4>
+        <h5 class="text-muted"> Our team is happy to answer your sales questions. Fill out the <br> form and we'll be in
+            touch as soon as possible</h5>
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <div class="formpage">
+                        <form onclick="return false">
+                            <br>
+
+                            <div class="first-name mb-3 d-flex">
+                                <label for="firstname" class="form-label">First name :</label>
+                                <input type="text" class="form-control" style="background-color: #E6E6E6;" id="fname"
+                                    placeholder="john" autocomplete="off" />
+                            </div>
+                            <p id="firstnameMessage"></p>
+
+                            <div class="last-name mb-3 d-flex">
+                                <label for="lastname" class="form-label">Last name :</label>
+                                <input type="text" class="form-control" style="background-color: #E6E6E6;" id="lname"
+                                    placeholder="doe" autocomplete="off">
+                            </div>
+                            <p id="lastNameMessage"></p>
+
+                            <div class="email mb-3 d-flex">
+                                <label for="mail" class="form-label">Work Email :</label>
+                                <input type="email" class="form-control" style="background-color: #E6E6E6;" id="email"
+                                    placeholder="abc@gmail.com" autocomplete="off">
+
+                            </div>
+                            <p id="mailMessage"></p>
+
+                            <div class="phone-number mb-3 d-flex">
+                                <label for="phonenumber" class="form-label">Phone Number :</label>
+                                <input type="text" class="form-control" style="background-color: #E6E6E6;"
+                                    id="phnnum" placeholder="xxxxx99" autocomplete="off">
+                            </div>
+                            <p id="phoneNumber"></p>
+
+                            <div class="date-of-birth mb-3 d-flex">
+                                <label for="date of birth" class="form-label">Date Of Birth :</label>
+                                <input type="date" class="form-control" style="background-color: #E6E6E6;"
+                                    id="dateOfBirth" autocomplete="off">
+                            </div>
+                            <p id="dateofbirth"></p>
+
+                            <div class="bio mb-3 d-flex">
+                                <label for="bio" class="form-label">Bio :</label>
+                                <input type="text" class="form-control" style="background-color: #E6E6E6;"
+                                    id="bioGraphy" autocomplete="off">
+                            </div>
+                            <p id="biography"></p> <br>
+
+                            <button type="submit" onclick="validateForm()" class="btn btn-primary">
+                                CONTACT SALES</button><br />
+
+                        </form>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-5">
+                <div class="right-container">
+                    <div class="quote mt-5" id="quotes"></div><br>
+
+                    <div class="image mt-1" id="images" class="center"></div>
+
+                    <p>you are in a good hands</p>
+                    <p>join millions of businesses on stripe. Hurry up now !! </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+
+
+.outerBlock{
+
+    width: 80vw;
+    height: 90vh;
+    margin-top: 2vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 10px;
+}
+
+.leftBlock{
+    width: 50vw;
+}
+
+.rightBlock{
+    background-color: brown;
+    width: 50vw;
+}
+
+.paymentDetails{
+    
+}
+
+.plans{
+
+}
+
+.emailInput{
+    height: 15px;
+    font-size: 12px;
+    width: 35vw;
+}
+
+.creditCardNumber{
+    height: 15px;
+    font-size: 12px;
+    width: 35vw;
+}
+
+
+.validation{
+    font-size: 8px;
+    color: red;
+}
+
+.labelCVV{
+    font-size: 10px;
+}
+
+.expiryDate{
+    height: 20px;
+    font-size: 10px;
+}
+
+.cvv{
+    height: 20px;
+    font-size: 10px;
+}
+
+.checkBoxText{
+    font-size: 10px;
+}
+
+.label{
+    font-size: 10px;
+    color: gray;
+}
+
+.subTotal{
+    font-size: 10px;
+}
+
+.platformFee{
+    font-size: 10px;
+}
+
+.totalAmount{
+    font-size: 10px;
+}
+
+hr{
+    border: 2px solid gray;
+}
+
+.makePayment{
+    height: 20px;
+    font-size: 8px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.rightBlockheader{
+    height: 40vh;
+    position: relative;
+}
+
+.plan{
+  height: 12vh ;
+  width: 25vw;
+  border-radius: 10px;
+  position: absolute;
+  top: 40vh;
+}
+
+.creditCardLogo{
+    height: 8vh;
+    width: 6vw;
+}
+
+.planAmount{
+    font-size: 10px;
+}
+
+ul li{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.modifyPlan{
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width:540px)
+{
+ 
+    .outerBlock{
+        display: block;
+    }
+
+ .rightBlock{
+    position: relative;
+    order: 1;
+ }
+
+ .leftBlock{
+    position: relative;
+    order: 2;
+ }
+}

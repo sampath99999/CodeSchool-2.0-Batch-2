@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/313eaaf651.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light px-5 pb-4">
+      <a class="container navbar-brand text-danger" href="#">News</a>
+      <div class="navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav d-none d-sm-flex">
+          <li class="nav-item socialMedia">
+            <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-pinterest"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-tiktok"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr class="bg-light ms-5 me-5" />
+    <nav class="navbar navbar-expand-lg px-5">
+      <div class="container-fluid">
+        <div class="search-wrapper bg-danger d-sm-none rounded-circle">
+          <i class="fas fa-search p-3 text-white align-items-center"></i>
+        </div>
+        <button
+          class="navbar-toggler d-flex justify-content-end d-sm-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="search-wrapper bg-danger rounded-circle">
+            <i
+              class="fa-solid fa-grip-lines p-3 text-white align-items-center"
+            ></i>
+          </div>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="menuItems navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item d-flex">
+              <a
+                class="nav-link active bg-danger text-white"
+                style="border-radius: 20px"
+                aria-current="page"
+                href="#"
+                >Home <i class="fa fa-chevron-down"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lifestyles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Culture</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Features
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+
+          <div class="d-sm-flex gap-3">
+            <div
+              class="search-wrapper d-none d-sm-flex bg-danger rounded-circle"
+              role="search"
+            >
+              <i class="fas fa-search p-3 text-white align-items-center"></i>
+            </div>
+            <div
+              class="search-wrapper bg-danger rounded-circle d-none d-sm-flex"
+            >
+              <i
+                class="fa-solid fa-grip-lines p-3 text-white align-items-center"
+              ></i>
+            </div>
+
+            <div
+              class="d-flex d-sm-none icons mb-3 gap-3 justify-content-center"
+            >
+              <a href="#" class="text-black"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-black"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-black"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-black"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+              <a href="#" class="text-black"><i class="fab fa-tiktok"></i></a>
+              <a href="#" class="text-black"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+      <div class="sliders">
+        <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators indicators">
+            <button
+              type="button"
+              data-bs-target="#mycarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#mycarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#mycarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <div class="carousel-inner" id="mainSlides"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#mycarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-secondary rounded-5"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#mycarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-secondary rounded-5"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 mt-5">
+          <div id="cards" class="container"></div>
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+          </nav>
+        </div>
+
+        <div class="col col-sm-4 col-12 mt-4">
+          <div class="row pt-4 mx-1">
+            <div class="card my-4 py-4">
+              <div class="card-title"></div>
+              <div
+                class="card-body justify-content-center text-secondary mx-2"
+                style="text-align: center; font-size: 15px"
+              >
+                Hello, We're content writer who is fascinated by content
+                fashion, celebrity and lifestyle. We helps clients bring the
+                right content to the right people.
+              </div>
+              <div
+                class="d-flex icons ms-4 mb-2 gap-3"
+                style="justify-content: center"
+              >
+                <a href="#" class="text-black"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-black"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-black"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="text-black"
+                  ><i class="fab fa-pinterest"></i
+                ></a>
+                <a href="#" class="text-black"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="text-black"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="card my-4 p-3 mt-5">
+            <h4
+              class="card-title my-3"
+              style="text-align: center; font-size: 20px; font-weight: 700"
+            >
+              Popular Posts
+            </h4>
+            <div class="card-body">
+              <div id="popularPosts"></div>
+            </div>
+          </div>
+          <div class="card my-4 mt-5">
+            <h4 class="card-title p-1 mt-5" style="text-align: center">
+              Explore Topics
+            </h4>
+            <div
+              class="card-body p-4"
+              style="font-size: 14px; font-weight: 700; opacity: 0.8"
+            >
+              <hr class="bg-secondary" />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Celebration</span>
+                </div>
+                <div class="text-secondary">(2)</div>
+              </div>
+              <hr class="bg-secondary" />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Culture</span>
+                </div>
+                <div class="text-secondary">(2)</div>
+              </div>
+              <hr class="bg-secondary" />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Fashion</span>
+                </div>
+                <div class="text-secondary">(1)</div>
+              </div>
+              <hr class="bg-secondary" />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Inspiration</span>
+                </div>
+                <div class="text-secondary">(2)</div>
+              </div>
+              <br />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Lifestyle</span>
+                </div>
+                <div class="text-secondary">(6)</div>
+              </div>
+              <hr class="bg-secondary" />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Politic</span>
+                </div>
+                <div class="text-secondary">(2)</div>
+              </div>
+              <hr class="bg-secondary" />
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i class="text-danger fa-solid fa-chevron-right me-4"></i>
+                  <span> Trending</span>
+                </div>
+                <div class="text-secondary">(2)</div>
+              </div>
+            </div>
+          </div>
+          <div class="card my-4 p-3 mt-5">
+            <h4
+              class="card-title my-3"
+              style="text-align: center; font-size: 20px; font-weight: 700"
+            >
+              News Letter
+            </h4>
+            <div class="card-body text-center">
+              <h4 style="font-size: 16px; text-align: center; font-weight: 800">
+                Join 70,000 Subscribers
+              </h4>
+              <form action="">
+                <input
+                  style="border-radius: 20px; width: 300px; height: 40px"
+                  class="text-center border-1 mt-4"
+                  type="text"
+                  placeholder="Email Address..."
+                />
+                <button
+                  style="border-radius: 20px; width: 300px; height: 40px"
+                  class="bg-danger text-center border-0 mt-2 mb-3"
+                  href="#"
+                >
+                  Sign Up
+                </button>
+              </form>
+              <p style="font-size: 14px" class="text-secondary fw-semibold">
+                By signing up, you agree to our
+                <span class="text-danger">Privacy Policy</span>
+              </p>
+            </div>
+          </div>
+          <div class="card my-4 p-3 mt-5 py-4">
+            <h4
+              class="card-title my-3"
+              style="text-align: center; font-size: 20px; font-weight: 700"
+            >
+              Celebration
+            </h4>
+            <div class="card-body p-4">
+              <div id="celebrationCard"></div>
+            </div>
+            <div class="d-flex justify-content-center gap-3">
+              <button
+                class="btn border-0 bg-body-secondary rounded-5 btn-outline-secondary"
+              >
+                <i class="fa-solid fa-chevron-left text-white"></i>
+              </button>
+              <button
+                class="btn border-0 bg-body-secondary rounded-5 btn-outline-secondary"
+              >
+                <i class="fa-solid fa-chevron-right text-white"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card my-4 mt-5">
+            <h4 class="card-title p-1" style="text-align: center">
+              Tag Clouds
+            </h4>
+            <div class="card-body">
+              <div id="tagClouds" class="d-flex flex-wrap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row ms-md-2" id="bottomPictures"></div>
+    </div>
+
+    <hr class="bg-secondary mt-5" />
+    <div class="container pt-4">
+      <footer>
+        <div
+          class="d-md-flex justify-content-md-between align-items-md-center"
+          style="text-align: center"
+        >
+          <div class="text-secondary mb-3"><span>© 2023 News</span></div>
+          <div class="d-flex icons mb-3 gap-3 justify-content-center">
+            <a href="#" class="text-black"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-black"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-black"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-black"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="text-black"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="text-black"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="btn rounded-5 btn-outline-secondary mb-3" id="backToTop">
+            <i class="fa-solid fa-chevron-up"></i> Back to Top
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -498,11 +498,25 @@ function newsResult(data) {
 }
 
 $(function () {
+
+
+
+
   var url =
-    'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=5f607795519e46759faa6905fcd4c2c7';
+    'https://newsapi.org/v2/everything?q=apple&from=2023-08-02&to=2023-08-02&sortBy=popularity&apiKey=5f607795519e46759faa6905fcd4c2c7';
     
   $.get(url, function (data) {
     console.log(data);
     newsResult(data);
   });
 });
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}

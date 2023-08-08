@@ -50,7 +50,7 @@
   </head>
   <body>
     <div class="news-container m-auto">
-      <header id="top">
+      <header id="top" class="header-large-devices">
         <div
           class="logo-icons-container d-flex align-items-center justify-content-md-between"
         >
@@ -153,7 +153,7 @@
           </div>
         </div>
         <div class="news-navbar">
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav class="navbar navbar-expand-lg navbar-light ">
             <button
               class="navbar-toggler navbar-dropdown-icon rounded-circle text-white"
               type="button"
@@ -170,7 +170,7 @@
               class="collapse navbar-collapse navbar-list-container"
               id="navbarNavDropdown"
             >
-              <ul class="navbar-nav navbar-dropdown-list">
+              <ul class="navbar-nav navbar-dropdown-list list-drop-down h-sm-100">
                 <li class="nav-item dropdown navbar-item-list">
                   <a
                     class="nav-link dropdown-toggle"
@@ -222,13 +222,41 @@
                 </li>
               </ul>
             </div>
+
             <i class="fas fa-search navbar-search-icon rounded-circle me-3"></i>
-            <i
-              class="fas fa-bars navbar-search-icon rounded-circle d-none d-lg-block"
-            ></i>
+           
           </nav>
         </div>
       </header>
+
+      
+      <header class="headers-small-devices d-md-none">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+          
+          <div id="main" class=" header-menu-dropdown ">
+            <i class="fas fa-search navbar-search-icon rounded-circle me-3 order-0"></i>
+            <button class="openbtn small-bars order-1" onclick="openNav()">☰ </button>  
+           
+          </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="main-container">
         <div class="container-fluid">
           <div class="row g-2">

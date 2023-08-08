@@ -486,21 +486,36 @@ function createRightNavContainer() {
   const navContainer = $("<div>", {
     class: "container-fluid d-flex justify-content-end align-items-center mx-4",
   });
-
+  let bars;
   const nav = $("<nav>");
+  if ($(window).width() < 548) {
+    bars = createIconButton("solid fa-times ms-auto");
+    $("#headerNav").append(bars);
+  } else {
+    bars = createIconButton("solid fa-bars");
+    const search = createIconButton("solid fa-search");
+    nav.append(search, bars);
+    navContainer.append(nav);
+  }
 
-  const bars = createIconButton("solid fa-bars");
-  const search = createIconButton("solid fa-search");
-  nav.append(search, bars);
-  navContainer.append(nav);
   bars.on("click", function () {
-    const leftNavContainer = $(".container-fluid.left-nav-container");
-    leftNavContainer.toggleClass("hidden");
+    if ($(window).width() < 548) {
+      const leftNavContainer = $(".container-fluid.left-nav-container");
+      leftNavContainer.toggleClass("hidden");
+    }
+    const icon = $(this).find("i");
+
+    if (icon.hasClass("fa-bars")) {
+      icon.removeClass("fa-bars");
+      icon.addClass("fa-times");
+    } else {
+      icon.removeClass("fa-times");
+      icon.addClass("fa-bars");
+    }
   });
   $(window).on("load resize", function () {
     const leftNavContainer = $(".container-fluid.left-nav-container");
-    if ($(window).width() < 768) {
-      search.addClass("d-none");
+    if ($(window).width() < 548) {
       leftNavContainer.addClass("hidden");
     } else {
       leftNavContainer.removeClass("hidden");
@@ -649,6 +664,7 @@ function generateNewsBody(images, data) {
     let url = news[i].url;
     let urlToImage = news[i].urlToImage;
     let publishedAt = news[i].publishedAt;
+    let content = news[i].content;
     if (i < 3) {
       var post = {
         title: title,
@@ -668,6 +684,7 @@ function generateNewsBody(images, data) {
       url: url,
       urlToImage: urlToImage,
       publishedAt: publishedAt,
+      content: content,
     };
     newsData.push(news_post);
     source_names.push(sourceName);
@@ -692,7 +709,8 @@ function showNewsPage(pageNumber) {
         newsCardData.url,
         newsCardData.urlToImage,
         newsCardData.publishedAt,
-        newsCardData.description
+        newsCardData.description,
+        newsCardData.content
       )
     );
   }
@@ -731,6 +749,7 @@ function createNewsCard(
   url,
   urlToImage,
   publishedAt,
+  description,
   content
 ) {
   return $("<div>", {
@@ -744,6 +763,7 @@ function createNewsCard(
       url,
       urlToImage,
       publishedAt,
+      description,
       content
     )
   );
@@ -756,6 +776,7 @@ function createNewsCardBody(
   url,
   urlToImage,
   publishedAt,
+  description,
   content
 ) {
   return $("<div>", {
@@ -764,15 +785,15 @@ function createNewsCardBody(
     createCardImg(urlToImage),
     createAuthorDetails(author, authorImg, publishedAt),
     createNewsCardHeader(title),
-    createNewsCardDescription(content),
-    createNewsCardFooter(url)
+    createNewsCardDescription(description),
+    createNewsCardFooter(title, urlToImage, content)
   );
 }
 
-function createNewsCardFooter(url) {
+function createNewsCardFooter(title, urlToImage, content) {
   return $("<div>", {
     class: "card-footer m-3 bg-white",
-  }).append(createFooterContainer(url));
+  }).append(createFooterContainer(title, urlToImage, content));
 }
 
 function createLogos() {
@@ -791,8 +812,8 @@ function createLogos() {
   return footerLogos;
 }
 
-function createFooterContainer(url) {
-  continueReadingBtn = createContinuedReadingBtn(url);
+function createFooterContainer(title, urlToImage, content) {
+  continueReadingBtn = createContinuedReadingBtn(title, urlToImage, content);
   return $("<div>", {
     class: "d-flex justify-content-between align-items-center",
   }).append(createLogos(), continueReadingBtn);
@@ -804,12 +825,68 @@ function getLogos(logo) {
   });
 }
 
-function createContinuedReadingBtn(url) {
-  return $("<a>", {
-    href: url,
+function createContinuedReadingBtn(title, urlToImage, content) {
+  const btn = $("<a>", {
     class: "btn btn-primary bg-white text-dark fw-bold border-0",
     text: `Continue Reading ˃`,
   });
+
+  btn.click(function () {
+    const card = createExpandedCard(title, urlToImage, content);
+    const overlay = createOverlay(card);
+
+    $("body").append(overlay);
+  });
+
+  return btn;
+}
+
+function createOverlay(content) {
+  const overlay = $("<div>", {
+    class: "overlay d-flex align-items-center justify-content-center",
+    style:
+      "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);",
+  });
+
+  overlay.append(content);
+
+  return overlay;
+}
+
+function createExpandedCard(title, imagePath, description) {
+  const card = $("<div>", {
+    class: "card p-3",
+    style: "max-width: 500px; margin: 0 auto;",
+  });
+
+  const cardHeader = $("<div>", {
+    class:
+      "card-header d-flex justify-content-between align-items-center fw-bold",
+    html: `${title}<button type="button" class="btn-close" aria-label="Close"></button>`,
+  });
+
+  const cardImage = $("<img>", {
+    class: "card-img-top",
+    src: imagePath,
+    alt: "Card Image",
+  });
+
+  const cardBody = $("<div>", {
+    class: "card-body",
+  }).append(
+    $("<p>", {
+      class: "card-text",
+      text: description,
+    })
+  );
+
+  card.append(cardHeader, cardImage, cardBody);
+
+  card.find(".btn-close").click(function () {
+    card.closest(".overlay").remove();
+  });
+
+  return card;
 }
 
 function createFooterLogos() {

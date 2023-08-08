@@ -1,0 +1,36 @@
+body {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:  repeating-linear-gradient(45deg, #45f7cd 25%, transparent 25%, transparent 75%, #45f7cd 75%, #45f7cd), repeating-linear-gradient(45deg, #45f7cd 25%, #e5e5f7 25%, #e5e5f7 75%, #45f7cd 75%, #45f7cd);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  
+ 
+  
+}
+.card {
+  margin-top: 10rem;
+  height: 40rem;
+  background-color: white;
+}
+.card form {
+  padding: 3rem;
+}
+.card form div {
+  padding-bottom: 2rem;
+}
+#temparature {
+  font-size: 8rem;
+}
+.WeatherIcons {
+  font-size: 2rem;
+  opacity: 50%;
+}
+#DayNightIcon {
+  margin-top: 50px;
+  font-size: 10rem;
+
+  text-align: center;
+  opacity: 30%;
+  color: yellow ;
+}

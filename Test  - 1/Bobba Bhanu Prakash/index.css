@@ -1,0 +1,36 @@
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/blue-white-diagonally-divided-clean-background-blue-white-diagonally-divided-clean-background-183136073.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form_title {
+    text-align: center;
+}
+
+input, select {
+    float: right !important;
+    width: 80% !important;
+}
+
+textarea {
+    width: 80% !important;
+}
+
+#monthlyAmount {
+    width: 90% !important;
+    height: 40px !important;
+}
+
+.paymentsvolume {
+    width: 23%;
+}
+
+    .paymentsvolume > p:nth-child(2) {
+        font-size: 12px;
+    }
+
+.rightpart {
+    vertical-align: center;
+    padding-top: 25% !important;
+}

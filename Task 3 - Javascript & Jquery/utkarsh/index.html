@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- j query cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- style sheet link -->
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Welcome to News Letters !!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex p-2 m-2 mt-4">
+            <div class="col-lg-9">
+                <h5 class="text-danger">News Blog</h5>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="icons d-md-flex d-none justify-content-between">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="navigation">
+            <nav class="navbar navbar-expand-lg m-2">
+                <div class="container-fluid gap-2">
+                    <a class="navbar-brand" href="#">Home</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Lifestyle</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Culture</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Features
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Current affairs</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Popular news</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacts</a>
+                            </li>
+                        </ul>
+                        <div class="badge rounded-pill bg-danger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="sliders">
+            <div id="carouselContent" class="carousel slide">
+                <div class="carousel-indicators indicators">
+                    <button type="button" data-bs-target="#carouselContent" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselContent" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+
+                <div class="carousel-inner" id="carouselCard"></div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselContent" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-secondary rounded-5" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselContent" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-secondary rounded-5" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8" id="news"></div>
+            
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-8 mt-5">
+                    <div id="cards" class="container"></div>
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination justify-content-center" id="pagination"></ul>
+                    </nav>
+                  </div>
+
+            <div class="col-lg-4 mt-5">
+                <div class="card p-3" style="text-align: center">
+                    <img src="map.jpg" class="card-img" alt="..." />
+                    <div class="card-img-overlay">
+                        <p class="text-muted mt-3">
+                            Hello. We're content writer who is fascinated by content
+                            fashion, celebrity and lifestyle. We helps clients bring the
+                            right content to the right people.
+                        </p>
+                    </div>
+
+                    <div class="icons" style="align-items: center">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="card my-4 p-3 mt-5">
+                    <h4 class="card-title my-3" style="text-align: center; font-size: 20px; font-weight: 700">
+                        Popular Posts
+                    </h4>
+                    <div class="card-body">
+                        <div id="postCard"></div>
+                    </div>
+                </div>
+                <br />
+                <div class="card p-3" style="text-align: center">
+                    <span><b>Explore topics</b></span>
+                    <span class="text-danger" style="text-align: center; font-size: 50px">~~</span>
+                    <hr />
+                    <div class="categories">
+                        <div class="row">
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Celebration</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(2)</p>
+                            </div>
+                            <hr />
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Culture</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(2)</p>
+                            </div>
+                            <hr />
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Fashion</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(1)</p>
+                            </div>
+                            <hr />
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Inspiration</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(2)</p>
+                            </div>
+                            <hr />
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Lifestyle</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(6)</p>
+                            </div>
+                            <hr />
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Politic</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(2)</p>
+                            </div>
+                            <hr />
+                            <div class="col-1 arrow">
+                                <p>></p>
+                            </div>
+                            <div class="col-5">
+                                <h6><b>Trending</b></h6>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted">(2)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="card">
+                    <br />
+                    <span style="text-align: center">News Letter</span>
+                    <span class="text-danger" style="text-align: center; font-size: 50px">~~</span>
+                    <span style="text-align: center"><b>Join 70,000 subscribers</b></span>
+                    <form style="padding: 25px">
+                        <input type="email" class="form-control" id="firstname" placeholder="Email address"
+                            style="text-align: center" autocomplete="none" />
+                    </form>
+                    <p class="btn btn-outline-primary mx-4">sign up</p>
+
+                    <p class="text-muted mx-4">
+                        by signing up, you agree to our
+                        <span class="text-danger" style="cursor: pointer">privacy policy</span>
+                    </p>
+                </div>
+                <br />
+                <div class="card" id="cloudCard">
+                    <br />
+
+                    <span style="text-align: center"><b>Tag Clouds</b></span>
+                    <span class="text-danger" style="text-align: center; font-size: 50px">~~</span>
+                </div>
+                <br />
+                <div class="card" id="celebrationCard">
+                    <br />
+                    <span style="text-align: center"><b>Celebration</b></span>
+                    <span class="text-danger" style="text-align: center; font-size: 50px">~~</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="container mt-5">
+        <div class="row" id="footerImagesCard"></div>
+    </div>
+
+
+    <br />
+    <hr />
+    <div class="row">
+        <div class="col-4 mt-1">
+            <p class="text-muted">© 2023 News</p>
+        </div>
+        <div class="col-6 mt-1">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="col-2">
+            <p class="btn btn-outline-dark">back to top ^</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

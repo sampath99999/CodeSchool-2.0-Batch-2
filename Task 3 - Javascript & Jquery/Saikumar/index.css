@@ -1,0 +1,474 @@
+.news-container{
+    width:98%;
+}
+
+@media (min-width:767px)
+{
+    .news-container{
+        width:94%;
+    }
+}
+/* header container */
+
+.news-logo{
+    height: 80px;
+}
+.header-icons-list{
+
+}
+.header-icons-list li{
+    margin-right: 15px;
+}
+.navbar-item-list li:hover{
+    background: linear-gradient( to right,#f85639,rgb(233, 174, 65));
+    color:white;
+}
+
+/* Navbar container */
+
+.navbar-list-container ul li a{
+    color:grey;
+}
+
+
+.navbar-list-container ul li {
+    padding-left:4px;
+    padding-right: 4px;
+    margin-right: 20px;
+}
+
+.news-navbar{
+
+}
+
+
+
+@media (max-width:767px)
+{
+    .list-drop-down{
+        height: 1000vh;
+        position: relative;
+    }
+}
+
+
+.nav-item-select-anchor{
+    color:white;
+}
+.navbar-dropdown-icon{background: linear-gradient( to right,#f85639,rgb(233, 174, 65));
+}
+
+
+@media(max-width:1000px)
+{
+    .navbar-dropdown-icon{
+        order:2;
+    }
+    .navbar-list-container{
+        order:3
+    }
+    .navbar-search-icon{
+       order:1;
+    
+    }
+}
+.navbar-search-icon{
+    background: linear-gradient( to right,#f85639,rgb(233, 174, 65));
+    color:white;
+    padding:10px;
+
+}
+.navbar-dropdown-list{
+    
+}
+.carousel-image{
+    height: 400px;
+    object-fit:cover;
+}
+
+@media (max-width:1000px) {
+    .header-large-devices{
+        display: none;
+    }    
+}
+
+.small-bars{
+    background:  linear-gradient( to right,#f85639,rgb(233, 174, 65));;
+}
+@media (min-width:1000) {
+    .headers-small-devices{
+        display: none;
+    }    
+}
+
+
+/* Main container */
+.main-container{
+
+}
+/* carousel contaier */
+.carousel-container{
+    margin-bottom: 50px;
+}
+.carousel-title{
+    font-weight: bold;
+    
+}
+.carousel-source{
+    background: linear-gradient( to right,#f85639,rgb(233, 174, 65));
+    color:white;
+    border-radius: 15px;
+    padding:8px;
+    display: inline-block;
+}
+.carousel-author-date-container{
+    color:rgb(153, 136, 136);
+}
+.carousel-author{
+    margin-right: 30px;
+}
+
+ /* product card */
+.product-image{
+    height:400px;
+    width:100%;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    object-fit: cover;
+} 
+.title-name{
+    font-weight: bold;
+    color:rgb(77 69 94);
+}
+.name-date-container{
+    color:grey;
+    display: flex;
+    
+}
+.content-container{
+    padding:20px;
+}
+.author-name{
+    margin-right: 20px;
+}
+.published-date{
+    margin-right: 30px;
+}
+.message-icon{
+    margin-right: 5px;
+}
+.product-bottom-card{
+    display: flex;
+    justify-content: space-between;
+}
+.continue-reading-button{
+    color:#4d455e;
+    font-weight: bold;
+}
+.continue-chervon-right{
+    color:grey;
+}
+.model-image
+{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+/* pagination container */
+
+.page-number-link{
+    margin-right: 30px;
+    text-decoration: none;
+    font-size:18px;
+    background-color: rgb(243, 235, 235);
+    color:grey;
+    padding:8px;
+    border-radius: 50%;
+    
+    display: inline-block;
+}
+.page-number-link:hover{
+    background: linear-gradient( to right,#f85639,rgb(233, 174, 65));;
+}
+.page-number-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* main right container */
+.main-right-container{
+
+}
+/* content writer container */
+.content-writer-container{
+    padding:30px;
+    border:1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+}
+.content-writer-text{
+    color:grey;
+}
+.content-writer-icons-list-container{
+    display: flex;
+    justify-content:center;
+}
+
+/* popular posts container */
+.popular-posts-container{
+    padding:30px;
+    border:1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.popular-posts-card{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+.popular-posts-heading{
+    color:#4d455e
+}
+.product-posts-card-container{
+    margin-top:20px;
+}
+.hr-line{
+    width:80%;
+    margin: auto;
+    margin-top:15px;
+}
+.popular-post-image{
+    height: 40px;
+    border-radius: 50%;
+    width:40px;
+    margin-right: 10px;
+}
+.popular-post-card-title{
+    color:#4d455e;
+    font-weight: bold;
+    margin: 0;
+    padding:0;
+    
+    
+}
+.popular-posts-date{
+    color:grey;
+    font-size:15px;
+}
+
+/* explore card container */
+.explore-topics-container{
+    padding:30px;
+    border:1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.explore-topics-list-item{
+    margin-bottom: 10px;
+}
+.chevron-right-icon{
+    color:#f85639;
+}
+.explore-topic-list-text{
+    color:#4d455e;
+    font-weight: bold;
+}
+.explore-topics-count{
+    color:rgb(167, 162, 162);
+}
+
+/* news letter */
+.news-letter{
+    padding:30px;
+    border:1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.news-letter-suscribers-count{
+    color:#4d455e;
+    margin-top:10px;
+    font-weight: bold;
+    
+    font-size:14px;
+}
+.news-letter-email-address-button{
+    border-radius: 15px;
+    
+    background-color: white;
+    border:1px solid rgb(206, 200, 200);
+    color:grey;
+    width:80%;
+    margin: auto;
+
+}
+.news-letter-sign-up-button{
+    background: linear-gradient( to right,#f85639,rgb(233, 174, 65));
+    margin-top:20px;
+    color:white;
+}
+.news-letter-agreement{
+    color:rgb(155, 152, 152);
+    margin-top:8px;
+    font-size:14px;
+}
+.news-letter-privay-policy{
+    color:#f85639
+}
+.celebration-image{
+    height: 150px;
+    width:80%;
+    margin: auto;
+}
+.celebration-title{
+    color:#4d455e;
+    font-weight:bold;
+    margin-top:15px;
+}
+.celebration-date-card{
+    display: flex;
+    color:grey;
+    justify-content: center;
+}
+.celebration-date{
+    margin-left:30px;
+}
+.tag-clouds-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.tag-clouds-list-item{
+    border-radius: 8px;
+    color:grey;
+    border:1px solid grey;
+    display: inline-block;
+    padding-left:3px;
+    padding-right: 15px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    width: 20%;
+}
+.bottom-images-container{
+    display: flex;
+    gap:25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:14px;
+}
+.bottom-image{
+    width:16%;
+    border-radius: 8px;
+    height: 200px;
+    width: 200px;
+    opacity: 0.8;
+}
+
+.footer-container{
+    margin-top:50px;
+    margin-bottom: 50px;
+   
+}
+.footer-copyright-text{
+    color:grey;
+    margin-bottom: 10px;
+}
+.footer-button{
+    color:grey;
+    border:1px solid grey;
+    border-radius: 15px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.back-to-top-button{
+    text-decoration: none;
+   
+}
+@media(max-width:767px)
+{
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media(max-width:767px)
+{
+    .footer-container-bottom {
+        width:40%;
+        margin: auto;
+    }
+}
+
+/* navbar small devices css */
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right:0;
+    background-color:white;
+    
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    color:black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  .header-menu-dropdown{
+    display: flex;
+    justify-content: space-between;
+  }

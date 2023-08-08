@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.tree-image-container{
+    background-image: url("https://images.pexels.com/photos/1632790/pexels-photo-1632790.jpeg?auto=compress&cs=tinysrgb&w=600");
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+li a{
+    color:white;
+}
+.logo{
+    height: 50px;
+}
+.images-list-container{
+    background-color:rgb(242, 237, 237);
+}

@@ -282,7 +282,7 @@ function getNewsCards(allData) {
         Continue Reading
         <i class="fa-solid fa-chevron-right"></i>
          </button>
-         <button type="button " class="btn d-md-none " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+         <button type="button " class="btn d-md-none " data-bs-toggle="modal" data-bs-target="#staticBackdrop${unique}">
          <i class="fas fa-ellipsis-h"></i>
         
          </button>

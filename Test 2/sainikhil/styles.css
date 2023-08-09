@@ -1,0 +1,33 @@
+.card {
+  margin-top: 10rem;
+  height: 40rem;
+  background-color: white;
+}
+.card form {
+  padding: 3rem;
+}
+.card form div {
+  padding-bottom: 2rem;
+}
+#Temparature {
+  font-size: 8rem;
+}
+.WeatherIcons {
+  font-size: 2rem;
+  opacity: 50%;
+  padding-left: 80px;
+}
+#DayNightIcon {
+  margin-top: 50px;
+  font-size: 10rem;
+  text-align: center;
+  opacity: 80%;
+  color: yellow;
+  
+}
+#temparatureToggler{
+  cursor: pointer;
+}
+#temparatureToggler h5{
+    font-size: 30px;
+}

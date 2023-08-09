@@ -144,6 +144,7 @@ $("document").ready(function () {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
+              <img src = ${urlToImage} class = "modalImage"/>
               ${description}
               </div>
               <div class="modal-footer">
@@ -280,6 +281,12 @@ $("document").ready(function () {
       });
       $(".images-container").css({
         flexWrap: "wrap",
+      });
+      $(".modalImage").css({
+        objectFit: "cover",
+        width: "100%",
+        borderRadius: "6px",
+        marginBottom: "6px",
       });
     }
   );

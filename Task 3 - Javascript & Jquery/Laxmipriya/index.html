@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Website Page</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>News Website</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,26 +20,22 @@
       src="https://kit.fontawesome.com/b4284854ee.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container-fluid p-0">
       <div class="row m-0">
         <div class="container">
           <nav
-            class="d-flex justify-content-between align-items-center mb-4 col-12 navCont"
+            class="d-flex justify-content-between align-items-center mt-3 ms-3 col-12 navbar"
           >
-            <div class="leftSideContainer ms-4">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/383/383832.png?w=740&t=st=1691066490~exp=1691067090~hmac=db7b55fc198c7756ef238602daef39c1a93b96690587a792f221f11f735aba70"
-                class="newsLogo mt-1"
-                alt="WebsiteLogo"
-              />
+            <div class="left-container text-danger"><b>NEWS</b>
             </div>
-            <div class="rightSideContainer d-none d-md-flex gap-3 me-4">
+            <div class="right-container d-none d-md-flex gap-3 me-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="12"
+                height="12"
                 fill="currentColor"
                 class="bi bi-facebook facebookIcon"
                 viewBox="0 0 16 16"
@@ -51,8 +46,8 @@
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="12"
+                height="12"
                 fill="currentColor"
                 class="bi bi-twitter twitterIcon"
                 viewBox="0 0 16 16"
@@ -63,8 +58,8 @@
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="12"
+                height="12"
                 fill="currentColor"
                 class="bi bi-instagram instagramIcon"
                 viewBox="0 0 16 16"
@@ -75,8 +70,8 @@
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="12"
+                height="12"
                 fill="currentColor"
                 class="bi bi-pinterest pintrestIcon"
                 viewBox="0 0 16 16"
@@ -87,8 +82,8 @@
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="12"
+                height="12"
                 fill="currentColor"
                 class="bi bi-tiktok tiktokIcon"
                 viewBox="0 0 16 16"
@@ -99,8 +94,8 @@
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="12"
+                height="12"
                 fill="currentColor"
                 class="bi bi-youtube youtubeIcon"
                 viewBox="0 0 16 16"
@@ -112,7 +107,7 @@
             </div>
           </nav>
           <nav
-            class="navbar navbar-expand-lg bg-white d-flex justify-content-between align-items-center mt-5 linksContainer"
+            class="navbar navbar-expand-lg bg-white d-flex justify-content-between align-items-center  linksContainer"
           >
             <div class="container-fluid" id="carouselContainer">
               <button
@@ -166,8 +161,8 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="12"
+                  height="12"
                   fill="currentColor"
                   class="bi bi-search searchIcon pe-2 ps-2"
                   viewBox="0 0 16 16"
@@ -276,7 +271,7 @@
                 </button>
                 <button
                   type="button"
-                  class="paginationAdd border border-light-subtle rounded-circle pe-2 ps-2 bg-transparent"
+                  class="arrowBtn border border-light-subtle rounded-circle pe-2 ps-2 bg-transparent"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -519,7 +514,7 @@
                   <button
                     class="angleButton rounded-circle pe-2 ps-2 border border-light-subtle"
                   >
-                    <
+                    </button>
                   </button>
                   <button
                     class="angleButton rounded-circle pe-2 ps-2 border border-light-subtle"
@@ -636,7 +631,7 @@
             </div>
             <div class="footer-3 mt-2">
               <a
-                class="footPara text-secondary fw-semibold text-center"
+                class="footpara text-secondary fw-semibold text-center"
                 href="#carouselContainer"
               >
                 ^ Back to Top
@@ -646,6 +641,6 @@
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

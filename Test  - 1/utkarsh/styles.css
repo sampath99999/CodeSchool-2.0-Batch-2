@@ -1,0 +1,33 @@
+body {
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+
+
+.heading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.heading h5 {
+    font-size: 15px;
+}
+
+.image {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote  {
+    font-size: 15px;
+}
+
+.right-container {
+    text-align: center;
+}

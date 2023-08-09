@@ -1,0 +1,107 @@
+::selection{
+  background-color: grey;
+  color: white;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* navBarContainer */
+
+.navBarContainer{
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+
+.websiteLogo p{
+  color: blue;
+}
+
+.userProfile{
+  background-color: darkblue;
+}
+
+/* navIconContainer */
+
+.navIconContainer{
+  padding-top: 10vh;
+  width: 10vh;
+  height: 100vh;
+  margin-top: 10vh;
+  position: fixed;
+}
+
+.navActiveIcon{
+  color: darkblue;
+}
+
+/* productsMainContainer */
+
+.productsMainContainer{
+  margin-top: 10vh;
+  margin-left: 10vh;
+}
+
+@media screen and (max-width:767px) {
+  .productsMainContainer{
+   
+    margin-left: 0vh;
+  }
+}
+
+.productsMainContainer h4{
+  height: 10vh;
+}
+
+/* filterCard */
+
+.filterCard input{
+  outline: none;
+}
+
+/* filterBtnsCard */
+
+.newProductBtn{
+  background-color: blue;
+}
+
+.newProductBtn:hover{
+  background-color: blue;
+}
+
+/* statusCard */
+
+.statusCard{
+  font-size: 10px;
+}
+
+
+/* tableContainer */
+
+.tableContainer{
+  overflow-y: auto;
+}
+
+.checkBoxStyle{
+  padding-left: 25px !important;
+  accent-color: grey;
+}
+
+.itemImg{
+  width: 30px;
+  height: 30px;
+}
+
+.statusBtn{
+  font-size: 10px;
+}
+
+/* pageContainer */
+
+#pageBtn1{
+  color: white;
+  background-color: blue;
+}

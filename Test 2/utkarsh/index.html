@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- j query cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Orbitron&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
+    <!-- style sheet link -->
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+
+
+    <div class="firstContainer">
+        <div class="navigation">
+            <nav class="navbar navbar-expand-lg m-2">
+                <div class="container-fluid gap-2">
+                    <a class="navbar-brand" href="#" id="brandName">Yessy</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Buy Art
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">popular images</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">most recommended</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Sell Art
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#"> Affordable Prices</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"> Best Prices</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                        </ul>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#"> Affordable Prices</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> Best Prices</a>
+                            </li>
+                        </ul>
+
+                        <div class="headerRightSide d-flex mt-3 gap-3 px-2">
+                            <p>Your Account</p>
+                            <p>Help</p>
+                            <p><i class="fa-solid fa-bag-shopping"></i></p>
+                            <p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalData" style="margin-top: -5px;">
+                                    sign-up
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <hr style="margin-top: -10px;">
+
+        <div class="modal" id="modalData" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Form
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="formpage">
+                            <form onclick="return false">
+                                <br />
+
+                                <div class="name mb-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="name" class="form-label">Name :</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" style="background-color: #e6e6e6"
+                                                id="name" placeholder="john" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p id="nameMessage"></p>
+
+                                <div class="email mb-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="mail" class="form-label">Email :</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="email" class="form-control" style="background-color: #e6e6e6"
+                                                id="eMail" placeholder="abc@gmail.com" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="mailMessage"></p>
+
+                                <div class="phone-number mb-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="phonenumber" class="form-label">Phone Number :</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" style="background-color: #e6e6e6"
+                                                id="phnNum"
+                                                oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0, 10);"
+                                                placeholder="xxxxx99" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="phoneNumber"></p>
+
+                                <div class="date-of-birth mb-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="date of birth" class="form-label">Date Of Birth :</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" style="background-color: #e6e6e6"
+                                                id="dateOfBirth" placeholder="dd/mm/yyyy" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p id="dateofbirth"></p>
+
+                                <br />
+
+                                <button type="submit" class="btn btn-primary float-end"
+                                    id="submitBtn">
+                                    CONTACT SALES</button><br />
+                            </form>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+
+       
+        <div class="firstContainerText">
+            <p>SIMPLY ART. SIMPLY BEAUTIFUL</p>
+            <p>
+                For seventeen years we have sold arts and images and we are
+                dedicated to serve more.
+            </p>
+            <div class="searchBox d-flex">
+                <input type="text" class="form-control" placeholder="Enter apple or coffee " id="searchBox" />
+                <button type="submit" onclick="search" class="btn btn-warning" id="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    
+</div>
+</div>
+
+
+
+
+    <br />
+    <p style="margin-left: 30px; font-family: oswald; font-size: 25px;">IMAGES</p>
+    <hr />
+    <div class="container" id="secondContainer">
+        <div class="row" id="images"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

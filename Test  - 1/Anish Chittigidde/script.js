@@ -1,16 +1,15 @@
 $(document).ready(() => {
 
-    $(document).ready(function() {
-        const randomImage = $('#random-image');
-        
-        function fetchRandomImage() {
-          const imageUrl = `https://picsum.photos/800?random=${Math.random()}`;
-          randomImage.attr('src', imageUrl);
-        }
+      const randomImage = $('#random-image');
       
-        // Load a new random image when the page loads
-        fetchRandomImage();
-      });
+      function fetchRandomImage() {
+        const imageUrl = `https://picsum.photos/800?random=${Math.random()}`;
+        randomImage.attr('src', imageUrl);
+      }
+    
+      // Load a new random image when the page loads
+      fetchRandomImage();
+
       
     
 

@@ -421,9 +421,13 @@ function createHeaderNav() {
   const navLeftContainer = createLeftNavContainer();
   const navRightContainer = createRightNavContainer();
   navContainer = $("<div>", {
-    class: "d-flex justify-content-between align-items-center",
+    class: "container-fluid",
   });
-  navContainer.append(navLeftContainer, navRightContainer);
+  row = $("<div>", {
+    class: "row d-flex justify-content-around   mx-4 main-nav", // Added a custom class for leftNavContainer
+  });
+  navContainer.append(row);
+  row.append(navLeftContainer, navRightContainer);
   return navContainer;
 }
 
@@ -466,10 +470,13 @@ function createIconButton(iconClass) {
 
 function createLeftNavContainer() {
   const navContainer = $("<div>", {
-    class: "container-fluid left-nav-container", // Added a custom class for leftNavContainer
+    class: "col-sm-9 ",
   });
 
-  const nav = $("<nav>"); // Removed the "navbar" class
+  const nav = $("<div>", {
+    class:
+      "d-flex d-none d-md-flex justify-content-start align-items-center left-nav",
+  }); // Removed the "navbar" class
 
   const navButton = createRoundedButton("Home");
   const navButton2 = createRoundedButton("Lifestyle");
@@ -484,41 +491,40 @@ function createLeftNavContainer() {
 
 function createRightNavContainer() {
   const navContainer = $("<div>", {
-    class: "container-fluid d-flex justify-content-end align-items-center mx-4",
+    class: "col-md-3 ",
   });
   let bars;
-  const nav = $("<nav>");
-  if ($(window).width() < 548) {
-    bars = createIconButton("solid fa-times ms-auto");
-    $("#headerNav").append(bars);
-  } else {
-    bars = createIconButton("solid fa-bars");
-    const search = createIconButton("solid fa-search");
-    nav.append(search, bars);
-    navContainer.append(nav);
-  }
+  const nav = $("<nav>", {
+    class: "d-flex justify-content-around align-items-center",
+  });
+  bars = createIconButton("solid fa-bars ms-auto d-sm-inline d-md-none");
+  const search = createIconButton("solid fa-search me-auto");
+  nav.append(search, bars);
+  navContainer.append(nav);
 
   bars.on("click", function () {
-    if ($(window).width() < 548) {
-      const leftNavContainer = $(".container-fluid.left-nav-container");
-      leftNavContainer.toggleClass("hidden");
-    }
-    const icon = $(this).find("i");
+    if ($(window).width() < 768) {
+      const icon = $(this).find("i");
 
-    if (icon.hasClass("fa-bars")) {
-      icon.removeClass("fa-bars");
-      icon.addClass("fa-times");
-    } else {
-      icon.removeClass("fa-times");
-      icon.addClass("fa-bars");
-    }
-  });
-  $(window).on("load resize", function () {
-    const leftNavContainer = $(".container-fluid.left-nav-container");
-    if ($(window).width() < 548) {
-      leftNavContainer.addClass("hidden");
-    } else {
-      leftNavContainer.removeClass("hidden");
+      if (icon.hasClass("fa-bars")) {
+        icon.removeClass("fa-bars");
+        icon.addClass("fa-times");
+      } else {
+        icon.removeClass("fa-times");
+        icon.addClass("fa-bars");
+      }
+      const leftNavContainer = $(".left-nav");
+      const mainNav = $(".main-nav");
+      const body = $("#body");
+      const slider = $("#slider");
+      const footer = $("#footer");
+      const footer_container = $("#footer-container")
+      body.toggleClass("d-none");
+      slider.toggleClass("d-none");
+      footer.toggleClass("d-none");
+      footer_container.toggleClass("d-none")
+      mainNav.toggleClass("flex-column-reverse");
+      leftNavContainer.toggleClass("d-none flex-column");
     }
   });
 

@@ -4,17 +4,17 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.ifmisBgContainer{
+.ifmisBgContainer {
   width: 100vw;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
 /* sideBarContainer */
 
-.sideBarContainer{
+.sideBarContainer {
   background-color: rgb(3, 36, 58);
   width: 255px !important;
 }
@@ -22,7 +22,6 @@ body::-webkit-scrollbar{
 .sideBarContainer ul {
   list-style-type: none;
   padding-left: 0px;
-  
 }
 
 .sideBarContainer ul li {
@@ -37,46 +36,44 @@ body::-webkit-scrollbar{
   border-left: 3px solid gold;
 }
 
-.tabsList{
+.tabsList {
   padding: 0;
 }
 
 .tabsList::-webkit-scrollbar {
   display: none;
- }
+}
 
 .ifmisLogo {
   height: 25px;
 }
 
-
 /* ifmisHomeRightContainer */
 
 .ifmisHomeRightContainer {
   width: 100%;
-  margin-left: 0px ;
+  margin-left: 0px;
   transition: all 0.5s ease;
 }
 
-@media screen and (min-width:767px) {
+@media screen and (min-width: 767px) {
   .ifmisHomeRightContainerClick {
-    width: 100% ;
+    width: 100%;
     margin-left: 250px !important;
   }
 }
 
 .ifmisHomeRightContainerClick {
-  width: 100% ;
-  margin-left:0;
+  width: 100%;
+  margin-left: 0;
   transition: all 0.5s ease;
 }
-
 
 /* navHeaderContainer */
 
 .navHeaderContainer {
   background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
-  width:100%;
+  width: 100%;
   height: 10vh;
   background-size: cover;
 }
@@ -104,86 +101,88 @@ body::-webkit-scrollbar{
 
 /* pointsCard */
 
-.pointsCard ul li{
+.pointsCard ul li {
   font-size: 13px;
   font-weight: 600;
 }
 
-.pointsCard ul li::marker{
+.pointsCard ul li::marker {
   color: brown;
 }
 
-.inputName{
+.inputName {
   width: 300px;
   font-weight: 600;
 }
 
-.radioBtnsCard{
+.radioBtnsCard {
   width: 60%;
 }
 
-@media screen and (max-width:767px) {
-  .radioBtnsCard{
+@media screen and (max-width: 767px) {
+  .radioBtnsCard {
     width: 100%;
   }
 }
 
 /* uploadDocuments */
 
-.desclimar{
+.desclimar {
   font-style: italic;
 }
 
 /* Errors */
 
-.partyErrMsg{
+.partyErrMsg {
   font-size: 10px;
 }
 
-.confirmPartyAccountErrMsg{
+.confirmPartyAccountErrMsg {
   font-size: 10px;
 }
 
-.partyNameErrMsg{
+.partyNameErrMsg {
   font-size: 10px;
 }
 
-.bankIfscCardErrMsg{
+.bankIfscCardErrMsg {
   font-size: 10px;
 }
 
-.expenditureTypeErrMsg{
+.expenditureTypeErrMsg {
   font-size: 10px;
 }
 
-.headOfAccountErrMsg{
+.headOfAccountErrMsg {
   font-size: 10px;
 }
 
-.fileErrMsg{
+.fileErrMsg {
   font-size: 10px;
 }
 
-.partyAmountErrMsg{
+.partyAmountErrMsg {
   font-size: 10px;
 }
 
-.purposeTypeErrMsg{
+.purposeTypeErrMsg {
   font-size: 10px;
 }
 
-.purposeErrMsg{
+.purposeErrMsg {
   font-size: 10px;
 }
 
-.logoutCard{
+.logoutCard {
   cursor: pointer;
 }
 
-.confirmPartyAccountCardEl::-webkit-inner-spin-button,.confirmPartyAccountCardEl::-webkit-outter-spin-button{
+.confirmPartyAccountCardEl::-webkit-inner-spin-button,
+.confirmPartyAccountCardEl::-webkit-outter-spin-button {
   -webkit-appearance: none;
 }
 
-.partyAmountEl::-webkit-inner-spin-button,.partyAmountEl::-webkit-outer-spin-button{
+.partyAmountEl::-webkit-inner-spin-button,
+.partyAmountEl::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }

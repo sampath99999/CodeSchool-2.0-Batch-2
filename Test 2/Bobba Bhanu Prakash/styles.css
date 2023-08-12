@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    height: 100% !important;
+}
+
+nav {
+    border-bottom: 1px solid lightgray;
+}
+
+.brandName {
+    color: #4169e1;
+}
+
+.iconBackground {
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.products {
+    background-color: lightgrey;
+}
+
+#searchinput {
+    width: 100%;
+    outline: none;
+}
+
+.cardtop {
+    height: 37px;
+}
+
+.filters {
+    width: 30%;
+}
+
+td > img {
+    height: 25px;
+    width: 25px;
+    padding-right: 10px;
+}
+
+td > svg {
+    float: right;
+}
+
+thead tr th:nth-child(1) svg {
+    padding-bottom: 5px;
+}
+
+tbody tr td:nth-child(2) {
+    width: 50%;
+}
+
+.badge {
+    width: 60%;
+}
+
+tbody tr td:nth-child(7) svg {
+    padding: 0px 5px;
+    background-color: lightgray;
+}

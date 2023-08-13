@@ -33,15 +33,15 @@ $(document).ready(function () {
   $(".partyAccountNo").blur(function (event) {
     if (event.target.value === "") {
       $(".accountErrMsg").show();
-      $(".accountErrMsg").text("*Please Enter Account Number");
+      $(".accountErrMsg").text("*Please enter account number");
       accountNumErr = true;
     } else if (event.target.value.match(/\D/g)) {
       $(".accountErrMsg").show();
-      $(".accountErrMsg").text("*Please Enter Only Numbers");
+      $(".accountErrMsg").text("*Please enter only numbers");
       accountNumErr = true;
     } else if (event.target.value.length < 12) {
       $(".accountErrMsg").show();
-      $(".accountErrMsg").text("*Please Enter Digits Between 12 and 22");
+      $(".accountErrMsg").text("*Please enter digits between 12 and 22");
       accountNumErr = true;
     } else {
       $(".accountErrMsg").hide();
@@ -55,11 +55,11 @@ $(document).ready(function () {
   $(".confirmAccountNo").blur(function (event) {
     if (event.target.value === "") {
       $(".confirmAccountErr").show();
-      $(".confirmAccountErr").text("*Please Enter Value");
+      $(".confirmAccountErr").text("*Please enter value");
       confirmaccountNumErr = true;
     } else if ($(".partyAccountNo").val() !== $(this).val()) {
       $(".confirmAccountErr").show();
-      $(".confirmAccountErr").text("*Account Number Should Be Same");
+      $(".confirmAccountErr").text("*Account number should be same");
       confirmaccountNumErr = true;
     } else {
       $(".confirmAccountErr").hide();
@@ -73,7 +73,7 @@ $(document).ready(function () {
   $(".partyName").blur(function (event) {
     if (event.target.value === "") {
       $(".partyNameErr").show();
-      $(".partyNameErr").text("*Please Enter Party Name");
+      $(".partyNameErr").text("*Please enter party name");
       partyNameErrMsg = true;
     } else if (
       event.target.value.match(/\W/) ||
@@ -94,14 +94,14 @@ $(document).ready(function () {
   $(".ifscCode").blur(function (event) {
     if (event.target.value === "") {
       $(".ifscErr").show();
-      $(".ifscErr").text("*Please Enter IFSC Code");
+      $(".ifscErr").text("*Please enter ifsc code");
       ifscErrMsg = true;
     } else if (
       $(this).val().slice(0, 4) !== $(this).val().slice(0, 4).toUpperCase() ||
       $(this).val().length < 4
     ) {
       $(".ifscErr").show();
-      $(".ifscErr").text("*First 4 characters should be Uppercase");
+      $(".ifscErr").text("*First 4 characters should be uppercase");
       ifscErrMsg = true;
     } else if ($(this).val().slice(4, 5) !== "0") {
       $(".ifscErr").show();
@@ -112,18 +112,18 @@ $(document).ready(function () {
       $(this).val().slice(5).match(/[_]/)
     ) {
       $(".ifscErr").show();
-      $(".ifscErr").text("*Last 6 character must be Digits or Alphabets");
+      $(".ifscErr").text("*Last 6 character must be digits or alphabets");
       ifscErrMsg = true;
     } else if ($(this).val().length !== 11) {
       $("ifscErr").show();
-      $(".ifscErr").text("IFSC Code must be 11 characters");
+      $(".ifscErr").text("*Ifsc code must be 11 characters");
       ifscErrMsg = true;
     } else if (
       $(".bankName").text() === "XXXX" ||
       $(".bankBranch").text() === "XXXX"
     ) {
       $(".ifscErr").show();
-      $(".ifscErr").text("Please Search For IFSC Code");
+      $(".ifscErr").text("*Please search for ifsc code");
     } else {
       $(".ifscErr").hide();
       ifscErrMsg = false;
@@ -193,9 +193,9 @@ $(document).ready(function () {
   $(".headErr").css({ fontSize: "12px" });
   let headErrMsg = true;
   $(".headOfAccount").blur(function (event) {
-    if (event.target.value === "Select") {
+    if (event.target.value === "") {
       $(".headErr").show();
-      $(".headErr").text("Please Select an option");
+      $(".headErr").text("*Please select an option");
       headErrMsg = true;
     } else {
       $(".headErr").hide();
@@ -236,9 +236,9 @@ $(document).ready(function () {
   $(".expenditureError").css({ fontSize: "12px" });
   let expenditureErrMsg = true;
   $(".expenditureType").blur(function (event) {
-    if (event.target.value === "Select") {
+    if (event.target.value === "") {
       $(".expenditureError").show();
-      $(".expenditureError").text("Please Select an Option");
+      $(".expenditureError").text("*Please select an Option");
       expenditureErrMsg = true;
     } else {
       $(".expenditureError").hide();
@@ -250,9 +250,9 @@ $(document).ready(function () {
   $(".purposeTypeErr").css({ fontSize: "12px" });
   let purposeTypeErrMsg = true;
   $(".purposeType").blur(function (event) {
-    if (event.target.value === "Select") {
+    if (event.target.value === "") {
       $(".purposeTypeErr").show();
-      $(".purposeTypeErr").text("Please Select an option");
+      $(".purposeTypeErr").text("*Please select an option");
       purposeTypeErrMsg = true;
     } else {
       $(".purposeTypeErr").hide();
@@ -266,7 +266,7 @@ $(document).ready(function () {
   $(".purpose").blur(function (event) {
     if (event.target.value === "") {
       $(".purposeErr").show();
-      $(".purposeErr").text("Please Enter Valid Purpose");
+      $(".purposeErr").text("*Please enter valid purpose");
       purposeErrMsg = true;
     } else {
       $(".purposeErr").hide();
@@ -281,7 +281,7 @@ $(document).ready(function () {
   $(".partyAmount").blur(function (event) {
     if (event.target.value === "") {
       $(".partyAmountErr").show();
-      $(".partyAmountErr").text("Please Enter Amount");
+      $(".partyAmountErr").text("*Please enter amount");
       partyAmountErrMsg = true;
     } else if (
       event.target.value.match(/[D]/) ||
@@ -289,7 +289,7 @@ $(document).ready(function () {
       event.target.value.includes(".")
     ) {
       $(".partyAmountErr").show();
-      $(".partyAmountErr").text("*Please Enter Numbers only");
+      $(".partyAmountErr").text("*Please enter numbers only");
       $(".amountInRs").text("");
       partyAmountErrMsg = true;
     } else {
@@ -341,7 +341,8 @@ $(document).ready(function () {
         str +=
           numValue[1] != 0
             ? (words[Number(numValue[1])] ||
-                words2[numValue[1][0]] + " " + words[numValue[1][1]]) + "arab "
+                words2[numValue[1][0]] + " " + words[numValue[1][1]]) +
+              "hundred "
             : "";
         str +=
           numValue[2] != 0
@@ -385,7 +386,7 @@ $(document).ready(function () {
   $(".fileDocument").blur(function (event) {
     if (event.target.value === "") {
       $(".fileErr").show();
-      $(".fileErr").text("*Please Upload a File");
+      $(".fileErr").text("*Please upload a file");
       fileErrMsg = true;
     } else {
       $(".fileErr").hide();
@@ -401,7 +402,7 @@ $(document).ready(function () {
   $("#addDocBtn").click(function () {
     $(".documentsCont").empty();
     if ($(".fileDocument").val() === "") {
-      $(".fileErr").show().text("Please Choose a File");
+      $(".fileErr").show().text("*Please choose a file");
     } else if (!docs.includes($(".fileDocument").val())) {
       docs = [...docs, $(".fileDocument").val()];
       $(".fileErr").hide();
@@ -426,15 +427,15 @@ $(document).ready(function () {
     let accountNo = $(".partyAccountNo").val();
     if (accountNo === "") {
       $(".accountErrMsg").show();
-      $(".accountErrMsg").text("*Please Enter Account No");
+      $(".accountErrMsg").text("*Please enter account no");
       accountNumErr = true;
     } else if (accountNo.match(/\D/g)) {
       $(".accountErrMsg").show();
-      $(".accountErrMsg").text("*Please Enter Valid Number");
+      $(".accountErrMsg").text("*Please enter valid number");
       accountNumErr = true;
     } else if (accountNo.length < 12) {
       $(".accountErrMsg").show();
-      $(".accountErrMsg").text("*Please Enter Digits Between 12 and 22");
+      $(".accountErrMsg").text("*Please enter digits between 12 and 22");
       accountNumErr = true;
     } else {
       $(".accountErrMsg").hide();
@@ -446,11 +447,11 @@ $(document).ready(function () {
     let confirmAccountNumber = $(".confirmAccountNo").val();
     if (confirmAccountNumber === "") {
       $(".confirmAccountErr").show();
-      $(".confirmAccountErr").text("*Please Enter Value");
+      $(".confirmAccountErr").text("*Please enter value");
       confirmaccountNumErr = true;
     } else if ($(".partyAccountNo").val() !== confirmAccountNumber) {
       $(".confirmAccountErr").show();
-      $(".confirmAccountErr").text("*Account Number Should Be Same");
+      $(".confirmAccountErr").text("*Account number should be same");
       confirmaccountNumErr = true;
     } else {
       $(".confirmAccountErr").hide();
@@ -462,7 +463,7 @@ $(document).ready(function () {
     let partyNameIp = $(".partyName").val();
     if (partyNameIp === "") {
       $(".partyNameErr").show();
-      $(".partyNameErr").text("*Please Enter Party Name");
+      $(".partyNameErr").text("*Please enter party name");
       partyNameErrMsg = true;
     } else if (partyNameIp.match(/\W/) || partyNameIp.match(/[_]/)) {
       $(".partyNameErr").show();
@@ -478,14 +479,14 @@ $(document).ready(function () {
     let ifscCodeIp = $(".ifscCode").val();
     if (ifscCodeIp === "") {
       $(".ifscErr").show();
-      $(".ifscErr").text("*Please Enter IFSC Code");
+      $(".ifscErr").text("*Please enter ifsc code");
       ifscErrMsg = true;
     } else if (
       ifscCodeIp.slice(0, 4) !== ifscCodeIp.slice(0, 4).toUpperCase() ||
       ifscCodeIp.length < 4
     ) {
       $(".ifscErr").show();
-      $(".ifscErr").text("*First 4 characters should be Uppercase");
+      $(".ifscErr").text("*First 4 characters should be uppercase");
       ifscErrMsg = true;
     } else if (ifscCodeIp.slice(4, 5) !== "0") {
       $(".ifscErr").show();
@@ -500,14 +501,14 @@ $(document).ready(function () {
       ifscErrMsg = true;
     } else if (ifscCodeIp.length !== 11) {
       $("ifscErr").show();
-      $(".ifscErr").text("IFSC Code must be 11 characters");
+      $(".ifscErr").text("*Ifsc code must be 11 characters");
       ifscErrMsg = true;
     } else if (
       $(".bankName").text() === "XXXX" ||
       $(".bankBranch").text() === "XXXX"
     ) {
       $(".ifscErr").show();
-      $(".ifscErr").text("Please Search For IFSC Code");
+      $(".ifscErr").text("*Please search for ifsc code");
     } else {
       $(".ifscErr").hide();
       ifscErrMsg = false;
@@ -516,9 +517,9 @@ $(document).ready(function () {
 
   function validateHeadofAccount() {
     let headofAccountIp = $(".headOfAccount").val();
-    if (headofAccountIp === "Select") {
+    if (headofAccountIp === "") {
       $(".headErr").show();
-      $(".headErr").text("Please Select an option");
+      $(".headErr").text("*Please select an option");
       headErrMsg = true;
     } else {
       $(".headErr").hide();
@@ -528,9 +529,9 @@ $(document).ready(function () {
 
   function validateExpenditureType() {
     let expenditureTypeIp = $(".expenditureType").val();
-    if (expenditureTypeIp === "Select") {
+    if (expenditureTypeIp === "") {
       $(".expenditureError").show();
-      $(".expenditureError").text("Please Select an Option");
+      $(".expenditureError").text("*Please select an option");
       expenditureErrMsg = true;
     } else {
       $(".expenditureError").hide();
@@ -540,9 +541,9 @@ $(document).ready(function () {
 
   function validatePurposeType() {
     let purposeTypeIp = $(".purposeType").val();
-    if (purposeTypeIp === "Select") {
+    if (purposeTypeIp === "") {
       $(".purposeTypeErr").show();
-      $(".purposeTypeErr").text("Please Select an option");
+      $(".purposeTypeErr").text("*Please select an option");
       purposeTypeErrMsg = true;
     } else {
       $(".purposeTypeErr").hide();
@@ -554,7 +555,7 @@ $(document).ready(function () {
     let purposeIp = $(".purpose").val();
     if (purposeIp === "") {
       $(".purposeErr").show();
-      $(".purposeErr").text("Please Enter Valid Purpose");
+      $(".purposeErr").text("*Please enter valid purpose");
       purposeErrMsg = true;
     } else {
       $(".purposeErr").hide();
@@ -566,7 +567,7 @@ $(document).ready(function () {
     let fileDoc = $(".fileDocument").val();
     if (fileDoc === "") {
       $(".fileErr").show();
-      $(".fileErr").text("*Please Upload a File");
+      $(".fileErr").text("*Please upload a file");
       fileErrMsg = true;
     } else {
       $(".fileErr").hide();
@@ -578,7 +579,7 @@ $(document).ready(function () {
     let partyAmountIp = $(".partyAmount").val();
     if (partyAmountIp === "") {
       $(".partyAmountErr").show();
-      $(".partyAmountErr").text("Please Enter Amount");
+      $(".partyAmountErr").text("*Please enter amount");
       partyAmountErrMsg = true;
     } else if (
       partyAmountIp.match(/[D]/) ||
@@ -586,7 +587,7 @@ $(document).ready(function () {
       partyAmountIp.includes(".")
     ) {
       $(".partyAmountErr").show();
-      $(".partyAmountErr").text("*Please Enter Numbers only");
+      $(".partyAmountErr").text("*Please enter numbers only");
       partyAmountErrMsg = true;
     } else {
       $(".partyAmountErr").hide();
@@ -627,9 +628,9 @@ $(document).ready(function () {
       $(".partyName").val("");
       $(".ifscCode").val("");
       $(".purpose").val("");
-      $(".headOfAccount").val("Select");
-      $(".expenditureType").val("Select");
-      $(".purposeType").val("Select");
+      $(".headOfAccount").val("");
+      $(".expenditureType").val("");
+      $(".purposeType").val("");
       $(".partyAmount").val("");
       $(".amountInRs").text("Amount in words");
       $(".bankName").text("XXXX");

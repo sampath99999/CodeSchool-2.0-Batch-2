@@ -175,10 +175,24 @@ $(document).ready(function () {
     },
   ];
 
+  let headOfAccountValues = [
+    "0853001020002000000NVN",
+    "8342001170004001000NVN",
+    "2071011170004320000NVN",
+    "8342001170004002000NVN",
+    "2204000030006300303NVN",
+  ];
+
+  for (let i in headOfAccountValues) {
+    $(".headOfAccount").append(
+      `<option value = ${i}> ${headOfAccountValues[i]} </option>`
+    );
+  }
+
   $(".headOfAccount").change(function (event) {
-    for (let each of headOfAccount) {
-      let { HeadofAccount, Balance, LOC } = each;
-      if ($(this).val() === each["HeadofAccount"]) {
+    for (let each in headOfAccount) {
+      let { HeadofAccount, Balance, LOC } = headOfAccount[each];
+      if ($(this).val() === each) {
         $(".headBalance").text(Balance);
         $(".headLoc").text(LOC);
         break;
@@ -205,16 +219,28 @@ $(document).ready(function () {
 
   //Expenditure Type
 
+  let expenditureValues = [
+    "Capital Expenditure",
+    "Revenue Expenditure",
+    "Deferred Revenue Expenditure",
+  ];
+
+  for (let i = 0; i < expenditureValues.length; i++) {
+    $(".expenditureType").append(
+      `$<option value = ${i}> ${expenditureValues[i]} </option>`
+    );
+  }
+
   let expenditureList = {
-    "Capital Expenditure": [
+    0: [
       "Maintain current levels of operation within the organization",
       "Expenses to permit future expansion.",
     ],
-    "Revenue Expenditure": [
+    1: [
       "Sales costs or All expenses incurred by the firm that are directly tied to the manufacture and selling of its goods or services.",
       "All expenses incurred by the firm to guarantee the smooth operation.",
     ],
-    "Deferred Revenue Expenditure": [
+    2: [
       "Exorbitant Advertising Expenditures",
       "Unprecedented Losses",
       " Development and Research Cost",
@@ -223,7 +249,7 @@ $(document).ready(function () {
 
   $(".expenditureType").change(function (event) {
     $(".purposeType").empty();
-    $(".purposeType").append(`<option selected> Select </option> `);
+    $(".purposeType").append(`<option value = ""> Select </option> `);
     for (let each in expenditureList) {
       if ($(this).val() === each) {
         for (let i of expenditureList[each]) {
@@ -278,6 +304,83 @@ $(document).ready(function () {
   $(".partyAmountErr").css({ fontSize: "12px" });
   let partyAmountErrMsg = true;
 
+  var words = [
+    "",
+    "one ",
+    "two ",
+    "three ",
+    "four ",
+    "five ",
+    "six ",
+    "seven ",
+    "eight ",
+    "nine ",
+    "ten ",
+    "eleven ",
+    "twelve ",
+    "thirteen ",
+    "fourteen ",
+    "fifteen ",
+    "sixteen ",
+    "seventeen ",
+    "eighteen ",
+    "nineteen ",
+  ];
+  var words2 = [
+    "",
+    "",
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
+  ];
+
+  function inWords(partyAmount) {
+    if ((partyAmount = partyAmount.toString()).length > 11) return "overflow";
+    numValue = ("00000000000" + partyAmount)
+      .substr(-11)
+      .match(/^(\d{2})(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+    if (!numValue) return;
+    var str = "";
+    str +=
+      numValue[1] != 0
+        ? (words[Number(numValue[1])] ||
+            words2[numValue[1][0]] + " " + words[numValue[1][1]]) + "hundred "
+        : "";
+    str +=
+      numValue[2] != 0
+        ? (words[Number(numValue[2])] ||
+            words2[numValue[2][0]] + " " + words[numValue[2][1]]) + "crore "
+        : "";
+    str +=
+      numValue[3] != 0
+        ? (words[Number(numValue[3])] ||
+            words2[numValue[3][0]] + " " + words[numValue[3][1]]) + "lakh "
+        : "";
+    str +=
+      numValue[4] != 0
+        ? (words[Number(numValue[4])] ||
+            words2[numValue[4][0]] + " " + words[numValue[4][1]]) + "thousand "
+        : "";
+    str +=
+      numValue[5] != 0
+        ? (words[Number(numValue[5])] ||
+            words2[numValue[5][0]] + " " + words[numValue[5][1]]) + "hundred "
+        : "";
+    str +=
+      numValue[6] != 0
+        ? (str != "" ? "and " : "") +
+          (words[Number(numValue[6])] ||
+            words2[numValue[6][0]] + " " + words[numValue[6][1]]) +
+          "only "
+        : "";
+    return str;
+  }
+
   $(".partyAmount").blur(function (event) {
     if (event.target.value === "") {
       $(".partyAmountErr").show();
@@ -295,87 +398,6 @@ $(document).ready(function () {
     } else {
       $(".partyAmountErr").hide();
       partyAmountErrMsg = false;
-      var words = [
-        "",
-        "one ",
-        "two ",
-        "three ",
-        "four ",
-        "five ",
-        "six ",
-        "seven ",
-        "eight ",
-        "nine ",
-        "ten ",
-        "eleven ",
-        "twelve ",
-        "thirteen ",
-        "fourteen ",
-        "fifteen ",
-        "sixteen ",
-        "seventeen ",
-        "eighteen ",
-        "nineteen ",
-      ];
-      var words2 = [
-        "",
-        "",
-        "twenty",
-        "thirty",
-        "forty",
-        "fifty",
-        "sixty",
-        "seventy",
-        "eighty",
-        "ninety",
-      ];
-
-      function inWords(partyAmount) {
-        if ((partyAmount = partyAmount.toString()).length > 11)
-          return "overflow";
-        numValue = ("00000000000" + partyAmount)
-          .substr(-11)
-          .match(/^(\d{2})(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-        if (!numValue) return;
-        var str = "";
-        str +=
-          numValue[1] != 0
-            ? (words[Number(numValue[1])] ||
-                words2[numValue[1][0]] + " " + words[numValue[1][1]]) +
-              "hundred "
-            : "";
-        str +=
-          numValue[2] != 0
-            ? (words[Number(numValue[2])] ||
-                words2[numValue[2][0]] + " " + words[numValue[2][1]]) + "crore "
-            : "";
-        str +=
-          numValue[3] != 0
-            ? (words[Number(numValue[3])] ||
-                words2[numValue[3][0]] + " " + words[numValue[3][1]]) + "lakh "
-            : "";
-        str +=
-          numValue[4] != 0
-            ? (words[Number(numValue[4])] ||
-                words2[numValue[4][0]] + " " + words[numValue[4][1]]) +
-              "thousand "
-            : "";
-        str +=
-          numValue[5] != 0
-            ? (words[Number(numValue[5])] ||
-                words2[numValue[5][0]] + " " + words[numValue[5][1]]) +
-              "hundred "
-            : "";
-        str +=
-          numValue[6] != 0
-            ? (str != "" ? "and " : "") +
-              (words[Number(numValue[6])] ||
-                words2[numValue[6][0]] + " " + words[numValue[6][1]]) +
-              "only "
-            : "";
-        return str;
-      }
-
       $(".amountInRs").text(inWords($(".partyAmount").val()));
     }
   });

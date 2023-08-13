@@ -115,12 +115,12 @@ body::-webkit-scrollbar {
   font-weight: 600;
 }
 
-.radioBtnsCard {
+.inputCard {
   width: 60%;
 }
 
 @media screen and (max-width: 767px) {
-  .radioBtnsCard {
+  .inputCard {
     width: 100%;
   }
 }

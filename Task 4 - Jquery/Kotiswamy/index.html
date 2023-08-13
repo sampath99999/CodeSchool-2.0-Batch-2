@@ -312,13 +312,14 @@
                 Transcation Type
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard d-flex flex-wrap gap-3">
+              <div class="inputCard d-flex flex-wrap gap-3">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="accountType"
                     id="singleParty"
+                    value="0"
                     checked
                   />
                   <label class="form-check-label" for="singleParty">
@@ -331,6 +332,7 @@
                     type="radio"
                     name="accountType"
                     id="multipleParties"
+                    value="1"
                   />
                   <label class="form-check-label" for="multipleParties">
                     Multiple Parties
@@ -342,6 +344,7 @@
                     type="radio"
                     name="accountType"
                     id="pdAccountToPdAccount"
+                    value="2"
                   />
                   <label class="form-check-label" for="pdAccountToPdAccount">
                     PD Account To PD Account
@@ -353,6 +356,7 @@
                     type="radio"
                     name="accountType"
                     id="PdAccountToOther"
+                    value="3"
                   />
                   <label class="form-check-label" for="PdAccountToOther">
                     PD Account to other
@@ -367,7 +371,7 @@
                   <span class="text-danger">*</span>
                 </p>
               </div>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <input
                     type="password"
@@ -387,7 +391,7 @@
                 Confirm Party Account no
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <input
                     type="number"
@@ -403,7 +407,7 @@
                 Party Name
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <input
                     type="text"
@@ -420,7 +424,7 @@
                   Bank IFSC Code
                   <span class="text-danger">*</span>
                 </p>
-                <div class="radioBtnsCard">
+                <div class="inputCard">
                   <div class="d-flex align-items-center gap-2">
                     <input
                       type="text"
@@ -435,7 +439,7 @@
               </div>
               <div class="bankNameCard d-flex flex-column flex-md-row p-2">
                 <p class="inputName m-0">Bank Name</p>
-                <div class="radioBtnsCard">
+                <div class="inputCard">
                   <div class="mb-3">
                     <p class="m-0 bankName">xxxx</p>
                   </div>
@@ -443,7 +447,7 @@
               </div>
               <div class="branchNameCard d-flex flex-column flex-md-row p-2">
                 <p class="inputName m-0">Bank Branch</p>
-                <div class="radioBtnsCard">
+                <div class="inputCard">
                   <div class="mb-3">
                     <p class="m-0 branchName">xxxx</p>
                   </div>
@@ -455,28 +459,18 @@
                 Head of Account
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <select
                     class="form-select headOfAccountEL"
                     aria-label="Default select example"
                   >
-                    <option selected></option>
-                    <option value="0853001020002000000NVN">
-                      0853001020002000000NVN
-                    </option>
-                    <option value="8342001170004001000NVN">
-                      8342001170004001000NVN
-                    </option>
-                    <option value="2071011170004320000NVN">
-                      2071011170004320000NVN
-                    </option>
-                    <option value="8342001170004002000NVN">
-                      8342001170004002000NVN
-                    </option>
-                    <option value="2071011170004320000NVN">
-                      2204000030006300303NVN
-                    </option>
+                    <option value="">Select</option>
+                    <option value="0">0853001020002000000NVN</option>
+                    <option value="1">8342001170004001000NVN</option>
+                    <option value="2">2071011170004320000NVN</option>
+                    <option value="3">8342001170004002000NVN</option>
+                    <option value="4">2204000030006300303NVN</option>
                   </select>
                   <p class="mt-1 text-danger headOfAccountErrMsg"></p>
                 </div>
@@ -486,7 +480,7 @@
               <p class="inputName m-0">
                 Balance<span class="text-muted fw-normal">(in Rs.)</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <p class="m-0 headBalance">xxxx</p>
                 </div>
@@ -496,7 +490,7 @@
               <p class="inputName m-0">
                 LOC<span class="text-muted fw-normal"> (in Rs.) </span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <p class="m-0 headLoc">xxxx</p>
                 </div>
@@ -507,22 +501,16 @@
                 Expenditure Type
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <select
                     class="form-select expenditureTypeEl"
                     aria-label="Default select example"
                   >
-                    <option selected></option>
-                    <option value="Capital Expenditure">
-                      Capital Expenditure
-                    </option>
-                    <option value="Revenue Expenditure">
-                      Revenue Expenditure
-                    </option>
-                    <option value="Deferred Revenue Expenditure">
-                      Deferred Revenue Expenditure
-                    </option>
+                    <option value="">Select</option>
+                    <option value="0">Capital Expenditure</option>
+                    <option value="1">Revenue Expenditure</option>
+                    <option value="2">Deferred Revenue Expenditure</option>
                   </select>
                   <p class="mt-1 expenditureTypeErrMsg text-danger"></p>
                 </div>
@@ -533,13 +521,13 @@
                 Purpose Type
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <select
                     class="form-select purposeTypeEl"
                     aria-label="Default select example"
                   >
-                    <option selected></option>
+                    <option value="">Select</option>
                   </select>
                   <p class="mt-1 purposeTypeErrMsg text-danger"></p>
                 </div>
@@ -550,7 +538,7 @@
                 Purpose
                 <span class="text-danger">*</span>
               </p>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <div class="form-floating">
                     <textarea
@@ -572,7 +560,7 @@
                   <span class="text-muted fw-light">(in Rs.)</span>
                 </p>
               </div>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <input
                     type="number"
@@ -592,7 +580,7 @@
                   <span class="text-muted fw-light">(in Words.)</span>
                 </p>
               </div>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <p
                     class="bg-secondary bg-opacity-10 partyAmountWordsEl p-2 rounded text-muted"
@@ -606,7 +594,7 @@
               <div class="inputName">
                 <p class="m-0 mt-2">Upload Documents</p>
               </div>
-              <div class="radioBtnsCard">
+              <div class="inputCard">
                 <div class="mb-3">
                   <div class="d-flex mb-2 gap-2">
                     <div class="input-group">

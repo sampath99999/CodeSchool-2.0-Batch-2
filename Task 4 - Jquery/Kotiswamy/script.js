@@ -27,13 +27,13 @@ $(document).ready(function () {
   $(".partyAccountnoEL").blur(function () {
     let text = $(this).val();
     if (text === "") {
-      $(".partyErrMsg").show().text("Please Enter Account no");
+      $(".partyErrMsg").show().text("Please enter account no");
       partyAccountBoolean = false;
     } else if (text.match(/\D/g)) {
-      $(".partyErrMsg").show().text("Please Enter Valid Account no");
+      $(".partyErrMsg").show().text("Please enter valid account no");
       partyAccountBoolean = false;
     } else if (text.length < 12) {
-      $(".partyErrMsg").show().text("Account no Should contain 12 digits");
+      $(".partyErrMsg").show().text("Account no should contain 12 digits");
       partyAccountBoolean = false;
     } else {
       partyAccountBoolean = true;
@@ -51,10 +51,10 @@ $(document).ready(function () {
     let text = $(this).val();
 
     if (text === "") {
-      $(".confirmPartyAccountErrMsg").show().text("Please Enter Account no");
+      $(".confirmPartyAccountErrMsg").show().text("Please enter account no");
       ConfirmPartyAccountBoolean = false;
     } else if (text !== $(".partyAccountnoEL").val()) {
-      $(".confirmPartyAccountErrMsg").show().text("Account no Should be same");
+      $(".confirmPartyAccountErrMsg").show().text("Account no should be same");
       ConfirmPartyAccountBoolean = false;
     } else {
       ConfirmPartyAccountBoolean = true;
@@ -72,7 +72,7 @@ $(document).ready(function () {
     let text = $(this).val();
 
     if (text === "") {
-      $(".partyNameErrMsg").show().text("Please Enter Party Name");
+      $(".partyNameErrMsg").show().text("Please enter party name");
       partyNameBoolean = false;
     } else if (text.match(/\W/) || text.match(/[_]/g)) {
       $(".partyNameErrMsg")
@@ -94,7 +94,7 @@ $(document).ready(function () {
   $(".bankIfscCardEl").blur(function () {
     let text = $(this).val();
     if (text === "") {
-      $(".bankIfscCardErrMsg").show().text("Please Enter IFSC Code");
+      $(".bankIfscCardErrMsg").show().text("Please enter ifsc Code");
       bankIfscBoolean = false;
     } else if (
       text.slice(0, 4) !== text.slice(0, 4).toUpperCase() ||
@@ -102,24 +102,24 @@ $(document).ready(function () {
     ) {
       $(".bankIfscCardErrMsg")
         .show()
-        .text("First 4 letters Should be Capitals");
+        .text("First 4 letters should be capitals");
       bankIfscBoolean = false;
     } else if (text.slice(4, 5) !== "0") {
-      $(".bankIfscCardErrMsg").show().text("Fifth Letter Should be 0");
+      $(".bankIfscCardErrMsg").show().text("Fifth letter should be 0");
       bankIfscBoolean = false;
     } else if (text.slice(5).match(/\W/) || text.slice(5).match(/[_]/)) {
       $(".bankIfscCardErrMsg")
         .show()
-        .text("Last 6 Letters Should not be Special Characters");
+        .text("Last 6 letters should not be special characters");
       bankIfscBoolean = false;
     } else if (text.length !== 11) {
       $(".bankIfscCardErrMsg")
         .show()
-        .text("IFSC Code Must Contain 11 Characters");
+        .text("Ifsc code must contain 11 characters");
       bankIfscBoolean = false;
     } else {
       if ($(".bankName").text() === "xxxx") {
-        $(".bankIfscCardErrMsg").show().text("Please Search IFSC Code");
+        $(".bankIfscCardErrMsg").show().text("Please search ifsc code");
       } else {
         bankIfscBoolean = true;
         $(".bankIfscCardErrMsg").hide();
@@ -132,7 +132,7 @@ $(document).ready(function () {
   $(".searchBtn").click(function () {
     let ifscCode = $(".bankIfscCardEl").val();
     if (ifscCode === "") {
-      $(".bankIfscCardErrMsg").show().text("Please Enter IFSC Code");
+      $(".bankIfscCardErrMsg").show().text("Please enter ifsc Code");
     } else if ($(".bankIfscCardEl").val().length === 11) {
       $.get(`https://ifsc.razorpay.com/${ifscCode}`)
         .then(function (data) {
@@ -176,8 +176,8 @@ $(document).ready(function () {
   });
 
   $(".headOfAccountEL").blur(function () {
-    if ($(this).val() === "Select") {
-      $(".headOfAccountErrMsg").text("Please Selcet An Option");
+    if ($(this).val() === "") {
+      $(".headOfAccountErrMsg").text("Please selcet an option");
       headOfAccountBoolean = false;
     } else {
       $(".headOfAccountErrMsg").hide();
@@ -207,7 +207,7 @@ $(document).ready(function () {
 
   $(".expenditureTypeEl").change(function () {
     $(".purposeTypeEl").empty();
-    $(".purposeTypeEl").append(`<option selected>Select</option>`);
+    $(".purposeTypeEl").append(`<option selected></option>`);
     for (let i in expenditureTypeList) {
       if (i === $(this).val()) {
         for (let j of expenditureTypeList[i]) {
@@ -219,8 +219,8 @@ $(document).ready(function () {
   });
 
   $(".expenditureTypeEl").blur(function () {
-    if ($(this).val() === "Select") {
-      $(".expenditureTypeErrMsg").text("Please Selcet An Option");
+    if ($(this).val() === "") {
+      $(".expenditureTypeErrMsg").text("Please selcet an option");
       expenditureTypeBoolean = false;
     } else {
       $(".expenditureTypeErrMsg").hide();
@@ -231,10 +231,10 @@ $(document).ready(function () {
   // purposeType
 
   let purposeTypeBoolean = false;
-
-  $(".purposeTypeEl").change(function () {
-    if ($(this).val() === "Select") {
-      $(".purposeTypeErrMsg").text("Please Selcet An Option");
+  $(".purposeTypeErrMsg").hide();
+  $(".purposeTypeEl").blur(function () {
+    if ($(this).val() === "") {
+      $(".purposeTypeErrMsg").show().text("Please selcet an option");
       purposeTypeBoolean = false;
     } else {
       $(".purposeTypeErrMsg").hide();
@@ -246,7 +246,7 @@ $(document).ready(function () {
   let purposeBoolean = false;
   $(".purposeEl").blur(function () {
     if ($(this).val() === "") {
-      $(".purposeErrMsg").text("Please Enter Purpose");
+      $(".purposeErrMsg").text("Please enter purpose");
       purposeBoolean = false;
     } else {
       $(".purposeErrMsg").hide();
@@ -264,8 +264,11 @@ $(document).ready(function () {
   $(".filesAddBtn").click(function () {
     $(".filesList").empty();
     if ($(".fileEl").val() === "") {
-      $(".fileErrMsg").show().text("Please Choose a File");
+      $(".fileErrMsg").show().text("Please choose a file");
       fileChoosenBoolean = false;
+    } else if (addedFilesList.includes($(".fileEl").val())) {
+      fileChoosenBoolean = true;
+      $(".fileErrMsg").show().text("This file already uploaded");
     } else if (!addedFilesList.includes($(".fileEl").val())) {
       addedFilesList = [...addedFilesList, $(".fileEl").val()];
       fileChoosenBoolean = true;
@@ -274,7 +277,7 @@ $(document).ready(function () {
 
     for (let i of addedFilesList) {
       $(".filesList")
-        .append(`<li class="addedFile d-flex justify-content-between"><p>${i}</p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg fileCloseBtn" viewBox="0 0 16 16">
+        .append(`<li class="addedFile d-flex justify-content-between align-items-center bg-warning bg-opacity-10 p-2 rounded"><p class="m-0">${i}</p> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg fileCloseBtn" style="cursor:pointer" viewBox="0 0 16 16">
       <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
     </svg></li>`);
 
@@ -295,12 +298,12 @@ $(document).ready(function () {
 
   $(".partyAmountEl").blur(function (event) {
     if (event.target.value === "") {
-      $(".partyAmountErrMsg").show().text("Please Enter Party Amount");
-      $(".partyAmountWordsEl").val("");
+      $(".partyAmountErrMsg").show().text("Please enter party amount");
+      $(".partyAmountWordsEl").text("Amount in words...");
       partyAmountBoolean = false;
     } else if ($(this).val().match(/\D/)) {
-      $(".partyAmountErrMsg").show().text("Amount Should be in number");
-      $(".partyAmountWordsEl").val("");
+      $(".partyAmountErrMsg").show().text("Amount should be in number");
+      $(".partyAmountWordsEl").text("Amount in words...");
       partyAmountBoolean = false;
     } else {
       partyAmountBoolean = true;
@@ -341,72 +344,61 @@ $(document).ready(function () {
       ];
 
       function convertAmountToWords(amount) {
-        if ((amount = amount.toString()).length > 19) {
-          return "overflow";
+        if ((amount = amount.toString()).length > 14) {
+          return "Amount out of range...";
         }
-        n = ("0000000000000000000" + amount)
-          .substr(-19)
-          .match(
-            /^(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/
-          );
+        var n = ("000000000000" + amount)
+          .substr(-14)
+          .match(/^(\d{2})(\d{2})(\d{1})(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
 
         var amountInWord = "";
         amountInWord +=
           n[1] != 0
             ? (below20List[Number(n[1])] ||
-                above20List[n[1][0]] + " " + below20List[n[1][1]]) + "shankh "
+                above20List[n[1][0]] + " " + below20List[n[1][1]]) + "lakh "
             : "";
         amountInWord +=
           n[2] != 0
             ? (below20List[Number(n[2])] ||
-                above20List[n[2][0]] + " " + below20List[n[2][1]]) + "padma "
+                above20List[n[2][0]] + " " + below20List[n[2][1]]) + "thousand "
             : "";
         amountInWord +=
           n[3] != 0
             ? (below20List[Number(n[3])] ||
-                above20List[n[3][0]] + " " + below20List[n[3][1]]) + "nil "
+                above20List[n[3][0]] + " " + below20List[n[3][1]]) +
+              "hundred and "
             : "";
-
         amountInWord +=
           n[4] != 0
             ? (below20List[Number(n[4])] ||
-                above20List[n[4][0]] + " " + below20List[n[4][1]]) + "kharab "
+                above20List[n[4][0]] + " " + below20List[n[4][1]]) + "crore "
             : "";
         amountInWord +=
           n[5] != 0
             ? (below20List[Number(n[5])] ||
-                above20List[n[5][0]] + " " + below20List[n[5][1]]) + "arab "
+                above20List[n[5][0]] + " " + below20List[n[5][1]]) + "lakh "
             : "";
         amountInWord +=
           n[6] != 0
             ? (below20List[Number(n[6])] ||
-                above20List[n[6][0]] + " " + below20List[n[6][1]]) + "crore "
+                above20List[n[6][0]] + " " + below20List[n[6][1]]) + "thousand "
             : "";
         amountInWord +=
           n[7] != 0
             ? (below20List[Number(n[7])] ||
-                above20List[n[7][0]] + " " + below20List[n[7][1]]) + "lakh "
+                above20List[n[7][0]] + " " + below20List[n[7][1]]) + "hundred "
             : "";
         amountInWord +=
           n[8] != 0
-            ? (below20List[Number(n[8])] ||
-                above20List[n[8][0]] + " " + below20List[n[8][1]]) + "thousand "
-            : "";
-        amountInWord +=
-          n[9] != 0
-            ? (below20List[Number(n[9])] ||
-                above20List[n[9][0]] + " " + below20List[n[9][1]]) + "hundred "
-            : "";
-        amountInWord +=
-          n[10] != 0
             ? (amountInWord != "" ? "and " : "") +
-              (below20List[Number(n[10])] ||
-                above20List[n[10][0]] + " " + below20List[n[10][1]]) +
+              (below20List[Number(n[8])] ||
+                above20List[n[8][0]] + " " + below20List[n[8][1]]) +
               "only "
             : "";
         return amountInWord;
       }
-      $(".partyAmountWordsEl").val(convertAmountToWords($(this).val()));
+
+      $(".partyAmountWordsEl").text(convertAmountToWords($(this).val()));
     }
   });
 
@@ -425,28 +417,28 @@ $(document).ready(function () {
   $(".nextBtn").click(function () {
     if (partyAccountBoolean === false) {
       if ($(".partyErrMsg").text() === "") {
-        $(".partyErrMsg").show().text("Please Enter Account No");
+        $(".partyErrMsg").show().text("Please enter account no");
       } else {
         $(".partyErrMsg").show();
       }
     }
     if (ConfirmPartyAccountBoolean === false) {
       if ($(".confirmPartyAccountErrMsg").text() === "") {
-        $(".confirmPartyAccountErrMsg").show().text("Please Enter Account No");
+        $(".confirmPartyAccountErrMsg").show().text("Please enter account no");
       } else {
         $(".confirmPartyAccountErrMsg").show();
       }
     }
     if (partyNameBoolean === false) {
       if ($(".partyNameErrMsg").text() === "") {
-        $(".partyNameErrMsg").show().text("Please Enter Party Name");
+        $(".partyNameErrMsg").show().text("Please enter party name");
       } else {
         $(".partyNameErrMsg").show();
       }
     }
     if (bankIfscBoolean === false) {
       if ($(".bankIfscCardErrMsg").text() === "") {
-        $(".bankIfscCardErrMsg").show().text("Please Enter IFSC Code");
+        $(".bankIfscCardErrMsg").show().text("Please enter ifsc code");
       } else if ($(".bankName").text() !== "xxxx") {
         $(".bankIfscCardErrMsg").hide();
         bankIfscBoolean = true;
@@ -455,27 +447,27 @@ $(document).ready(function () {
       }
     }
     if (headOfAccountBoolean === false) {
-      $(".headOfAccountErrMsg").show().text("Please Selcet An Option");
+      $(".headOfAccountErrMsg").show().text("Please selcet an option");
     }
     if (expenditureTypeBoolean === false) {
-      $(".expenditureTypeErrMsg").show().text("Please Selcet An Option");
+      $(".expenditureTypeErrMsg").show().text("Please selcet an option");
     }
     if (purposeTypeBoolean === false) {
-      $(".purposeTypeErrMsg").show().text("Please Selcet An Option");
+      $(".purposeTypeErrMsg").show().text("Please selcet an option");
     }
     if (purposeBoolean === false) {
-      $(".purposeErrMsg").show().text("Please Enter Purpose");
+      $(".purposeErrMsg").show().text("Please enter purpose");
     }
     if (partyAmountBoolean === false) {
       if ($(".partyAmountErrMsg").text() === "") {
-        $(".partyAmountErrMsg").show().text("Please Party Amount");
+        $(".partyAmountErrMsg").show().text("Please party amount");
       } else {
         $(".partyAmountErrMsg").show();
       }
     }
     if (fileChoosenBoolean === false) {
       if (addedFilesList.length === 0) {
-        $(".fileErrMsg").show().text("Please Choose a File");
+        $(".fileErrMsg").show().text("Please choose a file");
       } else {
         $(".fileErrMsg").show();
       }
@@ -498,16 +490,17 @@ $(document).ready(function () {
       $(".bankIfscCardEl").val("");
       $(".bankName").text("xxxx");
       $(".branchName").text("xxxx");
-      $(".headOfAccountEL").val("Select");
+      $(".headOfAccountEL").val("");
       $(".headBalance").text("xxxx");
       $(".headLoc").text("xxxx");
-      $(".expenditureTypeEl").val("Select");
+      $(".expenditureTypeEl").val("");
       $(".purposeTypeEl").val("");
       $(".purposeEl").val("");
       $(".partyAmountEl").val("");
-      $(".partyAmountWordsEl").val("");
+      $(".partyAmountWordsEl").text("Amount in words...");
       $(".filesList").empty();
       $(".fileEl").val("");
+      $(".fileErrMsg").hide().text("");
       addedFilesList = [];
       partyAccountBoolean = false;
       ConfirmPartyAccountBoolean = false;
@@ -519,7 +512,7 @@ $(document).ready(function () {
       purposeBoolean = false;
       partyAmountBoolean = false;
       fileChoosenBoolean = false;
-      alert("successfull");
+      alert("Successfull");
     }
   });
 });

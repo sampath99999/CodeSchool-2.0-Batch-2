@@ -1,0 +1,22 @@
+.loginbutton{
+    padding: 10px 30px;
+    background-color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+    width: 33vw;
+    height: 4rem;
+    background: rgb(0 114 212);
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+}
+.registrationForm input{
+    
+    width: 33vw;
+    height: 80px;
+    outline: none;
+    border: 3px solid rgb(211, 208, 208);
+    border-radius: 5px;
+    
+}

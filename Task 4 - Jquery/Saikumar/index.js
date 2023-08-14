@@ -456,7 +456,6 @@ $(function () {
     validatePartyAccountNo();
     validateConfirmPartyAccountNo();
     validatePartyName();
-    
     validateIFSCCode();
     validateHeadOfAccount();
     validateExpenditureType();
@@ -465,11 +464,52 @@ $(function () {
     validatePurpose();
   });
 
-  const number = 123456789;
-  const words = convertNumberToWords(number);
-  console.log(words);
 
-  
+  const addButton = document.getElementById("inputGroupFileAddon04");
+  const fileInput = document.getElementById("inputGroupFile04");
+  const fileList = document.getElementById("fileList");
+  const errorMsg = document.getElementById("uploadDocsErrorMsg");
+  const addedFilesEl = document.getElementById("addedFiles");
+
+  addButton.addEventListener("click", function () {
+    const selectedFile = fileInput.files[0];
+    //selectedFile gives undefined
+    if (!selectedFile) {
+      errorMsg.textContent = "*Please select a file.";
+      return;
+    }
+
+    const fileName = selectedFile.name;
+    const existingFile = Array.from(fileList.children).find(
+      (element) => element.textContent === fileName
+    );
+
+    if (existingFile) {
+      errorMsg.textContent = "*File already exists.";
+    } else {
+      const listItem = document.createElement("div");
+      listItem.innerHTML = `<span>${fileName}</span>
+        <span><i class="fa-solid fa-xmark remove-icon text-danger ms-2"></i></span>
+        `;
+      listItem.classList.add("filedesc");
+      fileList.appendChild(listItem);
+      errorMsg.textContent = "";
+
+      const removeBtns = document.querySelectorAll(".remove-icon");
+      removeBtns.forEach((icon) => {
+        icon.addEventListener("click", function () {
+          fileList.removeChild(listItem);
+          errorMsg.textContent = "";
+        });
+      });
+    }
+
+    fileInput.value = "";
+  });
+
 });
+
+
+
 
 

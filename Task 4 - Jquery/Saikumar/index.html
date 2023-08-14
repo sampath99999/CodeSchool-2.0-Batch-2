@@ -139,26 +139,21 @@
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <a class="dropdown-item" href="#"
-                      >
+                    <a class="dropdown-item" href="#">
                       <div class="optons">
-                        <span style="font-size: 13px">Welcome Sai</span>
-                      <br />
-                      <span style="font-size: 13px">23031013023</span>
+                        <span style="font-size: 13px">Settings</span>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="optons">
+                        <span style="font-size: 13px">Account</span>
                       </div></a
                     >
-                    <a class="dropdown-item" href="#"> <div class="optons">
-                        <span style="font-size: 13px">Welcome vivek</span>
-                      <br />
-                      <span style="font-size: 13px">23031013012</span>
-                      </div></a>
-                    
                   </div>
                 </div>
               </div>
             </div>
 
-           
             <div class="login-container">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
               <span id="login">Logout</span>
@@ -198,38 +193,29 @@
               class="user-logo-image"
             />
             <div class="d-flex flex-column">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    style="background: none; border: none"
-                  >
-                    
-                  </button>
-                  <div
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item" href="#"
-                      >
-                      <div class="optons">
-                        <span style="font-size: 8px">Welcome Sai</span>
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="background: none; border: none"
+                ></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">
+                    <div class="optons">
+                      <span style="font-size: 8px">Settings</span>
                       <br />
-                      <span style="font-size: 8px">23031013023</span>
-                      </div></a
-                    >
-                    
-                    
-                  </div>
+                      <span style="font-size: 8px">Account</span>
+                    </div></a
+                  >
                 </div>
               </div>
+            </div>
           </div>
         </div>
-
         <div
           class="offcanvas offcanvas-start w-50"
           tabindex="-1"
@@ -323,6 +309,7 @@
                   name="transaction_type"
                   value="Single"
                   class="radio-input"
+                  checked
                 />
                 <label for="single" class="radio-button"
                   ><span>Single Party</span></label
@@ -587,36 +574,38 @@
           <!-- upload files -->
 
           <div class="d-flex flex-wrap account-numbers w-100">
-            <label class="form-title" for="IFSCCode">
-              Upload Files <span class="required">*</span></label
+            <!-- <label for="uploadDocs" class="upload-label">Upload Documents<span style="font-weight: bold;" class="text-danger">*</span></label > -->
+            <label class="form-title" for="partyAmountInWords"
+              >Upload Documents</label
             >
-            <div class="d-flex flex-column input-error-container">
-              <div class="w-100">
-                <div class="d-flex">
+            <div class="input-error-container">
+              <div>
+                <div class="inputEl d-flex align-items-start">
                   <input
-                    class="form-control"
                     type="file"
-                    id="formFileMultiple"
-                    multiple
+                    class="form-control"
+                    id="inputGroupFile04"
+                    aria-describedby="inputGroupFileAddon04"
+                    aria-label="Upload"
                   />
                   <button
                     class="btn btn-primary ms-2"
-                    for="formFileMultiple"
-                    type="file"
-                    id="fileDrop"
+                    type="button"
+                    id="inputGroupFileAddon04"
                   >
                     +Add
                   </button>
-                  <ul id="list"></ul>
+                  <p
+                    style="margin-top: 80px"
+                    class="text-danger"
+                    id="uploadDocsErrorMsg"
+                  ></p>
                 </div>
-                <p class="note">
-                  Note: Documents of cheque(Letter/G.O. etc) can be uploaded
-                  here
-                </p>
+                <div id="fileList"></div>
               </div>
             </div>
           </div>
-          
+
           <hr
             style="
               height: 1px;

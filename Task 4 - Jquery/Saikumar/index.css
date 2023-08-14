@@ -166,3 +166,10 @@ input::-webkit-inner-spin-button {
     color:red;
 }
 
+.input-error-container{
+    width: 70%;
+}
+
+.upload-label{
+    width: 30%;
+}

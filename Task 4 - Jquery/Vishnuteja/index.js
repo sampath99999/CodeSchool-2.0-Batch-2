@@ -330,12 +330,12 @@ add.addEventListener("click", function () {
     return;
   }
 
+  let fileExists = false;
   const fileName = currentFile.name;
-  console.log(fileName);
-  const existingFile = Array.from(fileList.children).find(
-    (element) => element.textContent === fileName
-  );
-
+  console.log("file name is", fileName);
+  const existingFile = Array.from(fileList.children).find((element) => {
+    element.textContent === fileName;
+  });
   console.log(existingFile);
 
   if (existingFile) {

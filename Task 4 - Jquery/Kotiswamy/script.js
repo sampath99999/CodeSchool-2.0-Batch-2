@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
   $(".lastLoginTime").text(dateFormat);
 
-  $("#menuBtn").click(function () {
+  $(".menuBtn").click(function () {
     $("#ifmisHomeRightContainer").toggleClass("ifmisHomeRightContainer");
     $("#ifmisHomeRightContainer").toggleClass("ifmisHomeRightContainerClick");
   });
@@ -295,10 +295,10 @@ $(document).ready(function () {
     if ((amount = amount.toString()).length > 14) {
       return "Amount out of range...";
     }
-    var n = ("000000000000" + amount)
+    var n = ("00000000000000" + amount)
       .substr(-14)
       .match(/^(\d{2})(\d{2})(\d{1})(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-
+    console.log(n)
     var amountInWord = "";
     amountInWord +=
       n[1] != 0
@@ -313,7 +313,7 @@ $(document).ready(function () {
     amountInWord +=
       n[3] != 0
         ? (below20List[Number(n[3])] ||
-            above20List[n[3][0]] + " " + below20List[n[3][1]]) + "hundred and "
+            above20List[n[3][0]] + " " + below20List[n[3][1]]) + "hundred "
         : "";
     amountInWord +=
       n[4] != 0

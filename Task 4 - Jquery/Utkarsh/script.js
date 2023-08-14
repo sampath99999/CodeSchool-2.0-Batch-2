@@ -91,8 +91,23 @@ $(document).ready(function () {
   });
 
   $("#menuIcon").click(function () {
-    $(".rightContainer").toggleClass("col-md-12 col-12");
+    $(".rightContainer").toggleClass("col-md-12");
     $(".leftContainer").toggleClass("d-lg-none d-none d-sm-block");
+  });
+
+  $("#mobileIcon").click(function (event) {
+    event.stopPropagation();
+    $("#leftSide").click(function (event) {
+      event.stopPropagation();
+    });
+    $("#leftSide").css({ position: "absolute", "z-index": "3000" });
+    $("#rightSide").css({position: "static", opacity: "0.5",}); 
+    $("#leftSide").attr("class", "d-block col-8");
+    $("html").click(function (event) {
+      $("#rightSide").css({ position: "static", "z-index": "1", opacity: "1" });
+      $("#leftSide").attr("class", "d-none");
+      $("body").css("overflow", "auto");
+    });
   });
 
   function updateDateTime() {
@@ -123,7 +138,7 @@ $(document).ready(function () {
     if ($changeText.text() === "Logout") {
       $changeText.html("Login");
     } else if ($changeText.text() === "Login") {
-      $changeText.html("Logout");
+      $changeText.html("Logout");ƒf
     }
   });
 
@@ -139,7 +154,7 @@ $(document).ready(function () {
     } else {
       $("#ifscCodeErr").css("display", "none");
       let url = "https://ifsc.razorpay.com/" + ifscCode;
-      console.log(url);
+      
       $.get(url, function (data, status) {
         if (status == "success") {
           let { BANK, BRANCH } = data;
@@ -270,7 +285,6 @@ $(document).ready(function () {
       if (remaining > 0) {
         words += convertGroup(remaining);
       }
-
       return words;
     }
     let partyAmount = $(this).val();
@@ -279,33 +293,38 @@ $(document).ready(function () {
     $(this).val(words);
   });
 
-  const maxFiles = 2;
+  const maxFiles = 3;
   const input = $("#uploadDocument");
   const documentList = $("#documentSelected");
   const addFileButton = $("#addButton");
-  const files = [];
-  addFileButton.on("click", function () {
-    input.click();
-  });
+  let files = [];
+
   input.on("change", function (e) {
     const fileList = e.target.files;
     for (let i = 0; i < fileList.length; i++) {
       const file = fileList[i];
       if (files.length < maxFiles && !files.includes(file.name)) {
         files.push(file.name);
-        addFileElement(file);
+        addFileToInput(file.name);
       }
     }
     input.val(null);
   });
-
-  function addFileElement(file) {
+  
+  addFileButton.on("click", function () {  
+    const fileName = input.val();
+    if (fileName && !files.includes(fileName)) {
+      files.push(fileName);
+      addFileElement(fileName);
+      input.val(null);
+    }
+  });
+  
+  function addFileElement(fileName) {
     const fileDiv = $("<div></div>").addClass(
       "file-item bg-success bg-opacity-25 d-flex justify-content-between mt-1 p-1 "
     );
-    const fileName = $("<span></span>")
-      .addClass("file-name text-success text-opacity-75")
-      .text(file.name);
+    
     const removeButton = $("<span></span>")
       .addClass("remove-button text-success text-opacity-75 ms-3 ")
       .html('<i class="fas fa-times"></i>');
@@ -315,7 +334,8 @@ $(document).ready(function () {
       removeFile(fileName);
       $(this).closest(".file-item").remove();
     });
-    fileDiv.append(fileName);
+    
+    fileDiv.append(String(fileName).slice(12));
     fileDiv.append(removeButton);
     documentList.append(fileDiv);
   }
@@ -326,8 +346,4 @@ $(document).ready(function () {
       files.splice(index, 1);
     }
   }
-
-
-
-
 });

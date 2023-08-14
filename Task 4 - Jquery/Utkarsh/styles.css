@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .leftBlock {
     padding-top: 10px;
     background-color: rgb(3, 36, 58);

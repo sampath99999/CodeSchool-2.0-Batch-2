@@ -3,13 +3,7 @@
   padding: 0px;
   font-family: "open sans", sans-serif;
 }
-.rightContainer {
-  width: 100%;
-  margin-left: 0;
-}
-.rightContainer2 {
-  width: 100%;
-}
+
 .sideBarContainer {
   background-color: rgb(3, 36, 58) !important;
   overflow: auto;
@@ -25,10 +19,13 @@
   width: 100%;
   margin-left: 0px;
   left: 250px;
+  transition: all 0.5s;
 }
 .rightContainer2 {
   width: 100%;
   left: 0px;
+  transition: all 0.5s;
+
   margin-left: 250px;
 }
 .sideBarContainer::-webkit-scrollbar {
@@ -147,6 +144,12 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .bankCont {
     width: 100%;
+  }
+  .rightContainer2 {
+    width: 100%;
+    left: 0px;
+    margin-left: 0;
+    transition: all 0.5s;
   }
 }
 

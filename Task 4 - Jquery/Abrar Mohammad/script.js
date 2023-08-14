@@ -206,6 +206,7 @@ $(document).ready(function () {
   $(".headErr").hide();
   $(".headErr").css({ fontSize: "12px" });
   let headErrMsg = true;
+
   $(".headOfAccount").blur(function (event) {
     if (event.target.value === "") {
       $(".headErr").show();
@@ -345,40 +346,40 @@ $(document).ready(function () {
       .substr(-11)
       .match(/^(\d{2})(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
     if (!numValue) return;
-    var str = "";
-    str +=
+    var amountInWords = "";
+    amountInWords +=
       numValue[1] != 0
         ? (words[Number(numValue[1])] ||
             words2[numValue[1][0]] + " " + words[numValue[1][1]]) + "hundred "
         : "";
-    str +=
+    amountInWords +=
       numValue[2] != 0
         ? (words[Number(numValue[2])] ||
             words2[numValue[2][0]] + " " + words[numValue[2][1]]) + "crore "
         : "";
-    str +=
+    amountInWords +=
       numValue[3] != 0
         ? (words[Number(numValue[3])] ||
             words2[numValue[3][0]] + " " + words[numValue[3][1]]) + "lakh "
         : "";
-    str +=
+    amountInWords +=
       numValue[4] != 0
         ? (words[Number(numValue[4])] ||
             words2[numValue[4][0]] + " " + words[numValue[4][1]]) + "thousand "
         : "";
-    str +=
+    amountInWords +=
       numValue[5] != 0
         ? (words[Number(numValue[5])] ||
             words2[numValue[5][0]] + " " + words[numValue[5][1]]) + "hundred "
         : "";
-    str +=
+    amountInWords +=
       numValue[6] != 0
-        ? (str != "" ? "and " : "") +
+        ? (amountInWords != "" ? "and " : "") +
           (words[Number(numValue[6])] ||
             words2[numValue[6][0]] + " " + words[numValue[6][1]]) +
           "only "
         : "";
-    return str;
+    return amountInWords;
   }
 
   $(".partyAmount").blur(function (event) {

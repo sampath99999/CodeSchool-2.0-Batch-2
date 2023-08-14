@@ -149,17 +149,17 @@
                                 class="text-danger d-inline">*
                             </p>
                         </div>
-                        <div class="p-2 d-flex ms-md-5 flex-wrap select-account">
-                            <input type="radio" id="radioButton">
+                        <div class="p-2 d-flex  flex-wrap select-account">
+                            <input type="radio" id="radioButton" name="radioButton">
                             <label class="ms-1" for="radioButton">Single Party</label>
 
-                            <input class="ms-md-3" type="radio" id="radioButton1">
+                            <input class="ms-md-3" type="radio" id="radioButton1" name="radioButton">
                             <label class="ms-1">Multiple Parties</label>
 
-                            <input class="ms-md-3" type="radio" id="radioButton2">
+                            <input class="ms-md-3" type="radio" id="radioButton2" name="radioButton">
                             <label class="ms-1">PO account to PD account</label>
 
-                            <input class="ms-md-3" type="radio" id="radioButton3">
+                            <input class="ms-md-3" type="radio" id="radioButton3" name="radioButton">
                             <label class="ms-1">PD account to other</label>
                         </div>
                     </div>
@@ -338,6 +338,7 @@
                             <div class="input">
                                 <input type="text" oninput="validateTextInput(event)" id="inputAmount"
                                     placeholder="Enter Party Amount" class="inputAmount input-text rounded ">
+                                <p class="party-AmountErrorMessage " style="color: red;"></p>
                             </div>
                         </div>
 
@@ -348,6 +349,7 @@
                             </div>
                             <div class="input">
                                 <p class="party-amount-words text-capitalize "></p>
+
                             </div>
                         </div>
 
@@ -359,11 +361,17 @@
                                 <div class="d-flex inputFile">
                                     <input type="file" id="inputChooseFile" placeholder="Enter Party Name"
                                         class="inputChooseFile input-file rounded ">
-                                    <button class="btn bg-primary text-white ms-2 add">+Add</button>
+                                    <button class="btn bg-primary text-white ms-2 add" id="addFiles">+Add</button>
                                 </div>
                                 <p class="note text-black-50 fst-italic">Note: Documents of Cheque(Letters/G.O etc) can
                                     be uploaded
                                     here</p>
+                                <div class="files" id="files">
+                                    <!-- <div class="eachfile">
+                                        <p class="filename"></p><i class="fa-solid fa-x remove"></i>
+                                    </div> -->
+                                </div>
+                                <p id="fileErrorMsg" class="text-danger"></p>
                             </div>
                         </div>
 

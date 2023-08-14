@@ -8,7 +8,7 @@ const onlyNumbers = /^[0-9]+$/;
 const alphaNumeric = /^[a-zA-Z0-9]+$/;
 const upperCaseAlphbets = /^[A-Z]+$/;
 
-let url = "https://ifsc.razorpay.com/";
+// let url = "https://ifsc.razorpay.com/";
 
 $(document).ready(function () {
   function updateCurrentTime() {
@@ -172,30 +172,6 @@ function checkValidations() {
 
   let IFSC_CODE = $("#inputIFSC").val();
   validIFSC(IFSC_CODE);
-  //   let firstFourChar = IFSC_CODE.substring(0, 4);
-  //   if (IFSC_CODE.length == 0) {
-  //     $(".ifsc-errorMessage").text("Please enter IFSC CODE!");
-  //     validIFSC_CODE = false;
-  //   } else if (IFSC_CODE.length != 11) {
-  //     $(".ifsc-errorMessage").text("IFSC CODE Must have 11 characters");
-  //     validIFSC_CODE = false;
-  //   } else if (!upperCaseAlphbets.test(firstFourChar)) {
-  //     $(".ifsc-errorMessage").text(
-  //       "first Four characters must be upper case alphabets!"
-  //     );
-  //     validIFSC_CODE = false;
-  //   } else if (IFSC_CODE[4] != 0) {
-  //     $(".ifsc-errorMessage").text("Fifth character must be 0!");
-  //     validIFSC_CODE = false;
-  //   } else if (!alphaNumeric.test(IFSC_CODE.substring(5, 11))) {
-  //     $(".ifsc-errorMessage").text(
-  //       "Last 6 characters must be Numeric or Alphabetic"
-  //     );
-  //     validIFSC_CODE = false;
-  //   } else {
-  //     $(".ifsc-errorMessage").text("");
-  //     validIFSC_CODE = true;
-  //   }
 }
 
 function validIFSC(IFSC_CODE) {
@@ -227,10 +203,38 @@ function validIFSC(IFSC_CODE) {
 
 function getBankDetails() {
   let IFSC_CODE = $("#inputIFSC").val();
-  validIFSC(IFSC_CODE);
+
+  let firstFourChar = IFSC_CODE.substring(0, 4);
+  if (IFSC_CODE.length == 0) {
+    $(".ifsc-errorMessage").text("Please enter IFSC CODE!");
+    validIFSC_CODE = false;
+  } else if (IFSC_CODE.length != 11) {
+    $(".ifsc-errorMessage").text("IFSC CODE Must have 11 characters");
+    validIFSC_CODE = false;
+  } else if (!upperCaseAlphbets.test(firstFourChar)) {
+    $(".ifsc-errorMessage").text(
+      "first Four characters must be upper case alphabets!"
+    );
+    validIFSC_CODE = false;
+  } else if (IFSC_CODE[4] != 0) {
+    $(".ifsc-errorMessage").text("Fifth character must be 0!");
+    validIFSC_CODE = false;
+  } else if (!alphaNumeric.test(IFSC_CODE.substring(5, 11))) {
+    $(".ifsc-errorMessage").text(
+      "Last 6 characters must be Numeric or Alphabetic"
+    );
+    validIFSC_CODE = false;
+  } else {
+    $(".ifsc-errorMessage").text("");
+    validIFSC_CODE = true;
+  }
+
   if (validIFSC_CODE) {
+    let url = "https://ifsc.razorpay.com/";
     let query = $("#inputIFSC").val();
+    console.log("query is :", query);
     url = url + query;
+    console.log("url is :", url);
     $.ajax({
       url: url,
       type: "GET",
@@ -240,9 +244,19 @@ function getBankDetails() {
       },
       error: function (data) {
         console.log(data);
+        errorBankDetails(data);
+        $(".ifsc-errorMessage").text("Not a Valid IFSC CODE");
+        validIFSC_CODE = false;
       },
     });
   }
+}
+
+function setBankDetails(data) {
+  let BANK = data.BANK;
+  let BRANCH = data.BRANCH;
+  $(".bankName").text(BANK);
+  $(".bankBranch").text(BRANCH);
 }
 
 function validateTextInput(event) {
@@ -253,13 +267,6 @@ function validateTextInput(event) {
 
   const newValue = currentValue.replace(/[^0-9]/g, "");
   input.value = newValue;
-}
-
-function setBankDetails(data) {
-  let BANK = data.BANK;
-  let BRANCH = data.BRANCH;
-  $(".bankName").text(BANK);
-  $(".bankBranch").text(BRANCH);
 }
 
 $("#select").change(function () {
@@ -285,11 +292,71 @@ $("#select").change(function () {
   }
 });
 
+function errorBankDetails(data) {
+  let BANK = data.BANK;
+  let BRANCH = data.BRANCH;
+  $(".bankName").text("XXXXX");
+  $(".bankBranch").text("XXXXX");
+}
+
 $("#inputAmount").keypress(function (event) {
   if (event.which === 13) {
+    // validations of party amount
     var inputData = $(this).val();
-    var number = parseInt(inputData);
-    var words = numberToWords.toWords(number);
-    $(".party-amount-words").text(words);
+
+    if (inputData.length == 0) {
+      $(".party-AmountErrorMessage").text("Please enter Amount!");
+      $(".party-amount-words").text("");
+    } else {
+      var number = parseInt(inputData);
+      var words = numberToWords.toWords(number);
+      $(".party-amount-words").text(words);
+      $(".party-AmountErrorMessage").text("");
+    }
   }
+});
+
+const add = document.getElementById("addFiles");
+const fileInput = document.getElementById("inputChooseFile");
+const fileList = document.getElementById("files");
+const errorMsg = document.getElementById("fileErrorMsg");
+
+add.addEventListener("click", function () {
+  const currentFile = fileInput.files[0];
+  console.log(currentFile);
+
+  if (!currentFile) {
+    errorMsg.textContent = "*Please select a file.";
+    return;
+  }
+
+  const fileName = currentFile.name;
+  console.log(fileName);
+  const existingFile = Array.from(fileList.children).find(
+    (element) => element.textContent === fileName
+  );
+
+  console.log(existingFile);
+
+  if (existingFile) {
+    errorMsg.textContent = "*File already exists.";
+  } else {
+    const listItem = document.createElement("div");
+    listItem.innerHTML = `<span>${fileName}</span>
+      <span><i class="fa-solid fa-xmark remove-icon text-danger ms-2"></i></span>
+      `;
+    listItem.classList.add("filedesc");
+    fileList.appendChild(listItem);
+    errorMsg.textContent = "";
+
+    const removeBtns = document.querySelectorAll(".remove-icon");
+    removeBtns.forEach((icon) => {
+      icon.addEventListener("click", function () {
+        fileList.removeChild(listItem);
+        errorMsg.textContent = "";
+      });
+    });
+  }
+
+  fileInput.value = "";
 });

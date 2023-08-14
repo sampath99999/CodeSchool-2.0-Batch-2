@@ -250,6 +250,12 @@
   margin-top: 30px;
 }
 
+@media screen and (max-width:768px) {
+  #transactionTypeErrorMsg{
+    margin-top: 50px;
+  }
+}
+
 .radio-btns-box {
   width: 70%;
 }
@@ -506,3 +512,4 @@
 .option-sm:hover {
   background-color: #f0f0f0;
 }
+

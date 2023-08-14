@@ -329,6 +329,19 @@ $(document).ready(function () {
   var headOfAccountValidate;
   var expenditureValidate;
   var purposeValidate;
+  var ifscValidate;
+
+  function ifscValidation(){
+   const ifscCode =  $("#ifscSearchInput").val();
+   console.log(ifscCode)
+   if(ifscCode === ""){
+    $("#ifscSearchInputErrorMsg").text("*Please enter IFSC code");
+    ifscValidate=false;
+   }else{
+    $("#ifscSearchInputErrorMsg").text("");
+    ifscValidate=true;
+   }
+  }
 
   function purposeValidation() {
     const purposeText = $("#floatingTextarea").val();
@@ -489,6 +502,7 @@ $(document).ready(function () {
     headOfAccountValidation();
     expenditureValidation();
     purposeValidation();
+    ifscValidation();
   });
 
   $("#nextBtn").click(function () {
@@ -500,7 +514,8 @@ $(document).ready(function () {
       payAmountValidate &&
       headOfAccountValidate &&
       expenditureValidate &&
-      purposeValidate
+      purposeValidate && 
+      ifscValidate
     ) {
       alert("Payment done successfully");
     }

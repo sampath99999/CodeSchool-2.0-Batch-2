@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+          crossorigin="anonymous" />
+    <link rel="shortcut icon" href="#" />
+    <script src="https://kit.fontawesome.com/313eaaf651.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>IFMIS</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-md-block col-md-2" id="onlyMenubar">
+                <div class="row menuBar">
+                    <h1 class="text-white border-bottom border-secondary py-3 IFMIS">IFMIS</h1>
+                    <ul class="list-unstyled text-white p-0">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Masters</a></li>
+                        <li><a href="#">Transactions</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Return Check Generation</a></li>
+                        <li><a href="#">Forest Transactions</a></li>
+                        <li><a href="#">Forest Transactions Report</a></li>
+                        <li><a href="#">E-Kuber Return Recieved List</a></li>
+                        <li><a href="#">E-Kuber Return Challan Print</a></li>
+                        <li><a href="#">UTR Search</a></li>
+                        <li><a href="#">Failed Transactions (ACK Reject)</a></li>
+                        <li><a href="#">Check Status Report</a></li>
+                        <li><a href="#">Rejected Checks due to FinYear End</a></li>
+                        <li><a href="#">Finyear New Checks Report</a></li>
+                        <li><a href="#">Pb Budget Check</a></li>
+                        <li><a href="#">Update Receipts Used Amount</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-10 p-0" id="exceptMenubar">
+                <nav class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <div class="m-3 me-0 d-md-none">
+                            <img class="img-fluid rounded-circle" id="telanganaEmblem" src="Telangana_logo.png" />
+                        </div>
+                        <div class="d-md-none btn border-0 menuIcon my-3 mt-4 me-0" id="mobileMenuIcon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="d-none d-md-block btn border-0 menuIcon m-3 ms-2 me-0" id="menuIcon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <p class="bg-secondary rounded-2 m-2 px-2 py-3 p-md-2 ms-0 text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m10.5 15.429l3.548 1.837a1 1 0 0 0 .907.006l2.992-1.496a1 1 0 0 0 .553-.894v-2.764a1 1 0 0 0-.553-.894L14.5 9.5l-3.46 1.792a1 1 0 0 0-.54.888v3.249z" />
+                            <path d="m3.04 15.708l3.008 1.558a1 1 0 0 0 .907.006L10.5 15.5v-3.382a1 1 0 0 0-.553-.894L6.5 9.5l-3.46 1.792a1 1 0 0 0-.54.888v2.64a1 1 0 0 0 .54.888zM6.5 9.429l3.548 1.837a1 1 0 0 0 .907.006L14.5 9.5V6.118a1 1 0 0 0-.553-.894l-2.992-1.496a1 1 0 0 0-.907.006L7.04 5.292a1 1 0 0 0-.54.888v3.249z" />
+                            <path d="m6.846 5.673l3.207 1.603a1 1 0 0 0 .894 0L14.12 5.69h0m-3.274 5.983l3.207 1.603a1 1 0 0 0 .894 0l3.172-1.586h0m-15.273-.017l3.207 1.603a1 1 0 0 0 .894 0l3.172-1.586h0M10.5 7.5v4m4 2V17m-8-3.5V17" />
+                        </g></svg> Modules</p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="d-none d-md-block">
+                            <p class="text-white my-0">Last Login</p>
+                            <p class="text-white my-0" id="currentDate"></p>
+                        </div>
+                        <div class="d-flex bg-secondary rounded-2 m-2 p-2 p-md-1 text-white">
+                            <a class="text-decoration-none d-flex dropdown-toggle text-white" href="#" id="Profile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="avatar-bg">
+                                    <img src="https://spruko.com/demo/ynex/dist/assets/images/faces/10.jpg" alt="User Image"></div>
+                                <div class="d-none d-md-block">
+                                    <p class="p-0 m-0">Welcome UshaSree</p>
+                                    <p class="p-0 m-0">(23031013097)</p>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="Profile">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Account Details</a></li>
+                            </ul>
+                        </div>
+                        <div class="d-none d-md-flex bg-secondary rounded-2 m-2 p-2 text-white">
+                            <div class="btn border-0 text-white" id="loginViceversa">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="d-none d-md-block bg-primary bg-opacity-10 text-primary m-3 p-2 fw-bolder">
+                    <i class="fas fa-money-check-alt"></i>
+                     Issue Cheque (E-Kuber Cheque From 01/03/19)</div>
+                <div class="bg-danger bg-opacity-10 m-3 mx-0 mx-md-5 p-2 rounded-2">
+                    <h5>Points to remember</h5>
+                    <ul class="points">
+                        <li>Please note that all cheques which are approved from DDOChecCker/Ohicer/Govt from 01/03/2019 shall get paid through Ekuber which IIS a Core Banking Solution of RBI. </li>
+                        <li>There is no need to present the cheques at the Bank for these cheques which got approved after 01/03/2019.</li>
+                        <li>Please give correct account details as it is when the Account was opened.</li>
+                        <li>Make sure there is no 'Your self' or 'self' in the account names while issuing cheques. Such cheques get auto-rejected by the EKuber</li>
+                        <li>Please check the exact length of Bank Account Number and No special are to be entered, which leads to auto rejection</li>
+                        <li>Finally, in multiple party cheques please do not enter the same party details in the same chequeno which will be considered as duplicate transaction and gets auto-rejected.</li>
+                        <li>This is just a one-time procedure to get your party details corrected and once when corrected the same details can be re-used for smooth transactions.</li>
+                        <li>PD-to-PD cheques shall be adjusted in treasury itself in regular procedure.</li>
+                    </ul>
+                </div>
+                <div class="my-3 mx-3 mx-md-5 px-2 accountForm">
+                    <div class="row bg-light mb-2 pt-1">
+                        <div class="col-12 form-label col-md-3">Transaction Type<span class="text-danger">*</span></div>
+                        <div class="col-12 col-md-7">
+                            <input type="radio" value="Single party" id="Single-party" name="transactionType">
+                            <label for="Single-party">Single Party</label>
+                            <input type="radio" value="Multiple parties" id="Multiple-parties" name="transactionType">
+                            <label for="Multiple parties">Multiple Parties</label>
+                            <input type="radio" value="PD Account to PD Account" id="PD-Account-to-PD-Account" name="transactionType">
+                            <label for="PD-Account-to-PD-Account">PD Account to PD Account</label>
+                            <input type="radio" value="PD Account to Other" id="PD-Account-to-Other" name="transactionType">
+                            <label for="PD-Account-to-Other">PD Account to Other</label>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="transactionTypeError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 form-label col-md-3">Party Account no<span class="text-danger">*</span></div>
+                          <div class="col-12 col-md-7">
+                            <input type="password" class="form-control" placeholder="Enter A/C no" id="partyAccountNo" autocomplete="off" />
+                          </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="partyAccountnoError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Confirm Party Account no<span class="text-danger">*</span></div>
+                          <div class="col-12 col-md-7">
+                            <input type="text" class="form-control" placeholder="Confirm A/C no" id="confirmAccountNo" autocomplete="off" />
+                          </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="confirmAccountnoError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Party Name<span class="text-danger">*</span></div>
+                        <div class="col-12 col-md-7"><input type="text" class="form-control" placeholder="Enter Party Name" id="partyName" autocomplete="off" /></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="partyNameError"></div>
+                    </div>
+                    <div class="row bg-light pt-2 mb-3">
+                        <div class="col-12">
+                            <div class="row p-0 mb-2">
+                                <div class="col-12 col-md-3 form-label">Bank IFSC Code<span class="text-danger">*</span></div>
+                                <div class="col-9 col-md-6 "><input type="text" class="form-control" placeholder="Enter IFSC Code" id="bankIFSCCode" autocomplete="off" /></div>
+                                <div class="col-3 col-md-1 btn text-white bg-primary" id="searchButton"><span>Search</span></div>
+                            </div>
+                            <div class="row p-0 mb-2">
+                                <div class="col-12 offset-md-3 col-md-7 text-danger" id="bankIFSCCodeError"></div>
+                            </div>
+                            <div class="row p-0 mb-2">
+                                <div class="col-12 col-md-3 form-label">Bank Name</div>
+                                <div class="col-12 col-md-7" id="bankName">XXXXX</div>
+                            </div>
+                            <div class="row p-0 mb-2">
+                                <div class="col-12 col-md-3 form-label">Bank Branch</div>
+                                <div class="col-12 col-md-7" id="bankBranch">XXXXX</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Head of account<span class="text-danger">*</span></div>
+                        <div class="col-12 col-md-7">
+                            <select class="form-select" id="headOfAccount">
+                                <option value="">Select</option>
+                                <option value="0853001020002000000NVN">0853001020002000000NVN</option>
+                                <option value="8342001170004001000NVN">8342001170004001000NVN</option>
+                                <option value="2071011170004320000NVN">2071011170004320000NVN</option>
+                                <option value="8342001170004002000NVN">8342001170004002000NVN</option>
+                                <option value="2204000030006300303NVN">2204000030006300303NVN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="headOfAccountError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Balance <span class="text-secondary">(in Rs.)</span></div>
+                        <div class="col-12 col-md-7" id="balance">XXXXX</div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">LOC <span class="text-secondary">(in Rs.)</span></div>
+                        <div class="col-12 col-md-7" id="loc">XXXXX</div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Expenditure Type<span class="text-danger">*</span></div>
+                        <div class="col-12 col-md-7">
+                            <select class="form-select" id="expenditureType">
+                                <option value="">Select</option>
+                                <option value="Capital Expenditure">Capital Expenditure</option>
+                                <option value="Revenue Expenditure">Revenue Expenditure</option>
+                                <option value="Deferred Revenue Expenditure">Deferred Revenue Expenditure</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="expenditureTypeError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Purpose Type<span class="text-danger">*</span></div>
+                        <div class="col-12 col-md-7">
+                            <select class="form-select" id="purposeType">
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="purposeTypeError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Purpose<span class="text-danger">*</span></div>
+                        <div class="col-12 col-md-7"><textarea class="form-control" placeholder="Purpose" id="purpose" autocomplete="off"></textarea></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="purposeError"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-3 form-label">Party Amount <span class="text-secondary">(in Rs.)</span></div>
+                        <div class="col-12 col-md-7"><input type="text" class="form-control" placeholder="Enter Party Amount" id="partyAmount" /></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="partyAmountError"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-3 form-label">Upload Documents<span class="text-danger">*</span></div>
+                        <div class="col-9 col-md-6"> <input type="file" class="form-control" placeholder="No file choosen" id="uploadDocument" /></div>
+                        <div class="col-3 col-md-1 btn bg-primary text-white" id="addButton">+ Add</div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 offset-md-3 col-md-7 text-danger" id="uploadDocumentsError"></div>
+                        <div class="col-12 offset-md-3 col-md-7" id="folder"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-3 form-label"></div>
+                        <div class="col-12 col-md-7"><i class="text-secondary">Note: Documents of Cheque(Letter/G.O. etc) can be uploaded here.</i></div>
+                    </div>
+                    <hr class="text-secondary">
+                    <div class="nextButton">
+                        <div class="btn bg-primary text-white my-2" id="nextButton">Next <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" /></svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

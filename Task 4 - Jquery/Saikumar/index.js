@@ -63,7 +63,7 @@ function validateConfirmPartyAccountNo() {
 
 function validatePartyName() {
   const partyName = $("#partyName").val();
-  const pattern = /^[a-zA-Z0-9]*$/;
+  const pattern = /^[a-zA-Z\s]*$/;
   // console.log(partyAccountNumber.length)
   if (partyName.length == 0) {
     $("#partyNameErrorText").text("*Party Name must not be empty");
@@ -96,31 +96,27 @@ function validateIFSCCode() {
 }
 
 // validate Expenditure Type
-function validateExpenditureType()
-{   
-    const value=$("#type").val();
-    console.log(value);
-    if(value=="select")
-    {
-        $("#expenditureTypeErrorText").text("*Select Expenditure Type ");
-        return false;
-    }
-    $("#expenditureTypeErrorText").text("");
-    return true;
+function validateExpenditureType() {
+  const value = $("#type").val();
+  console.log(value);
+  if (value == "select") {
+    $("#expenditureTypeErrorText").text("*Select Expenditure Type ");
+    return false;
+  }
+  $("#expenditureTypeErrorText").text("");
+  return true;
 }
 
 // validate Purpose Type
-function validatePurposeType()
-{   
-    const value=$("#purpose").val();
-    console.log(value);
-    if(value=="select")
-    {
-        $("#purposeTypeErrorText").text("*Select Purpose Type ");
-        return false;
-    }
-    $("#purposeTypeErrorText").text("");
-    return true;
+function validatePurposeType() {
+  const value = $("#purpose").val();
+  console.log(value);
+  if (value == "select") {
+    $("#purposeTypeErrorText").text("*Select Purpose Type ");
+    return false;
+  }
+  $("#purposeTypeErrorText").text("");
+  return true;
 }
 
 // Head of Account
@@ -136,86 +132,118 @@ function validateHeadOfAccount() {
 
 // Convert number to words
 function convertNumberToWords(num) {
-    const units = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-    const teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
-    const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-    const thousands = ["", "thousand", "lakh", "crore"];
-  
-    function convertChunk(chunk) {
-      const hundreds = Math.floor(chunk / 100);
-      const remainder = chunk % 100;
-  
-      let chunkWords = "";
-  
-      if (hundreds > 0) {
-        chunkWords += units[hundreds] + " hundred";
-      }
-  
-      if (remainder > 0) {
-        if (remainder < 10) {
-          chunkWords += (hundreds > 0 ? " and " : "") + units[remainder];
-        } else if (remainder >= 11 && remainder <= 19) {
-          chunkWords += (hundreds > 0 ? " and " : "") + teens[remainder - 10];
-        } else {
-          chunkWords += (hundreds > 0 ? " and " : "") + tens[Math.floor(remainder / 10)];
-          if (remainder % 10 > 0) {
-            chunkWords += " " + units[remainder % 10];
-          }
+  const units = [
+    "",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
+  const teens = [
+    "",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+  ];
+  const tens = [
+    "",
+    "ten",
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
+  ];
+  const thousands = ["", "thousand", "lakh", "crore"];
+
+  function convertChunk(chunk) {
+    const hundreds = Math.floor(chunk / 100);
+    const remainder = chunk % 100;
+
+    let chunkWords = "";
+
+    if (hundreds > 0) {
+      chunkWords += units[hundreds] + " hundred";
+    }
+
+    if (remainder > 0) {
+      if (remainder < 10) {
+        chunkWords += (hundreds > 0 ? " and " : "") + units[remainder];
+      } else if (remainder >= 11 && remainder <= 19) {
+        chunkWords += (hundreds > 0 ? " and " : "") + teens[remainder - 10];
+      } else {
+        chunkWords +=
+          (hundreds > 0 ? " and " : "") + tens[Math.floor(remainder / 10)];
+        if (remainder % 10 > 0) {
+          chunkWords += " " + units[remainder % 10];
         }
       }
-  
-      return chunkWords;
     }
-  
-    const chunks = [];
-    while (num > 0) {
-      chunks.push(num % 1000);
-      num = Math.floor(num / 1000);
-    }
-  
-    const wordsArray = chunks.map((chunk, index) => {
-      const chunkWords = convertChunk(chunk);
-      if (chunkWords) {
-        return chunkWords + " " + thousands[index];
-      }
-      return "";
-    });
-  
-    return wordsArray.reverse().join(" ");
+
+    return chunkWords;
   }
-  
-// validate Purpose
-function validatePurpose(){
-    const purpose=$("#purposeTextArea").val();
-    
-    console.log($("#purposeTextArea"));
-    console.log(purpose.length)
-    if(purpose.length==0)
-    {
-        $("#purposeErrorText").text("*Purpose cannot be left empty");
-        return false;
+
+  const chunks = [];
+  while (num > 0) {
+    chunks.push(num % 1000);
+    num = Math.floor(num / 1000);
+  }
+
+  const wordsArray = chunks.map((chunk, index) => {
+    const chunkWords = convertChunk(chunk);
+    if (chunkWords) {
+      return chunkWords + " " + thousands[index];
     }
-    $("#purposeErrorText").text("");
-    return true;
+    return "";
+  });
+
+  return wordsArray.reverse().join(" ");
+}
+
+// validate Purpose
+function validatePurpose() {
+  const purpose = $("#purposeTextArea").val();
+
+  console.log($("#purposeTextArea"));
+  console.log(purpose.length);
+  if (purpose.length == 0) {
+    $("#purposeErrorText").text("*Purpose cannot be left empty");
+    return false;
+  }
+  $("#purposeErrorText").text("");
+  return true;
 }
 // Validate Amount
-function validatePartyAmount(){
-    const amount=$("#partyAmount").val();
-    console.log(amount)
-    const regex = /^\d+(?:\.\d+)?$/;
-    if(amount.length==0)
-    {
-        $("#partyAmountErrorText").text("*Enter Party Amount");
-        return false;
-    }
-    else if(!regex.test(amount))
-    {
-        $("#partyAmountErrorText").text("*Party Amount Should not be in Fractions.");
-        $("#partyAmount").val("");
-        return false;
-    }
-    $("#partyAmountErrorText").text("");
-    return true;
+function validatePartyAmount() {
+  const amount = $("#partyAmount").val();
+  console.log(amount);
+  const regex = /^\d+(?:\.\d+)?$/;
+  if (amount.length == 0) {
+    $("#partyAmountErrorText").text("*Enter Party Amount");
+    return false;
+  } else if (!regex.test(amount)) {
+    $("#partyAmountErrorText").text(
+      "*Party Amount Should not be in Fractions."
+    );
+    $("#partyAmount").val("");
+    return false;
+  }
+  $("#partyAmountErrorText").text("");
+  return true;
 }
 $(function () {
   //header
@@ -261,7 +289,7 @@ $(function () {
   // login logout
   $(".login-container").css({
     "background-color": "rgb(128, 128, 128,0.3)",
-   
+
     "margin-left": "18px",
   });
 
@@ -301,7 +329,7 @@ $(function () {
   $(".form-title").css({ color: "#130155", "font-weight": "500" });
   $(".account-input").css({ width: "70%" });
   $(".required").css({ color: "red" });
-  $(".account-numbers").css({ padding: "10px", "margin-bottom": "20px" });
+  $(".account-numbers").css({ padding: "10px", "margin-bottom": "8px" });
   $(".account-details").css({ padding: "20px" });
 
   // IFSC Code
@@ -317,7 +345,13 @@ $(function () {
   // error text
   $(".error-text").css({ color: "red" });
   // note
-  $(".note").css({"font-style":"italic","color":"grey","margin-top":'10px',"font-size":"14px","font-weight":"500"})
+  $(".note").css({
+    "font-style": "italic",
+    color: "grey",
+    "margin-top": "10px",
+    "font-size": "14px",
+    "font-weight": "500",
+  });
   toggleNav();
   // Get Date from datetime
   function formatDate(date) {
@@ -364,29 +398,28 @@ $(function () {
     }
   );
 
-  
-
   // IFSC Search button
 
   $("#IFSCsearch").click(function () {
-    console.log("hello");
     IFSCSearch = validateIFSCCode();
     if (IFSCSearch) {
       const searchText = $("#IFSCCode").val();
-      const url = `https://ifsc.razorpay.com/${searchText}`;
-      $.ajax({
-        url: url,
+      const url = `https://ifsc.razorpay.com/${searchText}`;     
 
+    $.ajax({
+        url: url,
         method: "GET",
-        success: function (data, status) {
-          $("#bank").text(data.BANK);
-          $("#branch").text(data.BRANCH);
-          console.log(data);
+        dataType: "json",
+        success: function (data) {
+            $("#bank").text(data.BANK);
+            $("#branch").text(data.BRANCH);
         },
-        error: function (error) {
-          console.error("Error:", error);
-          $("#bank").text("NOT FOUND");
-          $("#branch").text("NOT FOUND");
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error(
+            "Error fetching IFSC details,Please check the IFSC code and try again.",
+            textStatus,
+            errorThrown
+          );
         },
       });
     }
@@ -414,7 +447,7 @@ $(function () {
     }
   });
 
-// Expenditure and Purpose Type
+  // Expenditure and Purpose Type
 
   $("#type").change(function () {
     var val = $(this).val();
@@ -435,21 +468,25 @@ $(function () {
     }
   });
 
-  $( "#partyAmount" ).on( "blur", function() {
-    const valid=validatePartyAmount();
-    if(valid)
-    {
-        console.log("valid");
-        const words=convertNumberToWords(parseInt($("#partyAmount").val()));
+  $("#partyAmount").on("input", function () {
+    const valid = validatePartyAmount();
+    if (valid) {
+      console.log("valid");
+      const number=$("#partyAmount").val();
+      let words;
+      if(number==0)
+      {
+        words="zero"
+      }
+      else{
+       words = convertNumberToWords(parseInt($("#partyAmount").val()));
+      }
 
-        $("#partyAmountInWords").val(words); 
+      $("#partyAmountInWords").val(words);
+    } else {
+      $("#partyAmountInWords").val("");
     }
-    else{
-        $("#partyAmountInWords").val("");
-    }
-    
-    
-  } );
+  });
 
   // Party Account Numbers Validation
   $("#verify").click(function () {
@@ -463,7 +500,6 @@ $(function () {
     validatePartyAmount();
     validatePurpose();
   });
-
 
   const addButton = document.getElementById("inputGroupFileAddon04");
   const fileInput = document.getElementById("inputGroupFile04");
@@ -506,10 +542,4 @@ $(function () {
 
     fileInput.value = "";
   });
-
 });
-
-
-
-
-

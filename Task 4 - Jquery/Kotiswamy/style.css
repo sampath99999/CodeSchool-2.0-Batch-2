@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.ifmisBgContainer {
+  width: 100vw;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* sideBarContainer */
+
+.sideBarContainer {
+  background-color: rgb(3, 36, 58);
+  width: 255px !important;
+}
+
+.sideBarContainer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.sideBarContainer ul li {
+  font-size: 13px;
+  padding: 10px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.sideBarContainer ul li:hover {
+  background-color: rgb(211, 211, 211, 0.2);
+  border-left: 3px solid gold;
+}
+
+.tabsList {
+  padding: 0;
+}
+
+.tabsList::-webkit-scrollbar {
+  display: none;
+}
+
+.ifmisLogo {
+  height: 25px;
+}
+
+/* ifmisHomeRightContainer */
+
+.ifmisHomeRightContainer {
+  width: 100%;
+  margin-left: 0px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 767px) {
+  .ifmisHomeRightContainerClick {
+    width: 100%;
+    margin-left: 250px !important;
+  }
+  
+}
+
+.ifmisHomeRightContainerClick {
+  width: 100%;
+  margin-left: 0;
+  transition: all 0.5s ease;
+}
+
+/* navHeaderContainer */
+
+.navHeaderContainer {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+  width: 100%;
+  height: 10vh;
+  background-size: cover;
+}
+
+.navMenuCard p {
+  height: 6vh;
+  font-size: 15px;
+}
+
+.userProfileCard {
+  font-size: 10px;
+}
+
+.userDetailCard {
+  height: 6vh;
+}
+
+.userDetailCard img {
+  height: 25px;
+}
+
+.logoutCard {
+  height: 6vh;
+}
+
+/* pointsCard */
+
+.pointsCard ul li {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pointsCard ul li::marker {
+  color: brown;
+}
+
+.inputName {
+  width: 300px;
+  font-weight: 600;
+}
+
+.inputCard {
+  width: 60%;
+}
+
+@media screen and (max-width: 767px) {
+  .inputCard {
+    width: 100%;
+  }
+  .sideBarContainer {
+    width: 50vw !important;
+  }
+}
+
+/* uploadDocuments */
+
+.desclimar {
+  font-style: italic;
+}
+
+/* Errors */
+
+.partyErrMsg {
+  font-size: 10px;
+}
+
+.confirmPartyAccountErrMsg {
+  font-size: 10px;
+}
+
+.partyNameErrMsg {
+  font-size: 10px;
+}
+
+.bankIfscCardErrMsg {
+  font-size: 10px;
+}
+
+.expenditureTypeErrMsg {
+  font-size: 10px;
+}
+
+.headOfAccountErrMsg {
+  font-size: 10px;
+}
+
+.fileErrMsg {
+  font-size: 10px;
+}
+
+.partyAmountErrMsg {
+  font-size: 10px;
+}
+
+.purposeTypeErrMsg {
+  font-size: 10px;
+}
+
+.purposeErrMsg {
+  font-size: 10px;
+}
+
+.logoutCard {
+  cursor: pointer;
+}
+
+.confirmPartyAccountCardEl::-webkit-inner-spin-button,
+.confirmPartyAccountCardEl::-webkit-outter-spin-button {
+  -webkit-appearance: none;
+}
+
+.partyAmountEl::-webkit-inner-spin-button,
+.partyAmountEl::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

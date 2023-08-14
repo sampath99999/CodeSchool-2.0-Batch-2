@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFMIS Payment Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid m-0 p-0">
+      <div class="row m-0">
+        <div class="container p-0 d-flex col-12">
+          <div class="rightContainer" id="rightSideContainer">
+            <div
+              class="navbarContainer d-flex justify-content-between pe-2 ps-2"
+            >
+              <div class="navLeftSide d-flex align-items-center">
+                <img
+                  src="https://res.cloudinary.com/djjtzlcrx/image/upload/v1691732202/ifmis-logo_qszs4e.png"
+                  class="d-block d-md-none me-2 telanganaLogo"
+                />
+                <!--Small Devices-->
+
+                <button
+                  class="btn text-white d-md-none largeHamBtn"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-list hamBtn"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="offcanvas offcanvas-start sideBarContainer text-white d-md-none"
+                  data-bs-scroll="true"
+                  tabindex="-1"
+                  data-bs-backdrop="true"
+                  id="offcanvasWithBothOptions"
+                  aria-labelledby="offcanvasWithBothOptionsLabel"
+                >
+                  <div
+                    class="text-center mb-2 d-flex justify-content-center align-items-center"
+                  >
+                    <h2 class="m-0 ifmisHead pt-3 fw-bold d-none d-md-block">
+                      IFMIS
+                    </h2>
+                    <img
+                      src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"
+                      class="d-block d-md-none logoImage mt-2"
+                    />
+                  </div>
+                  <hr class="text-light" />
+                  <div class="offcanvas-body p-0 unorderedList">
+                    <ul class="d-flex flex-column gap-2 m-0 p-0">
+                      <li class="ps-4 pe-2 pt-2 pb-2">Home</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Masters</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Transcations</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Reports</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Return Cheque Generation
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Forest Transcations</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Forest Transcations Report
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        E-Kuber Return Recieved List
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        E-Kuber Return Challan Print
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">UTR Search</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Failed transcations (ACK Reject)
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Cheque Status Report</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Rejected Cheques due to FinYear End
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        FinYear New Cheques Report
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Pb Budget Check</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Update Reciepts Used Amount
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!--Large Devices-->
+
+                <button
+                  class="d-none d-md-block largeHamBtn"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasScrolling"
+                  aria-controls="offcanvasScrolling"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-list text-light"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="offcanvas offcanvas-start d-none d-md-block sideBarContainer"
+                  data-bs-scroll="true"
+                  data-bs-backdrop="false"
+                  tabindex="-1"
+                  id="offcanvasScrolling"
+                  aria-labelledby="offcanvasScrollingLabel"
+                >
+                  <div
+                    class="text-center mb-2 d-flex justify-content-center align-items-center"
+                  >
+                    <h2 class="m-0 ifmisHead pt-3 fw-bold d-none d-md-block">
+                      IFMIS
+                    </h2>
+                    <img
+                      src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"
+                      class="d-block d-md-none logoImage mt-2"
+                    />
+                  </div>
+                  <hr class="text-light" />
+                  <div class="offcanvas-body p-0">
+                    <ul class="unorderedList d-flex flex-column gap-2 m-0 p-0">
+                      <li class="ps-4 pe-2 pt-2 pb-2">Home</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Masters</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Transcations</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Reports</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Return Cheque Generation
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Forest Transcations</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Forest Transcations Report
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        E-Kuber Return Recieved List
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        E-Kuber Return Challan Print
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">UTR Search</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Failed transcations (ACK Reject)
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Cheque Status Report</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Rejected Cheques due to FinYear End
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        FinYear New Cheques Report
+                      </li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">Pb Budget Check</li>
+                      <li class="ps-4 pe-2 pt-2 pb-2">
+                        Update Reciepts Used Amount
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div
+                  class="moduleCont d-flex align-items-center p-2 bg-secondary rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-boxes text-light me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"
+                    />
+                  </svg>
+                  <p class="m-0 text-light">Modules</p>
+                </div>
+              </div>
+              <div class="navRightContainer d-flex align-items-center gap-3">
+                <div class="loginCont d-none d-md-block">
+                  <p class="m-0 lastLogin">Last Login</p>
+                  <p class="m-0 presentDate text-light"></p>
+                  <p class="m-0 presentTime text-light"></p>
+                </div>
+                <div
+                  class="d-flex align-items-center ps-2 ps-2 pt-1 pb-1 gap-2"
+                >
+                  <div class="dropdown gap-1">
+                    <a
+                      class="btn btn-secondary dropdown-toggle d-flex align-items-center"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        src="https://cdn3.iconfinder.com/data/icons/avatars-collection/256/22-512.png"
+                        class="userImage"
+                      />
+                    </a>
+
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><p class="m-0 text-dark name">Welcome M.USHASHREE</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><p class="m-0 text-dark name">(23031013097)</p></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  class="logoutBtn pe-2 ps-2 pb-2 pt-2 text-light bg-secondary rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-box-arrow-right text-light"
+                    viewBox="0 0 16 16"
+                    id="inOut"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                    />
+                  </svg>
+                  <span class="changeText">Logout</span>
+                </button>
+              </div>
+            </div>
+            <div class="downContainer mt-2">
+              <div
+                class="d-none d-md-flex issueCard align-items-center bg-primary bg-opacity-25 p-2 text-primary me-3 ms-3 mb-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-newspaper me-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"
+                  />
+                  <path
+                    d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"
+                  />
+                </svg>
+                <p class="m-0 fw-semibold">
+                  Issue Cheque(E-Kuber Cheque from 01/03/2019)
+                </p>
+              </div>
+              <div
+                class="pointsContainer bg-warning bg-opacity-10 p-2 me-md-5 ms-md-5 mb-4"
+              >
+                <h6 class="m-0 text-dark fw-bold">Points to remember</h6>
+                <ul class="pointsUnordered">
+                  <li>
+                    Please noe all the cheques which are approved from
+                    DDOChecCKer/Ohicer/Govt from 01/03/2019 shall get paid
+                    through Ekuber which iIs a Core Banking Solution at RBI.
+                  </li>
+                  <li>
+                    Please give correct account details as it is when the
+                    Account was opened.
+                  </li>
+                  <li>
+                    Make sure there is no 'Your self" or "Self" in the account
+                    names while issuing cheques. Such cheques get auto-rejected
+                    by the EKuber
+                  </li>
+                  <li>
+                    Please check the exact length of the Bank Account Number and
+                    NO special characters are to be entered, which leads to auto
+                    rejection
+                  </li>
+                  <li>
+                    Finally, in multiple party cheques please do not enter the
+                    same party details in the same chequeno which will be
+                    considered as a duplicacy transaction and gets auto-rejeted.
+                  </li>
+                  <li>
+                    This is just a one-time procedure to get your Party details
+                    corrected and once when corrected the same details can be
+                    re-used for smooth transactions.
+                  </li>
+                  <li>
+                    PD-to-PD cheques shall be adjusted in treasury itself in the
+                    regular procedure.
+                  </li>
+                  <li>
+                    There is no need to present the cheques at the Bank for
+                    those cheques which got approved after 01/03/2019.
+                  </li>
+                  <li>
+                    There is no need to present the cheques at the Bank for
+                    those cheques which got approved after 01/03/2019.
+                  </li>
+                </ul>
+              </div>
+              <form class="totalFormCont">
+                <div
+                  class="transcationCont d-flex flex-column bg-secondary bg-opacity-10 p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Transcation Type<span class="star text-danger fw-semibold"
+                      >*</span
+                    >
+                  </p>
+                  <div class="radioBtnContainer d-flex flex-wrap gap-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="parties"
+                        id="flexRadioDefault1"
+                        value="0"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Single Party</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="parties"
+                        value="1"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Multiple Parties</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="parties"
+                        id="flexRadioDefault3"
+                        value="2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault3">
+                        PD Account to PD Account</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="parties"
+                        id="flexRadioDefault4"
+                        value="3"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault4">
+                        PD Account to other</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Party Account no<span class="star text-danger fw-semibold"
+                      >*</span
+                    >
+                  </p>
+                  <div class="ipContainer">
+                    <input
+                      type="password"
+                      class="form-control partyAccountNo"
+                      placeholder="Enter A/C no"
+                      minlength="12"
+                      maxlength="22"
+                    />
+                    <p class="accountErrMsg text-danger"></p>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Confirm Party Account no<span
+                      class="star text-danger fw-semibold"
+                      >*</span
+                    >
+                  </p>
+                  <div class="ipContainer">
+                    <input
+                      type="number"
+                      class="form-control confirmAccountNo"
+                      placeholder="Confirm A/C no"
+                    />
+                    <p class="m-0 confirmAccountErr text-danger"></p>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Party Name<span class="star text-danger fw-semibold"
+                      >*</span
+                    >
+                  </p>
+                  <div class="ipContainer">
+                    <input
+                      type="text"
+                      class="form-control partyName"
+                      placeholder="Enter Party Name"
+                    />
+                    <p class="m-0 partyNameErr text-danger"></p>
+                  </div>
+                </div>
+                <div
+                  class="ifscCont bg-secondary bg-opacity-10 d-flex flex-column me-md-5 ms-md-5 mb-2 d-md-flex"
+                >
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">
+                      Bank IFSC Code<span class="star text-danger fw-semibold"
+                        >*</span
+                      >
+                    </p>
+                    <div class="bankCont d-flex flex-column">
+                      <div class="d-flex">
+                        <input
+                          type="text"
+                          class="form-control me-1 ifscCode"
+                          placeholder="Enter IFSC Code"
+                          maxlength="11"
+                        />
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          id="bankSearchBtn"
+                        >
+                          Search
+                        </button>
+                      </div>
+                      <p class="m-0 text-danger ifscErr ms-1"></p>
+                    </div>
+                  </div>
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">Bank Name</p>
+                    <div class="ipContainer">
+                      <p class="m-0 bankName">XXXX</p>
+                    </div>
+                  </div>
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">Bank Branch</p>
+                    <div class="ipContainer">
+                      <p class="m-0 bankBranch">XXXX</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ifscCont d-flex flex-column me-md-5 ms-md-5 mb-2 d-md-flex"
+                >
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">
+                      Head of Account<span class="star text-danger fw-semibold"
+                        >*</span
+                      >
+                    </p>
+                    <div class="bankCont d-flex flex-column">
+                      <select
+                        class="form-select headOfAccount"
+                        aria-label="Default select example"
+                      >
+                        <option value="">Select</option>
+                      </select>
+                      <p class="m-0 text-danger headErr ms-1"></p>
+                    </div>
+                  </div>
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">
+                      Balance <span class="spanned"> (in Rs.) </span>
+                    </p>
+                    <div class="ipContainer">
+                      <p class="m-0 headBalance">XXXX</p>
+                    </div>
+                  </div>
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">
+                      LOC <span class="spanned"> (in Rs.) </span>
+                    </p>
+                    <div class="ipContainer">
+                      <p class="m-0 headLoc">XXXX</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Expenditure Type<span class="star text-danger fw-semibold"
+                      >*</span
+                    >
+                  </p>
+                  <div class="ipContainer">
+                    <select
+                      class="form-select expenditureType"
+                      aria-label="Default select example"
+                    >
+                      <option value="">Select</option>
+                    </select>
+                    <p class="m-0 text-danger expenditureError"></p>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Purpose Type<span class="star text-danger fw-semibold"
+                      >*</span
+                    >
+                  </p>
+                  <div class="ipContainer">
+                    <select
+                      class="form-select purposeType"
+                      aria-label="Default select example"
+                    >
+                      <option value="">Select</option>
+                    </select>
+                    <p class="m-0 text-danger purposeTypeErr"></p>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Purpose<span class="star text-danger fw-semibold">*</span>
+                  </p>
+                  <div class="ipContainer">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control purpose"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea"
+                        maxlength="500"
+                      ></textarea>
+                      <label for="floatingTextarea">Purpose</label>
+                      <p class="m-0 text-danger purposeErr"></p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Party Amount<span class="spanned"> (in Rs.) </span>
+                  </p>
+                  <div class="ipContainer">
+                    <input
+                      type="number"
+                      class="form-control partyAmount"
+                      id="exampleInputPassword1"
+                      placeholder="Please Enter Amount"
+                    />
+                    <p class="m-0 text-danger partyAmountErr"></p>
+                  </div>
+                </div>
+                <div
+                  class="transcationCont d-flex flex-column p-2 me-md-5 ms-md-5 mb-2 flex-md-row"
+                >
+                  <p class="m-0 transType fw-semibold">
+                    Amount<span class="spanned"> (words.) </span>
+                  </p>
+                  <div
+                    class="ipContainer bg-secondary bg-opacity-10 p-1 rounded"
+                  >
+                    <p class="m-0 text-dark amountInRs">Amount in words..</p>
+                  </div>
+                </div>
+                <div
+                  class="ifscCont d-flex flex-column me-md-5 ms-md-5 mb-2 d-md-flex"
+                >
+                  <div
+                    class="transcationCont d-flex flex-column p-2 flex-md-row"
+                  >
+                    <p class="m-0 transType fw-semibold">Upload Documents</p>
+                    <div class="d-flex flex-column bankCont">
+                      <div class="d-flex flex-column">
+                        <div class="input-group mb-1">
+                          <input
+                            type="file"
+                            class="form-control me-1 fileDocument"
+                            id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04"
+                            aria-label="Upload"
+                          />
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="addDocBtn"
+                          >
+                            +Add
+                          </button>
+                        </div>
+                        <p class="fileErr m-0 text-danger"></p>
+                        <p class="m-0 note">
+                          Note: Documents of Cheque(Letter/G.O. etc) can be
+                          uploaded here
+                        </p>
+                      </div>
+                      <ul class="documentsCont"></ul>
+                    </div>
+                  </div>
+                </div>
+                <hr class="me-4 ms-4" />
+                <div class="nextBtn d-flex justify-content-center mb-3">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="nextValidBtn"
+                  >
+                    Next
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

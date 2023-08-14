@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3ff75e850b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>IFMIS Home Page</title>
+  </head>
+  <body>
+    <div class="container-fluid p-0 d-flex ifmisBgContainer">
+      <div
+        class="ifmisHomeRightContainer d-flex flex-column"
+        id="ifmisHomeRightContainer"
+      >
+        <!--navHeaderContainer -->
+
+        <nav
+          class="navHeaderContainer d-flex justify-content-between align-items-center text-white pe-2 ps-2"
+          id="navHeaderContainer"
+        >
+          <div class="navMenuCard d-flex align-items-center">
+            <img
+              src="https://res.cloudinary.com/djjtzlcrx/image/upload/v1691732202/ifmis-logo_qszs4e.png"
+              height="40"
+              width="40"
+              class="d-md-none"
+            />
+            <!-- LargeDevices -->
+            <button
+              class="btn text-white d-none d-md-inline menuBtn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasScrolling"
+              aria-controls="offcanvasScrolling"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start sideBarContainer text-white d-none d-md-flex"
+              data-bs-scroll="true"
+              tabindex="-1"
+              data-bs-backdrop="false"
+              id="offcanvasScrolling"
+              aria-labelledby="offcanvasScrollingLabel"
+            >
+              <div class="offcanvas-header d-flex justify-content-center">
+                <h1 class="pt-3">IFMIS</h1>
+              </div>
+              <hr />
+              <div class="offcanvas-body tabsList">
+                <ul class="d-flex flex-column gap-1">
+                  <li>Home</li>
+                  <li>Masters</li>
+                  <li>Transcations</li>
+                  <li>Reports</li>
+                  <li>Return Cheque Generation</li>
+                  <li>Forest Transcations</li>
+                  <li>Forest Transcations Report</li>
+                  <li>E-Kuber Return Recieved List</li>
+                  <li>E-Kuber Return Challan Print</li>
+                  <li>UTR Search</li>
+                  <li>Failed transactions (ACK Reject)</li>
+                  <li>Cheque Status Report</li>
+                  <li>Rejected Cheques due to FinYear End</li>
+                  <li>Finyear New Cheques due to FinYear End</li>
+                  <li>Finyear New Cheques Report</li>
+                  <li>Pb Budget Check</li>
+                  <li>Update Receipts Used Amount</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- smallDevices -->
+
+            <button
+              class="btn text-white d-md-none menuBtn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start sideBarContainer text-white d-md-none"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="offcanvasWithBothOptions"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header d-flex justify-content-center">
+                <div class="pt-3">
+                  <img
+                    src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"
+                    alt="ifmisLogo"
+                    class="ifmisLogo"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="offcanvas-body tabsList">
+                <ul class="d-flex flex-column gap-1">
+                  <li>Home</li>
+                  <li>Masters</li>
+                  <li>Transcations</li>
+                  <li>Reports</li>
+                  <li>Return Cheque Generation</li>
+                  <li>Forest Transcations</li>
+                  <li>Forest Transcations Report</li>
+                  <li>E-Kuber Return Recieved List</li>
+                  <li>E-Kuber Return Challan Print</li>
+                  <li>UTR Search</li>
+                  <li>Failed transactions (ACK Reject)</li>
+                  <li>Cheque Status Report</li>
+                  <li>Rejected Cheques due to FinYear End</li>
+                  <li>Finyear New Cheques due to FinYear End</li>
+                  <li>Finyear New Cheques Report</li>
+                  <li>Pb Budget Check</li>
+                  <li>Update Receipts Used Amount</li>
+                </ul>
+              </div>
+            </div>
+            <p
+              class="m-0 bg-secondary bg-opacity-50 d-flex align-items-center pe-2 ps-2 rounded-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-boxes me-1"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"
+                />
+              </svg>
+              Modules
+            </p>
+          </div>
+          <div class="d-flex userProfileCard align-items-center gap-3">
+            <div
+              class="navLoginTimeCard text-end d-none d-md-flex flex-md-column"
+            >
+              <p class="m-0 text-white-50">Last Login</p>
+              <p class="lastLoginDate m-0"></p>
+              <p class="lastLoginTime m-0"></p>
+            </div>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle userDetailCard d-flex align-items-center gap-2 bg-secondary bg-opacity-50 pe-1 ps-1 rounded-1"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Cutout.png"
+                  alt="userLogo"
+                />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Welcome M.USHASHREE</a>
+                </li>
+                <li><a class="dropdown-item" href="#">(23031013097)</a></li>
+              </ul>
+            </div>
+            <div
+              class="logoutCard d-flex align-items-center bg-secondary bg-opacity-50 rounded-1 pe-2 ps-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-right me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                />
+              </svg>
+              <p class="m-0">Logout</p>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ifmisMainContainer -->
+        <div class="ifmisMainContainer" id="ifmisMainContainer">
+          <div
+            class="chequeCard d-none d-md-flex align-items-center bg-primary bg-opacity-25 text-primary fw-semibold mt-3 mb-3 me-2 ms-2 ps-2 pt-1 pb-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-card-checklist me-2"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"
+              />
+              <path
+                d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"
+              />
+            </svg>
+            <p class="m-0">Issue Cheque (E-Kuber Cheque From 01/03/2019)</p>
+          </div>
+          <div
+            class="pointsCard bg-warning-subtle me-md-4 ms-md-4 rounded-1 p-2"
+          >
+            <h5 class="fw-semibold">Points to remember</h5>
+            <ul>
+              <li>
+                Please note that all cheques which are approved from
+                DDOChecCKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+                Ekuber which ils a Core Banking Solution ot RBI.
+              </li>
+              <li>
+                There is no need to present the cheques at the Bank for these
+                cheques which got approved after 01/03/2019.
+              </li>
+              <li>
+                Please give correct account details as it is when the Account
+                was opened.
+              </li>
+              <li>
+                Make sure there is no 'Your self" or "Self" in the account names
+                while issuing cheques. Such cheques get auto-rejected by the
+                EKuber.
+              </li>
+              <li>
+                Please check the exact length of the Bank Account Number and NO
+                special characters are to be entered, which leads to auto
+                rejection.
+              </li>
+              <li>
+                Finally, in multiple party cheques please do not enter the same
+                party details in the same chequeno which will be considered as a
+                duplicacy transaction and gets auto-rejeted.
+              </li>
+              <li>
+                This is just a one-time procedure to get your Party details
+                corrected and once when corrected the same details can be
+                re-used for smooth transactions.
+              </li>
+              <li>
+                PD-to-PD cheques shall be adjusted in treasury itself in the
+                regular procedure.
+              </li>
+            </ul>
+          </div>
+
+          <!-- inputContainer -->
+          <div class="inputContainer m-3 m-md-4">
+            <div
+              class="transcationTypeCard d-flex flex-column flex-md-row bg-secondary bg-opacity-10 p-2 mb-2"
+            >
+              <p class="inputName m-0">
+                Transcation Type
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="accountType"
+                    id="singleParty"
+                    value="0"
+                    checked
+                  />
+                  <label class="form-check-label" for="singleParty">
+                    Single Party
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="accountType"
+                    id="multipleParties"
+                    value="1"
+                  />
+                  <label class="form-check-label" for="multipleParties">
+                    Multiple Parties
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="accountType"
+                    id="pdAccountToPdAccount"
+                    value="2"
+                  />
+                  <label class="form-check-label" for="pdAccountToPdAccount">
+                    PD Account To PD Account
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="accountType"
+                    id="PdAccountToOther"
+                    value="3"
+                  />
+                  <label class="form-check-label" for="PdAccountToOther">
+                    PD Account to other
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="partyAccountCard d-flex flex-column flex-md-row p-2">
+              <div class="inputName">
+                <p class="m-0">
+                  Party Account no
+                  <span class="text-danger">*</span>
+                </p>
+              </div>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control partyAccountnoEL"
+                    minlength="12"
+                    maxlength="22"
+                    placeholder="Enter A/C no"
+                  />
+                  <p class="partyErrMsg text-danger mt-1"></p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="confirmPartyAccountCard d-flex flex-column flex-md-row p-2"
+            >
+              <p class="inputName m-0">
+                Confirm Party Account no
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    class="form-control confirmPartyAccountCardEl"
+                    placeholder="Confirm A/C no"
+                  />
+                  <p class="confirmPartyAccountErrMsg text-danger mt-1"></p>
+                </div>
+              </div>
+            </div>
+            <div class="partyNameCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                Party Name
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control partyNameEl"
+                    placeholder="Enter Party Name"
+                  />
+                  <p class="partyNameErrMsg mt-1 text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="bankDetailContainer bg-secondary bg-opacity-10 mb-2">
+              <div class="bankIfscCard d-flex flex-column flex-md-row p-2">
+                <p class="inputName m-0">
+                  Bank IFSC Code
+                  <span class="text-danger">*</span>
+                </p>
+                <div class="inputCard">
+                  <div class="d-flex align-items-center gap-2">
+                    <input
+                      type="text"
+                      class="form-control bankIfscCardEl"
+                      maxlength="11"
+                      placeholder="Enter IFSC Code"
+                    />
+                    <button class="btn btn-primary searchBtn">Search</button>
+                  </div>
+                  <p class="mt-1 text-danger bankIfscCardErrMsg"></p>
+                </div>
+              </div>
+              <div class="bankNameCard d-flex flex-column flex-md-row p-2">
+                <p class="inputName m-0">Bank Name</p>
+                <div class="inputCard">
+                  <div class="mb-3">
+                    <p class="m-0 bankName">xxxx</p>
+                  </div>
+                </div>
+              </div>
+              <div class="branchNameCard d-flex flex-column flex-md-row p-2">
+                <p class="inputName m-0">Bank Branch</p>
+                <div class="inputCard">
+                  <div class="mb-3">
+                    <p class="m-0 branchName">xxxx</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="headOfAccountCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                Head of Account
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <select
+                    class="form-select headOfAccountEL"
+                    aria-label="Default select example"
+                  >
+                    <option value="">Select</option>
+                    <option value="0">0853001020002000000NVN</option>
+                    <option value="1">8342001170004001000NVN</option>
+                    <option value="2">2071011170004320000NVN</option>
+                    <option value="3">8342001170004002000NVN</option>
+                    <option value="4">2204000030006300303NVN</option>
+                  </select>
+                  <p class="mt-1 text-danger headOfAccountErrMsg"></p>
+                </div>
+              </div>
+            </div>
+            <div class="balanceCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                Balance<span class="text-muted fw-normal">(in Rs.)</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <p class="m-0 headBalance">xxxx</p>
+                </div>
+              </div>
+            </div>
+            <div class="locCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                LOC<span class="text-muted fw-normal"> (in Rs.) </span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <p class="m-0 headLoc">xxxx</p>
+                </div>
+              </div>
+            </div>
+            <div class="expenditureTypeCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                Expenditure Type
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <select
+                    class="form-select expenditureTypeEl"
+                    aria-label="Default select example"
+                  >
+                    <option value="">Select</option>
+                    <option value="0">Capital Expenditure</option>
+                    <option value="1">Revenue Expenditure</option>
+                    <option value="2">Deferred Revenue Expenditure</option>
+                  </select>
+                  <p class="mt-1 expenditureTypeErrMsg text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="purposeTypeCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                Purpose Type
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <select
+                    class="form-select purposeTypeEl"
+                    aria-label="Default select example"
+                  >
+                    <option value="">Select</option>
+                  </select>
+                  <p class="mt-1 purposeTypeErrMsg text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="purposeCard d-flex flex-column flex-md-row p-2">
+              <p class="inputName m-0">
+                Purpose
+                <span class="text-danger">*</span>
+              </p>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control purposeEl"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea"
+                      maxlength="500"
+                    ></textarea>
+                    <label for="floatingTextarea">Purpose</label>
+                  </div>
+                  <p class="mt-1 text-danger purposeErrMsg"></p>
+                </div>
+              </div>
+            </div>
+            <div class="partyAmountCard d-flex flex-column flex-md-row p-2">
+              <div class="inputName">
+                <p class="m-0">
+                  Party Amount
+                  <span class="text-muted fw-light">(in Rs.)</span>
+                </p>
+              </div>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    class="form-control text-muted partyAmountEl"
+                    placeholder="Enter Party Amount"
+                  />
+                  <p class="mt-1 text-danger partyAmountErrMsg"></p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="partyAmountWordsCard d-flex flex-column flex-md-row p-2"
+            >
+              <div class="inputName">
+                <p class="m-0">
+                  Party Amount
+                  <span class="text-muted fw-light">(in Words.)</span>
+                </p>
+              </div>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <p
+                    class="bg-secondary bg-opacity-10 partyAmountWordsEl p-2 rounded text-muted"
+                  >
+                    Amount In Words...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="chooseFileCard d-flex flex-column flex-md-row p-2">
+              <div class="inputName">
+                <p class="m-0 mt-2">Upload Documents</p>
+              </div>
+              <div class="inputCard">
+                <div class="mb-3">
+                  <div class="d-flex mb-2 gap-2">
+                    <div class="input-group">
+                      <input
+                        type="file"
+                        class="form-control fileEl"
+                        id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04"
+                        aria-label="Upload"
+                      />
+                    </div>
+                    <button class="btn btn-primary filesAddBtn">+Add</button>
+                  </div>
+                  <p class="mt-1 text-danger fileErrMsg"></p>
+                  <p class="desclimar text-muted">
+                    Note: Documents of Cheque(Letter/G.O. etc) can be uploaded
+                    here.
+                  </p>
+                  <ul
+                    class="filesList d-flex flex-column gap-2"
+                    style="padding-left: 0px"
+                  ></ul>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-primary nextBtn">
+                Next
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-caret-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

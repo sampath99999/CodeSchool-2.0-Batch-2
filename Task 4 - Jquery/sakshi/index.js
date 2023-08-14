@@ -308,6 +308,17 @@ $(document).ready(function () {
         $(this).val(numericVal);
     });
     $("#nextButton").click(function () {
+        $("#transactionTypeError").empty();
+        $("#partyAccountnoError").empty();
+        $("#confirmAccountnoError").empty();
+        $("#partyNameError").empty();
+        $("#bankIFSCCodeError").empty();
+        $("#headofAccountError").empty();
+        $("#expenditureTypeError").empty();
+        $("#purposeTypeError").empty();
+        $("#purposeError").empty();
+        $("#partyAmountError").empty();
+        $("#uploadDocumentsError").empty();
         var accountFormObj = {
             partyAccountNo: $("#partyAccountNo").val().trim(),
             confirmAccountNo: $("#confirmAccountNo").val(),

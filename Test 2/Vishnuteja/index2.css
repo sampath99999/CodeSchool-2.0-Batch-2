@@ -1,0 +1,104 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.outerBox{
+    background-color: #00e6e6;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.main{
+    width: 70vw;
+    height: 70vh;
+    margin-top: 5vh;
+}
+
+.header{
+    background-color:  #4d2600;
+    height: 4vh;
+    width: 70vw;
+}
+
+.header i{
+    color: #999966;
+    font-size: 10px;
+}
+
+.mainContainer{
+    margin-top: 10vh;
+    margin-left: 15vw;
+}
+/* sup{
+    font-size: 1px;
+} */
+
+.countryInput{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-weight: 700;
+    width: 8vw;
+    
+    
+}
+
+.temperatue span{
+    font-size: 20px;
+    color: gray;
+}
+
+.todaysTemp{
+    font-size: 60px;
+}
+
+.mainHeader span{
+   font-size: 25px;
+}
+
+.weatherDetails i{
+   font-size: 20px;
+   color: gray;
+   margin-top: 10px;
+}
+
+.span{
+    font-size: 25px;
+    margin-left: 5px;
+    color: gray;
+    margin-top: 10px;
+ }
+
+ .percentage{
+    font-size: 15px;
+    margin-top: 20px;
+ }
+
+ .metaInfo{
+    font-size: 10px;
+    margin-top: 20px;
+ }
+
+ .minTemp{
+    font-size: 30px;
+ }
+
+ .weatherIcon{
+    width: 8vw;
+    height: 15vh;
+ }
+
+ .temp{
+    font-size: 25px;
+    color: gray;
+ }
+
+ .tempIcon{
+    width: 3vw;
+    height: 4vh;
+ }

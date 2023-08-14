@@ -131,88 +131,141 @@ function validateHeadOfAccount() {
 }
 
 // Convert number to words
-function convertNumberToWords(num) {
-  const units = [
-    "",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-  ];
-  const teens = [
-    "",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-    "sixteen",
-    "seventeen",
-    "eighteen",
-    "nineteen",
-  ];
-  const tens = [
-    "",
-    "ten",
-    "twenty",
-    "thirty",
-    "forty",
-    "fifty",
-    "sixty",
-    "seventy",
-    "eighty",
-    "ninety",
-  ];
-  const thousands = ["", "thousand", "lakh", "crore"];
+// function convertNumberToWords(number) {
+//     const ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+//     const teens = ["", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+//     const tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+//     const thousands = ["", "Thousand", "Lakh", "Crore"];
 
-  function convertChunk(chunk) {
-    const hundreds = Math.floor(chunk / 100);
-    const remainder = chunk % 100;
+// //   function convertChunk(chunk) {
+// //     const hundreds = Math.floor(chunk / 100);
+// //     const remainder = chunk % 100;
 
-    let chunkWords = "";
+// //     let chunkWords = "";
 
-    if (hundreds > 0) {
-      chunkWords += units[hundreds] + " hundred";
+// //     if (hundreds > 0) {
+// //       chunkWords += units[hundreds] + " hundred";
+// //     }
+
+// //     if (remainder > 0) {
+// //       if (remainder < 10) {
+// //         chunkWords += (hundreds > 0 ? " and " : "") + units[remainder];
+// //       } else if (remainder >= 11 && remainder <= 19) {
+// //         chunkWords += (hundreds > 0 ? " and " : "") + teens[remainder - 10];
+// //       } else {
+// //         chunkWords +=
+// //           (hundreds > 0 ? " and " : "") + tens[Math.floor(remainder / 10)];
+// //         if (remainder % 10 > 0) {
+// //           chunkWords += " " + units[remainder % 10];
+// //         }
+// //       }
+// //     }
+
+// //     return chunkWords;
+// //   }
+
+// //   const chunks = [];
+// //   while (num > 0) {
+// //     chunks.push(num % 1000);
+// //     num = Math.floor(num / 1000);
+// //   }
+
+// //   const wordsArray = chunks.map((chunk, index) => {
+// //     const chunkWords = convertChunk(chunk);
+// //     if (chunkWords) {
+// //       return chunkWords + " " + thousands[index];
+// //     }
+// //     return "";
+// //   });
+
+// //   return wordsArray.reverse().join(" ");
+// function convertChunk(number) {
+//     if (number === 0) {
+//         return "";
+//     } else if (number < 10) {
+//         return ones[number];
+//     } else if (number < 20) {
+//         return teens[number - 10];
+//     } else if (number < 100) {
+//         return tens[Math.floor(number / 10)] + " " + ones[number % 10];
+//     } else {
+//         return ones[Math.floor(number / 100)] + " Hundred " + convertChunk(number % 100);
+//     }
+// }
+
+// const chunks = [];
+// while (number > 0) {
+//     chunks.push(number % 1000);
+//     number = Math.floor(number / 1000);
+// }
+
+// if (chunks.length === 0) {
+//     return "Zero";
+// }
+
+// const words = [];
+// for (let i = chunks.length - 1; i >= 0; i--) {
+//     if (chunks[i] !== 0) {
+//         words.push(convertChunk(chunks[i]) + " " + thousands[i]);
+//     }
+// }
+
+// return words.join(" ");
+// }
+const convertNumberToWords= (num) => {
+    const single = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+    const double = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+    const tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+    const formatTenth = (digit, prev) => {
+       return 0 == digit ? "" : " " + (1 == digit ? double[prev] : tens[digit])
+    };
+    const formatOther = (digit, next, denom) => {
+       return (0 != digit && 1 != next ? " " + single[digit] : "") + (0 != next || digit > 0 ? " " + denom : "")
+    };
+    let res = "";
+    let index = 0;
+    let digit = 0;
+    let next = 0;
+    let words = [];
+    if (num += "", isNaN(parseInt(num))){
+       res = "";
     }
-
-    if (remainder > 0) {
-      if (remainder < 10) {
-        chunkWords += (hundreds > 0 ? " and " : "") + units[remainder];
-      } else if (remainder >= 11 && remainder <= 19) {
-        chunkWords += (hundreds > 0 ? " and " : "") + teens[remainder - 10];
-      } else {
-        chunkWords +=
-          (hundreds > 0 ? " and " : "") + tens[Math.floor(remainder / 10)];
-        if (remainder % 10 > 0) {
-          chunkWords += " " + units[remainder % 10];
-        }
-      }
-    }
-
-    return chunkWords;
-  }
-
-  const chunks = [];
-  while (num > 0) {
-    chunks.push(num % 1000);
-    num = Math.floor(num / 1000);
-  }
-
-  const wordsArray = chunks.map((chunk, index) => {
-    const chunkWords = convertChunk(chunk);
-    if (chunkWords) {
-      return chunkWords + " " + thousands[index];
-    }
-    return "";
-  });
-
-  return wordsArray.reverse().join(" ");
-}
+    else if (parseInt(num) > 0 && num.length <= 10) {
+       for (index = num.length - 1; index >= 0; index--) switch (digit = num[index] - 0, next = index > 0 ? num[index - 1] - 0 : 0, num.length - index - 1) {
+          case 0:
+             words.push(formatOther(digit, next, ""));
+          break;
+          case 1:
+             words.push(formatTenth(digit, num[index + 1]));
+             break;
+          case 2:
+             words.push(0 != digit ? " " + single[digit] + " Hundred" + (0 != num[index + 1] && 0 != num[index + 2] ? " and" : "") : "");
+             break;
+          case 3:
+             words.push(formatOther(digit, next, "Thousand"));
+             break;
+          case 4:
+             words.push(formatTenth(digit, num[index + 1]));
+             break;
+          case 5:
+             words.push(formatOther(digit, next, "Lakh"));
+             break;
+          case 6:
+             words.push(formatTenth(digit, num[index + 1]));
+             break;
+          case 7:
+             words.push(formatOther(digit, next, "Crore"));
+             break;
+          case 8:
+             words.push(formatTenth(digit, num[index + 1]));
+             break;
+          case 9:
+             words.push(0 != digit ? " " + single[digit] + " Hundred" + (0 != num[index + 1] || 0 != num[index + 2] ? " and" : " Crore") : "")
+       };
+       res = words.reverse().join("")
+    } else res = "";
+    return res
+ };
 
 // validate Purpose
 function validatePurpose() {

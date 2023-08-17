@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <link  rel="stylesheet" href="index.css"/> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/2061e7e031.js" crossorigin="anonymous"></script>   
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>  
+</head>
+<body>
+     
+  <div class="bg-container"> 
+    <div class="container-fluid m-0 p-0">
+      <div class="row m-0 p-0">
+        <div class="main-container p-0 m-0 pt-0 col-12">
+    <!---Large-navbar------------------------------------------------>
+    <div class="nav-display-box d-none d-lg-block">
+        <div class="nav-large-container d-flex  align-items-center justify-content-between" > 
+
+            <div class="nav-left-box">
+                  
+                <div id="sidebar" class="">
+                    
+                  <div class="toggle-btn" onclick="toggleSidebar(this)">
+                    <i class="fa-solid fa-bars text-light fs-25"></i>            
+                 </div>  
+                 
+                    
+                 <div class="sidebar-content text-light p-2">
+                    <h1 class="text-center sidebar-heading text-light mt-2">IFMIS</h1>  
+                    <hr class="line"/> 
+                    <ul class="sidebar-list ms-0 m-0 p-0">
+                       <li>Home</li>
+                       <li>Masters</li>
+                       <li>Transactions</li>
+                       <li>Reports</li>
+                       <li>Return Check Generation</li>
+                       <li>Forest Transactions</li>
+                       <li>Forest Transactions Report</li>
+                       <li>E-Kuber Return Received List</li>
+                       <li>E-Kuber Return Challan Print</li>
+                       <li>UTR Search</li>
+                       <li>Failed transactions (ACK Reject) </li>
+                       <li>Check Status Report</li>
+                       <li>Rejected Cheques due to FinYear End</li>
+                       <li>FinYear New Cheques Report</li>
+                       <li>Pb Budget Check</li>
+                       <li>Update Receipts Used Amount</li>
+
+                    </ul>
+                 </div>
+                 
+               </div> 
+                  
+                  <div id="moduleBox" class="module-box text-light d-flex justify-content-center align-items-center">
+              <iconify-icon icon="system-uicons:cubes" class="me-1 fs-25"></iconify-icon>
+                    <span>Modules</span>
+                </div>
+            </div>
+            
+            <div class="nav-right-box me-3 d-flex align-items-center">
+                
+                <div class="date-box text-light d-none d-lg-block mt-2">
+                    
+                    <span class="login-text">Last Login</span>
+                    <p  id="date" class="p-0 m-0"></p>
+                    <p  id="time"></p>
+                 </div>
+            <!-------
+                 <div class="user-box text-light d-flex flex-row justify-content-center align-items-center d-none d-lg-block">
+                    <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg"/>
+                    <div class="name-text"><p class="m-0 p-0 me-2">Welcome M.USHASREE</p><span>(23031013097)</span></div>
+                    <i class="fa-solid fa-caret-down"></i>
+                 </div>  --->
+                 
+                 <div class="custom-dropdown">
+                  <div class="selected-option d-flex align-items-center">
+                    <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg"/>
+                    <div class="name-text">
+                      <p class="m-0 p-0 me-2">Welcome M.USHASREE</p>
+                      <span>(23031013097)</span>
+                    </div>
+                    <i class="fa-solid fa-caret-down"></i>
+                  </div>
+                  <div class="options">
+                    <div class="option d-flex align-items-center">
+                      <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/15.jpg"/>
+                      <div class="name-text">
+                        <p class="m-0 p-0 me-2">Welcome MS.DHONI</p>
+                        <span>(23031013098)</span>
+                      </div>
+                    </div>
+                    <div class="option d-flex align-items-center">
+                      <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/11.jpg"/>
+                      <div class="name-text">
+                        <p class="m-0 p-0 me-2">Welcome VIRAT KOHLI</p>
+                        <span>(23031013099)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+                 <div id="logOutBtn" class="logout-box text-light d-flex align-items-center justify-content-center ms-3 text-center">
+                    <img class="user-img me-2 d-lg-none d-md-block" src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg"/>
+                    <i class="me-2 fa-solid fa-arrow-right-from-bracket"></i>
+                    <span class=" d-none d-lg-block">Logout</span> 
+                 </div>
+
+                 
+            </div>
+             
+        </div> 
+    </div> 
+    <!---Small-navbar------------------------------------------------->
+    <div class="nav-display-box d-md-block d-lg-none">
+        
+    <div class="nav-small-container p-3 d-flex  align-items-center justify-content-between" >
+         
+      <div class="nav-small-container-left-box d-flex align-items-center justify-content-between">
+        <div class="ts-logo-box me-1">
+            <img class="ts-logo w-100" src="telangalogo.png"/>
+
+        </div>
+        <div  class="hamburger-container me-2">
+          
+          <span  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars text-light fs-25"></i>  </span>
+
+          <div style="width: 55vw" class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header d-flex align-items-center text-light" style="background-color: #111c43;">
+             <img class="nav-sm-logo w-100" src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"/>
+           <!----   <button type="button" class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+            </div>  
+             <div class="offcanvas-body pt-0 mt-0">
+              <div class="sidebar-content-sm text-light p-2"> 
+                
+                <ul class="sidebar-list ms-0 m-0 p-0">
+                   <li>Home</li>
+                   <li>Masters</li>
+                   <li>Transactions</li>
+                   <li>Reports</li>
+                   <li>Return Check Generation</li>
+                   <li>Forest Transactions</li>
+                   <li>Forest Transactions Report</li>
+                   <li>E-Kuber Return Received List</li>
+                   <li>E-Kuber Return Challan Print</li>
+                   <li>UTR Search</li>
+                   <li>Failed transactions (ACK Reject) </li>
+                   <li>Check Status Report</li>
+                   <li>Rejected Cheques due to FinYear End</li>
+                   <li>FinYear New Cheques Report</li>
+                   <li>Pb Budget Check</li>
+                   <li>Update Receipts Used Amount</li>
+          
+                </ul>
+             </div>
+            </div>  
+          </div>
+       </div> 
+
+       <div class="module-box-sm text-light d-flex justify-content-center align-items-center">
+        <iconify-icon icon="system-uicons:cubes" class="me-1 fs-25"></iconify-icon>
+        <span>Modules</span>
+    </div>
+      </div> 
+    
+     <div class="custom-dropdown-sm">
+      <div class="selected-option-sm d-flex align-items-center">
+        <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg"/>
+        <div class="name-text d-none d-md-block">
+          <p class="m-0 p-0 me-2">Welcome M.USHASREE</p>
+          <span>(23031013097)</span>
+        </div>
+        <i class="fa-solid fa-caret-down sm-icon"></i>
+      </div>
+      <div class="options-sm">
+        <div class="option-sm d-flex align-items-center">
+          <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/15.jpg"/>
+          <div class="name-text d-none d-md-block ">
+            <p class="m-0 p-0 me-2">Welcome MS.DHONI</p>
+            <span>(23031013098)</span>
+          </div>
+        </div>
+        <div class="option-sm d-flex align-items-center">
+          <img class="user-img me-2 mb-2" src="https://spruko.com/demo/ynex/dist/assets/images/faces/11.jpg"/>
+          <div class="name-text d-none d-md-block ">
+            <p class="m-0 p-0 me-2">Welcome VIRAT KOHLI</p>
+            <span>(23031013099)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+     
+    </div>
+        </div>
+    <!---Sub-main-container------------------------------------------->
+        <div class="sub-main-container col-12 p-3">
+         
+          <div class="issuecheque-box d-flex align-items-center p-2 mb-4 ms-3 d-none d-md-none d-lg-block">
+            <i class="fa-solid fa-money-check-dollar fs-25 me-2 text-primary"></i>
+             <span class="text-primary">Issue Cheque(E-Kuber Cheque From 01/03/2019)</span>
+          </div> 
+          <div class="points-container p-2  mb-4">
+            <h1>Points to remember</h1>
+            <ul>
+              <li>Please note that all cheques which are approved from DDOCheCKer/Ohicer/Govt trom 01/03/2019 shall get paid through Ekuber which IIS a Core Banking Solution ot RBI.</li>
+              <li>There is no need to present the cheques at the Bank for these cheques which got approved after 01/03/2019.</li>
+              <li>Please give correct account details as it is when the Account was opened.</li>
+              <li>Make sure there is no "Your self' or 'Self" in the account names while issuing cheques. Such cheques get auto-rejected by the EKuber</li>
+              <li>Please check the exact length of the Bank Account Number and NO special characters are to be entered, which leads to auto rejection</li>
+              <li>Finally, in multiple party cheques please do not enter the same party details in the same chequeno which will be considered as a duplicacy transaction and gets auto-reieted </li>
+              <li>This is just a one-time procedure to get your Party details corrected and once when corrected the same details can be re-used for smooth transactions.</li>
+              <li>PD-to-PD cheques shall be adjusted in treasury itself in the regular procedure</li>
+            </ul>
+          </div>  
+
+          <div class="content-container"> 
+   
+          <form>
+            
+            <div class="transaction-type-box d-flex align-items-start mb-4">
+              <p class="p-0 m-0">Transaction Type<span style="font-weight: bold;" class="text-danger">*</span></p>
+              <div class="radio-btns-box">
+                <input id="checkbox1" class="checkbox" type="radio"/>
+                <label for="checkbox1" class="me-2">Single Party</label> 
+
+                <input id="checkbox2" class="checkbox" type="radio"/>
+                <label for="checkbox2" class="me-2">Multiple Parties</label>
+
+                <input id="checkbox3" class="checkbox" type="radio"/>
+                <label for="checkbox3" class="me-2">PD account to PD account</label>
+
+                <input id="checkbox4" class="checkbox" type="radio"/>
+                <label for="checkbox4" class="me-2">PD account to other</label>
+              </div>
+              <p id="transactionTypeErrorMsg" class="text-danger"></p>
+
+            </div> 
+            
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="partyAcNo">Party Account no<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl">
+                <input  type="number" id="partyAcNo" name="partyAcNo" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <p class="text-danger" id="partyAcNoErrorMsg"></p>
+              </div>
+            
+            </div>  
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="confrimPartyAcNo">Confirm Party Account no<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl">
+                <input  type="number" id="confrimPartyAcNo" name="confrimPartyAcNo" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <p class="text-danger" id="confrimPartyAcNoErrorMsg"></p>
+              </div>
+            
+            </div>
+
+            
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="partyName">Party Name<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl">
+                <input  type="text" id="partyName" name="partyName" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <p class="text-danger" id="partyNameErrorMsg"></p>
+              </div>
+            </div>
+
+            <div class="ifsc-bg-box mb-3">
+               
+              <div class="input-field d-flex align-items-center mb-3">
+                <label for="ifscSearchInput">Bank IFSC Code<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="d-flex inputEl flex-column">      
+               <div class="d-flex align-items-center"> 
+                <input  type="search" id="ifscSearchInput" name="ifscSearchInput" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <button class="btn btn-primary ms-2" type="button" id="searchBtn">Search</button>
+              </div>
+              <p style="margin-top: 40px;" class="text-danger" id="ifscSearchInputErrorMsg"></p>
+            </div> 
+              </div>
+              
+
+              <div class="input-field d-flex align-items-center mb-3">
+                <label for="bankName">Bank Name<span style="font-weight: bold;" class="text-danger">*</span></label>
+                <div class="inputEl">  
+                 <p class="" id="bankName">XXXX</p>
+                </div>
+              </div> 
+
+              <div class="input-field d-flex align-items-center mb-3">
+                <label for="bankBranch">Bank Branch<span style="font-weight: bold;" class="text-danger">*</span></label>
+                <div class="inputEl">  
+                 <p class="" id="bankBranch">XXXX</p>
+                </div>
+              </div>
+            </div> 
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="partyName">Head of Account<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl mb-3">
+                <select class="form-select" id="headOfAccountSelect" aria-label="Example select with button addon">
+                  <option disabled selected>Select</option>
+                  <option value="0853001020002000000NVN">0853001020002000000NVN</option>
+                  <option value="8342001170004001000NVN">8342001170004001000NVN</option>
+                  <option value="2071011170004320000NVN">2071011170004320000NVN</option>
+                  <option value="8342001170004002000NVN">8342001170004002000NVN</option>
+                  <option value="2204000030006300303NVN">2204000030006300303NVN</option>
+                </select>
+                <p id="headOfAccountSelectErrorMsg" class="text-danger"></p>
+              </div>
+            </div> 
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="balence">Balance(in Rs.)</label>
+              <div class="inputEl">  
+               <p class="" id="balence">XXXX</p>
+              </div>
+            </div> 
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="loc">LOC(in RS.)</label>
+              <div class="inputEl">  
+               <p class="" id="loc">XXXX</p>
+              </div>
+            </div> 
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="inputGroupSelect03">Expenditure Type<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl mb-3">
+                <select class="form-select w-100" id="expenditure" aria-label="Example select with button addon">
+                  <option disabled selected>Select</option>
+                  <option value="capital">Capital Expenditure</option>
+                  <option value="revenue">Revenue Expenditure</option>
+                  <option value="deferred">Deferred Revenue Expenditure</option>
+                </select>
+                <p id="expenditureErrorMsg" class="text-danger"></p>
+              </div>
+            </div> 
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="inputGroupSelect03">Purpose Type<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl mb-3">
+                <select class="form-select w-100" id="purpose" aria-label="Example select with button addon">
+                 <option>Select</option>
+                 
+                </select>
+                <p id="purposeInputErrorMsg" class="text-danger"></p>
+              </div>
+            </div>
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="confrimPartyAcNo">Purpose<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl">
+                <div class="form-floating">
+                  <textarea maxlength="500" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea">Purpose</label>
+                </div>
+                <p class="text-danger" id="purposeErrorMsg" ></p>
+              </div>
+            
+            </div>
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="payAmount">Pay Amount(in Rs.)</label>
+              <div class="inputEl">
+                <input  type="number" id="payAmount" name="payAmount" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <p class="text-danger" id="payAmountErrorMsg"></p>
+              </div>
+            
+            </div>  
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="payAmountWords">Pay Amount(in Words)</label>
+              <div class="inputEl">
+                <input  type="text" id="payAmountWords" name="payAmountWords" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" readonly>
+                <p class="text-danger" id="payAmountWordsErrorMsg"></p>
+              </div>
+            
+            </div> 
+
+            <div class="input-field d-flex align-items-center mb-3">
+              <label for="uploadDocs">Upload Documents<span style="font-weight: bold;" class="text-danger">*</span></label>
+              <div class="inputEl d-flex align-items-center">
+                <input  type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <button class="btn btn-primary ms-2" type="button" id="inputGroupFileAddon04">+Add</button>
+                <p style="margin-top: 80px;" class="text-danger" id="uploadDocsErrorMsg"></p>   
+              </div>   
+            </div> 
+            
+            <div id="fileList"></div>
+            <i class="note-text">Note: Documents of Cheque(Letter/G.O. etc) can be Uploaded here</i> 
+
+            <hr class="bottom-line"/>
+            
+            
+            
+
+            
+
+            <button class="btn btn-primary nextBtn" type="submit" id="nextBtn">Next<i class=" ms-2 mt-2 fa-solid fa-caret-right"></i></button>
+
+          </form> 
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+
+
+</div>
+
+ </div>
+    <script src="index.js"></script>
+</body>
+</html>

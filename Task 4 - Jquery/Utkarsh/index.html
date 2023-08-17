@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFMIS Login Page</title>
+
+    <!-- bootstrap cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- j query cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- style sheet link -->
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block g-0 leftContainer" id="leftSide">
+            <div class="leftBlock">
+                <h3>IFMIS</h3>
+                <hr />
+
+                <ul>
+                    <li>Home</li>
+                    <li>Masters</li>
+                    <li>Transaction</li>
+                    <li>Reports</li>
+                    <li>Return Cheque Generation</li>
+                    <li>Forest Transactions</li>
+                    <li>E-Kuber Return Received List</li>
+                    <li>E-Kuber Return Challan Print</li>
+                    <li>UTR Search</li>
+                    <li>Failed transactions (ACK Reject)</li>
+                    <li>Cheque Status report</li>
+                    <li>Rejected Cheques due to FinYear End</li>
+                    <li>Finyear New Cheques Report</li>
+                    <li>pb Budget Check</li>
+                    <li>Update receipts Used Amount</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="col-md-10 col-12 g-0 rightContainer" id="rightSide">
+            <div class="rightBlock d-flex gap-3 fs-6 justify-content-between">
+                <div class="left d-flex gap-3">
+                    <div class="telangana-Logo d-md-none">
+                        <img class="rounded-circle" src="Emblem_of_Telangana.svg.png" id="telanganaLogo" height="55px"
+                            width="55px" style="margin-left: 8px" />
+                    </div>
+
+                    <i class="fa-solid fa-bars d-sm-block d-none" style="margin-top: 20px; cursor: pointer;" id="menuIcon"></i>
+                    <i class="fa-solid fa-bars d-sm-none d-block" style="margin-top: 20px; cursor: pointer;" id="mobileIcon"></i>
+
+                    <div class="module-button d-none d-md-block">
+                        <button type="button" class="btn btn-secondary opacity-75">
+                            <div class="headerModule d-flex gap-2">
+                                <i class="fa-solid fa-cubes"></i>
+                                <p style="font-size: 13px">modules</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="right d-flex gap-3">
+                    <div class="date d-none d-md-block" style="font-size: 13px" id="datetime"></div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary opacity-75 dropdown-toggle" style="font-size: 13px"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Welcome M.USHASHREE <br />
+                                (5363536782245)</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#"> User : M.Usha Shree</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Accnt no : 5363536782245</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="logout-button d-none d-md-block">
+                        <button type="button" id="logoutBtn" class="btn btn-secondary opacity-75">
+                            <div class="headerLogout d-flex gap-2">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <p style="font-size: 13px">Logout</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex pt-2 px-3 gap-2 m-3 issueContent">
+                <i class="fas fa-money-check-alt" style="padding-top: 5px"></i>
+                <p class="text-primary">
+                    Issue cheque (E-Kuber cheque from 01/03/2019)
+                </p>
+            </div>
+            <div class="pointsContent m-3">
+                <p style="margin-left: 10px; font-size: 20px">
+                    <b>Points to remember</b>
+                </p>
+                <ul>
+                    <li>
+                        Please note that all cheques which are approved from
+                        DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+                        Ekuber which ilS a Core Banking Solution ot RBI.
+                    </li>
+                    <li>
+                        There is no need to present the cheques at the Bank for these
+                        cheques which got approved after 01/03/2019.
+                    </li>
+                    <li>
+                        Please give correct account details as it is when the Account was
+                        opened.
+                    </li>
+                    <li>
+                        Make sure there is no 'Your self' or 'Self" in the account names
+                        while issuing cheques. Such cheques get auto-rejected by the
+                        EKuber
+                    </li>
+                    <li>
+                        Please check the exact length of the Bank Account Number and NO
+                        special characters are to be entered, which leads to auto
+                        rejection
+                    </li>
+                    <li>
+                        Finally, in multiple party cheques please do not enter the same
+                        party details in the same chequeno which will be considered as a
+                        duplicacy transaction and gets auto-rejeted.
+                    </li>
+                    <li>
+                        This is just a one-time procedure to get your Party details
+                        corrected and once when corrected the same details can be re-used
+                        for smooth transactions.
+                    </li>
+                    <li>
+                        PD-to-PD cheques shall be adjusted in treasury itself in the
+                        regular procedure.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="formpage m-3" style="font-size: 13px">
+                <form>
+                    <div class="transaction-type mb-3" style="padding: 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-12 fw-bolder">
+                                <label for="transaction-type" class="form-label">Transaction Type</label>
+                            </div>
+                            <div class="col-lg-8 col-12 d-flex gap-3">
+                                <input type="radio" id="single-party" name="transaction-type" value="Single Party" />
+                                <label for="single-party">Single Party</label><br />
+                                <input type="radio" id="multiple-party" name="transaction-type"
+                                    value="Multiple Party" />
+                                <label for="multiple-party">Multiple Party</label><br />
+                                <input type="radio" id="pd-account-to-pd-account" name="transaction-type"
+                                    value="PD Account to PD Account" />
+                                <label for="pd-account-to-pd-account">PD Account to PD Account</label><br />
+                                <input type="radio" id="pd-account-to-other" name="transaction-type"
+                                    value="PD Account to other" />
+                                <label for="pd-account-to-other">PD Account to other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="party-account-no" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="Party-Account-no" class="form-label">Party Account no</label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <input type="password" class="form-control" id="partyAccNo"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0, 10);"
+                                    placeholder="Enter A/C no" autocomplete="off" />
+                                <p id="partyAccNoErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="confirm-party-account-no mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="Confirm-Party-Account-no" class="form-label">Confirm Party Account
+                                    no</label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <input type="text" class="form-control" id="confirmPartyAccNo"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0, 10);"
+                                    placeholder="Confirm A/C no" autocomplete="off" />
+                                <p id="confirmPartyAccNoErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="party-name mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="party-name" class="form-label">party Name </label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <input type="text" class="form-control" id="partyName"
+                                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '').substring(0, 50);"
+                                    placeholder="Enter Party Name" autocomplete="off" />
+                                <p id="partyNameErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bank-ifsc-code mb-3" style="padding: 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="bank-ifsc-code" class="form-label">Bank IFSC Code :</label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-10 col-9">
+                                        <input type="text" class="form-control" id="ifscCode"
+                                            placeholder="Enter IFSC Code" autocomplete="off" />
+                                        <p id="ifscCodeErr"></p>
+                                    </div>
+                                    <div class="col-lg-2 col-3">
+                                        <button type="button" class="btn btn-primary" id="searchButton"
+                                            style="margin-left: -10px">
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="bank-name" class="form-label">Bank Name</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <p id="bankName">XXXX</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 fw-bolder">
+                                    <label for="branch-name" class="form-label">Branch Name</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p id="branchName" style="margin-left: 7px">XXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="head-of-account mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="party-type" class="form-label">Head of account</label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <select class="form-select" id="headAccntType">
+                                    <option value="">Select</option>
+                                    <option value="0853001020002000000NVN">
+                                        0853001020002000000NVN
+                                    </option>
+                                    <option value="8342001170004001000NVN">
+                                        8342001170004001000NVN
+                                    </option>
+                                    <option value="2071011170004320000NVN">
+                                        2071011170004320000NVN
+                                    </option>
+                                    <option value="8342001170004002000NVN">
+                                        8342001170004002000NVN
+                                    </option>
+                                    <option value="2204000030006300303NVN">
+                                        2204000030006300303NVN
+                                    </option>
+                                </select>
+                                <p id="headAccntErr"></p>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="balance" class="form-label">Balance (in Rs.)</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <p id="balance">XXXX</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 fw-bolder">
+                                    <label for="loc" class="form-label">LOC (in Rs.)</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p id="loc" style="margin-left: 7px">XXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expenditure-type mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="expenditure-type" class="form-label">Expenditure Type
+                                </label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <select class="form-select" id="expenditureType">
+                                    <option value="">Select</option>
+                                    <option value="Capital Expenditure">
+                                        Capital Expenditure
+                                    </option>
+                                    <option value="Revenue Expenditure">
+                                        Revenue Expenditure
+                                    </option>
+                                    <option value="Deferred Revenue Expenditure">
+                                        Deferred Revenue Expenditure
+                                    </option>
+                                </select>
+                                <p id="expenditureTypeErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="purpose-type mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="purpose-type" class="form-label">Purpose Type
+                                </label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <select class="form-select" id="purposeType">
+                                    <option value="">Select</option>
+                                </select>
+                                <p id="purposeTypeErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="purpose mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="purpose" class="form-label">purpose </label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <textarea class="form-control" id="enterPurpose" placeholder="purpose"
+                                    autocomplete="off"></textarea>
+                                <p id="purposeErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="party-amount mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="party-amount" class="form-label">party Amount
+                                    <span class="text-muted">(in Rs.)</span></label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <input type="text" class="form-control" id="partyAmount"
+                                    placeholder="Enter Party Amount in words...." autocomplete="off" />
+                                <p id="partyAmountErr"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-document mb-3" style="padding: 0px 10px">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 fw-bolder">
+                                <label for="upload-document" class="form-label">Upload documents
+                                </label>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-10 col-7 g-0">
+                                        <input type="file" class="form-control rounded-start-0" id="uploadDocument"
+                                             autocomplete="off" name="documents[]"multiple
+                                            style="margin-left: -10px" />
+                                        <p id="uploadDocumentErr"></p>
+                                    </div>
+                                    <div class="col-lg-2 col-3 g-0">
+                                        <button type="button" class="btn btn-primary" id="addButton">
+                                            + Add
+                                        </button>
+                                    </div>
+                                    <div class="col-6" id="documentSelected"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br />
+            <p class="text-muted" style="text-align: center; font-style: italic">
+                Note : documents of cheque (letter/G.O. etc) can be uploaded here.
+            </p>
+            <hr />
+
+            <button type="submit" onclick="validateForm()" class="btn btn-primary" id="submitBtn">
+                NEXT <i class="fa-solid fa-play"></i></button><br /><br />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

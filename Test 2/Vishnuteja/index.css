@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+ .outerBox{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color:  #3366ff;
+    align-items: center;
+    justify-content: center;
+ }
+
+.container{ 
+    background-color: white;
+   /* width: 40vw; */
+   height: 90vh;
+    border-radius: 10px;
+}
+
+.header{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 30px;
+}
+
+.field{
+    margin-bottom: 5px;
+    position: relative;
+}
+
+
+.field input{
+    display: block;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 100%;
+    padding: 5px;
+}
+
+.field p{
+    margin-left: 5px;
+    font-size: 13px;
+    color: red;
+}
+
+.invisible{
+    display: none;
+}
+
+.signUpButton{
+   background-color: #3366ff;
+}
+
+.facebookAuthentication{
+    position: relative;
+}
+
+.facebook-loginText{   
+    margin-left: 200px;
+}
+
+.googleAuthentication{
+    position: relative;
+}
+
+.google-loginText{   
+    margin-left: 200px;
+}
+
+.googleImg{
+     width: 20px;
+     height: 20px;
+}
+

@@ -1,0 +1,9 @@
+.bodyContent {
+    align-items: center;
+    margin: 200px;
+}
+.nextBtn {
+    width: 300px;
+    margin-left: 10px;
+    border-radius: 50px;
+}

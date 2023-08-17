@@ -1,0 +1,305 @@
+
+
+
+.sidebar{
+    background-color:  #08254f;
+    width: 0vw;
+    height: 120vh;
+    position:absolute;
+    position: fixed;
+    overflow-x: hidden;   
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+.navbar-rightBlock{
+    /* margin-left: -20vw; */
+}
+
+.header p{
+    font-size: 10px;
+}
+
+.mainBlock{
+    transition: margin-left .5s;
+    
+}
+
+.mainBlock{
+    width: 100vw;
+}
+
+.main{
+   
+}
+
+.issueChequeContainer{
+    width: 95vw;
+}
+
+.issueCheque{
+    font-weight: 600;
+}
+
+.points-to-remember{
+    width: 90vw;
+    background-color: #fce1c8;
+}
+
+.points-to-remember ul{
+    list-style: none
+}
+
+.points-to-remember ul li::before{
+  content: "\2022";
+  color: #b33c00;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+
+}
+
+.select-account{
+    margin-left: 9vw;
+}
+
+.sidebar-links{
+    
+}
+
+.sidebar-links ul li {
+    list-style: none;
+    height: auto;
+    width: 15vw;
+    margin-bottom: 10px;
+    
+}
+
+.sidebar-links ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    width: 15vw;
+   
+}
+
+.sidebar-links ul li:hover{
+   background-color: #0a2f63;
+}
+
+.top-navbar{
+   background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+}
+
+.lastLogin p{
+    color: white;
+    font-size: 12px;
+}
+
+.profile{
+    height: 45px;
+}
+
+.profile-img img{
+    border: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.userDetails span{
+    color: white;
+    font-size: 10px;
+}
+
+.userId{
+    font-size: 10px;
+}
+
+.logout{
+    height: 45px;
+}
+
+.logout-text{
+    font-size: 12px;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.label-container{
+    width: 20vw;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-text{
+    outline-style: none;
+    border: 1px solid gray;
+    width: 40vw;
+}
+
+.select-text{
+    width: 40vw;
+}
+
+.input-file{
+    border: 1px solid gray;
+    width: 35vw;
+}
+
+.inputFile input{
+    height: 30px;
+}
+
+.ifsc-inputContainer{
+    margin-bottom: 20px;
+}
+
+.inputIFSC{
+    outline-style: none;
+    border: 1px solid gray;
+    width: 35vw;
+}
+
+.ifsc-errorMessage{
+    position: absolute;
+    top: 35px;
+    bottom: 0px;
+    left: 0px;
+    color: red;
+}
+
+.field{
+
+}
+
+.input{
+    margin-left: 1vw;
+    position: relative;
+}
+
+.errorMessage{
+    position: absolute;
+    top: 25px;
+    bottom: 0px;
+    left: 0px;
+    color: red;
+}
+
+.metaText{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.party-amount-words{
+    font-weight: 600;
+}
+
+.next button{
+    margin-left: 60vw;
+}
+
+.party-AmountErrorMessage{
+    color: red;
+}
+@media (max-width:600px) {
+
+    .navbar-rightBlock{
+        margin-left: 0vw;
+    }
+    .sidebar-links ul li {
+        width: 40vw;    
+    }
+
+    .sidebar-links ul li a{
+        width: 40vw;
+    }
+    
+    .profile{
+        margin-left: 30vw;
+    }
+
+    .points-to-remember{
+        /* margin-left: 2vw; */
+        width: 100vw !important;
+    }
+
+    .select-account label{
+        font-size: 12px;
+    }
+
+    .label-container{
+        width: 80vw;
+    }
+
+    .input{
+        margin-bottom: 20px;
+    }
+
+    .input input{
+        width: 80vw;
+    }
+
+    .inputIFSC{
+        width: 50vw;
+    }
+
+    .form-select{
+        width: 80vw;
+    }
+
+    .add{
+        font-size: 5px;
+    }
+
+    #select-purposeType{
+        width: auto;
+    }
+    
+    .modules{
+        margin-top: 5px;
+        height: 30px;
+    }
+  .profile{
+    height: 30px;
+  }
+
+  .profile-img{
+    height: 30px;
+  }
+
+  .profile-img img{
+    height: 20px;
+  }
+    .dropdownBtn{
+        height: 10px;
+    }
+
+    .dropdownBtn button{
+     height: 20px;
+    }
+
+    .logo img{
+        height: 30px;
+    }
+
+    #purpose{
+        width: 80vw;
+    }
+
+    .form-select option{
+        font-size: 8px;
+    }
+
+   
+}

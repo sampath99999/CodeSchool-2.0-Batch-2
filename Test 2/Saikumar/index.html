@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f52f9e4d4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="website d-flex justify-content-center align-items-center">
+      <div class="truenorth-page" id="trunorthWebsite">
+        <h1 class="truenorth-title">truNorth</h1>
+
+        <div class="truenorth-card d-flex justify-content-center flex-column">
+          <div class="truenorth-title-container d-flex align-items-center">
+            <h1 class="truenorth-card-title">Welcome to Truenorth!</h1>
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/002/668/687/original/clubhouse-icon-in-flat-style-free-vector.jpg"
+              alt="hand-raise"
+              class="hand-image"
+            />
+          </div>
+          <p class="user-info">You are signing up as josh@truenorth.io</p>
+          <div class="questions-card" id="questionsFirstCard">
+            <div class="input-field">
+              <label for="name" class="label">What's your Full Name?</label>
+              <input type="text" id="name" placeholder="xyz" class="input" />
+              <span id="username-error" class="error"></span>
+            </div>
+
+            <div class="input-field">
+              <label for="email" class="label"
+                >What's your Email Address?</label
+              >
+              <input
+                type="email"
+                id="email"
+                placeholder="xyz@gmail.com"
+                class="input"
+              />
+              <span id="email-error" class="error"></span>
+            </div>
+
+            <div class="input-field">
+              <label for="companyName" class="label"
+                >What's your Company Name?</label
+              >
+              <input
+                type="text"
+                id="companyName"
+                placeholder="Pixelvide"
+                class="input"
+              />
+              <span id="company-error" class="error"></span>
+            </div>
+
+            <div class="input-field">
+              <label for="business" class="label"
+                >Which category best describes your business??</label
+              >
+
+              <select name="cars" id="business" class="input">
+                <option value=""></option>
+                <option value="volvo">Education</option>
+                <option value="saab">Marketing</option>
+                <option value="mercedes">Hospital</option>
+                <option value="audi">Government</option>
+              </select>
+              <span id="business-error" class="error"></span>
+            </div>
+
+            <button id="nextButton" class="d-inline-block button">Next</button>
+          </div>
+          <div class="questions-next-card displayNone" id="questionsSecondCard">
+            <div class="input-field">
+              <label for="number" class="label" class="label"
+                >Phone Number</label
+              >
+              <input
+                type="number"
+                class="input"
+                id="number"
+                placeholder="999999999"
+              />
+              <span class="error" id="phoneError"></span>
+            </div>
+
+            <div class="input-field" class="label">
+              <label for="password" class="label">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="input"
+                placeholder="********"
+              />
+              <span id="password-error" class="error"></span>
+            </div>
+            <div class="input-field">
+              <label for="confirmPassword" class="label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="input"
+                placeholder="********"
+                id="confirmPassword"
+              />
+              <span id="confirm-password-error" class="error"></span>
+            </div>
+            <button id="submit" class="d-inline-block button">Submit</button>
+          </div>
+
+          <div class="icons-container d-flex justify-content-center">
+            <div class="dot-icons">
+              <i class="fa-solid fa-circle me-2" id="prev"></i>
+              <i class="fa-solid fa-circle" id="next"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="random-jokes displayNone p-5" id="joke">
+          <h3 class="text-center jokes-title">Jokes</h3>
+          <!-- <img class="laughing-image m-auto d-block" src="https://th.bing.com/th/id/OIP.Q3dW9be51ymNznr2aXKb4AHaHa?w=172&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"/> -->
+          <ul class="list-unstyled" id="jokeList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f52f9e4d4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="ifmis-website">
+      <div id="mySidenav" class="sidenav d-none d-md-block">
+        <h2 class="text-center text-white">IFMIS</h2>
+        <hr
+          style="
+            height: 1px;
+            border-width: 0;
+            color: gray;
+            background-color: gray;
+          "
+        />
+        <ul class="list-unstyled">
+          <li><a href="#" class="selected">Home</a></li>
+          <li><a href="#">Masters</a></li>
+          <li><a href="#">Transactions</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Return Check Generation</a></li>
+          <li><a href="#">Forest Transactions</a></li>
+          <li><a href="#">Forest Transactions Report</a></li>
+          <li><a href="#">UTR Search</a></li>
+          <li><a href="#">Failed Transactions (Ack Reject) </a></li>
+          <li><a href="#">Cheque Status Report</a></li>
+          <li><a href="#">Rejected Cheques due to FinYear End</a></li>
+          <li><a href="#">FinYear New Cheques Report</a></li>
+          <li><a href="#">Pb Budget Check</a></li>
+          <li><a href="#">Update Reciepts Used Amount</a></li>
+        </ul>
+      </div>
+
+      <div id="main" class="main-website d-none d-md-block">
+        <div class="header d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <span
+              id="bars"
+              style="font-size: 30px; cursor: pointer"
+              onclick="toggleNav()"
+              >&#9776;
+            </span>
+            <div class="modules d-flex align-items-center">
+              <iconify-icon
+                icon="system-uicons:cubes"
+                class="blocks-image"
+              ></iconify-icon>
+              <span class="modules-text">Modules</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="current-date d-flex flex-column align-items-end">
+              <span class="last-login">Last Login</span>
+              <span class="date"></span>
+              <span class="time"></span>
+            </div>
+            <div class="login-container d-flex align-items-center">
+              <img
+                src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg"
+                alt="user-logo"
+                class="user-logo-image"
+              />
+              <div class="d-flex flex-column">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    style="background: none; border: none"
+                  >
+                    <span style="font-size: 12px">Welcome M.USHASHREE</span>
+                    <br />
+                    <span style="font-size: 12px">23031013097</span>
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item" href="#">
+                      <div class="optons">
+                        <span style="font-size: 13px">Settings</span>
+                      </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <div class="optons">
+                        <span style="font-size: 13px">Account</span>
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="login-container">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span id="login">Logout</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-devices-header d-md-none">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <img
+              src="ifmis-logo.jpeg"
+              class="ifmis-logo-image rounded-circle"
+            />
+            <a
+              class="text-white navbar-bars-icon-small"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
+            >
+              ☰
+            </a>
+            <div class="modules d-flex align-items-center text-white">
+              <iconify-icon
+                icon="system-uicons:cubes"
+                class="blocks-image"
+              ></iconify-icon>
+              <span class="modules-text">Modules</span>
+            </div>
+          </div>
+          <div class="login-container d-flex align-items-center me-3">
+            <img
+              src="https://spruko.com/demo/ynex/dist/assets/images/faces/4.jpg"
+              alt="user-logo"
+              class="user-logo-image"
+            />
+            <div class="d-flex flex-column">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="background: none; border: none"
+                ></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">
+                    <div class="optons">
+                      <span style="font-size: 8px">Settings</span>
+                      <br />
+                      <span style="font-size: 8px">Account</span>
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="offcanvas offcanvas-start w-50"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-body sidenav-small-body">
+            <img
+              src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"
+              class="ifmis-small-logo"
+            />
+            <hr
+              style="
+                height: 1px;
+                border-width: 0;
+                color: gray;
+                background-color: gray;
+              "
+            />
+            <ul
+              class="list-unstyled d-flex justify-content-between sidenav-small flex-column"
+            >
+              <li><a href="#" class="selected">Home</a></li>
+              <li><a href="#">Masters</a></li>
+              <li><a href="#">Transactions</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Return Check Generation</a></li>
+              <li><a href="#">Forest Transactions</a></li>
+              <li><a href="#">Forest Transactions Report</a></li>
+              <li><a href="#">UTR Search</a></li>
+              <li><a href="#">Failed Transactions (Ack Reject) </a></li>
+              <li><a href="#">Cheque Status Report</a></li>
+              <li><a href="#">Rejected Cheques due to FinYear End</a></li>
+              <li><a href="#">FinYear New Cheques Report</a></li>
+              <li><a href="#">Pb Budget Check</a></li>
+              <li><a href="#">Update Reciepts Used Amount</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content-container" id="content">
+        <div class="issue-cheque d-none d-md-block">
+          <i class="fa-solid fa-money-check-dollar"></i>
+          <span>Issue Cheque (E-Kuber Cheque From 01/03/2019)</span>
+        </div>
+        <div class="points">
+          <h4 class="points-title">Points to remember</h4>
+          <ul class="points-list">
+            <li>
+              <span> Please not all the cheques which approved</span>
+            </li>
+            <li>
+              <span>There is no need to present the cheques</span>
+            </li>
+            <li>
+              <span>
+                Please give correct account detais as it is when the account was
+                opened.</span
+              >
+            </li>
+            <li>
+              <span
+                >The RBI was nationalized on 1st January, 1949 in accordance
+                with the RBI(Transfer to Public Ownership)act,1948.</span
+              >
+            </li>
+            <li>
+              <span
+                >Deposit Insurance and Credit Guarantee Coporation(DICGC)was set
+                up in 1978.
+              </span>
+            </li>
+            <li>
+              <span>
+                National Agriculture and Rural Development Bank(NABARD) was set
+                up in 1982.
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="account-details">
+          <div class="d-flex flex-wrap transaction-details">
+            <label class="form-title"
+              >Transacation Type <span class="required">*</span></label
+            >
+            <div class="d-flex flex-row flex-wrap">
+              <div class="d-flex align-item-center radio-buttons">
+                <input
+                  type="radio"
+                  id="single"
+                  name="transaction_type"
+                  value="Single"
+                  class="radio-input"
+                  checked
+                />
+                <label for="single" class="radio-button"
+                  ><span>Single Party</span></label
+                >
+              </div>
+              <div class="d-flex align-item-center radio-buttons">
+                <input
+                  type="radio"
+                  id="multiple"
+                  name="transaction_type"
+                  value="Multiple"
+                  class="radio-input"
+                />
+                <label for="multiple" class="radio-button"
+                  >Multiple Parties</label
+                >
+              </div>
+              <div class="d-flex align-item-center radio-buttons">
+                <input
+                  type="radio"
+                  id="pdAccount"
+                  name="transaction_type"
+                  value="PD Account to PD Account"
+                  class="radio-input"
+                />
+                <label for="pdAccount" class="radio-button"
+                  >PD Account to PD Account</label
+                >
+              </div>
+              <div class="d-flex align-item-center radio-buttons">
+                <input
+                  type="radio"
+                  id="pdOther"
+                  name="transaction_type"
+                  value="PD Account to Other"
+                  class="radio-input"
+                />
+                <label for="pdOther" class="radio-button"
+                  >PD Account to Other
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Party Account Number -->
+
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <label class="form-title" for="partyAccountNumber"
+              >Party Account no <span class="required">*</span></label
+            >
+            <div class="d-flex flex-column input-error-container">
+              <input
+                type="password"
+                class="form-control account-input w-100"
+                id="partyAccountNumber"
+                placeholder="Enter A/C no"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
+              <small id="accountErrorText" class="error-text"></small>
+            </div>
+          </div>
+
+          <!-- confirm party Account Number -->
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <label class="form-title" for="confirmPartyAccountNumber"
+              >Confirm Party Account no <span class="required">*</span></label
+            >
+            <div class="d-flex flex-column input-error-container">
+              <input
+                type="text"
+                class="form-control account-input w-100"
+                id="confirmPartyAccountNumber"
+                placeholder="Confirm A/C no"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
+              <small id="confirmAccountErrorText" class="error-text"></small>
+            </div>
+          </div>
+          <!-- Part Name -->
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <label class="form-title" for="partyName"
+              >Party Name <span class="required">*</span></label
+            >
+            <div class="d-flex flex-column input-error-container">
+              <input
+                type="text"
+                class="form-control account-input w-100"
+                id="partyName"
+                placeholder="Enter Party Name"
+              />
+              <small id="partyNameErrorText" class="error-text"></small>
+            </div>
+          </div>
+          <!-- IFSC Code Details -->
+          <div class="ifsc-code-details">
+            <div class="d-flex flex-wrap account-numbers w-100">
+              <label class="form-title" for="IFSCCode">
+                Bank IFSC Code <span class="required">*</span></label
+              >
+              <div class="d-flex flex-column input-error-container">
+                <div class="d-flex">
+                  <input
+                    type="text"
+                    class="form-control account-input w-100"
+                    id="IFSCCode"
+                    placeholder="Enter IFSC Code"
+                  />
+                  <button class="btn btn-primary ms-2" id="IFSCsearch">
+                    Search
+                  </button>
+                </div>
+
+                <small id="IFSCErrorText" class="error-text"></small>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap ifsc-details w-100">
+              <label class="form-title" for="partyName">Bank Name </label>
+              <div class="d-flex flex-column input-error-container">
+                <p id="bank">XXXXX</p>
+                <small id="partyNameErrorText" class="error-text"></small>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap w-100 ifsc-details">
+              <label class="form-title" for="partyName">Bank Branch </label>
+              <div class="d-flex flex-column input-error-container">
+                <p id="branch">XXXXX</p>
+                <small id="partyNameErrorText" class="error-text"></small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Head of Account - Balance - LOC -->
+          <div class="head-of-account-details">
+            <div class="d-flex flex-wrap account-numbers w-100">
+              <label class="form-title" for="IFSCCode">
+                Head of Account<span class="required">*</span></label
+              >
+              <div class="d-flex flex-column input-error-container">
+                <div class="d-flex">
+                  <select
+                    name="account"
+                    id="headOfAccount"
+                    class="form-select account-input w-100"
+                  >
+                    <option value="select" selected>Select</option>
+                    <option value="account1">0853001020002000000NVN</option>
+                    <option value="account2">8342001170004001000NVN</option>
+                    <option value="account3">2071011170004320000NVN</option>
+                    <option value="account4">8342001170004002000NVN</option>
+                    <option value="account5">2204000030006300303NVN</option>
+                  </select>
+                </div>
+
+                <small id="headOfAccountErrorText" class="error-text"></small>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap ifsc-details w-100">
+              <label class="form-title" for="partyName"
+                >Balance <span class="rupees">(in RS.)</span></label
+              >
+              <div class="d-flex flex-column input-error-container">
+                <p id="balance">XXXXX</p>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap w-100 ifsc-details">
+              <label class="form-title" for="partyName"
+                >Loc<span class="rupees">(in RS.)</span></label
+              >
+              <div class="d-flex flex-column input-error-container">
+                <p id="loc">XXXXX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exprenditure Type -->
+
+          <div class="expenditure-purpose-type">
+            <div class="d-flex flex-wrap account-numbers w-100">
+              <label class="form-title" for="IFSCCode">
+                Expenditure Type<span class="required">*</span></label
+              >
+              <div class="d-flex flex-column input-error-container">
+                <div class="d-flex">
+                  <select id="type" class="form-select account-input w-100">
+                    <option value="select" selected>Select</option>
+                    <option value="capital">Capital Expenditure</option>
+                    <option value="revenue">Revenue Expenditure</option>
+                    <option value="deferred">
+                      Deferred Revenue Expenditure
+                    </option>
+                  </select>
+                </div>
+
+                <small id="expenditureTypeErrorText" class="error-text"></small>
+              </div>
+            </div>
+            <!-- Purpose Type -->
+            <div class="d-flex flex-wrap account-numbers w-100">
+              <label class="form-title" for="IFSCCode"
+                >Purpose Type<span class="required">*</span></label
+              >
+              <div class="d-flex flex-column input-error-container">
+                <div class="d-flex">
+                  <select id="purpose" class="form-select account-input w-100">
+                    <option value="select">Select</option>
+                  </select>
+                </div>
+
+                <small id="purposeTypeErrorText" class="error-text"></small>
+              </div>
+            </div>
+          </div>
+
+          <!-- purpose -->
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <label class="form-title" for="purposeTextArea"
+              >Purpose <span class="required">*</span></label
+            >
+            <div class="d-flex flex-column input-error-container">
+              <textarea
+                maxlength="50"
+                id="purposeTextArea"
+                class="form-control account-input w-100"
+                placeholder="Puropse"
+              ></textarea>
+              <small id="purposeErrorText" class="purpose-error-text"></small>
+            </div>
+          </div>
+          <!-- Party Amount -->
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <label class="form-title" for="partyAmount"
+              >Party Amount<span class="rupees"> (in Rs.)</span></label
+            >
+            <div class="d-flex flex-column input-error-container">
+              <input
+                type="number"
+                class="form-control account-input w-100"
+                id="partyAmount"
+                style="height: 30px"
+                rows="3"
+                placeholder="Enter Party Amount"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              />
+              <small id="partyAmountErrorText" class="error-text"></small>
+            </div>
+          </div>
+
+          <!-- Party Amount in words -->
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <label class="form-title" for="partyAmountInWords"
+              >Party Amount in words</label
+            >
+            <div class="d-flex flex-column input-error-container">
+              <input
+                type="text"
+                class="form-control account-input w-100"
+                id="partyAmountInWords"
+                placeholder="Party Amount in words"
+              />
+            </div>
+          </div>
+
+          <!-- upload files -->
+
+          <div class="d-flex flex-wrap account-numbers w-100">
+            <!-- <label for="uploadDocs" class="upload-label">Upload Documents<span style="font-weight: bold;" class="text-danger">*</span></label > -->
+            <label class="form-title" for="partyAmountInWords"
+              >Upload Documents</label
+            >
+            <div class="input-error-container">
+              <div>
+                <div class="inputEl d-flex align-items-start">
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="inputGroupFile04"
+                    aria-describedby="inputGroupFileAddon04"
+                    aria-label="Upload"
+                  />
+                  <button
+                    class="btn btn-primary ms-2"
+                    type="button"
+                    id="inputGroupFileAddon04"
+                  >
+                    +Add
+                  </button>
+                  <p
+                    style="margin-top: 80px"
+                    class="text-danger"
+                    id="uploadDocsErrorMsg"
+                  ></p>
+                </div>
+                <div id="fileList"></div>
+              </div>
+            </div>
+          </div>
+
+          <hr
+            style="
+              height: 1px;
+              border-width: 0;
+              color: gray;
+              background-color: gray;
+            "
+          />
+          <div class="text-center">
+            <button class="btn btn-primary m-auto" id="verify">
+              Next
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

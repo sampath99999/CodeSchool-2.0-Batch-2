@@ -1,0 +1,51 @@
+
+    <section class="row" style="margin-top: 3rem">
+      <form
+        onsubmit="return false"
+        class="col-12 d-flex justify-content-center"
+        id="login"
+      >
+        <div class="registrationForm">
+          <h2 class="mb-5 mt-5" id="loginBtn">Login</h2>
+
+          <input
+            type="email"
+            name=""
+            id="email"
+            placeholder="Email"
+            class="mb-4"
+          />
+          <div id="emailError" class="text-danger"></div>
+          <input type="text" placeholder="Password" id="password" />
+          <div id="passwordError"></div>
+          <p style="color: #87b1e9; font-weight: 500" class="mt-3">
+            Forgot password?
+          </p>
+          <button id="logintonext">Login</button>
+          <span class="text-secondary mb-5">
+            Don't have an account?
+            <span style="color: #87b1e9" id="signuppage"> Signup </span></span
+          >
+
+          <div>Or</div>
+
+          <button class="facebook fs-6">
+            <i class="fa-brands fa-facebook-f"></i>
+            Login with Facebook
+          </button>
+          <button
+            class="google text-secondary border-secondary border-1 border-opacity-25 fw-bold opacity-75"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu1PJmT_THldF0n5APcmt9p10utgu6KSw4cH2fQ5Xhpw&s"
+              alt=""
+              style="width: 25px"
+            />
+            Login with Google
+          </button>
+        </div>
+      </form>
+    </section>
+ 
+  <script src="login.js"></script>
+

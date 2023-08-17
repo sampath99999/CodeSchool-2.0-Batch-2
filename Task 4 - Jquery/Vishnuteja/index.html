@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0e1ba3dc39.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/number-to-words"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid m-0 p-0 d-flex w-100">
+        <div class="sidebar" style="height: 100vh; ">
+            <div class="sidebar-headerSection d-flex align-items-center">
+                <div class="logo ms-2 d-md-none">
+                    <img class="" src="ifmislogo.png">
+                </div>
+                <div class="header ms-2 pt-2">
+                    <h2 class="ms-md-5 pt-md-2 pb-0 mb-0 text-white">IFMIS</h2>
+                    <p class="text-white mt-0 pt-0  d-sm-none">&#169; Government of Telangana</p>
+                </div>
+
+            </div>
+            <hr class="text-white w-100">
+            <div class="sidebar-links ms-0 ps-0">
+                <ul class="ms-0 ps-0">
+                    <li class=""><a href="#" class="text-white ps-3">Home</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Masters</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Transactions</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Reports</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Return Cheque Generation</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Forest Transactions</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Forest Transactions Report</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">E-Kuber Return Recieved List</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">UTR Search</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Failed transactions (ACK Reject)</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Cheque Status Report</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Rejected Cheques due to FinYear End</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Finyear New Cheques Report</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Pb Budget Check</a></li>
+                    <li class=""><a href="#" class="text-white ps-3">Update Receipts Used Amount</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainBlock ">
+            <div class="top-navbar  bg-dark-subtle d-flex align-items-center justify-content-md-between"
+                style="height: 10vh;">
+                <div class="navbar-leftBlock d-flex  ">
+                    <div class="logo ms-2 d-md-none pt-1">
+                        <img class="" src="ifmislogo.png">
+                    </div>
+                    <div>
+                        <button class="btn menuBtn"><i class="fa-solid fa-bars text-white"></i></button>
+                    </div>
+                    <div class="modules d-flex align-items-center text-bg-secondary p-2  rounded">
+                        <i class="fa-solid fa-cubes text-white"></i>
+                        <p class="text-white m-0 p-0">Modules</p>
+                    </div>
+                </div>
+                <div class="navbar-rightBlock d-flex float-end float-md-none">
+                    <div class="lastLogin  d-none d-md-inline-block">
+                        <p class="p-0 m-0">Last Login</p>
+                        <p class="p-0 m-0 LoginDate"></p>
+                        <p class="p-0 m-0 currentTime"></p>
+                    </div>
+                    <div
+                        class="profile  d-flex ms-md-3 align-items-md-center text-bg-secondary pt-1 ps-1 ps-md-0 pt-md-0 p-md-2 rounded">
+                        <div class="profile-img d-flex  align-items-md-center">
+                            <img src="profile.png">
+                        </div>
+
+                        <div class="userDetails d-none d-md-inline-block ps-2 pt-1 dropdown">
+                            <span>Welcome</span><span class="userName">M Vishnuteja</span>
+                            <p class="userId text-white pt-0 mt-0">201234556677</p>
+                        </div>
+                        <div class="dropdown dropdownBtn">
+                            <button class="btn btn-secondary dropdown-toggle mt-0 pt-0" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">M Vishnuteja</a></li>
+                                <li><a class="dropdown-item" href="#">201234556677</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="dropDown ps-1">
+                            <i class="fa-solid fa-caret-down text-white"></i>
+                        </div> -->
+                    </div>
+
+                    <div class="logout text-bg-secondary p-2 rounded ms-2  d-none d-md-inline-block">
+                        <div class="d-flex ">
+                            <i class="fa-solid fa-right-from-bracket text-white pt-1 m-0"></i>
+                            <p class="logout-text text-white ms-1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main  h-100 w-100">
+                <div class="bg-success-subtle m-2 ms-3 me-1 d-none d-md-inline-block issueChequeContainer">
+                    <div class=" d-flex align-items-center p-2">
+                        <i class="fa-solid fa-money-check text-primary me-2"></i>
+                        <p class="text-primary p-0 m-0 issueCheque">Issue Cheque (E-kuber cheque from 01/03/2019)</p>
+                    </div>
+                </div>
+                <div class="points-to-remember   ms-md-5 rounded">
+
+                    <h5 class="p-md-2">Points to remember</h5>
+                    <ul class="pb-3">
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                        <li>Please note all cheques approved from e-kuber Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Molestias ab cupiditate, praesentium commodi quidem fugit!</li>
+                    </ul>
+
+                </div>
+                <div class="details">
+                    <div class="m-3 d-md-flex bg-body-secondary ms-md-5 me-md-5">
+                        <div class="transaction-type ms-1 label ps-2 pe-2">Transaction type <p
+                                class="text-danger d-inline">*
+                            </p>
+                        </div>
+                        <div class="p-2 d-flex  flex-wrap select-account">
+                            <input type="radio" id="radioButton" name="radioButton">
+                            <label class="ms-1" for="radioButton">Single Party</label>
+
+                            <input class="ms-md-3" type="radio" id="radioButton1" name="radioButton">
+                            <label class="ms-1" for="radioButton1">Multiple Parties</label>
+
+                            <input class="ms-md-3" type="radio" id="radioButton2" name="radioButton">
+                            <label class="ms-1" for="radioButton2">PO account to PD account</label>
+
+                            <input class="ms-md-3" type="radio" id="radioButton3" name="radioButton">
+                            <label class="ms-1" for="radioButton3">PD account to other</label>
+                        </div>
+                    </div>
+
+                    <div class="d-md-flex ms-3 ms-md-5 mt-2 field mb-md-4">`
+                        <div class="d-flex label-container">
+                            <p class="label pb-0 mb-0">Party Account no</p>
+                            <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="inputPartyAccountNumber" placeholder="Enter A/C no"
+                                class="inputPartyAccountNumber input-text rounded ">
+                            <p class="partyAccountNumber-error errorMessage"></p>
+                        </div>
+                    </div>
+
+                    <div class="d-md-flex ms-3 ms-md-5 mt-2 mb-md-4">
+                        <div class="d-flex label-container">
+                            <p class="label pb-0 mb-0">Confirm Party Account no</p>
+                            <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="confirmPartyAccountNumber" placeholder="Confirm A/C no"
+                                class="inputPartyAccountNumber input-text  rounded ">
+                            <p class="confirmAccountNumber-errorMessage errorMessage"></p>
+                        </div>
+                    </div>
+
+                    <div class="d-md-flex ms-3 ms-md-5 mt-2 mb-md-4">
+                        <div class="d-flex label-container">
+                            <p class="label pb-0 mb-0">Party Name</p>
+                            <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="inputPartyName" placeholder="Enter Party Name"
+                                class="inputPartyName input-text  rounded ">
+                            <p class="partyNameErrorMessage errorMessage"></p>
+                        </div>
+                    </div>
+
+                    <div class="bankDetails bg-body-secondary ms-md-5 me-md-5 m-3 p-1 rounded">
+                        <div class="d-md-flex  mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Bank IFSC code</p>
+                                <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                            </div>
+                            <div class="input ifsc-inputContainer  flex-nowrap">
+                                <div class=" d-flex">
+                                    <input type="text" id="inputIFSC" placeholder="Enter IFSC Code"
+                                        class="inputIFSC rounded ">
+                                    <button class="btn text-white bg-primary ms-1"
+                                        onclick="getBankDetails()">Search</button>
+                                </div>
+                                <p class="ifsc-errorMessage "></p>
+                            </div>
+
+                        </div>
+
+                        <div class="d-md-flex  mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Bank name</p>
+                            </div>
+                            <div class="input">
+                                <p class="bankName text-black"></p>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex  mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Bank Branch</p>
+                            </div>
+                            <div class="input">
+                                <p class="bankBranch text-black"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accounts ms-md-5 me-md-5 m-3 p-1">
+                        <div class="d-md-flex ">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Head of accounts</p>
+                                <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                            </div>
+                            <div class="input select-text">
+                                <select id="select" class="form-select w-100" aria-label="Default select example">
+                                    <option selected>Select</option>
+                                    <option value="0853001020002000000NVN">0853001020002000000NVN</option>
+                                    <option value="8342001170004001000NVN">8342001170004001000NVN</option>
+                                    <option value="2071011170004320000NVN">2071011170004320000NVN</option>
+                                    <option value="8342001170004002000NVN">8342001170004002000NVN</option>
+                                    <option value="2204000030006300303NVN">2204000030006300303NVN</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex  mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-1 mb-0">Balance</p>
+                                <p class="pb-0 mb-0  pt-0 metaText"> (In Rs.)</p>
+                            </div>
+                            <div class="input">
+                                <p class="balance">XXXXXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex  mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label  pb-0 mb-0">LOC</p>
+                                <p class=" pb-0 mb-0  pt-0 metaText"> (In Rs.)</p>
+                            </div>
+                            <div class="input">
+                                <p class="loc">XXXXXXX</p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-md-flex ">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Expenditure Type</p>
+                                <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                            </div>
+                            <div class="input select-text">
+                                <select id="select-expenditure" class="form-select w-100"
+                                    aria-label="Default select example">
+                                    <option selected>Select</option>
+                                    <option value="Capital Expenditure">Capital Expenditure</option>
+                                    <option value="Revenue Expenditure">Revenue Expenditure</option>
+                                    <option value="Deferred Revenue Expenditure">Deferred Revenue Expenditure</option>
+                                    <option value="Exorbitant Advertising Expenditures">Exorbitant Advertising
+                                        Expenditures</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Purpose Type</p>
+                                <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                            </div>
+                            <div class="input select-text">
+                                <select id="select-purposeType" class="form-select select-purposeType w-100 "
+                                    aria-label="Default select example">
+                                    <option selected>Select</option>
+                                    <option value="">Maintain current levels of operation within the
+                                        organization
+                                    <option value="">Maintain current levels of operation within the
+                                        organization
+                                    </option>
+                                    <option value="">Expenses to permit future expansion.</option>
+                                    <option value="">Sales costs or All expenses incurred by the firm .</option>
+                                    <option value="">All expenses incurred by the firm to guarantee the smooth
+                                        operation.</option>
+                                    <option value="">Unprecedented Losses</option>
+                                    <option value="">Development and Research Cost</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Purpose</p>
+                                <p class="d-inline-block text-danger pb-0 mb-0">*</p>
+                            </div>
+                            <div class="input">
+                                <textarea class="input-text" id="purpose" placeholder="Purpose" maxlength="500">
+
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Party Amount</p>
+                                <p class="metaText">(In Rs)</p>
+                            </div>
+                            <div class="input">
+                                <input type="text" oninput="validateTextInput(event)" id="inputAmount"
+                                    placeholder="Enter Party Amount" class="inputAmount input-text rounded ">
+                                <p class="party-AmountErrorMessage " style="color: red;"></p>
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Party Amount</p>
+                                <p class="metaText">(In words)</p>
+                            </div>
+                            <div class="input">
+                                <p class="party-amount-words text-capitalize "></p>
+
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex mt-2">
+                            <div class="d-flex label-container">
+                                <p class="label pb-0 mb-0">Upload Documents</p>
+                            </div>
+                            <div class="input ">
+                                <div class="d-flex inputFile">
+                                    <input type="file" id="inputChooseFile" placeholder="Enter Party Name"
+                                        class="inputChooseFile input-file rounded ">
+                                    <button class="btn bg-primary text-white ms-2 add" id="addFiles">+Add</button>
+                                </div>
+                                <p class="note text-black-50 fst-italic">Note: Documents of Cheque(Letters/G.O etc) can
+                                    be uploaded
+                                    here</p>
+                                <div class="files" id="files">
+                                    <!-- <div class="eachfile">
+                                        <p class="filename"></p><i class="fa-solid fa-x remove"></i>
+                                    </div> -->
+                                </div>
+                                <p id="fileErrorMsg" class="text-danger"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="w-100">
+                <div class="next">
+                    <button class="btn bg-primary text-white" onclick="checkValidations()">Next <i
+                            class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

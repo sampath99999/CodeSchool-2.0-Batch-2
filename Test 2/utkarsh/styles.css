@@ -1,0 +1,41 @@
+li {
+    list-style: none;
+}
+
+.firstContainer{
+    background: url(background.jpg);
+    height: 100%;
+    width: 100%;
+padding-bottom: 100px;
+margin-top: -8px;
+}
+
+
+.firstContainerText {
+    margin: 100px 30px;
+    
+}
+
+#brandName {
+    font-family: cursive;
+}
+
+.firstContainerText p {
+font-family: oswald;
+font-size: 25px;
+}
+
+#secondContainer {
+background-color: #ECECEC;
+padding: 5px 50px;
+}
+
+
+  .card-img-top {
+    display: block;
+   
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid;
+  }

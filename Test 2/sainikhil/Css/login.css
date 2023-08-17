@@ -1,0 +1,108 @@
+
+.registrationForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid white;
+
+    
+    border-radius: 10px;
+    background-color: white;
+    height: 45rem;
+    width: 40vw;
+  
+    
+}
+.registrationForm input{
+    
+    width: 33vw;
+    height: 80px;
+    outline: none;
+    border: 3px solid rgb(211, 208, 208);
+    border-radius: 5px;
+    
+}
+.registrationForm input::placeholder{
+    font-size:1.5rem;
+    padding-left: 10px;
+}
+.registrationForm #logintonext{
+  padding: 10px 30px;
+  background-color: white;
+  margin: 10px 0px;
+  border-radius: 10px;
+  width: 33vw;
+  height: 4rem;
+  background: rgb(0 114 212);
+  border: none;
+  border-radius: 5px;
+  color: white;
+
+}
+.facebook{
+    padding: 10px 30px;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 33vw;
+    height: 4rem;
+    background: #4067b2;
+    border: none;
+   
+    color: white;
+}
+.facebook i{
+    translate: -160px 0px;
+    padding: 8px 11px;
+    background-color: white;
+    color:#4067b2 ;
+    border-radius: 50%;
+}
+.google{
+    padding: 10px 30px;
+    background-color: white;
+    margin: 20px 0px;
+    border-radius: 10px;
+    width: 33vw;
+    height: 4rem;
+    background: white;
+    outline: none;
+}
+.google img{
+    translate: -165px 0px;
+}
+#signuppage{
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:767px) {
+.registrationForm{
+    width: 90%;
+}
+    .registrationForm input{
+    width: 90%;
+}
+.facebook{
+    width: 50%;
+}
+.google{
+    width: 50%;
+}
+.facebook i{
+    display: none;
+}
+.google img{
+    display: none;
+}
+
+}
+@media screen and (max-width:1450px) {
+    .facebook i{
+        display: none;
+    }
+    .google img{
+        display: none;
+    }
+}

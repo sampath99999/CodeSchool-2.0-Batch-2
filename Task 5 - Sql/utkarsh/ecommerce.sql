@@ -1,4 +1,3 @@
-
 -- create a database for ecommerce
 
 CREATE DATABASE Ecommerce;

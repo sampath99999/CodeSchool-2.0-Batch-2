@@ -40,8 +40,6 @@ CREATE TABLE
         booking_date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
-DROP TABLE bookings;
-
 -- Inserting Data into Tables
 
 INSERT INTO

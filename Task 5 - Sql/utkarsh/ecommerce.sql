@@ -30,6 +30,7 @@ CREATE TABLE Orders (
     customerid INT,
     orderdate DATE,
     totalamount FLOAT,
+    orderstatus VARCHAR(20),
     FOREIGN KEY (customerid) REFERENCES Customers(customerid)
 );
 
@@ -80,18 +81,18 @@ VALUES
 ALTER Table products
 DROP COLUMN quantity;
 
-INSERT INTO Orders (orderid, customerid, orderdate, totalamount)
+INSERT INTO Orders (orderid, customerid, orderdate, totalamount, orderstatus)
 VALUES
-('1','1','2000-12-12','300000'),
-('2','4','2022-04-12','15000'),
-('3','6','2019-04-01','86458'),
-('4','7','1976-08-04','15389'),
-('5','9','1976-08-04','2362'),
-('6','5','2020-12-23','53438'),
-('7','3','2015-09-05','885343'),
-('8','7','2000-09-13','22000'),
-('9','3','2012-01-09','69999'),
-('10','8','1999-06-12','347');
+('1','1','2000-12-12','300000', 'delivered'),
+('2','4','2022-04-12','15000', 'on-process'),
+('3','6','2019-04-01','86458', 'cancelled'),
+('4','7','1976-08-04','15389', 'on-process' ),
+('5','9','1976-08-04','2362','delievered' ),
+('6','5','2020-12-23','53438','cancelled' ),
+('7','3','2015-09-05','885343',  'delievered'),
+('8','7','2000-09-13','22000', 'on-process' ),
+('9','3','2012-01-09','69999', 'cancelled'),
+('10','8','1999-06-12','347','delievered' );
 
 INSERT INTO orderdetails (orderdetailsid, orderid, productid, quantity, total)
 VALUES
@@ -156,4 +157,9 @@ LEFT JOIN Orderdetails od ON od.productid = p.productid
 LEFT JOIN Orders o ON o.orderid = od.orderid
 LEFT JOIN Customers cn ON cn.customerid = o.customerid
 GROUP BY c.categoryname, cn.customername;
+
+-- 10. What is the total revenue for each status and month combination?
+SELECT o.orderstatus, EXTRACT(MONTH FROM o.orderdate), SUM(od.total) FROM Orders o
+JOIN orderdetails od ON o.orderid = od.orderid
+GROUP BY o.orderstatus, EXTRACT(MONTH FROM o.orderdate);
 

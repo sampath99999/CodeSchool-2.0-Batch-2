@@ -8,7 +8,7 @@ CREATE DATABASE CRM;
 
 CREATE TABLE
     Companies(
-        company_id SERIAL PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         company_name VARCHAR(255) NOT NULL,
         company_location varchar(255) NOT NULL,
         city varchar(50) NOT NULL,
@@ -17,39 +17,36 @@ CREATE TABLE
 
 CREATE TABLE
     Employees(
-        Employee_id SERIAL PRIMARY KEY,
-        Employee_name VARCHAR(100) NOT NULL,
-        Company_id BIGINT REFERENCES Companies(Company_id),
-        Employee_role VARCHAR(50),
-        Employee_phno NUMERIC(10) NOT NULL,
-        Employee_email VARCHAR(255) NOT NULL,
+        id SERIAL PRIMARY KEY,
+        employee_name VARCHAR(100) NOT NULL,
+        company_id BIGINT REFERENCES Companies(id),
+        employee_role VARCHAR(50),
+        employee_phno NUMERIC(10) NOT NULL,
+        employee_email VARCHAR(255) NOT NULL,
         permanant_address varchar(500) NOT NULL,
-        Residential_address VARCHAR(500),
-        Leaves_per_month INT NOT NULL,
-        Salary_per_annum BIGINT NOT NULL
+        residential_address VARCHAR(500),
+        leaves_per_month INT NOT NULL,
+        salary_per_annum BIGINT NOT NULL
     );
 
-ALTER TABLE Employees ADD COLUMN Date_of_joining DATE NOT NULL;
+ALTER TABLE Employees ADD COLUMN date_of_joining DATE NOT NULL;
 
-ALTER TABLE employees
+ALTER TABLE Employees
 ADD
-    COLUMN Date_of_birth DATE NOT NULL,
+    COLUMN date_of_birth DATE NOT NULL,
 ADD
-    COLUMN Gender VARCHAR(15) NOT NULL;
-
-ALTER TABLE
-    Employees RENAME COLUMN Salary_per_annum to "Salary_per_annum(RS)";
+    COLUMN gender VARCHAR(15) NOT NULL;
 
 Create Table
     Salaries(
-        Salary_id serial primary KEY,
-        Employee_id bigint REFERENCES Employees(Employee_id),
+        id serial primary KEY,
+        employee_id bigint REFERENCES Employees(id),
         no_of_leaves int DEFAULT 0,
         salary_date DATE NOT NULL,
         salary BIGINT NOT NULL
     );
 
-Alter TABLE Salaries RENAME column salary to "salary_per_month(RS)";
+Alter TABLE Salaries RENAME column salary to salary_per_month;
 
 INSERT INTO
     Companies(
@@ -81,18 +78,18 @@ select * from companies;
 
 INSERT INTO
     Employees(
-        Employee_name,
-        Company_id,
-        Employee_role,
-        Employee_phno,
-        Employee_email,
+        employee_name,
+        company_id,
+        employee_role,
+        employee_phno,
+        employee_email,
         permanant_address,
-        Residential_address,
-        Leaves_per_month,
-        "Salary_per_annum(RS)",
-        Date_of_joining,
-        Date_of_birth,
-        Gender
+        residential_address,
+        leaves_per_month,
+        Salary_per_annum,
+        date_of_joining,
+        date_of_birth,
+        gender
     )
 VALUES (
         'bhanu',
@@ -155,17 +152,17 @@ SELECT * from Employees;
 CREATE OR REPLACE FUNCTION CALCULATE_SALARY(EMPLOYEE_ID 
 BIGINT, NO_OF_LEAVES INT, SALARY_DATE DATE) RETURNS 
 NUMERIC AS $$ 
-	$$ $$ $$ $$ $$ $$ $$ DECLARE salary NUMERIC := 0;
+	$$ DECLARE salary NUMERIC := 0;
 	leavesno INT := 0;
 	BEGIN
 	SELECT
-	    e."Salary_per_annum(RS)",
+	    e.salary_per_annum,
 	    e.leaves_per_month INTO salary,
 	    leavesno
 	FROM employees e
 	WHERE
-	    e.employee_id = calculate_salary.employee_id
-	    and e.Date_of_joining < calculate_salary.salary_date;
+	    e.id = calculate_salary.employee_id
+	    and e.date_of_joining < calculate_salary.salary_date;
 	salary := salary / 12;
 	IF no_of_leaves > leavesno THEN salary := salary - ( (salary / 30) * (no_of_leaves - leavesno)
 	);
@@ -177,7 +174,7 @@ NUMERIC AS $$
 
 INSERT INTO
     Salaries (
-        Employee_id,
+        employee_id,
         no_of_leaves,
         salary_date,
         salary
@@ -270,8 +267,8 @@ select
     e.employee_name,
     cmp.company_name
 from Salaries s
-    left join Employees e on s.employee_id = e.employee_id
-    left join companies cmp on cmp.company_id = e.company_id;
+    left join Employees e on s.employee_id = e.id
+    left join companies cmp on cmp.id = e.company_id;
 
 --3.5. HOW much salary created total for each employee
 
@@ -280,14 +277,14 @@ select
     e.employee_name,
     cmp.company_id,
     cmp.company_name,
-    sum(s."salary_per_month(RS)") as total_salary
+    sum(s.salary_per_month) as total_salary
 from Salaries s
-    left join Employees e on s.employee_id = e.employee_id
-    left join companies cmp on cmp.company_id = e.company_id
+    left join Employees e on s.employee_id = e.id
+    left join companies cmp on cmp.id = e.company_id
 group by
     s.employee_id,
     e.employee_name,
-    cmp.company_id
+    cmp.id
 ORDER BY s.employee_id;
 
 --3.6. How many total employees
@@ -297,10 +294,10 @@ select count(*) as total_employees from employees;
 --3.7. How many total employees company wise
 
 select
-    cmp.company_id,
+    cmp.id,
     cmp.company_name,
-    count(e.employee_id) as total_employees
+    count(e.id) as total_employees
 from companies cmp
-    left join employees e on cmp.company_id = e.company_id
-GROUP BY cmp.company_id
-ORDER BY cmp.company_id;
+    left join employees e on cmp.id = e.company_id
+GROUP BY cmp.id
+ORDER BY cmp.id;

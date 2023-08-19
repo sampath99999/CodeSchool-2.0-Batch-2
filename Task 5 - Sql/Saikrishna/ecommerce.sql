@@ -393,22 +393,39 @@ WHERE inventory > 100;
 
 --QUERY:4
 
-SELECT u.*
-FROM users u
-    INNER JOIN orders o ON o.user_id = u.user_id
-GROUP BY u.user_id
-HAVING
-    COUNT(DISTINCT o.order_id) > 10;
+SELECT
+    u.user_id,
+    u.user_name,
+    u.dob,
+    u.phone_no,
+    u.email,
+    a.address,
+    a.city
+FROM Users u
+    JOIN Orders o ON u.user_id = o.user_id
+    JOIN useraddresses a ON u.user_id = a.user_id
+WHERE
+    o.order_date >= CURRENT_DATE - INTERVAL '7 days'
+GROUP BY
+    u.user_id,
+    a.address,
+    a.city
+HAVING COUNT(o.order_id) > 10;
 
 --QUERY:5
 
 SELECT
-    u.user_name "Ordered By",
-    p.product_name "Ordered Product"
-FROM users u
-    INNER JOIN Orders o ON o.user_id = u.user_id
-    INNER JOIN Products p ON p.product_id = o.product_id
-WHERE o.delivery_time > 5;
+    o.order_id,
+    o.user_id,
+    o.product_id,
+    p.product_name,
+    o.delivery_time
+FROM orders o
+    INNER JOIN products p ON p.product_id = o.product_id
+GROUP BY
+    o.order_id,
+    p.product_id
+HAVING delivery_time > 5;
 
 --QUERY:6
 

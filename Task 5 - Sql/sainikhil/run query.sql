@@ -44,11 +44,9 @@ SELECT * FROM orders WHERE promised_delivery_date - order_date > 5;
 
 -- all the details of users who have purchased products using same credit card more than 5 times.
 
-SELECT
-    first_name || '' || last_name as customer_name
-FROM customers c
-    INNER JOIN orders o ON c.customer_id = o.customer_id
-    INNER JOIN cards ca on o.card_id = ca.card_id
+SELECT ca.card_id, c.first_name || '' || c.last_name as customer_name FROM cards ca
+LEFT JOIN customers c ON ca.customer_id = c.customer_id
+LEFT JOIN orders o ON ca.card_id = o.card_id
 WHERE ca.card_type = 'Credit'
-GROUP BY c.customer_id
-HAVING COUNT(ca.card_id) > 5;
+GROUP BY ca.card_id,c.customer_id HAVING
+count(ca.card_id) >5;

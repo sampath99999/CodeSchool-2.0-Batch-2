@@ -6,18 +6,36 @@ CREATE TABLE Customers (
     customerid SERIAL PRIMARY KEY,
     customername VARCHAR (50),
     customercontact BIGINT,
-    customeremail VARCHAR (100),
-    customeraddress VARCHAR (200)  
+    customeremail VARCHAR (100), 
 );
+
+CREATE TABLE customeraddress(
+    addressid SERIAL PRIMARY KEY,
+    pincode VARCHAR(10),
+    addressname VARCHAR(200),
+    customerid INT,
+    FOREIGN KEY (customerid) REFERENCES Customers(customerid)
+)
+
+INSERT INTO customeraddress (addressid, customerid, pincode, addressname)
+VALUES
+('1', '2', '50075', 'germany'),
+('2', '2', '50076', 'germany'),
+('3', '3', '50077', 'germany'),
+('4', '4', '50076', 'germany'),
+('5', '5', '50075', 'germany'),
+('6', '2', '50075', 'germany'),
+('7', '1', '50075', 'germany'),
+('8', '7', '50075', 'germany'),
+('9', '4', '50075', 'germany'),
+('10', '4', '50075', 'germany');
 
 CREATE TABLE Products (
     productid SERIAL PRIMARY KEY,
     productname VARCHAR (100),
     categoryid INT,
-    quantity VARCHAR (200),
     price FLOAT,
     FOREIGN KEY (categoryid) REFERENCES Categories(categoryid)
-
 );
 
 CREATE TABLE Categories (
@@ -78,9 +96,6 @@ VALUES
 ('9', 'microwave', '1', '11000'),
 ('10', 'hotwheels cars', '4', '1350');
 
-ALTER Table products
-DROP COLUMN quantity;
-
 INSERT INTO Orders (orderid, customerid, orderdate, totalamount, orderstatus)
 VALUES
 ('1','1','2000-12-12','300000', 'delivered'),
@@ -89,8 +104,8 @@ VALUES
 ('4','7','1976-08-04','15389', 'on-process' ),
 ('5','9','1976-08-04','2362','delievered' ),
 ('6','5','2020-12-23','53438','cancelled' ),
-('7','3','2015-09-05','885343',  'delievered'),
-('8','7','2000-09-13','22000', 'on-process' ),
+('7','3','2015-09-05','885343','delievered'),
+('8','7','2000-09-13','22000', 'on-process'),
 ('9','3','2012-01-09','69999', 'cancelled'),
 ('10','8','1999-06-12','347','delievered' );
 
@@ -135,7 +150,7 @@ LEFT JOIN orderdetails od ON od.productid = p.productid
 GROUP BY p.productname;
 
 -- 6. Which customers have ordered a particular product and how many times?
-SELECT c.customername, p.productname, COUNT(*)  FROM Customers c
+SELECT c.customername, p.productname, COUNT(od.quantity)  FROM Customers c
 JOIN Orders o ON o.customerid = c.customerid
 JOIN Orderdetails od ON od.orderid = o.orderid
 JOIN products p ON p.productid = od.productid
@@ -162,4 +177,31 @@ GROUP BY c.categoryname, cn.customername;
 SELECT o.orderstatus, EXTRACT(MONTH FROM o.orderdate), SUM(od.total) FROM Orders o
 JOIN orderdetails od ON o.orderid = od.orderid
 GROUP BY o.orderstatus, EXTRACT(MONTH FROM o.orderdate);
+
+SELECT c.customername, COUNT(ad.addressname) from customers c
+JOIN Customeraddress ad ON c.customerid = ad.customerid
+GROUP BY c.customername
+HAVING COUNT(*)>=3;
+
+SELECT c.customername, COUNT(ad.customerid) FROM customers c
+LEFT JOIN Customeraddress ad ON c.customerid = ad.customerid
+GROUP BY c.customername;
+
+SELECT COUNT (*) FROM orders o;
+
+SELECT SUM(od.total) FROM orderdetails od;
+
+SELECT c.customername FROM customers c
+LEFT JOIN orders o ON o.customerid = c.customerid
+GROUP BY c.customername
+HAVING COUNT(o.orderid)>=1;
+
+SELECT p.productname, SUM(od.quantity) from products p
+JOIN orderdetails od ON od.productid = p.productid
+GROUP BY p.productname;
+
+SELECT p.productname from products p
+LEFT JOIN orderdetails od ON od.productid = p.productid
+GROUP BY productname 
+HAVING COUNT(od.orderid)=0;
 

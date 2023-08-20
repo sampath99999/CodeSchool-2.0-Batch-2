@@ -608,6 +608,7 @@ VALUES (
     );
 
 --  card details table
+
 create table
     user_card_details (
         user_id integer not null,
@@ -781,109 +782,78 @@ VALUES (
         current_timestamp
     );
 
--- Seller product mapping
+-- Sellers table
 
 create table
-    seller_product_mapping (
-        seller_id int,
-        product_id int,
-        PRIMARY KEY (seller_id, product_id),
-        seller_name varchar(50) not null,
-        product_name VARCHAR(50),
-        items_in_inventory int not null,
-        constraint fk_sellerId FOREIGN key (seller_id) REFERENCES sellers (seller_id),
-        constraint fk_productId FOREIGN key (product_id) REFERENCES products (product_id)
+    sellers (
+        seller_id int PRIMARY KEY,
+        seller_name VARCHAR(50) not null,
+        product_id int not null,
+        created_at timestamptz,
+        updated_at timestamptz,
+        constraint fk_productId FOREIGN KEY(product_id) REFERENCES products (product_id)
     );
 
-alter table
-    seller_product_mapping
-add
-    column created_at timestamptz,
-add
-    column updated_at timestamptz;
-
 insert into
-    seller_product_mapping(
+    sellers(
         seller_id,
-        product_id,
         seller_name,
-        product_name,
-        items_in_inventory,
+        product_id,
         created_at
     )
-VALUES (
+values (
         301,
-        201,
         'rakesh',
-        'laptop',
-        500,
+        201,
         current_timestamp
     ), (
         302,
-        202,
         'ravi',
-        'mobile',
-        300,
+        202,
         current_timestamp
     ), (
         303,
-        203,
         'ramesh',
-        'T-shirts',
-        200,
+        203,
         current_timestamp
     ), (
         304,
-        204,
         'shiva',
-        'headphones',
-        50,
+        204,
         current_timestamp
     ), (
         305,
-        205,
         'suresh',
-        'watch',
-        60,
+        205,
         current_timestamp
     ), (
         306,
-        206,
         'harsha',
-        'Book shelf',
-        60,
+        206,
         current_timestamp
     ), (
         307,
-        207,
         'naveen',
-        'Table lamp',
-        200,
+        207,
         current_timestamp
     ), (
         308,
-        208,
         'sahith',
-        'Indoor Plant',
-        50,
+        208,
         current_timestamp
     ), (
         309,
-        209,
         'suraj',
-        'curtain set',
-        300,
+        209,
         current_timestamp
     ), (
         310,
-        210,
         'rohith',
-        'jeans',
-        300,
+        210,
         current_timestamp
     );
 
--- Sellers table
+-- Seller product mapping
 
 create table
     seller_product_mapping (
@@ -1109,14 +1079,17 @@ where items_in_inventory > 100;
 -- Query to get all the users who have orders greater than 10 within one week.
 
 SELECT
-    user_id,
-    DATE_TRUNC('week', order_date) AS week_start_date,
-    count(user_id)
-FROM orders
+    u.user_id,
+    u.user_name,
+    count(u.user_id) as orders_in_week
+FROM users u
+    left join orders o on u.user_id = o.user_id
+WHERE
+    o.order_date >= CURRENT_DATE - INTERVAL '7 days'
 GROUP BY
-    user_id,
-    week_start_date
-HAVING COUNT(user_id) > 10;
+    u.user_id,
+    u.user_name
+HAVING COUNT(u.user_id) > 10;
 
 -- Query to get all orders which have delivery time more than 5 days.
 

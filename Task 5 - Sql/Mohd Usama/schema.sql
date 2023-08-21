@@ -49,6 +49,24 @@ CREATE TABLE Deductions (
   FOREIGN KEY (deduction_employee_id) REFERENCES Employees(employee_id)
 );
 
+CREATE TABLE Bills (
+  bill_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  department_id INT REFERENCES Departments(department_id) NOT NULL,
+  bill_month INT NOT NULL CHECK (bill_month >= 1 AND bill_month <= 12),
+  bill_year INT NOT NULL CHECK (bill_year >= 2020),
+  total_earnings INT NOT NULL,
+  total_deductions INT NOT NULL,
+  net_amount INT NOT NULL,
+  bill_status VARCHAR(6) DEFAULT 'Unpaid'
+);
+
+CREATE TABLE BillBeneficiaries (
+  bill_beneficiary_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  bill_id INT REFERENCES Bills(bill_id) NOT NULL,
+  employee_id INT REFERENCES Employees(employee_id) NOT NULL,
+  amount INT NOT NULL
+);
+
 INSERT INTO Departments (department_name, department_head) VALUES
   ('Sales', 'Amit Sharma'),
   ('Marketing', 'Reena Kapoor'),
@@ -981,3 +999,65 @@ VALUES
   (50, 4, 8, 2023, 25),
   (50, 1, 8, 2023, 100),
   (50, 3, 9, 2023, 20);
+
+INSERT INTO Bills (department_id, bill_month, bill_year, total_earnings, total_deductions, net_amount)
+SELECT
+  d.department_id,
+  e.earning_month,
+  e.earning_year,
+  SUM(e.amount) AS total_earnings,
+  COALESCE(SUM(ded.amount), 0) AS total_deductions,
+  SUM(e.amount) - COALESCE(SUM(ded.amount), 0) AS net_amount
+FROM
+  Departments d
+JOIN
+  Employees emp ON d.department_id = emp.employee_department_id
+JOIN
+  Earnings e ON emp.employee_id = e.earning_employee_id
+JOIN
+  EarningTypes et ON e.earning_type_id = et.earning_type_id
+LEFT JOIN
+  Deductions ded ON emp.employee_id = ded.deduction_employee_id AND e.earning_month = ded.deduction_month
+GROUP BY
+  d.department_id, e.earning_month, e.earning_year;
+
+INSERT INTO BillBeneficiaries (bill_id, employee_id, amount)
+SELECT
+  b.bill_id,
+  emp.employee_id,
+  SUM(earn.amount) - COALESCE(SUM(ded.amount), 0) AS amount
+FROM
+  Bills b
+JOIN
+  Departments d ON b.department_id = d.department_id
+JOIN
+  Employees emp ON d.department_id = emp.employee_department_id
+JOIN(
+  SELECT
+    earning_employee_id,
+    earning_month,
+    earning_year,
+    SUM(amount) AS amount
+  FROM
+    Earnings
+  GROUP BY
+    earning_employee_id, earning_month, earning_year
+)
+ earn ON emp.employee_id = earn.earning_employee_id AND b.bill_month = earn.earning_month
+LEFT JOIN (
+  SELECT
+    deduction_employee_id,
+    deduction_month,
+    deduction_year,
+    SUM(amount) AS amount
+  FROM
+    Deductions
+  GROUP BY
+    deduction_employee_id, deduction_month, deduction_year
+) ded ON emp.employee_id = ded.deduction_employee_id AND b.bill_month = ded.deduction_month AND b.bill_year = ded.deduction_year
+GROUP BY
+b.bill_id,
+emp.employee_id,
+earn.amount,
+ded.amount
+;

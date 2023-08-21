@@ -6,6 +6,83 @@ CREATE DATABASE Shoppingcartdb;
 
 ---- TABLES CREATION ----------------------------------
 
+PSQL Code for Tables
+
+Default (GPT-3.5)
+
+User
+convert the below code into psql  code                                                                                                                            
+-- Create the database
+CREATE DATABASE IF NOT EXISTS ShoppingCartDB;
+
+-- Switch to the newly created database
+USE ShoppingCartDB;
+
+-- Create the Sellers table
+CREATE TABLE Sellers (
+    seller_id INT PRIMARY KEY,
+    seller_name VARCHAR(255),
+    seller_contact_info VARCHAR(255)
+);
+
+-- Create the Products table
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    seller_id INT,
+    product_name VARCHAR(255),
+    product_price DECIMAL(10, 2),
+    FOREIGN KEY (seller_id) REFERENCES Sellers(seller_id)
+);
+
+-- Create the Customers table
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(255),
+    customer_contact_info VARCHAR(255)
+);
+
+-- Create the Addresses table
+CREATE TABLE Addresses (
+    address_id INT PRIMARY KEY,
+    customer_id INT,
+    address_line1 VARCHAR(255),
+    address_line2 VARCHAR(255),
+    city VARCHAR(255),
+    state VARCHAR(255),
+    postal_code VARCHAR(20),
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+-- Create the Orders table
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+-- Create the Order_Items table
+CREATE TABLE Order_Items (
+    order_item_id INT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    total_price DECIMAL(10, 2),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
+
+-- The Payments table
+CREATE TABLE Payments (
+    payment_id SERIAL PRIMARY KEY,
+    order_id INT NOT NULL,
+    payment_date DATE NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+);
+
+
+
 -- Insert data into Sellers table 
 INSERT INTO Sellers (seller_name, seller_contact_info)
 VALUES
@@ -253,6 +330,7 @@ GROUP BY
     p.product_name, p.product_id, p.product_price
 ORDER BY
     COUNT(oi.order_item_id) DESC;
+
 
 
 

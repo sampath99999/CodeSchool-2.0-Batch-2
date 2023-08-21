@@ -1,0 +1,666 @@
+/*--------------------------*/
+body{
+background-color:white;
+}
+
+.logo img
+{
+    height: 80px;
+    width: 100px;
+    margin-left: 25px;
+}
+
+.nav-icons .fa-brands 
+{
+    margin: 40px 10px;
+    font-size: 1.2rem;
+}
+
+.nav
+{
+    
+    height: 100px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/*----------------------------------------------*/
+
+.header
+{
+    height: 100px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-content ul
+{
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+    
+}
+
+.header-content ul li{
+    margin-left: 10px;
+    padding:7px 20px;
+    font-size: large;
+    width: 70px;
+   height: 25px;
+   
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    list-style: none;
+    text-align: center;
+}
+
+.header-content ul li:hover{
+  background-color: rgb(192, 72, 72);
+  color: aliceblue;
+}
+
+.header-icons
+{
+    margin: 20px 10px;
+    font-size: 1.2rem;  
+    
+}
+
+.header-icons i{
+    margin-left: 10px;
+   padding: 10px;
+    border-radius: 50%;  
+    height: 30px;
+    width: 35px; 
+    background-color: rgb(192, 72, 72);
+    color: aliceblue;
+    text-align: center;
+}
+
+
+
+
+/*---------------------------------------------------*/
+ 
+/* styles/slider.css */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    
+    /* Set your preferred width */
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+  
+ .slider-container .slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 550px; /* Set your preferred height */
+    background-position: center;
+    position: relative;
+   
+  }
+  
+   
+  
+  
+  .slide
+  {
+    height: 550px;
+    width: 100%;
+    background-size: contain;
+    
+  }
+  
+  
+  .slide-content {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-weight: bolder;
+    width: 60%;
+    color: #fff; /* White text color for better contrast */
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(16, 1, 1, 0.956);
+  }
+  
+  
+  .slide-content p {
+    font-size: 20px;
+    padding-left: 15px;
+    color: #545151;
+  }
+
+  
+  
+ .prev, .next {
+   
+    height: 30px;
+    width: 30px;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     cursor: pointer;
+     font-size: 20px;
+     user-select: none;
+     background-color: rgb(201, 233, 233);
+     border-radius: 100%;
+     color: white;
+     text-align: center;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
+
+
+
+
+/*---------------------------------------------------*/
+
+.div2
+{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+
+
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 800px;
+  height: 850px;
+  margin: 6% 5%;
+}
+
+.card img {
+  width: 100%;
+  height: 55%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card p{
+font-size: 20px;
+padding-left: 15px;
+color: #545151;
+}
+/* Existing styles for .card class and other elements */
+
+.div2 #one {
+  width: 60%;
+ height: auto;
+  margin-left: 5%;
+  
+}
+
+
+
+/* Additional styles for centering pagination buttons */
+#pagination {
+  text-align: center;
+  padding: 5px;
+}
+
+
+
+/* Additional styles for positioning the icons and "Continue Reading" link */
+
+
+#pagination button {
+  height: 70px;
+  width: 70px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 50%;
+  border: #e3dbdb;
+}
+
+#pagination button:hover {
+  background-color: #e96969;
+  color: white;
+}
+
+
+
+/* Existing styles for .card class */
+
+.card h1 {
+  margin-top: 20px;
+  color: #0f2b4a;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #545151;
+}
+
+.card hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media-icons {
+  display: flex;
+}
+
+.social-media-icons a {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.social-media-icons a i {
+  font-size: 20px;
+  color: #007bff;
+  margin: 0px 10px;
+}
+
+.continue-reading a {
+  font-size:x-large;
+  font-weight: bold;
+  color: #0f2b4a;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Additional styles for positioning the icons and "Continue Reading" link */
+
+
+
+
+
+
+
+
+
+
+/*----------------*/
+
+.div2 #two
+{
+  margin-right: 5%;
+  width: 30%;
+  height: auto;
+  
+}
+
+
+
+.div2 #two .comment
+{
+  height:280px;
+  width: 450px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  letter-spacing: 1px;
+  font-family:sans-serif;
+  text-align: center;
+  color: #0f2b4a;
+  line-height: 2rem;
+  margin-top: 15%;
+  border-radius: 10%;
+}
+
+.div2 .comment .fa-brands
+{
+  margin: 20px 10px;
+  font-size: 1.2rem;
+  
+}
+
+
+/*----------------*/
+
+
+.div2 #two .news-container
+{
+  margin-top: 15%;
+ height: 520px;
+ width: 450px;
+ padding: 30px;
+ border-radius: 10%;
+ overflow-y: scroll;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  height: 160px;
+  width: 400px;
+}
+
+.news-image {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.news-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-title {
+  font-weight: bold;
+}
+
+.news-publishedAt {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------*/
+.div2 #two .explore-topics
+{
+  font-weight:bolder;
+  margin-top: 15%;
+  height: 550px;
+  width: 450px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #0f2b4a;
+  border-radius: 10%;
+}
+
+article i{
+  color: #e96969;
+  padding-right: 30px;
+}
+
+.hr{
+  height: 1px;
+  width: 25rem;
+  color: #e96969;
+  background-color: #e96969;
+}
+
+
+.vel,.num
+{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: larger;
+}
+
+.vel{
+    width: 75%;
+    text-align: left;
+}
+
+
+
+/*---------------*/
+
+
+.div2 #two .newsletter
+{
+  margin-top: 15%;
+  height: 350px;
+  width: 450px;
+  padding: 30px;
+  text-align: center;
+  color: #686767;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+}
+
+.newsletter h2,h3{
+  font-weight: bold;
+  color: #545151;
+  font-size:x-large;
+}
+
+.newsletter hr{
+  height: 1px;
+  width: 25rem;
+  color: #e96969;
+  background-color: #e96969;
+}
+
+.newsletter input{
+ display: block;
+ height: 50px;
+ width: 350px;
+ border: none;
+ text-align: center;
+ margin-top: 20px;
+ margin-left: 50px;
+ border-radius: 10px;
+ font-size: large;
+}
+
+.newsletter p span{
+ color:  rgb(192, 72, 72);
+}
+.newsletter input[type="button"] 
+{
+  background-color:  rgb(192, 72, 72);
+  color: #cac6c6;
+}
+
+
+
+
+/*-----------div 2 right-------------------*/
+
+
+.celebration
+{
+    height: 480px;
+    width: 500px;
+    color: #0f2b4a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    margin-top: 15%;
+}
+
+
+
+.celebration .container {
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.author-date {
+  margin-top: 20px;
+    font-size: 14px;
+}
+
+.celebration .slider-container .prev, .celebration .slider-container .next {
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    background-color: rgb(199, 198, 198);
+    border-radius: 100%;
+    color: rgb(128, 126, 126);
+    text-align: center;
+}
+
+.celebration .slider-container .prev {
+    left: 50%;
+    transform: translateX(-150%);
+}
+
+.celebration .slider-container .next {
+    left: 50%;
+    transform: translateX(50%);
+}
+
+.celebration .slider-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+/*----------------------------------------*/
+
+.tag-clouds
+{
+  height: 350px;
+    width: 500px;
+    color: #0f2b4a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    margin-top: 15%;
+}
+
+.tag-clouds div{
+  padding: 30px;
+}
+
+.tag-clouds input{
+  color: #928f8f;
+  height: 40px;
+  width: 120px;
+  margin: 10px 10px;
+  border: none;
+  text-align: center;
+  border-radius: 20px;
+  font-size: large;
+  background-color: white;
+ }
+
+
+
+
+
+
+
+
+
+
+
+/*----------------footabove-----------------------------------*/
+#repeatimages {
+    height: 240px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding-bottom: 3%;
+  }
+ 
+  #repeatimages img {
+    width: 250px;
+    height: 180px;
+    border-radius: 10%;
+    margin:0 10px;
+  }
+
+
+
+/*---------------------------------------------------*/
+.footer
+{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+}
+
+.footer .fa-brands ,.footer div
+{
+  margin: 0px 10px;
+  font-size: 1.2rem;
+}
+
+.footer button{
+  height: 30px;
+  width: 140px;
+  border-radius: 5%;
+  border: none;
+  background-color: #cac6c6;
+  margin-right: 25px;
+  cursor: pointer;
+  
+}

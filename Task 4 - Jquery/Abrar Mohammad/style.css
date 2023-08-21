@@ -1,0 +1,163 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "open sans", sans-serif;
+}
+
+.sideBarContainer {
+  background-color: rgb(3, 36, 58) !important;
+  overflow: auto;
+  height: 100%;
+  width: 250px !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.rightContainer {
+  width: 100%;
+  margin-left: 0px;
+  left: 250px;
+  transition: all 0.5s;
+}
+.rightContainer2 {
+  width: 100%;
+  left: 0px;
+  transition: all 0.5s;
+
+  margin-left: 250px;
+}
+.sideBarContainer::-webkit-scrollbar {
+  display: none;
+}
+.logoImage {
+  height: 40px;
+  width: 140px;
+}
+.unorderedList {
+  list-style: none;
+  overflow: auto;
+}
+.unorderedList::-webkit-scrollbar {
+  display: none;
+}
+.unorderedList li {
+  color: white;
+  font-size: 13px;
+  width: 100%;
+  opacity: 1;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+.largeHamBtn {
+  background-color: transparent;
+  border: 0px solid;
+  outline: none;
+}
+.unorderedList li:hover {
+  background-color: rgb(211, 211, 211, 0.3);
+  border-left: 2px solid gold;
+}
+.ifmisHead {
+  color: white;
+  text-align: center;
+}
+.navbarContainer {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+  height: 8vh;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+.hamBtn {
+  border: 0px;
+  background-color: transparent;
+  outline: none;
+}
+.userImage {
+  height: 30px;
+  width: 30px;
+}
+.logoutBtn {
+  background-color: rgb(211, 211, 211, 0.3);
+  border: 0px solid;
+}
+.userCont {
+  background-color: rgb(211, 211, 211, 0.3);
+}
+.name {
+  font-size: 12px;
+}
+.lastLogin {
+  color: white;
+  font-size: 12px;
+  opacity: 0.75;
+}
+.moduleCont {
+  background-color: rgb(211, 211, 211, 0.3);
+  border-radius: 5px;
+}
+.telanganaLogo {
+  height: 30px;
+  width: 30px;
+}
+.pointsContainer {
+  border-radius: 5px;
+}
+.pointsContainer ul li {
+  font-size: 14px;
+  font-weight: 600;
+}
+.pointsContainer ul li::marker {
+  color: brown;
+}
+.transType {
+  width: 300px;
+  color: navy;
+}
+
+.form-check-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.spanned {
+  color: gray;
+  font-size: 12px;
+}
+.note {
+  font-style: italic;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.documentsCont {
+  list-style-type: none;
+}
+@media screen and (max-width: 768px) {
+  .ipContainer {
+    width: 100%;
+  }
+  .bankCont {
+    width: 100%;
+  }
+  .rightContainer2 {
+    width: 100%;
+    left: 0px;
+    margin-left: 0;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ipContainer {
+    width: 50%;
+  }
+  .bankCont {
+    width: 50%;
+  }
+}

@@ -1,0 +1,43 @@
+Questions & Answers
+
+1.What is a Data Type?
+Ans.A Data Type reprsents the type of the value which it belongs to example:STRING,INT,BOOLEAN,FLOAT,etc... 
+
+2.What is a Primary Key?
+Ans.A Primary Key is used to Uniquely identify a column in rows of the table.
+
+3.What is a Foreign Key?
+Ans.A Foreign Key is a Field in one table that refers to the primary key of the another table.
+
+4.What is Database Engine?
+Ans.A database engine is a software component that a database management system uses to CRUD(Create,Read,Update,Delete) data from the database.
+
+5.How many types of joins & explain each type of join?
+Ans. INNER JOIN.LEFT JOIN,RIGHT JOIN,CROSS JOIN,NATURAL JOIN.
+INNER JOIN:this type of join is used combine the data from both tables if it matches the particular condition.
+LEFT JOIN:this join returns all records from the LEFT table and the matched data from the RIGHT table.
+RIGHT JOIN:this join returns all records from the RIGHT table and the matched data from the LEFT table.
+CROSS JOIN:this cross join combines every row of the left table with every row of the right table and gives the combined data.
+NATURAL JOIN:natural join refers to combining two or more tables,based on the common columns,the columns in the table must have same name and a same datatype.
+
+6.What is the meaning of CRUD?
+Ans.CRUD->CREATE,READ,UPDATE,DELETE.
+
+7.Explain GROUP BY,ORDER BY,LIMIT,OFFSET?
+Ans.GROUP BY: the group by clause is used to group rows which have same values in different rows.
+ORDER BY:it is used to represent the data in the form of ascending and descending order..EX[DEFAULT ASC(ascending order),DESC(descending order)].
+LIMIT:the limit clause is used to specify the number of rows should return.EX[LIMIT 100 it returns the 100 rows of the whole data of the table].
+OFFSET:the offset clause is used to skip the rows of the table and return the rows after the specied offset count.[ex:offset 3 -> it returns the data from the 4th row of the table].
+
+8.What is NOSQL?
+Ans.NOSQL is also referred as 'not only sql'.it is a database which it stores data in the form of document model,key-value pairs,graph model,column model.
+
+9.What are the types of Databases?
+Ans.1.Relational Databases -> it represent the data in the tabular form.
+    2.NON Relational Databases-> it stores the data in the form of,key-value pairs,document format,graph databases,column stores.
+
+10.What is a Relational Database Design?
+Ans.in relational database design the data is organised in the tables and all type of data is accessed and carried out with controlled transcations.relational database design uses the ACID(atomicity,consistency,integrity and durability) property.
+
+11 What is Indexing?
+Ans.it is used to retrive the data from the database fastly and it is divided in to different types of rows for effecient and fast retrival.

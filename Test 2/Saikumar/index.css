@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+@media (max-width: 767px) {
+  .truenorth-page {
+    width: 90%;
+  }
+  .truenorth-card-title {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 767px) {
+  .truenorth-page {
+    width: 80%;
+  }
+  .truenorth-card-title {
+    font-size: 32px;
+  }
+}
+
+.wave-icon {
+  color: black;
+}
+.input-field span {
+  position: absolute;
+  top: 66px;
+  left: 0;
+}
+.website {
+  min-height: 100vh;
+}
+.error {
+  color: red;
+}
+
+.displayNone {
+  display: none;
+}
+.joke {
+  color: lightblue;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #2b6678;
+  font-size: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.jokes-title {
+  color: #296bb6;
+  font-size: 34px;
+}
+.face-icon {
+  margin-right: 20px;
+}

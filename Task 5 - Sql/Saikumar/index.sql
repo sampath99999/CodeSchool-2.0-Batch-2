@@ -44,192 +44,602 @@ VALUES ('Sai', 'Kumar', '2000-08-25', 'Male', 'saikumar.komma@gmail.com',1, '923
 select * from employees;
 
 
+create table earningsTypes(
+    earnings_type_id SERIAL PRIMARY KEY,
+    earnings_type VARCHAR(100) 
+)
+
+insert into earningsTypes(earnings_type)
+values
+('base_salary'),
+('DA'),
+('HRA'),
+('bonus');
+drop table earningstypes;
 CREATE TABLE Earnings (
     earning_id SERIAL PRIMARY KEY,
     employee_id INT REFERENCES Employees(employee_id),
-    base_salary DECIMAL(10, 2),
-    DA DECIMAL(10, 2),
-    HRA DECIMAL(10, 2),
-    bonus DECIMAL(10, 2),
-    payment_date date
+    earnings_type_id int REFERENCES  earningsTypes(earnings_type_id),
+    earnings_month int ,
+    earnings_year int,
+    earnings_amount int
+    
 );
 select * from earnings;
+drop table earnings;
 
-INSERT INTO Earnings (employee_id ,base_salary, DA,HRA,bonus,payment_date)
+
+create table earningsTypes(
+    earnings_type_id SERIAL PRIMARY KEY,
+    earnings_type VARCHAR(100) 
+)
+
+insert into earningsTypes(earnings_type)
+values
+('base_salary'),
+('DA'),
+('HRA'),
+('bonus');
+INSERT INTO Earnings (employee_id ,earnings_type_id,earnings_month, earnings_year,earnings_amount)
 VALUES
-    (1, 50000.00,  1000.00, 2000.00,100,'2023-01-01'),
-    (2,  45000.00,  800.00, 1000.00,1500,'2023-01-01'),
-    (3,  68000.00,  1200.00, 3000.00,1200.00,'2023-01-01'),
-    (4,  90009.00,  10000.00, 2000.00,4000,'2023-01-01'),
-    (5,  150020.00,  8000.00, 1100.00,6000.50,'2023-01-01'),
-    (6,  56302.00, 1300.00, 4020.00,500,'2023-01-01'),
-    (7,  70002.00,  3020.00, 1260.00,650,'2023-01-01'),
-    (8,  35030.00,  7100.00, 2030.00,1999,'2023-01-01'),
-    (9,  78000.00,  2900.00, 3300.50,2230,'2023-01-01'),
-    (10, 50050.00,  2120.00, 1100.00,1000,'2023-01-01'), 
-    (1, 50500.00,  1000.00, 2000.00,100,'2023-02-01'),
-    (2,  45100.00,  800.00, 1000.00,1500,'2023-02-01'),
-    (3,  68800.00,  1200.00, 3000.00,1200.00,'2023-02-01'),
-    (4,  90209.00,  10000.00, 2000.00,4000,'2023-02-01'),
-    (5,  155020.00,  8000.00, 1100.00,6000.50,'2023-02-01'),
-    (6,  56502.00, 1300.00, 4020.00,500,'2023-02-01'),
-    (7,  70102.00,  3020.00, 1260.00,650,'2023-02-01'),
-    (8,  35530.00,  7100.00, 2030.00,1999,'2023-02-01'),
-    (9,  78100.00,  2900.00, 3300.50,2230,'2023-02-01'),
-    (10, 50550.00,  2120.00, 1100.00,1000,'2023-02-01'),
-    (1, 50500.00,  1000.00, 2000.00,100,'2023-03-01'),
-    (2,  45100.00,  800.00, 1000.00,1500,'2023-03-01'),
-    (3,  68800.00,  1200.00, 3000.00,1200.00,'2023-03-01'),
-    (4,  90209.00,  10000.00, 2000.00,4000,'2023-03-01'),
-    (5,  155020.00,  8000.00, 1100.00,6000.50,'2023-03-01'),
-    (6,  56502.00, 1300.00, 4020.00,500,'2023-03-01'),
-    (7,  70102.00,  3020.00, 1260.00,650,'2023-03-01'),
-    (8,  35530.00,  7100.00, 2030.00,1999,'2023-03-01'),
-    (9,  78100.00,  2900.00, 3300.50,2230,'2023-03-01'),
-    (10, 50550.00,  2120.00, 1100.00,1000,'2023-03-01'),
-     (1, 50500.00,  1000.00, 2000.00,100,'2023-04-01'),
-    (2,  45100.00,  800.00, 1000.00,1500,'2023-04-01'),
-    (3,  68800.00,  1200.00, 3000.00,1200.00,'2023-04-01'),
-    (4,  90209.00,  10000.00, 2000.00,4000,'2023-04-01'),
-    (5,  155020.00,  8000.00, 1100,6000.50,'2023-04-01'),
-    (6,  56502.00, 1300.00, 4020.00,500,'2023-04-01'),
-    (7,  70102.00,  3020.00, 1260.00,650,'2023-04-01'),
-    (8,  35530.00,  7100.00, 2030.00,1999,'2023-04-01'),
-    (9,  78100.00,  2900.00, 3300.50,2230,'2023-04-01'),
-    (10, 50550.00,  2120.00, 1100.00,1000,'2023-04-01'),
-     (1, 50500.00,  1000.00, 2000.00,100,'2023-05-01'),
-    (2,  45100.00,  800.00, 1000.00,1500,'2023-05-01'),
-    (3,  68800.00,  1200.00, 3000.00,1200.00,'2023-05-01'),
-    (4,  90209.00,  10000.00, 2000.00,4000,'2023-05-01'),
-    (5,  155020.00,  8000.00, 1100.00,6000.50,'2023-05-01'),
-    (6,  56502.00, 130.00, 4020.00,500,'2023-05-01'),
-    (7,  70102.00,  3020.00, 1260.00,650,'2023-05-01'),
-    (8,  35530.00,  7100.00, 2030.00,1999,'2023-05-01'),
-    (9,  78100.00,  2900.00, 3300.50,2230,'2023-05-01'),
-    (10, 50550.00,  2120.00, 1100.00,1000,'2023-05-01'),
-    (1, 50500.00,  1000.00, 2000.00,100,'2023-06-01'),
-    (2,  45100.00,  800.00, 1000.00,1500,'2023-06-01'),
-    (3,  68800.00,  1200.00, 3000.00,1200.00,'2023-06-01'),
-    (4,  90209.00,  10000.00, 2000.00,4000,'2023-06-01'),
-    (5,  155020.00,  8000.00, 1100.00,6000.50,'2023-06-01'),
-    (6,  56502.00, 1300.00, 4020.00,500,'2023-06-01'),
-    (7,  70102.00,  3020.00, 1260.00,650,'2023-06-01'),
-    (8,  35530.00,  7100.00, 2030.00,1999,'2023-06-01'),
-    (9,  78100.00,  2900.00, 3300.50,2230,'2023-06-01'),
-    (10, 50550.00,  2120.00, 1100.00,1000,'2023-06-01');
-
-
-
-   
-
-
+    (1, 1, 1, 2023, 50000),
+    (1, 2, 1, 2023, 8000),
+    (1, 3, 1, 2023, 7000),
+    (1, 4, 1, 2023, 1000),
+    (1, 1, 2, 2023, 52000),
+    (1, 2, 2, 2023, 8200),
+    (1, 3, 2, 2023, 7100),
+    (1, 4, 2, 2023, 1200),
+    (2, 1, 1, 2023, 50000),
+    (2, 2, 1, 2023, 8000),
+    (2, 3, 1, 2023, 7000),
+    (2, 4, 1, 2023, 1000),
+    (2, 1, 2, 2023, 52000),
+    (2, 2, 2, 2023, 8200),
+    (2, 3, 2, 2023, 7100),
+    (2, 4, 2, 2023, 1200),
+    (3, 1, 1, 2023, 48000),
+    (3, 2, 1, 2023, 7500),
+    (3, 3, 1, 2023, 6500),
+    (3, 4, 1, 2023, 900),
+    (3, 1, 2, 2023, 49000),
+    (3, 2, 2, 2023, 7600),
+    (3, 3, 2, 2023, 6700),
+    (3, 4, 2, 2023, 800),
+     (4, 1, 1, 2023, 48000),
+    (4, 2, 1, 2023, 7500),
+    (4, 3, 1, 2023, 6500),
+    (4, 4, 1, 2023, 900),
+    (4, 1, 2, 2023, 49000),
+    (4, 2, 2, 2023, 7600),
+    (4, 3, 2, 2023, 6700),
+    (4, 4, 2, 2023, 800),
+      (5, 1, 1, 2023, 48000),
+    (5, 2, 1, 2023, 7500),
+    (5, 3, 1, 2023, 6500),
+    (5, 4, 1, 2023, 900),
+    (5, 1, 2, 2023, 49000),
+    (5, 2, 2, 2023, 7600),
+    (5, 3, 2, 2023, 6700),
+    (5, 4, 2, 2023, 800),
+    (6, 1, 1, 2023, 48000),
+    (6, 2, 1, 2023, 7500),
+    (6, 3, 1, 2023, 6500),
+    (6, 4, 1, 2023, 900),
+    (6, 1, 2, 2023, 49000),
+    (6, 2, 2, 2023, 7600),
+    (6, 3, 2, 2023, 6700),
+    (6, 4, 2, 2023, 800),
+    (6, 1, 1, 2023, 48000),
+    (7, 2, 1, 2023, 7500),
+    (7, 3, 1, 2023, 6500),
+    (7, 4, 1, 2023, 900),
+    (7, 1, 2, 2023, 49000),
+    (7, 2, 2, 2023, 7600),
+    (7, 3, 2, 2023, 6700),
+    (7, 4, 2, 2023, 800),
+    (8, 2, 1, 2023, 7500),
+    (8, 3, 1, 2023, 6500),
+    (8, 4, 1, 2023, 900),
+    (8, 1, 2, 2023, 49000),
+    (8, 2, 2, 2023, 7600),
+    (8, 3, 2, 2023, 6700),
+    (8, 4, 2, 2023, 800),
+    (9, 2, 1, 2023, 7500),
+    (9, 3, 1, 2023, 6500),
+    (9, 4, 1, 2023, 900),
+    (9, 1, 2, 2023, 49000),
+    (9, 2, 2, 2023, 7600),
+    (9, 3, 2, 2023, 6700),
+    (9, 4, 2, 2023, 800),
+    (10, 2, 1, 2023, 7500),
+    (10, 3, 1, 2023, 6500),
+    (10, 4, 1, 2023, 900),
+    (10, 1, 2, 2023, 49000),
+    (10, 2, 2, 2023, 7600),
+    (10, 3, 2, 2023, 6700),
+    (10, 4, 2, 2023, 800);
 
 select * from earnings;
+drop table earnings;
+create table deductionsTypes(
+    deductions_type_id SERIAL PRIMARY KEY,
+    deductions_type VARCHAR(100) 
+)
 
-
+insert into deductionsTypes(deductions_type)
+values
+('group_insurance'),
+('house_loan'),
+('it_deductions'),
+('health_insurance'),
+('retirement_contribution');
+ drop table deductions;
 CREATE TABLE Deductions (
     deduction_id SERIAL PRIMARY KEY,
     employee_id INT REFERENCES Employees(employee_id),
-    group_insurance DECIMAL(10, 2),
-    house_loan DECIMAL(10,2),
-    it_deductions DECIMAL(10, 2),
-    health_insurance DECIMAL(10, 2),
-    retirement_contribution DECIMAL(10, 2),
-    deduction_date date
+    deductions_type_id int REFERENCES  deductionsTypes(deductions_type_id),
+    deductions_month int ,
+    deductions_year int ,
+    deductions_amount int
 );
 
 
 
-INSERT INTO Deductions (employee_id, group_insurance, house_loan, it_deductions, health_insurance, retirement_contribution,deduction_date)
+INSERT INTO Deductions (employee_id,deductions_type_id,deductions_month,deductions_year,deductions_amount)
 VALUES
-    (1, 500, 3000, 2050, 2510, 501,'2023-01-01'),
-    (2, 400, 3000, 1500, 200, 400 ,'2023-01-01'),
-    (3, 308, 600, 1000, 150, 300 ,'2023-01-01'),
-    (4, 500, 300, 2000, 250, 500 ,'2023-01-01'),
-    (5, 400, 800, 1500, 2000, 400 ,'2023-01-01'),
-    (6, 300, 600, 1200, 105, 300 ,'2023-01-01'),
-    (7, 500, 1000, 200, 250, 500,'2023-01-01'),
-    (8, 400, 800, 150, 200, 400,'2023-01-01'),
-    (9, 300, 600, 100, 150, 300,'2023-01-01'),
-    (10, 500, 100, 200, 250, 500,'2023-01-01'),
-    (1, 400, 800, 159, 200, 400 ,'2023-02-01'),
-    (2, 300, 600, 100, 150, 300  ,'2023-02-01'),
-    (3, 500, 100, 200, 250, 500 ,'2023-02-01'),
-    (4, 400, 800, 150, 200, 400 ,'2023-02-01'),
-    (5, 3000, 600, 900, 150, 300 ,'2023-02-01'),
-    (6, 300, 500, 259, 100, 100 ,'2023-02-01'),
-    (7, 200, 650, 122, 350, 500 ,'2023-02-01'),
-    (8, 900, 230, 225, 154, 200 ,'2023-02-01'),
-    (9, 300, 520, 550,120, 200 ,'2023-02-01'),
-    (10, 1000, 400, 600, 250, 100 ,'2023-02-01'),
-    (1, 400, 800, 159, 200, 400 ,'2023-03-01'),
-    (2, 300, 600, 100, 150, 300  ,'2023-03-01'),
-    (3, 500, 500, 200, 150, 500 ,'2023-03-01'),
-    (4, 400, 800, 150, 200, 400 ,'2023-03-01'),
-    (5, 3000, 700, 900, 150, 300 ,'2023-03-01'),
-    (6, 300, 500, 259, 100, 100 ,'2023-03-01'),
-    (7, 200, 650, 122, 350, 500 ,'2023-03-01'),
-    (8, 900, 230, 225, 154, 200 ,'2023-03-01'),
-    (9, 300, 520, 150,120, 200 ,'2023-03-01'),
-    (10, 1000, 400, 600, 250, 100 ,'2023-03-01'),
-     (1, 400, 800, 159, 200, 400 ,'2023-04-01'),
-    (2, 300, 600, 100, 150, 300  ,'2023-04-01'),
-    (3, 500, 500, 200, 150, 500 ,'2023-04-01'),
-    (4, 400, 800, 150, 200, 400 ,'2023-04-01'),
-    (5, 3000, 700, 900, 150, 300 ,'2023-04-01'),
-    (6, 320, 500, 259, 100, 100 ,'2023-04-01'),
-    (7, 200, 650, 122, 350, 500 ,'2023-04-01'),
-    (8, 900, 230, 225, 154, 200 ,'2023-04-01'),
-    (9, 300, 520, 150,120, 200 ,'2023-04-01'),
-    (10, 1000, 400, 600, 250, 100 ,'2023-04-01'),
-     (1, 400, 800, 159, 200, 400 ,'2023-05-01'),
-    (2, 300, 600, 100, 150, 300  ,'2023-05-01'),
-    (3, 500, 500, 200, 150, 500 ,'2023-05-01'),
-    (4, 400, 800, 550, 200, 400 ,'2023-05-01'),
-    (5, 3000, 700, 900, 150, 300 ,'2023-05-01'),
-    (6, 300, 500, 259, 100, 100 ,'2023-05-01'),
-    (7, 200, 650, 122, 350, 500 ,'2023-05-01'),
-    (8, 700, 230, 225, 154, 280 ,'2023-05-01'),
-    (9, 300, 520, 150,120, 200 ,'2023-05-01'),
-    (10, 1000, 400, 600, 250, 100 ,'2023-05-01'),
-     (1, 400, 800, 159, 200, 400 ,'2023-05-01'),
-    (2, 300, 600, 100, 150, 300  ,'2023-05-01'),
-    (3, 500, 500, 200, 150, 500 ,'2023-05-01'),
-    (4, 400, 850, 150, 200, 400 ,'2023-05-01'),
-    (5, 3000, 700, 900, 150, 300 ,'2023-05-01'),
-    (6, 300, 500, 259, 100, 100 ,'2023-05-01'),
-    (7, 200, 650, 122, 350, 500 ,'2023-05-01'),
-    (8, 900, 210, 225, 154, 200 ,'2023-05-01'),
-    (9, 300, 520, 150,120, 200 ,'2023-05-01'),
-    (10, 1000, 800, 600, 250, 100 ,'2023-05-01');
+    (1, 1, 1, 2023, 500),
+    (1, 2, 1, 2023, 800),
+    (1, 3, 1, 2023, 700),
+    (1, 4, 1, 2023, 100),
+    (1, 1, 2, 2023, 520),
+    (1, 2, 2, 2023, 820),
+    (1, 3, 2, 2023, 700),
+    (1, 4, 2, 2023, 100),
+    (2, 1, 1, 2023, 400),
+    (2, 2, 1, 2023, 800),
+    (2, 3, 1, 2023, 700),
+    (2, 4, 1, 2023, 100),
+    (2, 1, 2, 2023, 520),
+    (2, 2, 2, 2023, 820),
+    (2, 3, 2, 2023, 710),
+    (2, 4, 2, 2023, 100),
+    (3, 1, 1, 2023, 480),
+    (3, 2, 1, 2023, 700),
+    (3, 3, 1, 2023, 600),
+    (3, 4, 1, 2023, 100),
+    (3, 1, 2, 2023, 49),
+    (3, 2, 2, 2023, 76),
+    (3, 3, 2, 2023, 67),
+    (3, 4, 2, 2023, 800),
+     (4, 1, 1, 2023, 48),
+    (4, 2, 1, 2023, 750),
+    (4, 3, 1, 2023, 650),
+    (4, 4, 1, 2023, 900),
+    (4, 1, 2, 2023, 490),
+    (4, 2, 2, 2023, 760),
+    (4, 3, 2, 2023, 670),
+    (4, 4, 2, 2023, 80),
+      (5, 1, 1, 2023, 480),
+    (5, 2, 1, 2023, 750),
+    (5, 3, 1, 2023, 650),
+    (5, 4, 1, 2023, 900),
+    (5, 1, 2, 2023, 490),
+    (5, 2, 2, 2023, 760),
+    (5, 3, 2, 2023, 670),
+    (5, 4, 2, 2023, 80),
+    (6, 1, 1, 2023, 480),
+    (6, 2, 1, 2023, 750),
+    (6, 3, 1, 2023, 650),
+    (6, 4, 1, 2023, 90),
+    (6, 1, 2, 2023, 490),
+    (6, 2, 2, 2023, 760),
+    (6, 3, 2, 2023, 670),
+    (6, 4, 2, 2023, 80),
+    (6, 1, 1, 2023, 480),
+    (7, 2, 1, 2023, 750),
+    (7, 3, 1, 2023, 650),
+    (7, 4, 1, 2023, 90),
+    (7, 1, 2, 2023, 490),
+    (7, 2, 2, 2023, 760),
+    (7, 3, 2, 2023, 670),
+    (7, 4, 2, 2023, 80),
+    (8, 2, 1, 2023, 750),
+    (8, 3, 1, 2023, 650),
+    (8, 4, 1, 2023, 90),
+    (8, 1, 2, 2023, 490),
+    (8, 2, 2, 2023, 760),
+    (8, 3, 2, 2023, 670),
+    (8, 4, 2, 2023, 80),
+    (9, 2, 1, 2023, 750),
+    (9, 3, 1, 2023, 650),
+    (9, 4, 1, 2023, 90),
+    (9, 1, 2, 2023, 490),
+    (9, 2, 2, 2023, 760),
+    (9, 3, 2, 2023, 670),
+    (9, 4, 2, 2023, 80),
+    (10, 2, 1, 2023, 75),
+    (10, 3, 1, 2023, 65),
+    (10, 4, 1, 2023, 90),
+    (10, 1, 2, 2023, 490),
+    (10, 2, 2, 2023, 760),
+    (10, 3, 2, 2023, 670),
+    (10, 4, 2, 2023, 800);
+
+    
 
 select * from deductions;
 
+drop table deductions;
 
--- net expenditure of department
-select   department_id,sum(base_salary+DA+HRA+bonus-(group_insurance+house_loan+it_deductions+health_insurance+retirement_contribution))
-from employees e inner join earnings er on e.employee_id=er.employee_id 
-inner join deductions d on d.employee_id=e.employee_id
-group by department_id
-order by department_id;
-
-
-
--- employees got paid in a partcular year 2023
-
-select sum(base_salary+DA+HRA+bonus-(group_insurance+house_loan+it_deductions+health_insurance+retirement_contribution)) as total_expenditures
-from employees e inner join earnings er on e.employee_id=er.employee_id 
-inner join deductions d on d.employee_id=e.employee_id;
-
--- sum of basic pay of particular department
-
-select sum(base_salary) as department_total_basic_salary from employees e inner join earnings  er on e.employee_id=er.employee_id
-inner join departments d on d.department_id=e.department_id
-where d.department_id=3;
+create table bills(
+    bill_id  serial PRIMARY key,
+    department_id int REFERENCES Departments(department_id) ,
+    total_earnings int,
+    total_deductions int,
+    net_amount int,
+    bill_month int,
+    bill_year int
+);
 
 
 
--- bills submitted for a particular department in a particular month april 
-select * from employees e inner join earnings er on er.employee_id=e.employee_id
-inner join departments d on d.department_id=e.department_id
-where  EXTRACT(MONTH FROM payment_date)=4 and d.department_id=4;
+select * from bills;
+
+INSERT INTO bills (department_id, total_earnings, total_deductions, net_amount, bill_month, bill_year)
+SELECT
+    d.department_id,
+    SUM(er.earnings_amount) AS total_earnings,
+    SUM(de.deductions_amount) AS total_deductions,
+    SUM(er.earnings_amount) - SUM(de.deductions_amount) AS net_amount,
+     er.earnings_month AS bill_month,
+    er.earnings_year AS bill_year
+FROM Employees e
+JOIN Departments d ON e.department_id = d.department_id
+ JOIN Earnings er ON e.employee_id = er.employee_id
+ JOIN Deductions de ON e.employee_id = de.employee_id
+GROUP BY  d.department_id, er.earnings_month,er.earnings_year
+ORDER BY d.department_id;
+
+drop table bills;
+select * from bills;
+
+create table BillBeneficiaries(
+    bill_id int REFERENCES   bills(bill_id),
+    employee_id int REFERENCES employees(employee_id),
+    amount int 
+);
+
+
+-- Active: 1692016121704@@127.0.0.1@5432@employment_details@public
+CREATE TABLE Departments (
+    department_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY ,
+    department_name VARCHAR(255) NOT NULL
+);
+
+INSERT INTO Departments (department_name) VALUES
+    ('Research and development'),
+    ('Learning and development'),
+    ('HR'),
+    ('Sales and marketing '),
+    ('Marketing Department'),
+    ('Accounting and finances Department'),
+    ('Security Department');
+
+select * from departments;
+
+drop table employees;
+CREATE TABLE Employees (
+    employee_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE,
+    gender VARCHAR(10),
+    email VARCHAR(100) UNIQUE,
+    department_id INT REFERENCES departments(department_id),
+    phone_number VARCHAR(20)
+);
+
+
+INSERT INTO Employees (first_name, last_name, date_of_birth, gender, email,department_id, phone_number)
+VALUES ('Sai', 'Kumar', '2000-08-25', 'Male', 'saikumar.komma@gmail.com',1, '9234168982'),
+('Vivek', 'Kumar', '2001-10-25', 'Male', 'vivek@gmail.com',1, '8634168982'),
+('Chetan', 'Garela', '2002-04-13', 'Male', 'chetan@gmail.com',3, '9238168182'),
+('Aishwarya','Barla', '2001-08-18', 'Female', 'aishwarya@gmail.com',5, '9298138182'),
+('Ananya','Modugula','2001-04-07','Female','ananya@gmail.com',7,'9342891682'),
+('Dheeraj', 'Reddy', '2001-01-25', 'Male', 'dheeraj.komma@gmail.com',6, '9234168982'),
+('Bhanu', 'Thudi', '2001-07-28', 'Male', 'bhanu@gmail.com',2, '9234168982'),
+('Navtej', 'Anam', '2002-01-10', 'Male', 'navtej@gmail.com',4, '9238120781'),
+('Abhinav', 'Kamatam', '2000-04-14', 'Male', 'abhinav@gmail.com',3, '9138360782'),
+('Rahul', 'Reddy', '1999-09-15', 'Male', 'rahul.komma@gmail.com',4, '9438160982');
+
+
+select * from employees;
+
+
+create table earningsTypes(
+    earnings_type_id SERIAL PRIMARY KEY,
+    earnings_type VARCHAR(100) 
+)
+
+insert into earningsTypes(earnings_type)
+values
+('base_salary'),
+('DA'),
+('HRA'),
+('bonus');
+drop table earningstypes;
+CREATE TABLE Earnings (
+    earning_id SERIAL PRIMARY KEY,
+    employee_id INT REFERENCES Employees(employee_id),
+    earnings_type_id int REFERENCES  earningsTypes(earnings_type_id),
+    earnings_month int ,
+    earnings_year int,
+    earnings_amount int
+    
+);
+select * from earnings;
+drop table earnings;
+
+
+create table earningsTypes(
+    earnings_type_id SERIAL PRIMARY KEY,
+    earnings_type VARCHAR(100) 
+)
+
+insert into earningsTypes(earnings_type)
+values
+('base_salary'),
+('DA'),
+('HRA'),
+('bonus');
+INSERT INTO Earnings (employee_id ,earnings_type_id,earnings_month, earnings_year,earnings_amount)
+VALUES
+    (1, 1, 1, 2023, 50000),
+    (1, 2, 1, 2023, 8000),
+    (1, 3, 1, 2023, 7000),
+    (1, 4, 1, 2023, 1000),
+    (1, 1, 2, 2023, 52000),
+    (1, 2, 2, 2023, 8200),
+    (1, 3, 2, 2023, 7100),
+    (1, 4, 2, 2023, 1200),
+    (2, 1, 1, 2023, 50000),
+    (2, 2, 1, 2023, 8000),
+    (2, 3, 1, 2023, 7000),
+    (2, 4, 1, 2023, 1000),
+    (2, 1, 2, 2023, 52000),
+    (2, 2, 2, 2023, 8200),
+    (2, 3, 2, 2023, 7100),
+    (2, 4, 2, 2023, 1200),
+    (3, 1, 1, 2023, 48000),
+    (3, 2, 1, 2023, 7500),
+    (3, 3, 1, 2023, 6500),
+    (3, 4, 1, 2023, 900),
+    (3, 1, 2, 2023, 49000),
+    (3, 2, 2, 2023, 7600),
+    (3, 3, 2, 2023, 6700),
+    (3, 4, 2, 2023, 800),
+     (4, 1, 1, 2023, 48000),
+    (4, 2, 1, 2023, 7500),
+    (4, 3, 1, 2023, 6500),
+    (4, 4, 1, 2023, 900),
+    (4, 1, 2, 2023, 49000),
+    (4, 2, 2, 2023, 7600),
+    (4, 3, 2, 2023, 6700),
+    (4, 4, 2, 2023, 800),
+      (5, 1, 1, 2023, 48000),
+    (5, 2, 1, 2023, 7500),
+    (5, 3, 1, 2023, 6500),
+    (5, 4, 1, 2023, 900),
+    (5, 1, 2, 2023, 49000),
+    (5, 2, 2, 2023, 7600),
+    (5, 3, 2, 2023, 6700),
+    (5, 4, 2, 2023, 800),
+    (6, 1, 1, 2023, 48000),
+    (6, 2, 1, 2023, 7500),
+    (6, 3, 1, 2023, 6500),
+    (6, 4, 1, 2023, 900),
+    (6, 1, 2, 2023, 49000),
+    (6, 2, 2, 2023, 7600),
+    (6, 3, 2, 2023, 6700),
+    (6, 4, 2, 2023, 800),
+    (6, 1, 1, 2023, 48000),
+    (7, 2, 1, 2023, 7500),
+    (7, 3, 1, 2023, 6500),
+    (7, 4, 1, 2023, 900),
+    (7, 1, 2, 2023, 49000),
+    (7, 2, 2, 2023, 7600),
+    (7, 3, 2, 2023, 6700),
+    (7, 4, 2, 2023, 800),
+    (8, 2, 1, 2023, 7500),
+    (8, 3, 1, 2023, 6500),
+    (8, 4, 1, 2023, 900),
+    (8, 1, 2, 2023, 49000),
+    (8, 2, 2, 2023, 7600),
+    (8, 3, 2, 2023, 6700),
+    (8, 4, 2, 2023, 800),
+    (9, 2, 1, 2023, 7500),
+    (9, 3, 1, 2023, 6500),
+    (9, 4, 1, 2023, 900),
+    (9, 1, 2, 2023, 49000),
+    (9, 2, 2, 2023, 7600),
+    (9, 3, 2, 2023, 6700),
+    (9, 4, 2, 2023, 800),
+    (10, 2, 1, 2023, 7500),
+    (10, 3, 1, 2023, 6500),
+    (10, 4, 1, 2023, 900),
+    (10, 1, 2, 2023, 49000),
+    (10, 2, 2, 2023, 7600),
+    (10, 3, 2, 2023, 6700),
+    (10, 4, 2, 2023, 800);
+
+select * from earnings;
+drop table earnings;
+create table deductionsTypes(
+    deductions_type_id SERIAL PRIMARY KEY,
+    deductions_type VARCHAR(100) 
+)
+
+insert into deductionsTypes(deductions_type)
+values
+('group_insurance'),
+('house_loan'),
+('it_deductions'),
+('health_insurance'),
+('retirement_contribution');
+ drop table deductions;
+CREATE TABLE Deductions (
+    deduction_id SERIAL PRIMARY KEY,
+    employee_id INT REFERENCES Employees(employee_id),
+    deductions_type_id int REFERENCES  deductionsTypes(deductions_type_id),
+    deductions_month int ,
+    deductions_year int ,
+    deductions_amount int
+);
+
+
+
+INSERT INTO Deductions (employee_id,deductions_type_id,deductions_month,deductions_year,deductions_amount)
+VALUES
+    (1, 1, 1, 2023, 500),
+    (1, 2, 1, 2023, 800),
+    (1, 3, 1, 2023, 700),
+    (1, 4, 1, 2023, 100),
+    (1, 1, 2, 2023, 520),
+    (1, 2, 2, 2023, 820),
+    (1, 3, 2, 2023, 700),
+    (1, 4, 2, 2023, 100),
+    (2, 1, 1, 2023, 400),
+    (2, 2, 1, 2023, 800),
+    (2, 3, 1, 2023, 700),
+    (2, 4, 1, 2023, 100),
+    (2, 1, 2, 2023, 520),
+    (2, 2, 2, 2023, 820),
+    (2, 3, 2, 2023, 710),
+    (2, 4, 2, 2023, 100),
+    (3, 1, 1, 2023, 480),
+    (3, 2, 1, 2023, 700),
+    (3, 3, 1, 2023, 600),
+    (3, 4, 1, 2023, 100),
+    (3, 1, 2, 2023, 49),
+    (3, 2, 2, 2023, 76),
+    (3, 3, 2, 2023, 67),
+    (3, 4, 2, 2023, 800),
+     (4, 1, 1, 2023, 48),
+    (4, 2, 1, 2023, 750),
+    (4, 3, 1, 2023, 650),
+    (4, 4, 1, 2023, 900),
+    (4, 1, 2, 2023, 490),
+    (4, 2, 2, 2023, 760),
+    (4, 3, 2, 2023, 670),
+    (4, 4, 2, 2023, 80),
+      (5, 1, 1, 2023, 480),
+    (5, 2, 1, 2023, 750),
+    (5, 3, 1, 2023, 650),
+    (5, 4, 1, 2023, 900),
+    (5, 1, 2, 2023, 490),
+    (5, 2, 2, 2023, 760),
+    (5, 3, 2, 2023, 670),
+    (5, 4, 2, 2023, 80),
+    (6, 1, 1, 2023, 480),
+    (6, 2, 1, 2023, 750),
+    (6, 3, 1, 2023, 650),
+    (6, 4, 1, 2023, 90),
+    (6, 1, 2, 2023, 490),
+    (6, 2, 2, 2023, 760),
+    (6, 3, 2, 2023, 670),
+    (6, 4, 2, 2023, 80),
+    (6, 1, 1, 2023, 480),
+    (7, 2, 1, 2023, 750),
+    (7, 3, 1, 2023, 650),
+    (7, 4, 1, 2023, 90),
+    (7, 1, 2, 2023, 490),
+    (7, 2, 2, 2023, 760),
+    (7, 3, 2, 2023, 670),
+    (7, 4, 2, 2023, 80),
+    (8, 2, 1, 2023, 750),
+    (8, 3, 1, 2023, 650),
+    (8, 4, 1, 2023, 90),
+    (8, 1, 2, 2023, 490),
+    (8, 2, 2, 2023, 760),
+    (8, 3, 2, 2023, 670),
+    (8, 4, 2, 2023, 80),
+    (9, 2, 1, 2023, 750),
+    (9, 3, 1, 2023, 650),
+    (9, 4, 1, 2023, 90),
+    (9, 1, 2, 2023, 490),
+    (9, 2, 2, 2023, 760),
+    (9, 3, 2, 2023, 670),
+    (9, 4, 2, 2023, 80),
+    (10, 2, 1, 2023, 75),
+    (10, 3, 1, 2023, 65),
+    (10, 4, 1, 2023, 90),
+    (10, 1, 2, 2023, 490),
+    (10, 2, 2, 2023, 760),
+    (10, 3, 2, 2023, 670),
+    (10, 4, 2, 2023, 800);
+
+    
+
+select * from deductions;
+
+drop table deductions;
+
+create table bills(
+    bill_id  serial PRIMARY key,
+    department_id int REFERENCES Departments(department_id) ,
+    total_earnings int,
+    total_deductions int,
+    net_amount int,
+    bill_month int,
+    bill_year int
+);
+
+
+
+select * from bills;
+
+INSERT INTO bills (department_id, total_earnings, total_deductions, net_amount, bill_month, bill_year)
+SELECT
+    d.department_id,
+    SUM(er.earnings_amount) AS total_earnings,
+    SUM(de.deductions_amount) AS total_deductions,
+    SUM(er.earnings_amount) - SUM(de.deductions_amount) AS net_amount,
+     er.earnings_month AS bill_month,
+    er.earnings_year AS bill_year
+FROM Employees e
+JOIN Departments d ON e.department_id = d.department_id
+ JOIN Earnings er ON e.employee_id = er.employee_id
+ JOIN Deductions de ON e.employee_id = de.employee_id
+GROUP BY  d.department_id, er.earnings_month,er.earnings_year
+ORDER BY d.department_id;
+
+drop table bills;
+select * from bills;
+
+CREATE TABLE BillBeneficiaries (
+    bill_id int REFERENCES bills(bill_id),
+    employee_id int REFERENCES employees(employee_id),
+    amount int 
+);
+drop table billbeneficiaries;
+INSERT INTO BillBeneficiaries (bill_id, employee_id, amount)
+SELECT
+    b.bill_id,
+    emp.employee_id,
+    (COALESCE(SUM(er.earnings_amount), 0) - COALESCE(SUM(de.deductions_amount), 0)) AS amount
+FROM
+    Bills b
+JOIN
+    Departments d ON b.department_id = d.department_id
+JOIN
+    Employees emp ON d.department_id = emp.department_id
+LEFT JOIN
+    Earnings er ON emp.employee_id = er.employee_id AND b.bill_month = er.earnings_month AND b.bill_year = er.earnings_year
+LEFT JOIN
+    Deductions de ON emp.employee_id = de.employee_id AND b.bill_month = de.deductions_month AND b.bill_year = de.deductions_year
+GROUP BY 
+    b.bill_id,
+    emp.employee_id
+
+ select * from billbeneficiaries;

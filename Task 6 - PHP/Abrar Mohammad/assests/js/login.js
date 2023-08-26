@@ -31,7 +31,7 @@ $(document).ready(function () {
   $("#passwordEl").blur(function () {
     if ($(this).val() === "") {
       $(".passwordErr").show();
-      $(".passwordErr").text("*Please enter confirm password");
+      $(".passwordErr").text("*Please enter password");
     } else if (!($(this).val().match(/\w/) && $(this).val().match(/\W/))) {
       $(".passwordErr").show();
       $(".passwordErr").text(

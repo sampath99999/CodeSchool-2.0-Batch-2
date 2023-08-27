@@ -1,0 +1,11 @@
+Employee Salary
+1. Create a database "crm"
+2. Create a tables for employees, companies, Salaries, etc
+3. Write a query for following:
+3.1. Employees List
+3.2. Company list
+3.3. Salary list
+3.4. Salary details List
+3.5. How much salary created total
+3.6. How many total employees
+3.7. How many Total employees company wise

@@ -1,0 +1,74 @@
+1. Data Type
+
+Date Type is used to define the Type of an item.
+
+data types are varchar,text,int,bigint,smallint,date,boolean,float,etc...
+
+2.Primary Key
+
+Primary key is used to identify the row by unique id in a table consists of single column or multiple columns.
+
+3.Foreign Key
+
+Foreign key is a column that is used to refer the primary key column of another table.
+
+4.Indexing
+
+It is used to retrives data faster from a database.
+
+5.Database Engine
+Database engine is a software component it is  uses to do CRUD operations on data of database.
+
+6.How many type of join & explain each type of join?
+
+Natural Join- It is used to joins the tables based on the column name and datatype.
+
+Inner Join - It is used to joins the table, where the rows are matched with the condition.
+...
+Left Join - It is used to return all the rows from the left table and condition matched rows from the right table If not it right table rows return null values.
+
+Right Join - It is used to return all the rows from the right table and condition matched rows from the left table If not it left table rows return null values.
+
+Full Join - It  return all the rows from the both tables,If rows doesn't match with the condition it returns null values.
+
+Cross Join - It combines every row with the left table and every row with right table. And gives Combined data.
+
+7.What is the meaning of CRUD?
+
+Create - it is used to create data on database by using create method.
+
+Read - it is used to read data from database by using select method.
+
+Update - it is used to update data on database by using insert or update methods.
+
+Delete - it is used to delete data from database by using delete,drop and truncate methods.
+
+
+8.Explain Group by, Order By, Limit, Offset?
+
+Group by - it is used to group same value rows in to a single row.
+
+Order by - it is used to organise rows by ascending order or descending order.
+
+Limit - It is used to return number of rows from a table.
+
+Offset - It is used to skip the rows from a table.
+
+9.What is NoSQL?
+
+NoSQL is refers to 'NotonlySql',It stores non relational data and semi relational data, It has 4 kinds of databases:- column-oriented-databse,document database,graph database,key-value-pairs.
+
+
+10.Types of database?
+
+There are 2 types of databases
+
+Relational databases:-The data which is in the form of tables.
+
+Non-Relational databses:- The data which in the form of graphs,objects,networks,hirerichal.
+
+11.Relational Database Design
+
+In an Relational Database Design, the data is organized in the tables format and all types of data access by controlled transactions. Relational database design satisfies the ACID (atomicity, consistency, integrity, and durability) properties required from a database design.
+
+

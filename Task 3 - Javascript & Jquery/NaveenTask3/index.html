@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Awesome Example</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+<body>
+  
+    <nav>
+     <div class="nav">
+        <div class="logo">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.q1dLIubLhvi2zWf8MCoiSwAAAA&pid=Api&P=0&h=180" alt="News">
+        </div>
+        <div class="nav-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+     </div>
+    </nav>
+
+
+  <header>
+    <div class="header">
+        <div class="header-content">
+           <ul>
+            <li>Home</li>
+            <li>Lifestyle</li>
+            <li>Culture</li>
+            <li> Features </li>
+            <li>Contact</li>
+           </ul>
+        </div>
+        <div class="header-icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-sharp fa-solid fa-bars"></i>
+        </div>
+    </div>
+  </header>
+
+
+
+  
+  <div class="slider-container">
+    <div class="slider"></div>
+    <div class="prev" onclick="prevSlide()">&#10094;</div>
+    <div class="next" onclick="nextSlide()">&#10095;</div>
+  </div>
+
+
+<div class="div2">
+     <div id="one">
+        <div id="cardContainer"></div>
+        
+        <div id="pagination"></div>
+     </div>
+
+     <div id="two">
+          <!---one-->
+         <div class="comment">
+           <h4>Hello, We're content writer who is fascinated by content fashion,celebrity and Lifestyle.
+            We helps clients bring the right content to the right people .
+           </h4>
+            <div>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-tiktok"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+         </div>
+
+         <!---two-->
+         
+         <div class="news-container" id="newsContainer">
+           
+         </div>
+          
+         <!--three-->
+         <div class="explore-topics">
+          
+            <h2 style="text-align: center;">  Explore Topics</h2>
+            <hr class="hr">
+            <br/><br/>
+            
+            <article >
+              <p class="vel"> <i class="fa-solid fa-angle-right"></i>Celebration </p> <p class="num">( 2 ) </p>   
+            </article>
+            <hr/>
+            <article >
+              <p class="vel"><i class="fa-solid fa-angle-right"></i>Culture </p> <p class="num">( 2 )</p>   
+            </article>
+            <hr/>
+            <article >
+              <p class="vel"> <i class="fa-solid fa-angle-right"></i> Fashion </p> <p class="num">( 1 )</p>   
+            </article>
+            <hr/>
+            <article >
+              <p class="vel"><i class="fa-solid fa-angle-right"></i>Inspiration</p> <p class="num">( 2 )</p>   
+            </article>
+            <hr/>
+            <article >
+              <p class="vel"> <i class="fa-solid fa-angle-right"></i>Lifestyle </p> <p class="num">( 6 )</p>   
+            </article>
+            <hr/>
+            <article >
+              <p class="vel"><i class="fa-solid fa-angle-right"></i>Politic </p> <p class="num">( 2 )</p>   
+            </article>
+            <hr/>
+            <article >
+              <p class="vel"><i class="fa-solid fa-angle-right"></i>Trending </p> <p class="num">( 2 )</p>   
+            </article>
+          
+         </div>
+
+         <!---four-->
+         <div class="newsletter">
+             <h2>Newsletter</h2>
+             <hr/>
+             <h3>Join 70,000 Subscribers!</h3>
+             <div>
+              <input type="email" placeholder="Email address...">
+             <input type="button" value="Sign Up">
+             </div>
+             
+             <p>By signing up,you agree to our <span>Privacy Policy</span></p>
+
+         </div>
+
+         <!--five-->
+         <div class="celebration">
+          <h2 style="text-align: center;">Celebration</h2>
+          <div class="container" id="news-container"></div>
+      
+          <div class="slider-container">
+              <div class="prev" id="prev-btn">&lt;</div>
+              <div class="next" id="next-btn">&gt;</div>
+          </div>
+      </div>
+      
+
+         <!---six-->
+         <div class="tag-clouds">
+          <h2 style="text-align: center;">Tag Clouds</h2>
+         <hr class="hr"/>
+          <div>
+            <input type="button" value="#Audio"> <input type="button" value="#Content"><input type="button" value="#Featured" >
+            <input type="button" value="#Image"><input type="button" value="#Inspiration"><input type="button" value="#Lifestyle">
+            <input type="button" value="#Photo" ><input type="button" value="#Pick"><input type="button" value="#Slide">
+            <input type="button" value="#Trending">
+          </div>
+            
+          
+          
+          
+         </div>
+
+     </div>
+</div>
+
+
+
+
+  <div id="repeatimages">
+    <!-- The images will be dynamically added here -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer">
+       <div><span><i class="fa-regular fa-copyright"></i>&nbsp;2023 News</span></div>
+        <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+       <div><button><i class="fa-solid fa-angle-up">&nbsp;</i>Back to top</button></div>
+    </div>
+</footer>
+
+
+
+
+   <!-- Add jQuery library -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:rgb(6 37 67);
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color:rgb(223, 214, 214);
+    font-weight: 400;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav-small a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color:rgb(223, 214, 214);
+    font-weight: 400;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  
+  
+  #main {
+    transition: margin-left .5s;
+    
+  }
+  option{
+    width: 20px; 
+    white-space: wrap;
+}
+
+  .content-container{
+    height: 100vh;
+   
+  }
+#content{
+    transition: margin-left .5s;
+    
+
+}
+@media (max-width:767px)
+{
+    #content{
+        margin-left: 0px !important;
+    }   
+   
+}
+.content-margin{
+    margin-left: 250px;
+}
+
+
+@media (min-width:767px) {
+    .points{
+        margin:20px;
+        border-radius: 8px;
+    }
+}
+
+
+.small-devices-header{
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+}
+.sidenav-small-body{
+    background-color:rgb(6 37 67);
+}
+@media (min-width:767px)
+{
+    .radio-buttons{
+        margin-right: 20px;
+    }
+    .radio-input
+    {
+        margin-right: 7px;
+    }
+    .form-title{
+        width: 30%;
+    }
+
+}
+@media (max-width:767px)
+{
+    .radio-buttons{
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    .radio-input
+    {
+        margin-right: 3px;
+    }
+    .count-numbers{
+        flex-direction: column;
+    }
+    .form-title{
+        width: 100%;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.account-input{
+    width: 50%;
+}
+.input-error-container{
+    width: 60%;
+}
+@media (max-width:767px) {
+    .input-error-container{
+        width: 99%;
+    }
+}
+
+.input-error-container{
+    position: relative;
+}
+.error-text{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top:40px;
+}
+@media(min-width:400px)
+{
+    .ifmis-small-logo{
+        height: 50px;
+    }
+}
+@media(max-width:400px)
+{
+    .ifmis-small-logo{
+        height: 30px;
+    }
+}
+
+.purpose-error-text{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top:60px;
+    color:red;
+}
+
+
+.input-error-container{
+    width: 50%;
+} 
+
+@media (max-width:767px) {
+    .input-error-container{
+        width: 100%;
+    }    
+}
+
+.upload-label{
+    width: 30%;
+}

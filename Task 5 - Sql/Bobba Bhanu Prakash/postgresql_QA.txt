@@ -1,0 +1,54 @@
+==Answer the following Quetions==
+1) what is a Data Type?
+ans) Data type is used to define the type of values stored under particular field/column. 
+     Data types in postgresql are:
+     i) Boolean
+     ii) Numeric-INT,BIGINT,SERIAL,etc. 
+     iii) Varchar
+
+2) what is Primary Key?
+ans) Primary key is defined as the unique identifier for that table.It must be unique and not null by its definition. It is considered as one of the key constraint for the table.  
+
+3) what is Forign Key?
+ans) It is one of the key constraint that provides link between two tables to avoid inproper and duplicate data. A table can contain one or more foreign keys.
+
+4) what is Indexing?
+ans) Indexing is used to retrive queries in a quick way. These are not visible to users. Indexing is can be done using one or more column like candidate keys in RDBMS. Index can be created that contain without duplicate or with duplicate based on combination of columns of the table.
+
+5) what is Database Engine?
+ans) Database engine can create databases, tables and perform crud operations on tables.Each database engine must follow DBMS functionalities but may vary in query syntax. eg: postgresql, mysql, oracle database, mangodb,etc.
+
+6) How many type of join & explain each type of join?
+ans) There are mainly five types of joins.They are:
+i) Left join: It returns all the records in left table and matched records from right table. Result may contain null values.
+ii) Right join: It returns all the records in right table and matched records from left table. Result may contain null values.
+iii) Inner join: It returns matched records of tables based on conditions.
+iv) Full outer join: It returns all the records from tables without duplicate records like union.
+v) Cross join: It returns cartisian product of rows of tables i.e each row of one table can combined with all rows of another table.
+
+7) What is the meaning of CRUD?
+ans) CRUD is the abbrevation of crucial operations of database engine. They are:
+ i) Create: This is used to create database and tables in the database. 
+ ii) Read: It is used to fetch the records from the tables, views and combination of tables using joins.
+ iii) update: It is used to update the values in record of the table using unique identifier.
+ iV) Delete: It is used to delete the records of the table using unique identifier.
+
+8) Explain Group by, Order By, Limit, Offset?
+ans) Group by: It performs grouping the data. It is used when we perform aggregations like sum, min,max,avg,etc.
+     Order by: It is used in select query to display the records either in ascending or descending order using keywords 'ASC' and 'DESC'.
+               By default 'order by' produce records in ascending order.
+     Limit: It is used in select query to display particular number of records from top of the table with starting index zero.
+     offset: It is also used in select query to display the records with particular number of records from top of table with starting index as offset number.
+
+9)What is NoSQL?
+ans) NOSQL can be abbrevation of 'Not Only SQL'.Large data applications can be well-developed using NOSQL. NOSQL deals with unstructured data that stores in document key pair. NOSQL doesn't follow ACID properties. It is fast when compared to SQL and doesn't perform joins.NOSQL follows non relational database management system.
+eg: Mangodb 
+
+10)Types of database?
+ans)  i)Relational database: eg-MYSQL,SQL databases.
+      ii) Non_relational database: eg-NOSQL databases.
+      iii) Centralised database: eg-single server.
+      iV) Distributed database: eg-multiple servers.
+
+11) Relational Database Design?
+ans) Relational database design can be represented by Entity Relationship(ER) diagram, which contain tables with attributes and degree of association acts as relationships between tables like one to one, one to many, many to one, many to many.

@@ -1,0 +1,90 @@
+.menuIcon > div {
+    width: 1rem;
+    height: 0.2rem;
+    background-color: white;
+    margin-bottom: 0.2rem;
+}
+
+.IFMIS {
+    text-align: center;
+}
+
+.avatar-bg img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+nav {
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.menuBar {
+    background-color: #08254f;
+}
+
+    .menuBar ul > li {
+        margin-bottom: 1rem;
+    }
+
+    .menuBar ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 0rem 1rem;
+        font-size: 14px;
+    }
+
+    .menuBar ul li:nth-child(1) {
+        background-color: gray;
+    }
+
+.dropdown-toggle::after {
+    margin-top: 1.6rem;
+}
+
+.points {
+    font-size: small;
+}
+
+    .points li::before {
+        color: white !important;
+    }
+
+.accountForm {
+    font-size: 12px;
+}
+
+    .accountForm .btn {
+        width: 5.4rem;
+    }
+
+.form-control,
+.form-select {
+    height: 2.5rem;
+}
+
+textarea {
+    width: 100%;
+}
+
+.form-label {
+    font-weight: 700;
+    color: #08254f;
+}
+
+.nextButton {
+    text-align: center;
+}
+
+select option {
+    font-size: 14px;
+    max-width: 2rem !important;
+}
+
+#telanganaEmblem {
+    height: 3rem;
+    width: 3rem;
+}

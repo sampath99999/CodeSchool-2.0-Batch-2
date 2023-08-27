@@ -1,0 +1,23 @@
+1. Products
+2. Users
+3. Orders
+4. Sellers
+5. Seller product mapping
+6. user_addresses
+7. user_card_details
+8. Product categories
+
+
+Queries:
+
+1. I need all details of all the sellers who are selling home and decor products.
+
+2. I need all details of users who have address in hyderabad.
+
+3. I need all the products list which have more then 100 items in inventory
+
+4. I need all the users list who have orders greater than 10 with in one week
+
+5. I need all the orders which have delivery time more than 5 days
+
+6. I need all the details of users who have purchased products using same credit card more than 5 times.

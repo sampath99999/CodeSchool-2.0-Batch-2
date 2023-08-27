@@ -1,0 +1,47 @@
+body {
+    overflow-x: hidden;
+}
+
+.leftBlock {
+    padding-top: 10px;
+    background-color: rgb(3, 36, 58);
+    padding: 10px 10px 100px 10px;
+}
+
+.leftBlock h3 {
+    text-align: center;
+    color: #fff;
+    
+}
+.leftBlock li {
+    list-style: none;
+    margin-bottom: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.rightBlock {
+    background: url(header-bg.jpg);
+    height:70px;
+    padding: 10px;
+    color: #fff;
+
+}
+
+.issueContent {   
+background-color: rgba(0, 76, 255, 0.25)
+}
+
+.pointsContent {   
+    background-color: rgba(253, 218, 13, 0.25);
+    padding: 25px 0px;
+    font-size: 13px;
+    }
+
+    .transaction-type , .bank-ifsc-code {
+        background-color: rgb(220, 215, 215, 0.25);
+    }
+
+    
+

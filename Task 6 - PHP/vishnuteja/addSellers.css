@@ -1,0 +1,11 @@
+.item{
+    position: relative;
+}
+
+.errorMsg{
+    position: absolute;
+}
+
+.header{
+    margin-left: 40vw;
+}

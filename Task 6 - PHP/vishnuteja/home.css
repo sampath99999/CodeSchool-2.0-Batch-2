@@ -1,0 +1,21 @@
+.logout{
+    cursor: pointer;
+}
+
+.logoutText{
+    cursor: pointer;
+}
+
+.admin{
+    margin-left: 30vw;
+    margin-top: 5vh;
+}
+
+.welcomeAdmin{
+    margin-left: 13vw;
+}
+
+.img img{
+    height: 55vh;
+    margin-left: 6vw;
+}

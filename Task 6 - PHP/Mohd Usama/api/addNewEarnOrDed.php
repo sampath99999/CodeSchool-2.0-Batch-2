@@ -29,9 +29,8 @@ if (
     $query = "SELECT earndeds_id FROM EarnDeds WHERE earndeds_employee_id=? AND earndeds_category_id=?";
     $stmt = $pdo->prepare($query);
     $result = $stmt->execute([$earndeds_employee_id, $earndeds_category_id]);
-
-    if ($result) {
-        $updateId = $stmt->fetchColumn();
+    $updateId = $stmt->fetchColumn();
+    if ($updateId) {
         $updateQuery = "UPDATE EarnDeds SET amount = ? WHERE earndeds_id = ?";
         $updateStmt = $pdo->prepare($updateQuery);
         $updateResult = $updateStmt->execute([$amount, $updateId]);

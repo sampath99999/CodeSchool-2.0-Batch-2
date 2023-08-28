@@ -21,6 +21,7 @@ ul li {
     color: white;
     font-size: 24px;
     padding: 10px;
+    cursor:pointer;
 }
 
     ul li:hover {

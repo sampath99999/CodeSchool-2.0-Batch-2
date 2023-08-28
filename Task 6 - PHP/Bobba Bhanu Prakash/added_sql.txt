@@ -1,0 +1,19 @@
+create table userDetails(
+    id serial PRIMARY KEY,
+    first_name varchar(255),
+    last_name varchar(255),
+    gender varchar(15),
+    phone_number VARCHAR(10),
+    date_of_birth date,
+    email varchar(255) not null,
+    password varchar(255) not null  
+);
+
+create table tokens(id serial primary KEY,
+user_id int REFERENCES userdetails(id),
+token varchar(255) not null
+);
+
+select * from userdetails;
+
+select * from tokens;

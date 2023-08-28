@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <link rel="stylesheet" href="login.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    
+     <script src="https://kit.fontawesome.com/2061e7e031.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="signup-form-container">
+   
+        <div class="login-form"  method="POST">
+            <h1 class="form-head">Login Form</h1>
+         <div class="input-box" style="position: relative;">
+             <label for="emailInput">Email address </label>
+             <input 
+             class="form-control input" 
+             aria-label="Sizing example input" 
+             aria-describedby="inputGroup-sizing-default"
+             id="emailInput"
+             type="email"
+             name="email"/>
+             <p id="emailErrorText" class="error-msg" style="position: absolute; margin-top: 60px;"></p>
+         </div>
+         <div class="input-box" style="position: relative;">
+             <label for="passwordInput">Password</label>
+             <input  
+             class="form-control input" 
+             aria-label="Sizing example input" 
+             aria-describedby="inputGroup-sizing-default"
+             id="passwordInput"
+             type="password"
+             name="password"/>
+             <p id="passwordErrorMsg" class="error-msg" style="position: absolute; margin-top: 60px;"></p>
+         </div>
+            <p id="result"></p>
+            <button id="submitBtn" class="subbtn btn btn-primary w-100" >Login</button>
+            <p style="font-size: 12px; color: #353535; font-family: sans-serif; " class="mt-3">Don't have an account?<a class="ms-2" style="font-weight:bold; font-size:14px;" href="register.html">Signup</a></p>
+        </div> 
+       
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -533,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   selectedOptionSmall.addEventListener("click", function () {
     optionsSmall.style.display =
-      optionsSmall.style.display === "block" ? "none" : "block";
+    optionsSmall.style.display === "block" ? "none" : "block";
   });
 
   optionsSmall.addEventListener("click", function (event) {

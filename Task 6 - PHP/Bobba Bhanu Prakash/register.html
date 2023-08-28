@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -77,11 +77,12 @@
                                autocomplete="off"
                                required />
                         <p id="phonenumbererr"></p>
-                        <input type="date"
+                        <input type="text"
+                               onfocus="(this.type='date')"
                                class="form-control"
                                id="dateofbirth"
                                name="dateofbirth"
-                               placeholder="dateofbirth"
+                               placeholder="Date of birth"
                                autocomplete="off" />
                         <p id="dateerr"></p>
                         <input type="email"

@@ -567,26 +567,39 @@ function handleAddDeduction(empid) {
       function (response) {
         result = JSON.parse(response);
         if (result.status) {
-          frontendData["Total Deductions"] =
-            parseInt(frontendData["Total Deductions"]) +
-            parseInt(inputField.val());
-          frontendData["Total Net"] =
-            parseInt(frontendData["Total Gross/Earnings"]) -
-            parseInt(frontendData["Total Deductions"]);
-          updateNetTableValues();
-          const entryData = {
-            earndeds_id: result.inserted_id,
-            earndeds_category_name: select.find(":selected").text(),
-            amount: inputField.val(),
-            earndeds_type: earndeds_type,
-          };
+          if (result.code == "Updated") {
+            const row = $(`#earnOrDed-${result.inserted_id}`);
+            frontendData["Total Deductions"] =
+              parseInt(frontendData["Total Deductions"]) -
+              parseInt(row.find(".amount-cell").text()) +
+              parseInt(inputField.val());
+            row.find(".amount-cell").text(inputField.val());
+            frontendData["Total Net"] =
+              parseInt(frontendData["Total Gross/Earnings"]) -
+              parseInt(frontendData["Total Deductions"]);
+            updateNetTableValues();
+          } else {
+            frontendData["Total Deductions"] =
+              parseInt(frontendData["Total Deductions"]) +
+              parseInt(inputField.val());
+            frontendData["Total Net"] =
+              parseInt(frontendData["Total Gross/Earnings"]) -
+              parseInt(frontendData["Total Deductions"]);
+            updateNetTableValues();
+            const entryData = {
+              earndeds_id: result.inserted_id,
+              earndeds_category_name: select.find(":selected").text(),
+              amount: inputField.val(),
+              earndeds_type: earndeds_type,
+            };
 
-          const newRow = createTableRow(
-            entryData,
-            handleEarnDedEdit,
-            handleEarnDedDelete
-          );
-          $(".deduction-table").append(newRow);
+            const newRow = createTableRow(
+              entryData,
+              handleEarnDedEdit,
+              handleEarnDedDelete
+            );
+            $(".deduction-table").append(newRow);
+          }
         }
         overlay.remove();
       }
@@ -696,20 +709,32 @@ function handleAddEarning(empid) {
             amount: inputField.val(),
             earndeds_type: "Earning",
           };
-
-          const newRow = createTableRow(
-            entryData,
-            handleEarnDedEdit,
-            handleEarnDedDelete
-          );
-          $(".earning-table").append(newRow);
-          frontendData["Total Gross/Earnings"] =
-            parseInt(frontendData["Total Gross/Earnings"]) +
-            parseInt(inputField.val());
-          frontendData["Total Net"] =
-            parseInt(frontendData["Total Gross/Earnings"]) -
-            parseInt(frontendData["Total Deductions"]);
-          updateNetTableValues();
+          if (result.code == "Updated") {
+            const row = $(`#earnOrDed-${result.inserted_id}`);
+            frontendData["Total Gross/Earnings"] =
+              parseInt(frontendData["Total Gross/Earnings"]) -
+              parseInt(row.find(".amount-cell").text()) +
+              parseInt(inputField.val());
+            row.find(".amount-cell").text(inputField.val());
+            frontendData["Total Net"] =
+              parseInt(frontendData["Total Gross/Earnings"]) -
+              parseInt(frontendData["Total Deductions"]);
+            updateNetTableValues();
+          } else {
+            const newRow = createTableRow(
+              entryData,
+              handleEarnDedEdit,
+              handleEarnDedDelete
+            );
+            $(".earning-table").append(newRow);
+            frontendData["Total Gross/Earnings"] =
+              parseInt(frontendData["Total Gross/Earnings"]) +
+              parseInt(inputField.val());
+            frontendData["Total Net"] =
+              parseInt(frontendData["Total Gross/Earnings"]) -
+              parseInt(frontendData["Total Deductions"]);
+            updateNetTableValues();
+          }
         }
         overlay.remove();
       }

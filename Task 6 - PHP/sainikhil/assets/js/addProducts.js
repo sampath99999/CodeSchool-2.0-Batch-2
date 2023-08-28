@@ -4,14 +4,15 @@ $(document).ready(function () {
   if (!token) {
     window.location.replace("login.html");
   }
+
   $("#addProductBtn").click(function (e) {
     e.preventDefault();
     var productName = $("#productName").val();
     var price = $("#price").val();
     var inventory = $("#inventory").val();
     var description = $("#description").val();
-    var sellerId = $("#sellerId").val();
-    var categoryId = $("#categoryId").val();
+    var sellerId = $("#idSelect").val();
+    var categoryId = $("#categorySelect").val();
 
     if (isNaN(price)) {
       alert("Price must be Number");
@@ -62,6 +63,24 @@ $(document).ready(function () {
       );
     } else {
       alert("All Inputs Must Be Filled");
+    }
+  });
+  $.post("./api/getSellerId.php", function (result) {
+    result = JSON.parse(result);
+    for (i = 0; i < result.length; i++) {
+      $("#idSelect").append(
+        ` <option value="${result[i].seller_id}">${result[i].seller_name}</option>`
+      );
+    }
+  });
+
+  $.post("./api/getCategoryName.php", function (result) {
+    result = JSON.parse(result);
+    console.log(result);
+    for (i = 0; i < result.length; i++) {
+      $("#categorySelect").append(
+        ` <option value="${result[i].category_id}">${result[i].category_name}</option>`
+      );
     }
   });
 });

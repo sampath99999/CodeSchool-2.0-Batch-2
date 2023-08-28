@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IFMIS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/07fb9ec079.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="d-flex justify-content-between">
+      <div class="d-flex">
+        <div id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="modules d-flex flex-column justify-content-end">
+          <h6><i class="fa-solid fa-cubes"></i> Modules</h6>
+        </div>
+      </div>
+      <div class="d-flex me-2 gap-4">
+        <div class="lastlogin mt-1 d-none d-md-block" id="lastLogin"></div>
+        <div
+          class="welcomemsg d-flex justify-content-center align-items-center mt-1 dropdown dropdown"
+        >
+          <i class="fa-regular fa-user"></i>
+          <h6 class="d-none d-md-block">
+            Welcome M.USHASHREE
+            <p class="p-0 m-0">(23031013097)</p>
+          </h6>
+
+          <i class="fa-solid fa-caret-down"></i>
+          <div class="dropdown-content">
+            <a href="#">Welcome M.USHASHREE</a>
+            <a href="#">(23031013097)</a>
+          </div>
+        </div>
+
+        <div
+          class="logoutbtn d-flex flex-column justify-content-end"
+          id="loginBtn"
+        >
+          <h6 class="d-none d-md-block">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Logout
+          </h6>
+        </div>
+      </div>
+    </nav>
+
+    <div id="sideBar" class="sidebar">
+      <h1 class="pt-2 text-white">IFMIS</h1>
+
+      <a href="#">Home</a>
+      <a href="#">Masters</a>
+      <a href="#">Transcations</a>
+      <a href="#">Reports</a>
+      <a href="#">Return Cheque Generation</a>
+      <a href="#">Forest Transcations</a>
+      <a href="#">Forest Transcations Report</a>
+      <a href="#">E-Kuber Return Recieved List</a>
+      <a href="#">E-Kuber Return Challan Print</a>
+      <a href="#">UTR Search</a>
+      <a href="#">Failed transactions (ACK Reject)</a>
+      <a href="#">Cheque Status Report</a>
+      <a href="#">Failed transactions (ACK Reject)</a>
+      <a href="#">Rejected Cheques due to FinYear End</a>
+      <a href="#">Finyear New Cheques Report</a>
+      <a href="#"> Pb Budget Check</a>
+      <a href="#">Update Receipts Used Amount</a>
+    </div>
+    <form class="row">
+      <div id="content" class="margin">
+        <div
+          class="chequenotification bg-primary bg-opacity-10 d-flex align-items-center gap-2"
+        >
+          <i class="fa-solid fa-money-check fs-3"></i>
+          <span>Issue Cheque (E-Kuber Cheque From 01/03/2019)</span>
+        </div>
+        <div class="pointstorem m-3 bg-warning bg-opacity-10 text-black p-2">
+          <h5>Points to remember</h5>
+          <ul>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which ilS a Core Banki ot RBI.
+            </li>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which ilS a Core Banking Solution ot RBI.
+            </li>
+            <li>
+              Please note that all cheques9 shall get paid through Ekuber which
+              ilS a Core Banking Solution ot RBI.
+            </li>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which ilS a Co]ution ot RBI.
+            </li>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which ilS a Core Banking Solution ot RBI.
+            </li>
+            <li>
+              Please note that all DDOChecKer/Ohicer/Govt trom 01/03/2019 shall
+              get paid through Ekuber which ilS a Core Banking Solution ot RBI.
+            </li>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt troaid through Ekuber which ilS a Core
+              Banking Solution ot RBI.
+            </li>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which.
+            </li>
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which ilS a Core Banking Solution ot RBI.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="transactiontype bg-secondary bg-opacity-10 m-3 p-2 d-md-flex d-block align-items"
+        >
+          <h6 class="fw-bolder">
+            Transcation Type<span class="text-danger">*</span>
+          </h6>
+          <div class="radio">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="radioOption1"
+              value="option1"
+              required
+            />
+            <label class="form-check-label" for="radioOption1">
+              Single Party
+            </label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="radioOption2"
+              value="option2"
+            />
+            <label class="form-check-label" for="radioOption2">
+              Multiple Parties
+            </label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="radioOption3"
+              value="option3"
+            />
+            <label class="form-check-label" for="radioOption3">
+              PD Account to PD Account
+            </label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="exampleRadios"
+              id="radioOption4"
+              value="option4"
+            />
+            <label class="form-check-label" for="radioOption4">
+              PD Account to other
+            </label>
+          </div>
+        </div>
+        <div
+          class="accountnosection m-3 p-2 d-md-flex d-block align-items-center"
+        >
+          <h6 class="fw-bolder">
+            Party Account no <span class="text-danger">*</span>
+          </h6>
+          <div>
+            <input
+              type="password"
+              class="form-control"
+              id="partyAccountNumber"
+              placeholder="Enter A/C no"
+              required
+            />
+            <div id="partyAccountNumberError" class="text-danger"></div>
+          </div>
+        </div>
+        <div
+          class="caccountnosection m-3 p-2 d-md-flex d-block align-items-center"
+        >
+          <h6 class="fw-bolder">
+            Confirm Party Account no <span class="text-danger">*</span>
+          </h6>
+
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              id="confirmPartyAccountNumber"
+              placeholder="Confirm A/C no"
+              required
+            />
+            <div id="confirmPartyAccountNumberError" class="text-danger"></div>
+          </div>
+        </div>
+        <div class="partyname m-3 p-2 d-md-flex d-block align-items-center">
+          <h6 class="fw-bolder">
+            Party Name <span class="text-danger">*</span>
+          </h6>
+
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              id="partyName"
+              placeholder="Enter Party Name"
+            />
+            <div id="partyNameError" class="text-danger"></div>
+          </div>
+        </div>
+        <div
+          class="ifsccode bg-secondary bg-opacity-10 m-3 mb-0 p-2 d-md-flex d-block align-items"
+        >
+          <h6 class="fw-bolder mt-2">
+            Bank IFSC Code<span class="text-danger">*</span>
+          </h6>
+          <div>
+            <div class="d-flex">
+              <input
+                type="text"
+                class="form-control"
+                id="ifscCode"
+                placeholder="Enter IFSC Code"
+              />
+              <button class="btn btn-primary" id="ifscSearch">Search</button>
+            </div>
+
+            <div id="ifscCodeError" class="text-danger"></div>
+          </div>
+        </div>
+        <div
+          class="bankname bg-secondary bg-opacity-10 m-3 mt-0 p-2 d-md-flex d-block align-items pt-3 mb-0"
+        >
+          <h6 class="fw-bolder">Bank Branch</h6>
+          <div>
+            <div class="d-flex" id="bankBranch">XXXXX</div>
+          </div>
+        </div>
+        <div
+          class="bankbranch bg-secondary bg-opacity-10 m-3 mt-0 p-2 d-md-flex d-block align-items"
+        >
+          <h6 class="fw-bolder">Bank Name</h6>
+          <div>
+            <div class="d-flex" id="bankName">XXXXX</div>
+          </div>
+        </div>
+        <div class="headofaccount m-3 p-2 d-md-flex d-block align-items-center">
+          <h6 class="fw-bolder">
+            Head of account<span class="text-danger">*</span>
+          </h6>
+          <div>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="headOfAccount"
+              required
+            >
+              <option>Select</option>
+              <option value="0853001020002000000NVN">
+                0853001020002000000NVN
+              </option>
+              <option value="8342001170004001000NVN">
+                8342001170004001000NVN
+              </option>
+              <option value="2071011170004320000NVN">
+                2071011170004320000NVN
+              </option>
+              <option value="8342001170004002000NVN">
+                8342001170004002000NVN
+              </option>
+              <option value="2204000030006300303NVN">
+                2204000030006300303NVN
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="balance m-3 mt-0 p-2 d-md-flex d-block align-items">
+          <h6 class="fw-bolder">
+            Balance <span class="fw-normal">(in Rs.)</span>
+          </h6>
+          <div>
+            <div class="d-flex" id="balance">XXXXX</div>
+          </div>
+        </div>
+        <div class="loc m-3 mt-0 p-2 d-md-flex d-block align-items">
+          <h6 class="fw-bolder">LOC <span class="fw-normal">(in Rs.)</span></h6>
+          <div>
+            <div class="d-flex" id="loc">XXXXX</div>
+          </div>
+        </div>
+        <div
+          class="expendituretype m-3 p-2 d-md-flex d-block align-items-center"
+        >
+          <h6 class="fw-bolder">
+            Expenditure Type<span class="text-danger">*</span>
+          </h6>
+          <div>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="expenditureType"
+            >
+              <option selected>Select</option>
+              <option value="CapitalExpenditure">Capital Expenditure</option>
+
+              <option value="RevenueExpenditure">Revenue Expenditure</option>
+
+              <option value="DeferredRevenueExpenditure">
+                Deferred Revenue Expenditure
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="purposetype m-3 p-2 d-md-flex d-block align-items-center">
+          <h6 class="fw-bolder">
+            Purpose Type<span class="text-danger">*</span>
+          </h6>
+          <div>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="purposeType"
+            >
+              <option selected>Select</option>
+            </select>
+          </div>
+        </div>
+        <div class="purpose m-3 p-2 d-md-flex d-block align-items-center">
+          <h6 class="fw-bolder">Purpose<span class="text-danger">*</span></h6>
+          <div>
+            <textarea
+              name=""
+              cols="89"
+              rows="2 "
+              placeholder="Purpose"
+              class="form-control"
+              id="purpose"
+            ></textarea>
+          </div>
+        </div>
+        <div id="purposeErrorMessage" class="text-danger"></div>
+
+        <div class="partyamount m-3 p-2 d-md-flex d-block align-items-center">
+          <h6 class="fw-bolder">
+            Party Amount <span class="fw-normal">(In Rs.)</span>
+          </h6>
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Party Amount"
+              id="partyAmount"
+            />
+          </div>
+        </div>
+        <div id="partyAmountInWords"></div>
+
+        <div
+          class="uploaddocuments m-3 p-2 d-md-flex d-block align-items-center"
+        >
+          <h6 class="fw-bolder">UploadDocuments</h6>
+          <div class="input-group" id="inputGrp">
+            <input
+              type="file"
+              class="form-control me-2"
+              id="fileInput"
+              multiple
+            />
+            <button
+              class="btn btn-primary ps-4 pe-4 rounded-2"
+              type="button"
+              id="addButton"
+            >
+              +Add
+            </button>
+          </div>
+        </div>
+        <div class="input-group-append d-flex">
+          <div></div>
+          <div>
+            <h6 class="text-secondary fst-italic fw-normal d-none d-md-block">
+              Note: Documents of Cheque(Letter/G.O. etc) can be uploaded here.
+            </h6>
+            <ul class="list-group mt-3" id="fileList"></ul>
+          </div>
+        </div>
+
+        <hr />
+      </div>
+    </form>
+
+    <button
+      id="nextBtn"
+      class="btn btn-primary ps-3 pe-3 fw-normal"
+      type="submit"
+    >
+      Next<i class="fa-solid fa-caret-right"></i>
+    </button>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

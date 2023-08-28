@@ -1,0 +1,158 @@
+* {
+  margin: 0px;
+}
+.mainContainer {
+  background-color: lightcyan;
+  height: 100%;
+}
+.inputEl {
+  color: lightgray;
+}
+.btnEl {
+  width: 100%;
+}
+.labelEl {
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+#checkEl {
+  height: 15px;
+  width: 25px;
+  border: 1px solid lightgray;
+}
+.checkLabel {
+  font-weight: 600;
+}
+.subHead {
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+}
+.platformHead {
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+}
+.totalHead {
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+}
+.subAmount {
+  font-weight: 700;
+  font-size: 14px;
+}
+.platformAmount {
+  font-weight: 700;
+  font-size: 14px;
+}
+.totalAmount {
+  font-weight: 700;
+  font-size: 14px;
+}
+.bgContainer {
+  background-image: linear-gradient(to right, black, black);
+  height: 25vh;
+  background-color: gray;
+  width: 100%;
+  background-size: cover;
+}
+.cont {
+  width: 300px;
+  height: 80px;
+}
+.solidImage {
+  height: 70px;
+  width: 70px;
+}
+.unorderedList li::marker {
+  color: blue;
+}
+.spanEl {
+  font-weight: 700;
+  font-size: 14px;
+  color: black;
+}
+.downMainContainer {
+  background-color: white;
+}
+.liItem {
+  color: gray;
+}
+.modifyBtn {
+  border-bottom: 1px solid blue;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+.planContainer {
+  width: 90%;
+}
+.tickImage {
+  height: 40px;
+  width: 40px;
+}
+.planName {
+  font-size: 10px;
+}
+.planName1 {
+  font-size: 10px;
+}
+.basicPlanPara1 {
+  background-color: darkcyan;
+  width: 100%;
+  color: white;
+}
+.basicPlanPara2 {
+  background-color: blue;
+  width: 100%;
+  color: white;
+}
+.basicPlanPara3 {
+  background-color: orange;
+  width: 100%;
+  color: white;
+}
+.planAmount1 {
+  color: darkcyan;
+  font-size: 20px;
+  font-weight: 500;
+}
+.planAmount2 {
+  color: blue;
+  font-size: 20px;
+  font-weight: 500;
+}
+.planAmount3 {
+  color: orange;
+  font-size: 20px;
+  font-weight: 500;
+}
+#selectBtn1 {
+  background-color: darkcyan;
+}
+#selectBtn2 {
+  background-color: blue;
+}
+#selectBtn3 {
+  background-color: orange;
+  border: 0px solid;
+}
+@media screen and (max-width: 768px) {
+  .itemsContainer {
+    display: flex;
+  }
+  .cont {
+    width: 200px;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cont {
+    width: 200px;
+  }
+}

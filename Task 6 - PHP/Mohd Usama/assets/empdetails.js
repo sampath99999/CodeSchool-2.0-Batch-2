@@ -568,16 +568,7 @@ function handleAddDeduction(empid) {
         result = JSON.parse(response);
         if (result.status) {
           if (result.code == "Updated") {
-            const row = $(`#earnOrDed-${result.inserted_id}`);
-            frontendData["Total Deductions"] =
-              parseInt(frontendData["Total Deductions"]) -
-              parseInt(row.find(".amount-cell").text()) +
-              parseInt(inputField.val());
-            row.find(".amount-cell").text(inputField.val());
-            frontendData["Total Net"] =
-              parseInt(frontendData["Total Gross/Earnings"]) -
-              parseInt(frontendData["Total Deductions"]);
-            updateNetTableValues();
+            alert(result.message);
           } else {
             frontendData["Total Deductions"] =
               parseInt(frontendData["Total Deductions"]) +
@@ -710,16 +701,7 @@ function handleAddEarning(empid) {
             earndeds_type: "Earning",
           };
           if (result.code == "Updated") {
-            const row = $(`#earnOrDed-${result.inserted_id}`);
-            frontendData["Total Gross/Earnings"] =
-              parseInt(frontendData["Total Gross/Earnings"]) -
-              parseInt(row.find(".amount-cell").text()) +
-              parseInt(inputField.val());
-            row.find(".amount-cell").text(inputField.val());
-            frontendData["Total Net"] =
-              parseInt(frontendData["Total Gross/Earnings"]) -
-              parseInt(frontendData["Total Deductions"]);
-            updateNetTableValues();
+            alert(result.message);
           } else {
             const newRow = createTableRow(
               entryData,

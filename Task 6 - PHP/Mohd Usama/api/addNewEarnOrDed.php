@@ -31,16 +31,9 @@ if (
     $result = $stmt->execute([$earndeds_employee_id, $earndeds_category_id]);
     $updateId = $stmt->fetchColumn();
     if ($updateId) {
-        $updateQuery = "UPDATE EarnDeds SET amount = ? WHERE earndeds_id = ?";
-        $updateStmt = $pdo->prepare($updateQuery);
-        $updateResult = $updateStmt->execute([$amount, $updateId]);
-
-        if ($updateResult) {
-            $response['status'] = true;
-            $response['message'] = "Updated Earning";
-            $response['inserted_id'] = $updateId;
-            $response['code'] = 'Updated';
-        }
+        $response['status'] = true;
+        $response['message'] = "Earning or Deduction Already Exist";
+        $response['code'] = 'Updated';
     } else {
         $insertQuery = "INSERT INTO EarnDeds(earndeds_employee_id, earndeds_type, earndeds_category_id, amount) VALUES(?,?,?,?) RETURNING earndeds_id";
         $insertStmt = $pdo->prepare($insertQuery);

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  line-height: 1.6;
+}
+
+.social-media-icons i {
+  translate: 0rem 0.8rem;
+}
+.hero-background-color {
+  background: hsl(357.83deg 100% 72.94%);
+}
+
+.slider img {
+  height: 46rem;
+}
+
+.news-card div span {
+  width: 4rem;
+  background-color: hsl(357.83deg 100% 72.94%);
+  translate: 30px 30px;
+}
+.newsletter button {
+  background-color: hsl(357.83deg 100% 72.94%);
+  border-color: hsl(357.83deg 100% 72.94%);
+}
+.tag-clouds h6 {
+  border: 1px solid rgb(202, 200, 200);
+}
+.footer-images img {
+  height: 13rem;
+  border-radius: 30px;
+  padding: 20px 10px;
+}
+#pagination {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+  padding: 30px;
+  font-size: larger;
+}
+@media screen and (max-width: 992px) {
+  body {
+    max-width: 100%;
+  }
+
+  .nav-bar .logo h3 {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .social-media-icons {
+    gap: 0.5rem;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-icon i {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,12 @@
+PHP Task
+
+=> create login page with proper validations.
+=> create register page with proper validations.
+=> After register page should redirect to login page.
+=> After successfull login, page should redirect to home page.
+=> keep session time about 10 min.
+=> user can login through multiple accessories.
+=> keep logout to terminate the session by user.
+=> The application should work on previous task crm database.
+=> along with existing tables, add new tables like "user_details" for registration & login purspose and  tokens table to manage sessions & logout.
+=> In homepage, display tables like employee_details, company_details and salary_details.  

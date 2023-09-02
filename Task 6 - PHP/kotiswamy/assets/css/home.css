@@ -1,0 +1,56 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navbarCard {
+  height: 10vh;
+  z-index: 1;
+}
+
+.contentCard {
+  height: 90vh;
+  background-image: url("https://e0.pxfuel.com/wallpapers/399/876/desktop-wallpaper-movie-reel-background-t-film-reel.jpg");
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+.movieLogo {
+  height: 8vh;
+  cursor: pointer;
+}
+
+.profileLogo {
+  height: 5vh;
+}
+
+.videoStyle {
+  height: 100%;
+  width: 100%;
+}
+
+.userName {
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#searchInputEl {
+  width: 100%;
+}
+
+@media screen AND (min-width: 767px) {
+  .videoStyle {
+    height: 50%;
+    width: 50%;
+  }
+  #searchInputEl {
+    width: 50%;
+  }
+}
+
+@media screen AND (min-width: 992px) {
+  #searchInputEl {
+    width: 30%;
+  }
+}

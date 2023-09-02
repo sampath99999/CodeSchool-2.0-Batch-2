@@ -1,0 +1,22 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+require_once('./dbConfig.php');
+
+// $response =  ["status" => false, "message" => ""];
+
+$query = "select m.movie_name , t.theatre_name, b.branch_name,b.branch_address,bs.id,bs.slot,bs.seats from branch_slots bs
+left join movies m on m.id = bs.movie_id
+left join branches b on b.id = bs.branch_id
+left join theatres t on t.id = b.theatre_id
+;";
+
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+echo json_encode($result);

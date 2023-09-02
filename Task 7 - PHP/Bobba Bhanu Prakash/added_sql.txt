@@ -1,0 +1,176 @@
+create table
+    earnings(
+        id serial primary key,
+        employee_id int references employees(id),
+        basic_pay BIGINT NOT null,
+        allowances bigint not null,
+        performance_bonus bigint not null,
+        benifits bigint not null
+    );
+
+create table
+    deductions(
+        id serial primary key,
+        employee_id int references employees(id),
+        income_tax bigint not null,
+        insurances bigint not null,
+        provident_fund bigint not null
+    );
+
+CREATE OR REPLACE FUNCTION CALCULATE_EARNINGS(EMPLOYEE_ID 
+BIGINT) RETURNS VOID AS $$ 
+	 DECLARE basic_pay NUMERIC := 0;
+	salary NUMERIC := 0;
+	performance_bonus NUMERIC := 0;
+	allowances NUMERIC := 0;
+	benefits NUMERIC := 0;
+	BEGIN
+	SELECT
+	    e.salary_per_annum INTO salary 
+	FROM employees e WHERE e.id = EMPLOYEE_ID;
+	salary := salary / 12;
+	basic_pay := 0.7 * salary;
+	allowances := 0.1 * salary;
+	benefits := 0.05 * salary;
+	performance_bonus := 0.15 * salary;
+	INSERT INTO
+	    earnings (
+	        "employee_id",
+	        "basic_pay",
+	        "allowances",
+	        "performance_bonus",
+	        "benifits"
+	    )
+	VALUES (
+	        EMPLOYEE_ID,
+	        basic_pay,
+	        allowances,
+	        performance_bonus,
+	        benefits
+	    );
+	RETURN;
+	END;
+	$$ LANGUAGE plpgsql;
+
+
+SELECT CALCULATE_EARNINGS(1);
+
+SELECT CALCULATE_EARNINGS(2);
+
+SELECT CALCULATE_EARNINGS(3);
+
+SELECT CALCULATE_EARNINGS(4);
+
+SELECT * from earnings;
+
+CREATE OR REPLACE FUNCTION CALCULATE_DEDUCTIONS(EMPLOYEE_ID 
+BIGINT) RETURNS VOID AS $$ 
+	DECLARE income_tax NUMERIC := 0;
+	tax_percentage NUMERIC := 0;
+	salary NUMERIC := 0;
+	insurances NUMERIC := 0;
+	provident_fund NUMERIC := 0;
+	BEGIN
+	SELECT
+	    e.salary_per_annum INTO salary
+	FROM employees e
+	WHERE e.id = EMPLOYEE_ID;
+	SELECT
+	    CASE
+	        WHEN salary <= 300000 THEN 0
+	        WHEN salary <= 600000 THEN 5
+	        WHEN salary <= 900000 THEN 10
+	        WHEN salary <= 1200000 THEN 15
+	        WHEN salary <= 1500000 THEN 20
+	        ELSE 30
+	    END INTO tax_percentage;
+	tax_percentage := tax_percentage / 100;
+	salary := salary / 12;
+	income_tax := tax_percentage * salary;
+	insurances := 0.1 * salary;
+	provident_fund := 0.12 * salary;
+	INSERT INTO
+	    deductions (
+	        "employee_id",
+	        "income_tax",
+	        "insurances",
+	        "provident_fund"
+	    )
+	VALUES (
+	        EMPLOYEE_ID,
+	        income_tax,
+	        insurances,
+	        provident_fund
+	    );
+	RETURN;
+	END;
+	$$ LANGUAGE plpgsql;
+
+
+SELECT CALCULATE_DEDUCTIONS(1);
+
+select CALCULATE_DEDUCTIONS(2);
+
+select CALCULATE_DEDUCTIONS(3);
+
+select CALCULATE_DEDUCTIONS(4);
+
+select * from deductions;
+
+--HR's
+
+INSERT INTO
+    Employees(
+        employee_name,
+        company_id,
+        employee_role,
+        employee_phno,
+        employee_email,
+        permanant_address,
+        residential_address,
+        leaves_per_month,
+        Salary_per_annum,
+        date_of_joining,
+        date_of_birth,
+        gender
+    )
+VALUES (
+        'alok',
+        1,
+        'hr',
+        '8987654321',
+        'alok@gmail.com',
+        'Hyderabad',
+        'Hyderabad',
+        2,
+        800000,
+        '2023-03-01',
+        '1994-05-25',
+        'male'
+    ), (
+        'jenny',
+        3,
+        'hr',
+        '8123456789',
+        'jenny@gmail.com',
+        'Texas',
+        'Atlanta',
+        4,
+        2000000,
+        '2023-02-01',
+        '1998-08-18',
+        'female'
+    ), (
+        'siri',
+        2,
+        'hr',
+        '8123456784',
+        'siri@gmail.com',
+        'Delhi',
+        'Hyderabad',
+        3,
+        1000000,
+        '2023-05-01',
+        '1999-01-17',
+        'female'
+    );

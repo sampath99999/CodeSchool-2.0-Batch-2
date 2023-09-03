@@ -46,6 +46,14 @@
 .searchEl {
   width: 300px;
 }
+
+.form-select-2 {
+  width: 90px;
+  height: 30px;
+}
+.labelPara {
+  width: 90px;
+}
 @media print {
   .mainContainer {
     visibility: hidden;

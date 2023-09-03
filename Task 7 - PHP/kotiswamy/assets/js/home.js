@@ -1,7 +1,6 @@
 $(document).ready(function () {
   var token = localStorage.getItem("access_token");
 
-  
   if (!token) {
     window.location.href = "login.html";
   } else {
@@ -10,14 +9,11 @@ $(document).ready(function () {
       if (!result["user_details"]) {
         window.location.replace("login.html");
       } else if (result["status"]) {
-
         // logout
         $("#logoutBtn").click(function () {
           localStorage.removeItem("access_token");
           window.location.href = "login.html";
-          $.post("apiconfig/logout.php",{userId:result["user_details"]["id"]},function(result){
-            
-          })
+          $.post("apiconfig/logout.php",{userId:result["user_details"]},function(){})
         });
         // curd operantions
         // Add theater
@@ -146,7 +142,11 @@ $(document).ready(function () {
               },
               function (result) {
                 var result = JSON.parse(result);
-                alert(result["message"]);
+                if (result["status"]) {
+                  alert(result["message"]);
+                } else {
+                  alert(result["message"]);
+                }
               }
             );
           }
@@ -168,7 +168,7 @@ $(document).ready(function () {
         });
         // addMovieCard
 
-        var getOptionsTableData = function (data) {
+        var getOptionsTableData = function (userId) {
           $("#inputGroupTheater")
             .empty()
             .append("<option selected value=''>Choose theater name</option>");
@@ -176,20 +176,24 @@ $(document).ready(function () {
             .empty()
             .append('<option selected value="">Choose movie name</option>');
           $.get(
-            "apiconfig/tablesData.php",
-            { userId: data },
+            "apiconfig/addMovieTablesData.php",
+            { userId: userId },
             function (result) {
               var result = JSON.parse(result);
-              $.each(result["theatersList"], function (index, value) {
-                $("#inputGroupTheater").append(
-                  `<option value=${value["id"]}>${value["theater_name"]}</option>`
-                );
-              });
-              $.each(result["moviesList"], function (index, value) {
-                $("#inputGroupMovie").append(
-                  `<option value=${value["id"]}>${value["movie_name"]}</option>`
-                );
-              });
+              if (result["status"]) {
+                $.each(result["theatersList"], function (index, value) {
+                  $("#inputGroupTheater").append(
+                    `<option value=${value["id"]}>${value["theater_name"]}</option>`
+                  );
+                });
+                $.each(result["moviesList"], function (index, value) {
+                  $("#inputGroupMovie").append(
+                    `<option value=${value["id"]}>${value["movie_name"]}</option>`
+                  );
+                });
+              } else {
+                console.log(result["message"]);
+              }
             }
           );
         };
@@ -270,25 +274,311 @@ $(document).ready(function () {
             inputGroupMovieBoolean &&
             showDateTimeBoolean
           ) {
+            let currentDate = new Date();
+            let showDate = new Date(showDateTime);
+            if (showDate > currentDate) {
+              $.post(
+                "apiconfig/insertMovieShowDetail.php",
+                {
+                  theaterId: theaterId,
+                  movieId: movieId,
+                  showDateTime: showDateTime,
+                },
+                function (result) {
+                  var result = JSON.parse(result);
+                  alert(result["message"]);
+                }
+              );
+            } else {
+              alert("Show date time must be greater than present date & time.");
+            }
+          }
+        });
+
+        // Add booking card
+
+        var getBookingTablesList = function () {
+          $("#bookingTheaterList")
+            .empty()
+            .append("<option selected value=''>Choose theater name</option>");
+          $("#bookingMovieList")
+            .empty()
+            .append("<option selected value=''>Choose movie name</option>");
+          $("#bookingDateList")
+            .empty()
+            .append("<option selected value=''>Choose show date</option>");
+          $("#bookingTimeList")
+            .empty()
+            .append("<option selected value=''>Choose show time</option>");
+          $("#ticketQuantity").val("");
+          $("#ticketPriceEl").val("");
+          $("#totalPrice").val("");
+          $(".bookingTheaterListErr").text("");
+          $(".bookingMovieListErr").text("");
+          $(".bookingDateListErr").text("");
+          $(".bookingTimeListErr").text("");
+          $(".ticketQuantityErr").text("");
+          $.get("apiconfig/addBookingTheatersList.php", function (result) {
+            var result = JSON.parse(result);
+            if (result["status"]) {
+              $.each(result["data"], function (index, value) {
+                $("#bookingTheaterList").append(
+                  `<option value=${value["id"]}>${value["theater_name"]}</option>`
+                );
+              });
+            } else {
+              console.log(result["message"]);
+            }
+          });
+        };
+
+        // booking theater el
+
+        let bookingTheaterBoolean = false;
+        $("#bookingTheaterList").blur(function () {
+          $("#bookingMovieList")
+            .empty()
+            .append("<option selected value=''>Choose movie name</option>");
+          $("#bookingDateList")
+            .empty()
+            .append("<option selected value=''>Choose show date</option>");
+          $("#bookingTimeList")
+            .empty()
+            .append("<option selected value=''>Choose show time</option>");
+          let theaterId = $(this).val();
+          if ($(this).val() === "") {
+            bookingTheaterBoolean = false;
+            $(".bookingTheaterListErr").text("*Please choose theater");
+          } else {
+            bookingTheaterBoolean = true;
+            $("#bookingTheaterListErr").text("");
+            $.get(
+              "apiconfig/addBookingMoviesList.php",
+              { theaterId: theaterId },
+              function (result) {
+                var result = JSON.parse(result);
+                if (result["status"]) {
+                  $.each(result["data"], function (index, value) {
+                    $("#bookingMovieList").append(
+                      `<option value=${value["id"]}>${value["movie_name"]}</option>`
+                    );
+                  });
+                } else {
+                  console.log(result["message"]);
+                }
+              }
+            );
+            $.get(
+              "apiconfig/addBookingTicketPrice.php",
+              { theaterId: theaterId },
+              function (result) {
+                var result = JSON.parse(result);
+                if (result["status"]) {
+                  $("#ticketPriceEl").val(result["data"]["ticket_price"]);
+                } else {
+                  console.log(result["message"]);
+                }
+              }
+            );
+          }
+        });
+
+        // bookingMovieList
+        let bookingMovieListBoolean = false;
+        $("#bookingMovieList").blur(function () {
+          $("#bookingDateList")
+            .empty()
+            .append("<option selected value=''>Choose show date</option>");
+          $("#bookingTimeList")
+            .empty()
+            .append("<option selected value=''>Choose show time</option>");
+          let moveId = $(this).val();
+          let theaterId = $("#bookingTheaterList").val();
+          if (moveId === "") {
+            bookingMovieListBoolean = false;
+            $(".bookingMovieListErr").text("*Please choose an movie");
+          } else {
+            bookingMovieListBoolean = true;
+            $(".bookingMovieListErr").text("");
+            $.get(
+              "apiconfig/addBookingDatesList.php",
+              { movieId: moveId, theaterId: theaterId },
+              function (result) {
+                var result = JSON.parse(result);
+                if (result["status"]) {
+                  let currentDate = new Date();
+                  let currentDay = currentDate.toLocaleString("en-us", {
+                    day: "2-digit",
+                  });
+                  let currentMonth = currentDate.toLocaleString("en-us", {
+                    month: "2-digit",
+                  });
+                  let currentYear = currentDate.toLocaleString("en-us", {
+                    year: "numeric",
+                  });
+                  $.each(result["data"], function (index, value) {
+                    let showDate = new Date(value["show_date_time"]);
+                    let showDay = showDate.toLocaleString("en-us", {
+                      day: "2-digit",
+                    });
+                    let showMonth = showDate.toLocaleString("en-us", {
+                      month: "2-digit",
+                    });
+                    let showYear = showDate.toLocaleString("en-us", {
+                      year: "numeric",
+                    });
+                    if (
+                      `${showYear}-${showMonth}-${showDay}` >=
+                      `${currentYear}-${currentMonth}-${currentDay}`
+                    ) {
+                      $("#bookingDateList").append(
+                        `<option value=${value["show_date_time"]}>${value["show_date_time"]}</option>`
+                      );
+                    }
+                  });
+                } else {
+                  console.log(result["message"]);
+                }
+              }
+            );
+          }
+        });
+
+        // bookingDateList
+        let bookingDateListBoolean = false;
+        $("#bookingDateList").blur(function () {
+          $("#bookingTimeList")
+            .empty()
+            .append("<option selected value=''>Choose show time</option>");
+          let theaterId = $("#bookingTheaterList").val();
+          let movieId = $("#bookingMovieList").val();
+          let date = $(this).val();
+          if (date === "") {
+            bookingDateListBoolean = false;
+            $(".bookingDateListErr").text("*Please choose date");
+          } else {
+            bookingDateListBoolean = true;
+            $(".bookingDateListErr").text("");
+            $.get(
+              "apiconfig/addBookingTimesList.php",
+              { theaterId: theaterId, movieId: movieId, date: date },
+              function (result) {
+                var result = JSON.parse(result);
+                if (result["status"]) {
+                  let currentDate = new Date();
+                  let currentHours = currentDate.toLocaleString("en-us", {
+                    hour: "2-digit",
+                  });
+                  let currentMinutes = currentDate.toLocaleString("en-us", {
+                    minute: "2-digit",
+                  });
+                  $.each(result["data"], function (index, value) {
+                    let showTime = new Date(value["time"]);
+                    let showHours = showTime.toLocaleString("en-us", {
+                      hourCycle: "h24",
+                      hour: "2-digit",
+                    });
+                    let showMinutes = showTime.toLocaleString("en-us", {
+                      minute: "2-digit",
+                    });
+                    if (showTime > currentDate) {
+                      $("#bookingTimeList").append(
+                        `<option value=${showHours}:${showMinutes}>${showHours}:${showMinutes}</option>`
+                      );
+                    }
+                  });
+                } else {
+                  console.log(result["message"]);
+                }
+              }
+            );
+          }
+        });
+
+        // bookingTimeList
+        let bookingTimeListBoolean = false;
+        $("#bookingTimeList").blur(function () {
+          if ($(this).val() === "") {
+            bookingTimeListBoolean = false;
+            $(".bookingTimeListErr").text("*Please choose time");
+          } else {
+            bookingTimeListBoolean = true;
+            $(".bookingTimeListErr").text("");
+          }
+        });
+
+        // ticketQuantity
+        let ticketQuantityBoolean = false;
+        $("#ticketQuantity").blur(function () {
+          if ($(this).val() === "") {
+            ticketQuantityBoolean = false;
+            $(".ticketQuantityErr").text("*Please enter quantity");
+          } else {
+            ticketQuantityBoolean = true;
+            $(".ticketQuantityErr").text("");
+            $("#totalPrice").val($(this).val() * $("#ticketPriceEl").val());
+          }
+        });
+
+        $("#addBookingBtn").click(function () {
+          let theaterId = $("#bookingTheaterList").val();
+          let movieId = $("#bookingMovieList").val();
+          let date = `${$("#bookingDateList").val()} ${$(
+            "#bookingTimeList"
+          ).val()}`;
+          let quantity = $("#ticketQuantity").val();
+          let totalPrice = $("#totalPrice").val();
+          let userId = result["user_details"]["id"];
+          if (!bookingTheaterBoolean) {
+            bookingTheaterBoolean = false;
+            $(".bookingTheaterListErr").text("*Please choose theater");
+          }
+          if (!bookingMovieListBoolean) {
+            bookingMovieListBoolean = true;
+            $(".bookingMovieListErr").text("*Please choose an movie");
+          }
+          if (!bookingDateListBoolean) {
+            bookingDateListBoolean = false;
+            $(".bookingDateListErr").text("*Please choose date");
+          }
+          if (!bookingTimeListBoolean) {
+            bookingTimeListBoolean = false;
+            $(".bookingTimeListErr").text("*Please choose time");
+          }
+          if (!ticketQuantityBoolean) {
+            ticketQuantityBoolean = false;
+            $(".ticketQuantityErr").text("*Please enter quantity");
+          } else if (
+            bookingTheaterBoolean &&
+            bookingMovieListBoolean &&
+            bookingDateListBoolean &&
+            bookingTimeListBoolean &&
+            ticketQuantityBoolean
+          ) {
             $.post(
-              "apiconfig/insertMovieShowDetail.php",
+              "apiconfig/insertBookingData.php",
               {
                 theaterId: theaterId,
                 movieId: movieId,
-                showDateTime: showDateTime,
+                date: date,
+                quantity: quantity,
+                totalPrice: totalPrice,
+                userId: userId,
               },
               function (result) {
                 var result = JSON.parse(result);
-                console.log(result);
                 alert(result["message"]);
               }
             );
           }
         });
 
+        $("#addBooking").click(function () {
+          getBookingTablesList();
+        });
+
         for (let i of result["data"]) {
           if (
-            i["table_name"] != "users" &&
             i["table_name"] != "movie_timing_details"
           ) {
             $("#tablesUl").append(`
@@ -301,14 +591,13 @@ $(document).ready(function () {
           }
         }
 
-        let getTablesData = function (tablename,userId) {
+        let getTablesData = function (tablename, userId) {
           let searialNo = 1;
           let getTableBodyApendedData = function (data, searialNo) {
             for (let i of data) {
               var tableRow = `<td class="text-white fw-bold">${searialNo}</td>`;
 
               for (let j in i) {
-                console.log(j);
                 if (
                   j !== "movie_img_url" &&
                   j !== "theater location" &&
@@ -334,14 +623,14 @@ $(document).ready(function () {
               if (tablename === "bookings") {
                 let movieImgUrl = i["movie_img_url"];
                 let movieName = i["movie name"];
-                let noOfSeats = i["no of seats"];
-                let seatNumbers = i["seat numbers"];
+                let noOfSeats = i["quantity"];
                 let showDateTime = i["show date time"];
                 let theaterName = i["theater name"];
                 let totalPrice = i["total price"];
                 let theaterLocation = i["theater location"];
                 let ticketPrice = i["ticket price"];
                 let bookingId = i["booking id"];
+                let customerName = i["customer name"];
 
                 var date = new Date(showDateTime);
                 let weekDay = date.toLocaleString("en-US", {
@@ -383,7 +672,7 @@ $(document).ready(function () {
                         </div>
                         <div class="showDetailCard d-flex flex-row justify-content-between"> 
                           <p class="m-0 fw-semibold">${noOfSeats} Tickets(s)</p> 
-                          <p class="m-0 fw-semibold">Seat numbers:${seatNumbers}</p>
+                          <p class="m-0 fw-semibold">CustomerName:${customerName}</p>
                         </div>
                         <p class="m-0 text-secondary text-center">A confirmation is sent on e-mail/SMS/WhatsApp within 15 minutes of booking.</p>
                         <div class="totalAmountCard d-flex justify-content-between">
@@ -434,13 +723,14 @@ $(document).ready(function () {
             }
           };
           $.get(
-            "apiconfig/tablesQueryData.php",
-            { tablename: tablename,userId:userId },
+            "apiconfig/homeTablesData.php",
+            { tablename: tablename, userId: userId },
             function (result) {
               var result = JSON.parse(result);
-              let data = [];
-              $(".contentCard").empty();
-              $(".contentCard").append(`
+              if (result["status"]) {
+                let data = [];
+                $(".contentCard").empty();
+                $(".contentCard").append(`
                 <input type="search" class="form-control bg-transparent mb-3 text-white" id="searchInputEl" placeholder="🔍 Search" />
                 <div class="table-responsive">
                   <table class="table table-hover table-bordered">
@@ -454,58 +744,61 @@ $(document).ready(function () {
                   </table>
                 </div>
               `);
-              $("#searchInputEl").keyup(function () {
-                $(".tableBodyCard").empty();
-                let searialNo1 = 1;
-                data = [];
-                for (let i of result["data"]) {
-                  for (let j in i) {
-                    let text = String(i[j]).toLowerCase();
-                    let compareText = $(this).val().toLowerCase();
-                    if (text.includes(compareText)) {
-                      data = [...data, i];
-                      break;
+                $("#searchInputEl").keyup(function () {
+                  $(".tableBodyCard").empty();
+                  let searialNo1 = 1;
+                  data = [];
+                  for (let i of result["data"]) {
+                    for (let j in i) {
+                      let text = String(i[j]).toLowerCase();
+                      let compareText = $(this).val().toLowerCase();
+                      if (text.includes(compareText)) {
+                        data = [...data, i];
+                        break;
+                      }
                     }
                   }
+                  getTableBodyApendedData(data, searialNo1);
+                });
+                for (let i in result["data"][0]) {
+                  if (
+                    i !== "movie_img_url" &&
+                    i !== "theater location" &&
+                    i !== "ticket price" &&
+                    i !== "booking id"
+                  ) {
+                    $(".tableHeadCard")
+                      .children()
+                      .append(
+                        `<th scope="col" class="bg-white text-dark">${i.toUpperCase()}</th>`
+                      );
+                  }
                 }
-                getTableBodyApendedData(data, searialNo1);
-              });
-              for (let i in result["data"][0]) {
-                if (
-                  i !== "movie_img_url" &&
-                  i !== "theater location" &&
-                  i !== "ticket price" &&
-                  i !== "booking id"
-                ) {
+                if (tablename === "bookings") {
                   $(".tableHeadCard")
                     .children()
                     .append(
-                      `<th scope="col" class="bg-white text-dark">${i.toUpperCase()}</th>`
+                      `<th scope="col" class="bg-white text-dark">TICKET</th>`
                     );
                 }
+                getTableBodyApendedData(result["data"], searialNo);
+              } else {
+                console.log(result["message"]);
               }
-              if (tablename === "bookings") {
-                $(".tableHeadCard")
-                  .children()
-                  .append(
-                    `<th scope="col" class="bg-white text-dark">TICKET</th>`
-                  );
-              }
-              getTableBodyApendedData(result["data"], searialNo);
             }
           );
         };
         $("#theaters").click(function () {
-          getTablesData("theaters",result["user_details"]["id"]);
+          getTablesData("theaters", result["user_details"]["id"]);
         });
-        $("#customers").click(function () {
-          getTablesData("customers",result["user_details"]["id"]);
+        $("#users").click(function () {
+          getTablesData("users", result["user_details"]["id"]);
         });
         $("#movies").click(function () {
-          getTablesData("movies",result["user_details"]["id"]);
+          getTablesData("movies", result["user_details"]["id"]);
         });
         $("#bookings").click(function () {
-          getTablesData("bookings",result["user_details"]["id"]);
+          getTablesData("bookings", result["user_details"]["id"]);
         });
         let movieQuotes = [
           "Bringing the box office to your fingertips – one ticket at a time.",

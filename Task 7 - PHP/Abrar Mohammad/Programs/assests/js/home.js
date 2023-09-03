@@ -27,6 +27,44 @@ $(document).ready(function () {
 
   $("#addBtn").hide();
 
+  $("#addAppointment").hide();
+
+  $("#addInvoice").hide();
+
+  $(".nameErr").hide();
+  $(".nameErr").css({ color: "red", fontSize: "12px" });
+  $(".ageErr").hide();
+  $(".ageErr").css({ color: "red", fontSize: "12px" });
+  $(".contactErr").hide();
+  $(".contactErr").css({ color: "red", fontSize: "12px" });
+
+  $("#patientName").blur(function (event) {
+    var patientName = $("#patientName").val();
+    if (patientName.length === 0) {
+      $(".nameErr").show();
+    } else {
+      $(".nameErr").hide();
+    }
+  });
+
+  $("#patientAge").blur(function (event) {
+    var patientAge = $("#patientAge").val();
+    if (patientAge.length === 0) {
+      $(".ageErr").show();
+    } else {
+      $(".ageErr").hide();
+    }
+  });
+
+  $("#patientContact").blur(function (event) {
+    var patientContact = $("#patientContact").val();
+    if (patientContact.length === 0) {
+      $(".contactErr").show();
+    } else {
+      $(".contactErr").hide();
+    }
+  });
+
   function getInvoices(
     id,
     patient_name,
@@ -204,8 +242,11 @@ $(document).ready(function () {
       );
       for (let each in result.data) {
         if (
-          result.data[each] !== "invoice_details" &&
-          result.data[each] !== "medicines"
+          result.data[each] !== "medicines" &&
+          result.data[each] !== "hospital_beds" &&
+          result.data[each] !== "diseases" &&
+          result.data[each] !== "appointment_status" &&
+          result.data[each] !== "invoice_details"
         ) {
           $("#navEl").append(`<li class="nav-item">
         <a
@@ -228,8 +269,20 @@ $(document).ready(function () {
       let getTableData = function (tableName) {
         if (tableName === "patients") {
           $("#addBtn").show();
+          $("#addAppointment").hide();
+          $("#addInvoice").hide();
+        } else if (tableName === "appointments") {
+          $("#addAppointment").show();
+          $("#addBtn").hide();
+          $("#addInvoice").hide();
+        } else if (tableName === "invoices") {
+          $("#addInvoice").show();
+          $("#addBtn").hide();
+          $("#addAppointment").hide();
         } else {
           $("#addBtn").hide();
+          $("#addAppointment").hide();
+          $("#addInvoice").hide();
         }
         $(".homeCont").empty();
         $.get(
@@ -253,8 +306,7 @@ $(document).ready(function () {
             for (let each in tableData["data"][0]) {
               if (
                 tableName === "invoices" &&
-                (each === "id" ||
-                  each === "doctor_name" ||
+                (each === "doctor_name" ||
                   each === "surgery_cost" ||
                   each === "medicine_cost" ||
                   each === "quantity" ||
@@ -286,8 +338,7 @@ $(document).ready(function () {
               for (let i in each) {
                 if (
                   tableName === "invoices" &&
-                  (i === "id" ||
-                    i === "doctor_name" ||
+                  (i === "doctor_name" ||
                     i === "surgery_cost" ||
                     i === "medicine_cost" ||
                     i === "quantity" ||
@@ -349,17 +400,319 @@ $(document).ready(function () {
         );
       };
 
+      var patientsArr = [];
+      var doctorsArr = [];
+
       $("#addPatientBtn").click(function () {
         var patientName = $("#patientName").val();
         var patientAge = $("#patientAge").val();
         var patientGender1 = $('input[name = "gender"]:checked').val();
         var patientNo = $("#patientContact").val();
-        $.post("http://localhost/programs/apiconfig/addpatient.php", {
-          patient_name: patientName,
-          age: patientAge,
-          gender: patientGender1,
-          contact: patientNo,
-        });
+        $.post(
+          "http://localhost/programs/apiconfig/addpatient.php",
+          {
+            patient_name: patientName,
+            age: patientAge,
+            gender: patientGender1,
+            contact: patientNo,
+          },
+          function (response) {
+            var response = JSON.parse(response);
+            if (response.status === true) {
+              alert(response.message);
+              var patientName = $("#patientName").val("");
+              var patientAge = $("#patientAge").val("");
+              var patientNo = $("#patientContact").val("");
+            } else {
+              alert(response.message);
+            }
+          }
+        );
+      });
+
+      $.get(
+        "http://localhost/programs/apiconfig/patients.php",
+        function (responseData) {
+          var responseData = JSON.parse(responseData);
+          patientsArr.push(responseData.data);
+          for (let each of responseData.data) {
+            $("#patientEl").append(
+              `<option value = ${each.id}> ${each.patient_name} </option>`
+            );
+          }
+        }
+      );
+
+      function getDoctors(hospitalId) {
+        $.get(
+          "http://localhost/programs/apiconfig/getdoctorsbyhospital.php",
+          { hospital_id: hospitalId },
+          function (resData) {
+            var resData = JSON.parse(resData);
+            for (let j of resData.data) {
+              $("#doctorEl").append(
+                `<option value = ${j.id}> ${j.doctor_name} </option>`
+              );
+            }
+          }
+        );
+      }
+
+      $.get(
+        "http://localhost/programs/apiconfig/hospitals.php",
+        function (hosData) {
+          var hosData = JSON.parse(hosData);
+          for (let each of hosData.data) {
+            $("#hospitalEl").append(
+              `<option value = ${each.id}> ${each.hospital_name} </option>`
+            );
+          }
+          for (let hos of hosData.data) {
+            $("#hospitalEl2").append(
+              `<option value = ${hos.id}> ${hos.hospital_name} </option>`
+            );
+          }
+        }
+      );
+
+      $("#hospitalEl").blur(function () {
+        $("#doctorEl").empty();
+        var hospitalId = $(this).val();
+        getDoctors(hospitalId);
+      });
+
+      $.get(
+        "http://localhost/programs/apiconfig/appointments.php",
+        function (appointmentData) {
+          var appointmentData = JSON.parse(appointmentData);
+          for (let i of appointmentData.data) {
+            $("#appointmentId").append(
+              `<option value = ${i.id}> ${i.patient_name} </option>`
+            );
+          }
+        }
+      );
+
+      $("#addInvoiceBtn").click(function () {
+        var appointmentId = $("#appointmentId").val();
+        var appointmentDate = $("#appointmentDate").val();
+        var medicineId = $("#medicineNameEl").val();
+        var medQuantity = $("#medicineQuantity").val();
+        var hosBedId = $("#bedTypeEl").val();
+        var diseaseId = $("#treatmentEl").val();
+        var invoiceId = $("#invoiceEl").val();
+        $.post(
+          "http://localhost/programs/apiconfig/addinvoice.php",
+          {
+            appointment_id: parseInt(appointmentId),
+            invoice_date: appointmentDate,
+          },
+          function (addInv) {
+            var addInv = JSON.parse(addInv);
+            if (addInv.status === true) {
+              alert(addInv.message);
+            } else {
+              alert(addInv.message);
+            }
+          }
+        );
+      });
+
+      $("#addInvoiceDetail").click(function () {
+        var medicineId = $("#medicineNameEl").val();
+        var medQuantity = $("#medicineQuantity").val();
+        var hosBedId = $("#bedTypeEl").val();
+        var diseaseId = $("#treatmentEl").val();
+        var invoiceId = $("#invoiceEl").val();
+        $.post(
+          "http://localhost/programs/apiconfig/addinvoicedetails.php",
+          {
+            invoice_id: parseInt(invoiceId),
+            disease_id: parseInt(diseaseId),
+            medicine_id: parseInt(medicineId),
+            hospital_bed_id: parseInt(hosBedId),
+            quantity: parseInt(medQuantity),
+          },
+          function (res) {
+            var res = JSON.parse(res);
+            if (res.status === true) {
+              alert(res.message);
+            } else {
+              alert(res.message);
+            }
+          }
+        );
+      });
+
+      $("#addAppointmentBtn").click(function () {
+        var patientId = $("#patientEl").val();
+        var doctorId = $("#doctorEl").val();
+        var dateEl = $("#dateEl").val();
+        var consultationEl = $("#amountEl").val();
+
+        $.post(
+          "http://localhost/programs/apiconfig/addappointment.php",
+          {
+            patient_id: parseInt(patientId),
+            doctor_id: parseInt(doctorId),
+            appointment_date: dateEl,
+            consultation: consultationEl,
+          },
+          function (reqRes) {
+            var reqRes = JSON.parse(reqRes);
+            if (reqRes.status === true) {
+              alert(reqRes.message);
+            } else {
+              alert(reqRes.message);
+            }
+          }
+        );
+      });
+
+      $.get(
+        "http://localhost/programs/apiconfig/getmedicines.php",
+        function (medData) {
+          var medData = JSON.parse(medData);
+          for (let eachMed of medData.data) {
+            $("#medicineNameEl").append(
+              `<option value = ${eachMed.id}> ${eachMed.medicine_name} </option>`
+            );
+          }
+        }
+      );
+
+      for (let x = 1; x <= 50; x++) {
+        $("#medicineQuantity").append(`<option value = ${x}> ${x}</option>`);
+        $("#bedQuantityEl").append(`<option value = ${x}> ${x}</option>`);
+        $("#treatmentQuantityEl").append(`<option value = ${x}> ${x}</option>`);
+      }
+
+      function getMedicineByPrice(medicineId) {
+        $.get(
+          "http://localhost/programs/apiconfig/getpricebymedicine.php",
+          { id: medicineId },
+          function (getMed) {
+            var getMed = JSON.parse(getMed);
+            for (let each of getMed.data) {
+              $("#medicinePrice").append(
+                `<option value = ${each.cost} >${each.cost} </option>`
+              );
+            }
+          }
+        );
+      }
+
+      $.get(
+        "http://localhost/programs/apiconfig/diseases.php",
+        function (disData) {
+          var disData = JSON.parse(disData);
+          for (let eachDis of disData.data) {
+            $("#treatmentEl").append(
+              `<option value = ${eachDis.id}> ${eachDis.disease_name} </option>`
+            );
+          }
+        }
+      );
+
+      $.get(
+        "http://localhost/programs/apiconfig/invoices.php",
+        function (invData) {
+          var invData = JSON.parse(invData);
+          for (let eachInv of invData.data) {
+            $("#invoiceEl").append(
+              `<option value = ${eachInv.id}>${eachInv.patient_name}</option>`
+            );
+          }
+        }
+      );
+
+      function getTreatmentCost(diseaseId) {
+        $.get(
+          "http://localhost/programs/apiconfig/treatmentcost.php",
+          { id: diseaseId },
+          function (treatData) {
+            var treatData = JSON.parse(treatData);
+            for (let eachCost of treatData.data) {
+              $("#treatmentChargesEl").append(
+                `<option value = ${eachCost.id}>  ${eachCost.disease_amount} </option>`
+              );
+            }
+          }
+        );
+      }
+
+      $("#treatmentEl").blur(function () {
+        var disId = $(this).val();
+        $("#treatmentChargesEl").empty();
+        getTreatmentCost(disId);
+      });
+
+      $("#medicinePrice").blur(function () {
+        var medPrice = $(this).val();
+        var medQUan = $("#medicineQuantity").val();
+        var totalMedCharges = parseInt(medPrice) * parseInt(medQUan);
+        $(".totalMedAmount").text(totalMedCharges);
+      });
+
+      function getBeds(hospitalId) {
+        $.get(
+          "http://localhost/programs/apiconfig/getbedsbyhospital.php",
+          { hospital_id: hospitalId },
+          function (bedData) {
+            var bedData = JSON.parse(bedData);
+            for (let eachBed of bedData.data) {
+              $("#bedTypeEl").append(
+                `<option value = ${eachBed.id}> ${eachBed.bed_type} </option>`
+              );
+            }
+          }
+        );
+      }
+
+      function getBedCharges(bedId) {
+        $.get(
+          "http://localhost/programs/apiconfig/getbedprice.php",
+          { id: bedId },
+          function (bedCost) {
+            var bedCost = JSON.parse(bedCost);
+            for (let eachbedCost of bedCost.data) {
+              $("#BedChargesEl").append(
+                `<option value = ${eachbedCost.bed_charges}> ${eachbedCost.bed_charges} </option>`
+              );
+            }
+          }
+        );
+      }
+
+      $("#treatmentChargesEl").blur(function () {
+        var treatQuan = $("#treatmentQuantityEl").val();
+        var treatVal = $(this).text();
+        var totalTreat = parseInt(treatVal) * parseInt(treatQuan);
+        $(".treatPrice").text(totalTreat);
+      });
+
+      $("#BedChargesEl").blur(function () {
+        var quan = $("#bedQuantityEl").val();
+        var charVal = $(this).val();
+        var total = parseInt(charVal) * parseInt(quan);
+        $(".totalBedPrice").text(total);
+      });
+
+      $("#hospitalEl2").blur(function () {
+        var hosId = $(this).val();
+        getBeds(hosId);
+      });
+
+      $("#medicineNameEl").blur(function () {
+        var medId = $(this).val();
+        $("#medicinePrice").empty();
+        getMedicineByPrice(medId);
+      });
+
+      $("#bedTypeEl").blur(function () {
+        var bedId = $(this).val();
+        $("#BedChargesEl").empty();
+        getBedCharges(bedId);
       });
 
       $("#hospitals").click(function () {
@@ -392,9 +745,9 @@ $(document).ready(function () {
       $("#appointment_status").click(function () {
         getTableData("appointment_status");
       });
-      // $("#invoice_details").click(function () {
-      //   getTableData("invoice_details");
-      // });
+      $("#invoice_details").click(function () {
+        getTableData("invoice_details");
+      });
     })
     .fail(function (result) {
       console.log(result.message);

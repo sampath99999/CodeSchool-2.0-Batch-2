@@ -1,0 +1,50 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+<label for="floatingInput" class="text-white mt-5 offset-3 mb-2">Movie</label>
+<div class="form-floating mb-3 w-50 m-auto">
+  <select id="movieName" class="w-100 p-3">
+    <option selected>Movie</option>
+  </select>
+</div>
+
+<label for="floatingInput" class="text-white offset-3 mb-2">Theatre Name</label>
+<div class="form-floating mb-3 w-50 m-auto">
+  <select id="theatreName" class="w-100 p-3">
+    <option selected>Theatre Name</option>
+  </select>
+</div>
+<label for="floatingInput" class="text-white offset-3 mb-2">Branch Name</label>
+<div class="form-floating mb-3 w-50 m-auto">
+  <select id="branchName" class="w-100 p-3">
+    <option selected>Branch Name</option>
+  </select>
+</div>
+<label for="floatingInput" class="text-white offset-3 mb-2">Slot</label>
+<div class="form-floating mb-3 w-50 m-auto">
+  <select id="slot" class="w-100 p-3">
+    <option selected>Slot</option>
+  </select>
+</div>
+<label for="floatingInput" class="text-white offset-3 mb-2">Seats</label>
+<div
+  class="form-floating mb-3 w-50 m-auto btn-group-toggle overflow-auto"
+  id="seats"
+  data-toggle="buttons"
+></div>
+
+<label for="floatingInput" class="text-white offset-3 mb-2"
+  >Payment Method</label
+>
+<div class="form-floating mb-3 w-50 m-auto">
+  <select id="paymentMethod" class="w-100 p-3">
+    <option selected>Payment Method</option>
+    <option>UPI</option>
+    <option>Credit/DebitCard</option>
+  </select>
+</div>
+
+<a class="btn btn-danger offset-3" id="bookTickets">Book Now</a>
+<script src="./assets/bookNow.js"></script>

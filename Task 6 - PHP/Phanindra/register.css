@@ -1,57 +1,61 @@
+
 * {
-  margin: 0;
+    margin: 0;
 }
 
 .signup-form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: rgb(102, 102, 255, 0.5);
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color:rgb(102, 102, 255,.5);
+    height: 100vh;
+
 }
 
 .login-form {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  width: 30%;
-  box-shadow: #6666ff 10px 10px 5px 0px;
-  background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: #6666ff 10px 10px 5px 0px;
+    background-color: #fff;
+
 }
 
 .input-box {
-  margin-bottom: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-  margin-bottom: 5px;
-  color: #353535;
+    margin-bottom: 5px;
+    color: #353535;
 }
 
 .error-msg {
-  color: red;
-  font-size: 12px;
+    color: red;
+    font-size: 12px;
 }
 
 .form-head {
-  color: #6666ff;
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 20px;
+    color: #6666ff;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.input {
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  color: gray;
+.input{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: gray;
 }
-.subbtn {
-  cursor: pointer;
+.subbtn{
+    cursor: pointer;
 }
+

@@ -1,0 +1,16 @@
+body{
+  font-family: sans-serif;
+}
+
+.adminBgContainer{
+  height: 100vh;
+}
+
+.bodyContainer{
+  height: 90vh;
+}
+
+.navBar{
+  height: 10vh;
+}
+

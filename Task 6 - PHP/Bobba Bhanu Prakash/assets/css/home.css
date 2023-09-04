@@ -1,0 +1,44 @@
+nav {
+    background-color: #08254f;
+}
+
+#logo {
+    height: 4rem;
+    width: 4rem;
+}
+
+.avatar-bg img {
+    width: 4rem;
+    height: 4rem;
+}
+
+#onlyMenubar {
+    background-color: #08254f;
+    height: 50rem;
+}
+
+ul li {
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor:pointer;
+}
+
+    ul li:hover {
+        background-color: cornflowerblue;
+    }
+
+table th,
+td {
+    width: 10rem;
+}
+
+.aboutCrm i {
+    font-size: 20px !important;
+}
+
+.aboutCrm img {
+    width: 85rem;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

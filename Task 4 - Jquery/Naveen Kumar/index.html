@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Last Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+  .navbar {
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.y01Jv17qXbZEjWo_7ODA4QHaEK&pid=Api&P=0&h=180");
+    width: 100%;
+    height: 100px;
+  }
+
+  .navbar-toggler .navbar-toggler-icon {
+  border-color: rgb(255,102,203);
+  color: #760822;
+}
+
+  
+  /* Rest of your existing styles */
+
+    .last-login {
+      text-align: right;
+      color: white;
+    }
+    .container-fluid-blue {
+      background-color: lightblue;
+      padding: 20px 0;
+      margin-top: 20px;
+      margin-left:20px
+    }
+    .long-heading {
+      font-size: 24px;
+      font-weight: bold;
+      color: blue;
+      
+    }
+    .offcanvas-body ul {
+      padding: 0;
+    }
+    .offcanvas-body li {
+      list-style: none;
+      margin: 0;
+      padding: 8px 0;
+    }
+    .offcanvas-body li a {
+      text-decoration: none;
+      color: white;
+    }
+    .offcanvas-body li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+   
+    /* Additional styles */
+    .container-fluid-burlywood {
+      background-color: rgb(234, 207, 137);
+     
+    }
+    .outline {
+     
+      margin-top: 40px;
+      margin-left: 60px;
+    }
+   
+
+   
+  </style>
+</head>
+<body>
+  <nav class="navbar bg-light sticky-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="d-flex">
+        <div class="last-login">
+          Last Login:<br>
+          <span id="lastLoginDate"></span><br>
+          <span id="lastLoginTime"></span>
+        </div>
+        <div class="dropdown ms-4">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="userProfileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user-circle" style="border-radius: 50%; font-size: 20px;"></i>
+            Welcome M.Naveen
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="userProfileDropdown">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+        <div>
+          <a id="loginLogoutLink" class="btn btn-primary time ms-4">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+ <div class="container-fluid container-fluid-blue rounded-2">
+  <div class="row"> 
+      <p class="long-heading ps-4"> Issue Cheque (E-Kuber Cheque From 01/03/2019)</p>
+    
+  </div>
+</div>
+
+
+<div class="container-fluid container-fluid-burlywood outline rounded-2">
+  <div class="row">
+    <div class="col-12">
+      
+      <h2 class=" ps-4 ">Points to Remember</h2>
+      <ul class="bullet-points ps-5 ms-4">
+        <li>Please note that all cheques which are approved from DDOChecCKer/Ohicer/Govt trom 01/03/1919 shall get paid through Ekuber which is a Core Banking Solution of
+          RBI.</li>
+        <li>There is no need to present the cheques at the Bank for these cheques which got approved after 01/03/2019.</li>
+        <li>Please give correct account details as it is when the Account was opened</li>
+        <li>Make sure there is no "Your self" or "Self" in the account names while issuing cheques. Such cheques get auto-rejection by Ekuber.</li>
+        <li> Please check the exact length of the Bank Account Number and NO special characters are to be entered, which leads to auto rejection</li>
+        <li> Finally, in multiple party cheques please do not enter the same party details in the same chequeno which will be considered as a duplicacy transaction and gets auto-reject</li>
+        <li>This is just a one-time procedure to get your Party details corrected and once when corrected the same details can be re-used for smooth transactions</li>
+        <li>PD-to-PD cheques shall be adjusted in the treasury using the regular procedure.</li>
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid  outline rounded-2">
+  <div class="row">
+    <div class="col-10">
+      
+      <!-- Transaction Type radio buttons -->
+      
+      <div class="transaction-type">
+        <label>Transaction Type *</label>
+        <div class="form-check-inline ms-5">
+          <input class="form-check-input" type="radio" name="transactionType" id="singleParty" value="single" required>
+          <label class="form-check-label" for="singleParty">Single Party</label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="transactionType" id="multipleParties" value="multiple">
+          <label class="form-check-label" for="multipleParties">Multiple Parties</label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="transactionType" id="pdToPd" value="pdToPd">
+          <label class="form-check-label" for="pdToPd">PD Account to PD Account</label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="transactionType" id="pdToOther" value="pdToOther">
+          <label class="form-check-label" for="pdToOther">PD Account to Other</label>
+        </div>
+      </div>
+
+       <!-- Party Account Number input -->
+      
+
+       
+       
+      <div class="mb-3 row mt-4">
+  <label for="partyAccountNumber" class="col-md-4 col-form-label">Party Account no*</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="partyAccountNumber" placeholder="Enter A/C no">
+    <div id="partyAccountNumberError" class="invalid-feedback">Please enter a valid account number.</div>
+  </div>
+</div>
+
+        
+<!-- Confirm Party Account Number input -->
+<div class="mb-3 row">
+  <label for="confirmPartyAccountNumber" class="col-md-4 col-form-label">Confirm Party Account no*</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="confirmPartyAccountNumber" placeholder="Confirm A/C no">
+    <div id="confirmPartyAccountNumberError" class="invalid-feedback">Please enter a valid account number that matches the Party Account no.</div>
+  </div>
+</div>
+
+<!-- Party Name input -->
+<div class="mb-3 row">
+  <label for="partyName" class="col-md-4 col-form-label">Party Name</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="partyName" placeholder="Enter Party Name">
+    <div id="partyNameError" class="invalid-feedback">Party Name should not have special characters.</div>
+  </div>
+</div>
+
+<!-- Purpose input -->
+<div class="mb-3 row">
+  <label for="purpose" class="col-md-4 col-form-label">Purpose</label>
+  <div class="col-md-8">
+    <textarea class="form-control" id="purpose" rows="4" maxlength="500"></textarea>
+    <div id="purposeError" class="invalid-feedback">Please enter a purpose with a maximum of 500 characters.</div>
+  </div>
+</div>
+
+<!-- Party input -->
+<div class="mb-3 row">
+  <label for="numberInput" class="col-md-4 col-form-label">Enter Party Amount:</label>
+  <div class="col-md-8">
+    <input type="number" class="form-control" id="numberInput">
+    <div id="partyAmountError" class="invalid-feedback">Please enter a valid party amount greater than 0.</div>
+  </div>
+</div>
+
+  <!---Converted amount -->
+
+<div class="mb-3 row">
+  <label for="convertedAmount" class="col-md-4 col-form-label">Converted Amount:</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="convertedAmount" disabled>
+  </div>
+</div>
+
+
+
+
+              <!--------------------------->
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <label for="ifsc" class="col-md-4 col-form-label">IFSC Code</label>
+    <div class="col-md-8">
+      <div class="input-group">
+        <input type="text" class="form-control" id="ifsc" maxlength="11">
+        <button id="searchButton" class="btn btn-primary">Search</button>
+      </div>
+      <div id="ifscError" class="invalid-feedback">Please enter a valid IFSC code.</div>
+    </div>
+  </div>
+
+
+ 
+  
+  <div class="mb-3 row mt-3">
+    <label for="bankName" class="col-md-4 col-form-label">Bank Name</label>
+    <div class="col-md-8">
+      <input type="text" class="form-control" id="bankName" readonly>
+    </div>
+  </div>
+
+   <div class="mb-3 row">
+  <label for="bankBranch" class="col-md-4 col-form-label">Bank Branch</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="bankBranch" readonly>
+  </div>
+</div>
+
+
+
+<div class="mb-3 row">
+  <label for="headOfAccount" class="col-md-4 col-form-label">Head of Account</label>
+  <div class="col-md-8">
+    <select class="form-select" id="headOfAccount">
+        <option></option>
+      <option value="0853001020002000000NVN">0853001020002000000NVN - 1000000 - 5000</option>
+      <option value="8342001170004001000NVN">8342001170004001000NVN - 1008340 - 4000</option>
+      <option value="2071011170004320000NVN">2071011170004320000NVN - 14530000 - 78000</option>
+      <option value="8342001170004002000NVN">8342001170004002000NVN - 1056400 - 34000</option>
+      <option value="2204000030006300303NVN">2204000030006300303NVN - 123465400 - 5000</option>
+    </select>
+  </div>
+</div>
+
+
+<div class="mb-3 row">
+  <label for="convertedAmount" class="col-md-4 col-form-label"> Balance (in Rs.):</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="convertedAmount" value="*******" disabled>
+  </div>
+</div>
+
+
+<div class="mb-3 row">
+  <label for="convertedAmount" class="col-md-4 col-form-label">LOC (in Rs.):</label>
+  <div class="col-md-8">
+    <input type="text" class="form-control" id="convertedAmount" value="*******" disabled>
+  </div>
+</div>
+
+
+
+
+<div class="mb-3 row">
+  <label for="expenditureType" class="col-md-4 col-form-label">Expenditure Type</label>
+  <div class="col-md-8">
+    <select class="form-select" id="expenditureType">
+        <option></option>
+      <option value="capital">Capital Expenditure</option>
+      <option value="revenue">Revenue Expenditure</option>
+      <option value="deferred">Deferred Revenue Expenditure</option>
+    </select>
+  </div>
+</div>
+
+<div class="mb-3 row">
+  <label for="expenditureType" class="col-md-4 col-form-label">Purpose Type</label>
+  <div class="col-md-8">
+    <select class="form-select" id="expenditureType">
+        <option></option>
+     
+    </select>
+  </div>
+</div>
+
+
+
+    <!--- upload documents--->
+
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <label for="uploadDocs" class="col-md-4 col-form-label">Upload Documents</label>
+    <div class="col-md-8">
+      <div class="input-group">
+        <input type="file" class="form-control" id="uploadDocs" aria-describedby="inputGroup-sizing-default" multiple>
+        <button id="addFilesButton" class="btn btn-primary">+ Add</button>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4"></div>
+    <div class="col-md-8" id="selectedFiles"></div>
+  </div>
+  <!-- <div id="fileError" class="invalid-feedback">Please choose at least one file.</div> -->
+</div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10" id="validMessage"></div>
+  </div>
+</div>
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <!-- ... (rest of your content) -->
+        
+        <!-- Next Button -->
+        <div class="mb-3 text-center">
+         
+           <button id="nextButton" class="btn btn-primary">NEXT</button>
+            <div id="allValidations" class="mt-3 text-danger"></div>
+         
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas-header">
+      <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" alt="IFMIS Logo" style="width: 95%; height: 80px;">
+    </div>
+    <div class="offcanvas-body">
+      <hr>
+      <br>
+      <ul class="list-unstyled">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Masters</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Return cheque generation</a></li>
+        <li><a href="#">Forest transaction</a></li>
+        <li><a href="#">Forest transaction report</a></li>
+        <li><a href="#">E-kuber return received list</a></li>
+        <li><a href="#">E-kuber return challan print</a></li>
+        <li><a href="#">UTR search</a></li>
+        <li><a href="#">Failed transactions (ACK Reject)</a></li>
+        <li><a href="#">Cheque Status Report</a></li>
+        <li><a href="#">Rejected Cheques due to FinYear End</a></li>
+        <li><a href="#">Finyear New Cheques Report</a></li>
+        <li><a href="#">Pb Budget Check</a></li>
+        <li><a href="#">Update Receipts Used Amount</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS (optional if you need dropdowns, modals, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+//--------------------------------------------------------------------
+      // Get the current date and time
+      var currentDate = new Date();
+      var formattedDate = formatDate(currentDate);
+
+      // Display the current date and time in the specified format
+      $("#lastLoginDate").text(formattedDate.date);
+      $("#lastLoginTime").text(formattedDate.time);
+
+      // Hide the last login initially in mobile view
+      $(".last-login").hide();
+
+      // Toggle the last login visibility on offcanvas toggler click
+      $(".time").click(function() {
+        $(".last-login").toggle();
+      });
+
+    function formatDate(date) {
+      var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+      var ampm = date.getHours() >= 12 ? "PM" : "AM";
+
+      var formattedDate = {
+        date: date.getDate() + "-" + months[date.getMonth()] + "-" + date.getFullYear(),
+        time: hours + ":" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() + " " + ampm
+      };
+
+      return formattedDate;
+    }
+
+//------------------------------------------------------------------------------
+
+$("#numberInput").change(function() {
+        function convertToWords(amount) {
+          var ones = [
+            "",
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+          ];
+          var teens = [
+            "",
+            "Eleven",
+            "Twelve",
+            "Thirteen",
+            "Fourteen",
+            "Fifteen",
+            "Sixteen",
+            "Seventeen",
+            "Eighteen",
+            "Nineteen",
+          ];
+          var tens = [
+            "",
+            "Ten",
+            "Twenty",
+            "Thirty",
+            "Forty",
+            "Fifty",
+            "Sixty",
+            "Seventy",
+            "Eighty",
+            "Ninety",
+          ];
+
+          function convertGroup(number) {
+              if (number === 0) return "";
+                else if (number < 10) return ones[number];
+                else if (number < 20) return teens[number - 10];
+                else if (number < 100)
+                    return tens[Math.floor(number / 10)] + " " + ones[number % 10];
+                else
+                    return (
+                        ones[Math.floor(number / 100)] +
+                        " Hundred " +
+                        convertGroup(number % 100)
+                    );
+          }
+
+          var words = "";
+          var crores = Math.floor(amount / 10000000);
+          var lakhs = Math.floor((amount % 10000000) / 100000);
+          var thousands = Math.floor((amount % 100000) / 1000);
+          var remaining = Math.round(amount % 1000);
+
+          if (crores > 0) {
+            words += convertGroup(crores) + " Crore ";
+          }
+
+          if (lakhs > 0) {
+            words += convertGroup(lakhs) + " Lakh ";
+          }
+
+          if (thousands > 0) {
+            words += convertGroup(thousands) + " Thousand ";
+          }
+
+          if (remaining > 0) {
+            words += convertGroup(remaining);
+          }
+
+          return words.trim();
+        }
+
+        var partyAmount = $(this).val();
+        partyAmount = parseInt(partyAmount);
+        var words = convertToWords(partyAmount);
+        $("#convertedAmount").val(words);
+      });
+
+//-----------------------------------
+
+
+//--------------------------------------------------------------
+      // Handle login/logout toggle
+      $("#loginLogoutLink").click(function() {
+        var linkText = $(this).text();
+        $(this).text(linkText === "Logout" ? "Login" : "Logout");
+      });
+
+
+// upload
+
+ $('#addFilesButton').click(function() {
+        $('#uploadDocs').click();
+    });
+
+    $('#uploadDocs').on('change', function(e) {
+        const files = e.target.files;
+
+        for (const file of files) {
+            const fileHtml = `
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span>${file.name}</span>
+                    <button type="button" class="btn btn-danger btn-sm remove-file">&times;</button>
+                </div>
+            `;
+            $('#selectedFiles').append(fileHtml);
+        }
+    });
+
+    $('#selectedFiles').on('click', '.remove-file', function() {
+        $(this).parent().remove();
+    });
+
+
+//-------------------------------------------
+
+    
+
+
+//-----------------------------------------------------------------
+
+ $("#nextButton").click(function() {
+        validateInputs();
+      });
+
+
+//---------------------------------------------------------------------------
+      // Function to validate all inputs
+      function validateInputs() {
+        var isValid = true;
+        
+        // Validate Party Account Number  start ---------------------
+        var accountNumber = $("#partyAccountNumber").val();
+        var accountNumberRegex = /^[0-9]{12,22}$/;
+        var accountNumberIsValid = accountNumberRegex.test(accountNumber);
+        $("#partyAccountNumberError").toggle(!accountNumberIsValid);
+        if (!accountNumberIsValid) {
+          isValid = false;
+        }
+        
+
+
+        // Validate Confirm Party Account Number
+        var confirmAccountNumber = $("#confirmPartyAccountNumber").val();
+        var confirmAccountNumberIsValid = accountNumberIsValid && accountNumber === confirmAccountNumber;
+        $("#confirmPartyAccountNumberError").toggle(!confirmAccountNumberIsValid);
+        if (!confirmAccountNumberIsValid) {
+          isValid = false;
+        }
+
+         // Validate Party Name
+        var partyName = $("#partyName").val();
+        var partyNameRegex = /^[A-Za-z0-9\s]+$/;
+        var partyNameIsValid = partyNameRegex.test(partyName);
+        $("#partyNameError").toggle(!partyNameIsValid);
+        if (!partyNameIsValid) {
+          isValid = false;
+        }
+
+
+
+          
+         // validate Purpose
+     
+    // ... (your existing code) ...
+
+    // Purpose validation function
+    function validatePurpose() {
+        var purpose = $("#purpose").val();
+        var maxLength = parseInt($("#purpose").attr("maxlength"));
+        
+        var purposeIsValid = purpose.length > 0 && purpose.length <= maxLength;
+        $("#purposeError").toggle(!purposeIsValid);
+        
+        return purposeIsValid;
+    }
+     
+        var isPurposeValid = validatePurpose();
+        if (!isPurposeValid) {
+            $("#allValidations").text("Please fix the validation errors before proceeding.");
+        } else {
+            // Proceed to the next step or submit the form
+        }
+
+
+
+
+
+
+        // Validate partyAmount
+        var partyAmount = $("#numberInput").val();
+            var partyAmountIsValid = !isNaN(partyAmount) && parseInt(partyAmount) > 0;
+            if (!partyAmountIsValid) {
+                $("#numberInput").addClass("is-invalid");
+                isValid = false;
+            } else {
+                $("#numberInput").removeClass("is-invalid");
+            }
+
+
+//----------------------------ifsc code -------------------------
+
+       
+$("#searchButton").click(function() {
+        validateInputs();
+    });
+    
+   
+    
+    function validateInputs() {
+        const ifsc = $("#ifsc").val();
+        
+        if (ifsc === "") {
+            $("#ifscError").show();
+            return;
+        }
+        
+        const bankName = ifsc.substring(0, 4).toUpperCase();
+        const fifthCharacter = ifsc.charAt(4);
+        const lastSixCharacters = ifsc.substring(5);
+        
+        if (ifsc.length !== 11 || !/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifsc)) {
+            $("#ifscError").show();
+            return;
+        }
+        
+        $("#ifscError").hide();
+        $("#bankName").val(bankName);
+        
+        if (fifthCharacter !== "0") {
+            $("#bankBranch").val("Invalid");
+        } else {
+            $("#bankBranch").val(lastSixCharacters);
+        }
+        
+        $("#validMessage").text("IFSC code is valid!");
+    }
+
+
+
+
+
+
+
+        // ... Add more input validations here ...
+
+        // Display all validations
+        $("#allValidations").empty();
+        if (!isValid) {
+          $("#allValidations").text("Please fix the validation errors before proceeding.");
+        }
+
+
+
+
+      }
+
+
+});
+
+
+
+      
+      
+
+    //});
+
+    // Function to format the date and time
+    
+  
+  
+  </script>
+</body>
+</html>

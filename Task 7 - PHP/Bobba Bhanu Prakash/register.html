@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/register.js"></script>
+    <style>
+      input {
+        border: 1px solid black !important;
+      }
+      .form-control {
+        width: 100% !important;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="col-12 col-md-8 offset-md-2 registrationform">
+      <div class="card m-5 p-4 bg-info">
+        <div class="card-header align-items-center bg-white">
+          <h2 class="text-primary" style="text-align: center">Registration</h2>
+          <div class="d-md-flex card-body bg-white">
+            <img
+              class="img-fluid col-12 col-md-7"
+              src="https://img.freepik.com/premium-vector/female-hands-typing-text-laptop-keyboard_575379-64.jpg"
+            />
+            <form
+              id="registrationForm"
+              class="col-12 col-md-4"
+              enctype="multipart/form-data"
+              action="connect.php"
+              method="post"
+            >
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="firstname"
+                placeholder="Enter First Name"
+                autocomplete="off"
+              />
+              <p id="firstnameerr"></p>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                name="lastname"
+                placeholder="Enter Last Name"
+                autocomplete="off"
+              />
+              <p id="lastnameerr"></p>
+
+              <label class="form-label">Gender:</label>
+              <fieldset id="gender" required>
+                <input
+                  type="radio"
+                  value="male"
+                  name="gender"
+                  id="male"
+                  autocomplete="off"
+                />
+                <label class="form-label">Male </label>
+                <input
+                  type="radio"
+                  value="female"
+                  id="female"
+                  name="gender"
+                  autocomplete="off"
+                />
+                <label class="form-label">Female </label>
+              </fieldset>
+              <p id="checkerr"></p>
+              <input
+                type="tel"
+                class="form-control"
+                id="phonenumber"
+                name="phoneNumber"
+                placeholder="Enter phone Number"
+                autocomplete="off"
+                required
+              />
+              <p id="phonenumbererr"></p>
+              <input
+                type="text"
+                onfocus="(this.type='date')"
+                class="form-control"
+                id="dateofbirth"
+                name="dateofbirth"
+                placeholder="Date of birth"
+                autocomplete="off"
+              />
+              <p id="dateerr"></p>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter Email"
+                autocomplete="off"
+              />
+              <p id="emailerr"></p>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Set password"
+                autocomplete="off"
+              />
+              <p id="passworderr"></p>
+              <input
+                type="password"
+                class="form-control"
+                id="re-enterpassword"
+                name="reenterPassword"
+                placeholder="Re-enter Password"
+                autocomplete="off"
+              />
+              <p id="err"></p>
+              <input
+                type="button"
+                class="bg-success text-white rounded-2 w-100 p-2 fs-5"
+                onclick="validateAndSubmit()"
+                name="registrationBtn"
+                value="Register Now"
+              />
+              <p id="message"></p>
+              <p class="text-center">
+                Already have an account?<a
+                  href="login.html"
+                  class="text-decoration-none"
+                >
+                  Login now</a
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

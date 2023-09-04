@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="assests/css/home.css" />
+  </head>
+  <body>
+    <div class="mainContainer p-0">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-primary navbarCont bg-opacity-50"
+      >
+        <div class="container-fluid m-0">
+          <a
+            class="navbar-brand d-flex align-items-center d-none d-md-flex"
+            href="#"
+            id="hosHead"
+          >
+            <img
+              src="https://outsourcetopk.com/public/assets/images/portfolio/logo/Hospital-1.jpg"
+              class="hospitalLogo me-2"
+            />
+            <p class="m-0 text-light">Hospital Management</p>
+          </a>
+          <div class="dropdown-center dropMenu order-md-1">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-circle text-light"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  class="dropdown-item userEl d-flex justify-content-around align-items-center"
+                  href="#"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-person-circle text-dark pe-1 p-0"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="#"
+                  id="logoutBtn"
+                >
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-box-arrow-right pe-1"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                      />
+                    </svg>
+                  </p>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navEl"></ul>
+          </div>
+        </div>
+      </nav>
+      <div class="bottomCont d-flex flex-column m-0 bg-info bg-opacity-25 p-4">
+        <div class="patient mb-3" id="addBtn">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add New Patient
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add Patient
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="patientName"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Patient Name</label>
+                  </div>
+                  <p class="nameErr m-0">*Name is a required field</p>
+                  <div class="form-floating mt-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="patientAge"
+                      placeholder="Password"
+                    />
+                    <label for="floatingPassword">Age</label>
+                  </div>
+                  <p class="ageErr m-0">*Age is a required field</p>
+                  <div class="radio d-flex mt-3">
+                    <div class="form-check d-flex me-2">
+                      <input
+                        class="form-check-input me-2"
+                        type="radio"
+                        name="gender"
+                        id="patientGender1"
+                        value="Male"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Male
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-floating mt-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="patientContact"
+                      placeholder="Password"
+                    />
+                    <label for="floatingPassword">Contact</label>
+                  </div>
+                  <p class="contactErr m-0">*Contact is a required field</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    id="addPatientBtn"
+                    class="btn btn-primary"
+                  >
+                    Add Patient
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="appointment mb-3" id="addAppointment">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal2"
+          >
+            Add New Appointment
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add Appointment
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="patientEl"
+                      aria-label="Floating label select example"
+                    ></select>
+                    <label for="patientEl">Patient Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="hospitalEl"
+                      aria-label="Floating label select example"
+                    ></select>
+                    <label for="patientEl">Hospital Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="doctorEl"
+                      aria-label="Floating label select example"
+                    ></select>
+                    <label for="doctorEl">Doctor Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      id="dateEl"
+                      aria-label="Floating label select example"
+                    />
+                    <label for="dateEl">Date & Time</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amountEl"
+                      aria-label="Floating label select example"
+                    />
+                    <label for="amountEl">Consultation Fee</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="addAppointmentBtn"
+                  >
+                    Add Appointment
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="invoice mb-3" id="addInvoice">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal3"
+          >
+            Add New Invoice
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal3"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add Invoice
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="hospitalEl2"
+                      aria-label="Floating label select example"
+                    ></select>
+                    <label for="floatingSelect">Hospital Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="appointmentId"
+                      aria-label="Floating label select example"
+                    ></select>
+                    <label for="floatingSelect">Patient Name</label>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="appointmentDate"
+                    />
+                    <label for="floatingSelect">Invoice Date</label>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <select
+                      class="form-select"
+                      id="invoiceEl"
+                      aria-label="Floating label select example"
+                    ></select>
+                    <label for="floatingSelect">Invoices</label>
+                  </div>
+                  <div class="itCont d-flex justify-content-between">
+                    <p class="me-2 m-0 labelPara">Items</p>
+                    <p class="me-2 m-0 labelPara">Quantity</p>
+                    <p class="me-2 m-0 labelPara">Price</p>
+                    <p class="me-2 m-0 labelPara">Sub Total</p>
+                  </div>
+                  <div class="invoiceCont d-flex flex-column">
+                    <div class="medicinesCont d-flex justify-content-between">
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="medicineNameEl"
+                          aria-label="Floating label select example"
+                        ></select>
+                        <label for="floatingSelect">Medicines</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="medicineQuantity"
+                          aria-label="Floating label select example"
+                        ></select>
+                        <label for="floatingSelect">Quantity</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="medicinePrice"
+                          aria-label="Floating label select example"
+                        ></select>
+                        <label for="floatingSelect">Price</label>
+                      </div>
+                      <div class="labelPara">
+                        <p class="m-0 totalMedAmount">10</p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="bedChargesCont d-flex me-2 justify-content-between"
+                    >
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="bedTypeEl"
+                          aria-label="Floating label select example"
+                        ></select>
+                        <label for="floatingSelect">Bed Type</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="bedQuantityEl"
+                          aria-label="Floating label select example"
+                        ></select>
+                        <label for="floatingSelect">Quantity</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="BedChargesEl"
+                          aria-label="Floating label select example"
+                        >
+                          <option selected>Open this select menu</option>
+                        </select>
+                        <label for="floatingSelect">Price</label>
+                      </div>
+                      <div class="labelPara">
+                        <p class="m-0 totalBedPrice">10</p>
+                      </div>
+                    </div>
+                    <div class="chargesCont d-flex justify-content-between">
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="treatmentEl"
+                          aria-label="Floating label select example"
+                        >
+                          <option selected>Open this select menu</option>
+                        </select>
+                        <label for="floatingSelect">Treatment Charges</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="treatmentQuantityEl"
+                          aria-label="Floating label select example"
+                        ></select>
+                        <label for="floatingSelect">Quantity</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select
+                          class="form-select form-select-2"
+                          id="treatmentChargesEl"
+                          aria-label="Floating label select example"
+                        >
+                          <option selected>Open this select menu</option>
+                        </select>
+                        <label for="floatingSelect">Price</label>
+                      </div>
+                      <div class="labelPara">
+                        <p class="m-0 treatPrice">10</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="addInvoiceBtn"
+                  >
+                    Add Invoice
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="addInvoiceDetail"
+                  >
+                    Add Invoice Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tableContainer d-flex flex-column align-items-center m-0 p-0 table-responsive"
+        ></div>
+      </div>
+    </div>
+    <script src="assests/js/home.js"></script>
+  </body>
+</html>

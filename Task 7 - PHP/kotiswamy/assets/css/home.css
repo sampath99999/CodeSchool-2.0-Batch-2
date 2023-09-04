@@ -1,0 +1,128 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbarCard {
+  height: 10vh;
+  z-index: 1;
+}
+
+/*  sideBar */
+
+.sideBar{
+  height: 90vh;
+  width: 250px;
+}
+
+.sideBar ul li{
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sideBar ul li:hover{
+  background-color: black;
+  color: white;
+}
+.contentCard {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+/*Add Theater Card */
+.formHead{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: black;
+  font-family: cursive;
+}
+
+#theaterFoundedYear::-webkit-inner-spin-button,#theaterFoundedYear::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+#theaterSeatingCapacity::-webkit-inner-spin-button,#theaterSeatingCapacity::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+#ticketPrice::-webkit-inner-spin-button,#ticketPrice::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+/* Add booking */
+
+#ticketQuantity::-webkit-inner-spin-button,#ticketQuantity::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+.movieLogo {
+  height: 8vh;
+  cursor: pointer;
+}
+
+.profileLogo {
+  height: 5vh;
+}
+
+.videoStyle {
+  height: 100%;
+  width: 100%;
+}
+
+.userName {
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  font-family: cursive;
+}
+#searchInputEl {
+  width: 100%;
+}
+
+@media screen AND (min-width: 767px) {
+  .videoStyle {
+    height: 50%;
+    width: 50%;
+  }
+  #searchInputEl {
+    width: 50%;
+  }
+}
+
+/* model */
+
+.movieImg{
+  height: 100px;
+}
+
+.showDetailCard{
+  border-top: 1px dashed lightgrey;
+  margin-top: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.totalAmountCard{
+  border-top: 1px dashed lightgrey;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+@media screen AND (min-width: 992px) {
+  #searchInputEl {
+    width: 30%;
+  }
+}
+@media print{
+  .contentContainer{
+    visibility: hidden;
+  }
+  .modal{
+    visibility: visible !important;
+  }
+  .modal-footer{
+    display: none !important;
+  }
+}

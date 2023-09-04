@@ -1,0 +1,35 @@
+.main-container {
+  background-image: linear-gradient(to bottom, #2b5876, #4e4376);
+  height: 100vh;
+  background-repeat: inherit;
+}
+.signBtn {
+  background-image: linear-gradient(to bottom, #2b5876, #4e4376);
+  width: 100%;
+}
+.inputEl {
+  width: 300px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  outline: none;
+  background-color: transparent;
+}
+.labelEl {
+  font-size: 14px;
+  font-family: sans-serif;
+  margin-bottom: 3px;
+  color: #2b5876;
+}
+.loginHere {
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.loginHere:hover {
+  text-decoration: underline;
+}
+.headName {
+  color: #2b5876;
+}

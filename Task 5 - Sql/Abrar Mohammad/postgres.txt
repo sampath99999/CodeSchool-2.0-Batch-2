@@ -13,15 +13,20 @@ Ans.A Foreign Key is a Field in one table that refers to the primary key of the 
 Ans.A database engine is a software component that a database management system uses to CRUD(Create,Read,Update,Delete) data from the database.
 
 5.How many types of joins & explain each type of join?
-Ans. INNER JOIN.LEFT JOIN,RIGHT JOIN,CROSS JOIN,NATURAL JOIN.
-INNER JOIN:this type of join is used combine the data from both tables if it matches the particular condition.
-LEFT JOIN:this join returns all records from the LEFT table and the matched data from the RIGHT table.
-RIGHT JOIN:this join returns all records from the RIGHT table and the matched data from the LEFT table.
-CROSS JOIN:this cross join combines every row of the left table with every row of the right table and gives the combined data.
-NATURAL JOIN:natural join refers to combining two or more tables,based on the common columns,the columns in the table must have same name and a same datatype.
+Ans. INNER JOIN.LEFT JOIN,RIGHT JOIN,CROSS JOIN,NATURAL JOIN,FULL JOIN.
+    > INNER JOIN:this type of join is used combine the data from both tables if it matches the particular condition.
+    > LEFT JOIN:this join returns all records from the LEFT table and the matched data from the RIGHT table.
+    > RIGHT JOIN:this join returns all records from the RIGHT table and the matched data from the LEFT table.
+    > CROSS JOIN:this cross join combines every row of the left table with every row of the right table and gives the combined data.
+    > NATURAL JOIN:natural join refers to combining two or more tables,based on the common columns,the columns in the table must have same name and a same datatype.
+    > FULL JOIN: this join is used to return all the rows from both the tables if the row doesn't match it returns tha null values.
 
 6.What is the meaning of CRUD?
-Ans.CRUD->CREATE,READ,UPDATE,DELETE.
+Ans.CRUD->
+    > CREATE-> it is used to create the data using CREATE Clause
+    > READ -> it is used to read the data using SELECT Clause
+    > UPDATE -> it is used to insert the data or update the existing data using INSERT and UPDATE Clauses
+    > DELETE -> it is used to delete the columns or rows or drop the table or database using DELETE AND DROP clauses.
 
 7.Explain GROUP BY,ORDER BY,LIMIT,OFFSET?
 Ans.GROUP BY: the group by clause is used to group rows which have same values in different rows.

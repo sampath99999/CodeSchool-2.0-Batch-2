@@ -1,0 +1,70 @@
+* {
+  font-family: "Sofia", sans-serif;
+}
+.mainContainer {
+  height: 100vh;
+  width: 100%;
+}
+.doctorImage {
+  height: 350px;
+  width: 350px;
+}
+.bottomCont {
+  height: 92vh;
+  width: 100%;
+}
+#navEl {
+  width: 800px;
+  overflow: auto;
+}
+#navEl::-webkit-scrollbar {
+  display: none;
+}
+.descHead {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: blueviolet;
+}
+.descPara {
+  font-size: 15px;
+  color: darkslateblue;
+  font-style: italic;
+}
+.tableContainer {
+  width: 100%;
+}
+.tableContainer::-webkit-scrollbar {
+  display: none;
+}
+.dropMenu {
+  padding-right: 110px;
+}
+.homePage {
+  width: 100%;
+}
+.searchEl {
+  width: 300px;
+}
+
+.form-select-2 {
+  width: 90px;
+  height: 30px;
+}
+.labelPara {
+  width: 90px;
+}
+@media print {
+  .mainContainer {
+    visibility: hidden;
+  }
+  .modalDisplay {
+    visibility: visible !important;
+  }
+}
+@media screen and (max-width: 776px) {
+  .homeCont {
+    display: flex;
+    flex-direction: column;
+  }
+}

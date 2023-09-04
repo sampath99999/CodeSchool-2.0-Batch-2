@@ -52,6 +52,11 @@ body{
   -webkit-appearance: none;
 }
 
+/* Add booking */
+
+#ticketQuantity::-webkit-inner-spin-button,#ticketQuantity::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
 .movieLogo {
   height: 8vh;
   cursor: pointer;

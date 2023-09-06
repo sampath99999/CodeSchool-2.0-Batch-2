@@ -38,6 +38,8 @@ $(document).ready(function () {
     });
 
     $("#loginBtn").click(function () {
+
+      
       var email = $("#emailEl").val();
       var password = $("#passwordEl").val();
 

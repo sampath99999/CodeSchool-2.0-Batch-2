@@ -1,0 +1,25 @@
+[06-Sep-2023 08:05:38 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:22:53 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:23:03 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:23:46 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:25:17 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:25:43 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:31:55 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:32:32 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:34:23 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:35:57 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 08:37:21 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 11:03:03 Europe/Berlin] Exception: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "user_id" of relation "messages" violates not-null constraint
+DETAIL:  Failing row contains (1, etet, null, 2023-09-06 14:33:03.67504).
+[06-Sep-2023 11:03:03 Europe/Berlin] Exception: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "user_id" of relation "messages" violates not-null constraint
+DETAIL:  Failing row contains (2, etet, null, 2023-09-06 14:33:03.681064).
+[06-Sep-2023 11:03:43 Europe/Berlin] Exception: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "user_id" of relation "messages" violates not-null constraint
+DETAIL:  Failing row contains (3, rgtr, null, 2023-09-06 14:33:43.491533).
+[06-Sep-2023 11:03:43 Europe/Berlin] Exception: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "user_id" of relation "messages" violates not-null constraint
+DETAIL:  Failing row contains (4, rgtr, null, 2023-09-06 14:33:43.538447).
+[06-Sep-2023 11:04:43 Europe/Berlin] Exception: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "user_id" of relation "messages" violates not-null constraint
+DETAIL:  Failing row contains (5, dgs, null, 2023-09-06 14:34:43.515338).
+[06-Sep-2023 11:04:43 Europe/Berlin] Exception: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "user_id" of relation "messages" violates not-null constraint
+DETAIL:  Failing row contains (6, dgs, null, 2023-09-06 14:34:43.554158).
+[06-Sep-2023 11:34:39 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
+[06-Sep-2023 11:35:10 Europe/Berlin] Exception: SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1

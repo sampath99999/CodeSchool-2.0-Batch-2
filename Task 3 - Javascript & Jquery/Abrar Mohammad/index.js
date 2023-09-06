@@ -1,6 +1,6 @@
 $("document").ready(function () {
   $.get(
-    "https://newsapi.org/v2/everything?q=apple&from=2023-08-03&to=2023-08-03&sortBy=popularity&apiKey=28f268b4ec714eaaa6f67de7b04d2db4",
+    "https://newsapi.org/v2/everything?q=apple&from=2023-09-05&to=2023-09-05&sortBy=popularity&apiKey=28f268b4ec714eaaa6f67de7b04d2db4",
     function (data, status) {
       let totalData = [];
       for (let i of data.articles) {

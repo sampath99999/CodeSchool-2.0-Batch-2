@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.unorderedList {
+  list-style-type: none;
+}
+.liItem {
+  font-size: 16px;
+  font-family: Bree Serif;
+  opacity: 0.5;
+}
+.imageCont {
+  width: 300px;
+  height: 350px;
+}
+.productImage {
+  height: 150px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.imagesContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.productImageCont {
+  width: 100%;
+}
+
+.imageCont {
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+.headPara {
+  color: darkgrey;
+  font-family: Bree Serif;
+  font-size: 25px;
+}
+.datePara {
+  font-size: 15px;
+  font-family: Bree serif;
+  color: gray;
+}
+.titlePara {
+  font-size: 15px;
+  font-family: Bree serif;
+  color: gray;
+}
+.descPara {
+  font-size: 15px;
+  font-family: Bree serif;
+  color: gray;
+}
+@media screen and (max-width: 776px) {
+  .imagesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .imageCont {
+    margin-bottom: 20px;
+  }
+}

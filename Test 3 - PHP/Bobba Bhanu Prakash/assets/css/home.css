@@ -1,0 +1,16 @@
+.navcolor {
+  background-color: #08254f !important;
+}
+#logo {
+  height: 4rem;
+  width: 4rem;
+}
+#viewDonations {
+  height: 2rem;
+  outline: none !important;
+  border: none !important;
+}
+#logoutBtn {
+  border: 1px solid white !important;
+  outline: 1px solid white !important;
+}

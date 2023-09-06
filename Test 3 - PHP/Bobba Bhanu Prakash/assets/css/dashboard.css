@@ -1,0 +1,8 @@
+#logo {
+  object-fit: contain;
+  width: 4rem;
+  height: 4rem;
+}
+#girlImage {
+  object-fit: contain !important;
+}

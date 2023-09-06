@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-4</title>
+    <link  rel="stylesheet" href="home.css"/> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/2061e7e031.js" crossorigin="anonymous"></script>   
+</head>
+<body>
+<div class="bg-container">
+ 
+   <div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0">
+        <div class="products-container col-12 bg-secondary d-flex justify-content-center align-items-center">
+          
+          <div class="white-box">
+            <nav class="d-flex justify-content-between align-items-center p-2">
+              <h5 class="text-primary">Shipido</h5>
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-bell"></i>
+                <div id="nameBox">SN</div>
+              </div>
+            </nav>
+            <div class="box w-100 d-flex align-items-start">
+              <div class="sidebar">
+                <i class=" icon fa-solid fa-grip ps-2 mb-4" id="dashboardBtn"></i>
+                <i class=" icon fa-solid fa-cart-shopping ps-2 mb-4"></i>
+                <i class=" icon fa-solid fa-tag ps-2 mb-4"></i>
+                <i class=" icon fa-solid fa-users ps-2 mb-4"></i>
+                <i class=" icon fa-solid fa-shop ps-2 mb-4"></i>
+              </div>
+              <div class="products-head-container p-2 w-100">
+                 <h4>Products</h4>
+                 <div class="table-outer-box">
+                  <div class="table-outer-box-nav d-flex justify-content-between align-items-center">
+                    <div class="inputBox d-flex mb-3">
+                      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter</button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                      <button class="btn btn-danger text-light me-2" id="deleteBtn">Delete</button>
+                      
+<button id="addProductBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  New Product
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"> 
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" >Product Name</label>
+          <input id="productName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" id="inputGroup-sizing-default">Product Image</label>
+          <input id="productImage" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text">Category</label>
+          <input  id="category" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" id="inputGroup-sizing-default">SKU</label>
+          <input id="sku" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" id="inputGroup-sizing-default">Price</label>
+          <input id="price" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" id="inputGroup-sizing-default">Variant</label>
+          <input id="variant" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <p id="modalMessage"></p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="addBtn">Add Product</button>
+      </div>
+    </div>
+  </div>
+</div>
+                      
+                    </div>
+                  </div>  
+                  <div class="table">
+                    <div id="tableContainer">
+                     
+                    </div>
+                  </div>
+                  
+      
+                 </div>
+                 
+              </div>
+            </div>
+           
+          </div>
+
+         
+           
+        </div> 
+    </div>
+   </div> 
+  
+
+</div> 
+
+</div>
+
+    <script src="home.js"></script>
+
+</body>
+</html>

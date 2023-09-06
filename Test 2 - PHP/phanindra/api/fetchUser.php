@@ -7,7 +7,7 @@ $response = ["status" => false, "message" => "", "data" => ""];
 $userToken = $_POST['userToken'];
 
 try {
-    $query = "SELECT firstname FROM userregistration WHERE token = :userToken"; // Use :userToken in the SQL query
+    $query = "SELECT firstname FROM userregistration WHERE token = :userToken";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':userToken', $userToken, PDO::PARAM_STR);
     $stmt->execute();
@@ -25,7 +25,6 @@ try {
         exit;
     }
 } catch (PDOException $e) {
-    // Handle database connection or query errors here
     $response['message'] = 'Database error: ' . $e->getMessage();
     echo json_encode($response);
     exit;

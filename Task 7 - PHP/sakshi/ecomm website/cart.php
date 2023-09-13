@@ -13,7 +13,7 @@ if(isset($_SESSION['user_id'])){
 
 if(isset($_POST['delete'])){
    $cart_id = $_POST['cart_id'];
-   $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE id = ?");
+   $delete_cart_item = $conn->prepare("DELETE FROM cart WHERE id = ?");
    $delete_cart_item->execute([$cart_id]);
 }
 

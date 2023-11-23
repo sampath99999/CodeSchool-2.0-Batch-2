@@ -1,0 +1,76 @@
+<div class="">
+  <div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0 register">
+      <div class="d-none d-md-flex col-md-8 p-0">
+        <img
+          class="img-fluid loginImg"
+          ng-src="https://cdn.kekastatic.net/login/v/M163_2023.11.20.1/images/login-image.jpg"
+        />
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark mt-5">
+          <h3 class="d-flex justify-content-center mb-3">Sign Up</h3>
+          <div class="row form-floating m-0 p-0 mb-3">
+            <input
+              type="text"
+              ng-model="name"
+              class="form-control mb-2"
+              placeholder="Enter Name"
+              ng-change="validateName()"
+              ng-class="{'is-invalid':nameErr}"
+            />
+            <label for="name">Enter Name</label>
+          </div>
+          <div ng-show="nameErr" class="text-danger">{{nameErr}}</div>
+          <div class="row form-floating m-0 p-0 mb-3">
+            <input
+              type="email"
+              ng-model="email"
+              class="form-control mb-2"
+              placeholder="Enter Email"
+              ng-change="validateEmail()"
+              ng-class="{'is-invalid':emailErr}"
+            />
+            <label for="email">Enter Email</label>
+          </div>
+          <div ng-show="emailErr" class="text-danger">{{emailErr}}</div>
+          <div class="row form-floating m-0 p-0 mb-3">
+            <input
+              type="password"
+              ng-model="password"
+              class="form-control mb-2"
+              placeholder="Enter Password"
+              ng-change="validatePassword()"
+              ng-class="{'is-invalid':passwordErr}"
+            />
+            <label for="password">Enter Password</label>
+          </div>
+          <div ng-show="passwordErr" class="text-danger">{{passwordErr}}</div>
+          <div class="row form-floating m-0 p-0 mb-3">
+            <input
+              type="password"
+              ng-model="confirmPassword"
+              class="form-control mb-2"
+              placeholder="Confirm Password"
+              ng-change="validateConfirmPassword()"
+              ng-class="{'is-invalid':confirmPasswordErr}"
+            />
+            <label for="password">Confirm Password</label>
+          </div>
+          <div ng-show="confirmPasswordErr" class="text-danger">
+            {{confirmPasswordErr}}
+          </div>
+          <div class="d-flex justify-content-between">
+            <div>Already an user?<a ui-sref="login"> Sign In</a></div>
+            <div
+              class="btn btn-primary text-white float-end px-3 py-1"
+              ng-click="register()"
+            >
+              Sign Up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+body {
+  height: 100vh !important;
+}
+.login,
+.register {
+  height: 100vh !important;
+}
+
+.loader {
+  width: 10rem !important;
+  height: 10rem !important;
+}

@@ -1,0 +1,131 @@
+<div class="container-fluid p-0 m-0">
+  <navbar></navbar>
+
+  <div class="row p-0 m-0 home">
+    <div class="col-md-2 bg-primary p-0 m-0 border-end border-dark">
+      <div ng-repeat="navItem in navItems">
+        <div
+          class="w-100 border-bottom border-white text-white p-3"
+          ui-sref="{{navItem.state}}"
+          ui-sref-active="active"
+        >
+          {{navItem.name}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 p-3">
+      <div class="d-flex justify-content-end">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Employee
+        </button>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  id="modalCloseBtn"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="row form-floating m-0 p-0 mb-3 text-dark">
+                  <input
+                    type="email"
+                    ng-model="email"
+                    class="form-control"
+                    placeholder="Enter Email"
+                    ng-class="{'is-invalid':emailErr}"
+                    ng-change="validateEmail()"
+                  />
+                  <label for="email">Email</label>
+                </div>
+                <div class="text-danger" ng-show="emailErr">{{emailErr}}</div>
+                <div class="row form-floating m-0 p-0 mb-3 text-dark">
+                  <input
+                    type="text"
+                    ng-model="name"
+                    class="form-control"
+                    ng-class="{'is-invalid':nameErr}"
+                    ng-change="validateName()"
+                    placeholder="Enter Name"
+                  />
+                  <label for="name">Name</label>
+                </div>
+                <div class="text-danger" ng-show="nameErr">{{nameErr}}</div>
+                <div class="row form-floating m-0 p-0 mb-3 text-dark">
+                  <input
+                    type="text"
+                    ng-model="salary"
+                    class="form-control"
+                    ng-class="{'is-invalid':salaryErr}"
+                    ng-change="validateSalary()"
+                    placeholder="Enter Salary"
+                  />
+                  <label for="salary">Annual Salary</label>
+                </div>
+                <div class="text-danger" ng-show="salaryErr">{{salaryErr}}</div>
+                <select
+                  class="form-select"
+                  ng-model="selectedRole"
+                  ng-class="{'is-invalid':roleErr}"
+                  ng-change="validateRole()"
+                  ng-options="role for role in roles"
+                >
+                  <option value="">Select</option>
+                </select>
+                <div class="text-danger" ng-show="roleErr">{{roleErr}}</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    ng-click="addEmployee()"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>S.NO</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="employee in employeeList">
+                <td>{{$index+1}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.role}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

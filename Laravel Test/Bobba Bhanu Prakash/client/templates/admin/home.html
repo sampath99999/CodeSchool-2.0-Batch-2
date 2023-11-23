@@ -1,0 +1,18 @@
+<div class="container-fluid p-0 m-0">
+  <navbar></navbar>
+
+  <div class="row p-0 m-0 home">
+    <div class="col-md-2 bg-primary p-0 m-0 border-end border-dark">
+      <div ng-repeat="navItem in navItems">
+        <div
+          class="w-100 border-bottom border-white text-white p-3"
+          ui-sref="{{navItem.state}}"
+          ui-sref-active="active"
+        >
+          {{navItem.name}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10"></div>
+  </div>
+</div>

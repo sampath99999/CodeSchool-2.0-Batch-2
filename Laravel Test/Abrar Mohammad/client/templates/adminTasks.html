@@ -1,0 +1,31 @@
+<div>
+    <admin-header2></admin-header2>
+    <div class="postCont d-flex flex-column align-items-center col-12 mt-5">
+        <div class="totalPosts col-10 table-responsive">
+            <table class="table table-bordered text-center align-items-center fw-semibold font-monospace">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Task Changes</th>
+                        <th>Assigned To</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="task in tasks" class="tableText fw-normal">
+                        <td>
+                            {{task.task_name}}
+                        </td>
+                        <td>{{task.task_changes}}</td>
+                        <td>
+                            {{task.get_user['name']}}
+                        </td>
+                        <td>
+                            {{task.get_tasks_status['task_status']}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

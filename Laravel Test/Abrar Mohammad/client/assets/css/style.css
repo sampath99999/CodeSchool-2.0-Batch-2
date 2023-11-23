@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.registerMainCont {
+    height: 100vh;
+    background-size: cover;
+}
+
+.registerContainer {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.loginContainer {
+    background-color: #fff;
+    border-radius: 20px;
+    height: 60vh;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 30px;
+
+}
+
+.signupImage {
+    max-width: 90%;
+}
+
+.loginImage {
+    width: 500px;
+}
+
+.errMsg {
+    font-size: 12px;
+    width: 300px;
+}
+
+.formEl {
+    position: relative;
+    border: 0px;
+}
+
+.routePara {
+    font-size: 14px;
+}
+
+.formEl input {
+    font-family: 'Poppins',
+        sans-serif;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.registerBtn {
+    cursor: pointer;
+    background: #6dabe4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all ease .25s;
+}
+
+.formEl2 {
+    font-family: 'Poppins',
+        sans-serif;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.passwordEl {
+    outline: none;
+    border: 0px;
+}
+
+.viewPasswordBtn {
+    border: 0px;
+    background-color: transparent;
+    outline: none;
+}
+
+.registerBtn:hover {
+    background: #4292dc;
+}
+
+@media screen and (max-width: 960px) {
+
+    body {
+        padding: 80px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column1,
+    .column2 {
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .formEl input {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .form {
+        padding: 30px 20px;
+    }
+
+    .postHomeCont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formEl {
+        margin-bottom: 5px;
+        padding-bottom: 15px;
+    }
+
+    .loginContainer {
+        background-color: #fff;
+        border-radius: 20px;
+    }
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #FF3D00;
+    border-left: 4px solid transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loginContainer {
+    height: 100vh;
+    /* background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #e7e7e7;
+}
+
+.navEl {
+    height: 8vh;
+}
+
+.navEl2 {
+    background-color: #4292dc;
+    height: 8vh;
+    width: 100%;
+}
+
+
+.logo {
+    height: 50px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.unordered2 li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.unordered2 li:hover {
+    text-decoration: underline;
+}
+
+.unordered2 li a {
+    text-decoration: none;
+    color: white;
+    font-family: Bree Serif;
+    font-size: 14px;
+}
+
+.unordered li:hover {
+    text-decoration: underline;
+}
+
+.linkEl {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.linkEl {
+    text-decoration: underline;
+}
+
+.errMsg {
+    font-size: 14px;
+    color: red;
+    font-family: Bree Serif;
+}
+
+.conts {
+    height: 90vh;
+}
+
+.inputCont {
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.inputEl {
+    border: 0px;
+    outline: none;
+    color: gray;
+    margin-left: 15px;
+    height: 40px;
+}
+
+.newsLogo {
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+}
+
+.logoCont {
+    background-color: #ff7a59;
+    border-radius: 4px;
+}
+
+.newsLogo2 {
+    height: 50px;
+    width: 100px;
+}
+
+.newsLogo3 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.loginPara {
+    font-size: 25px;
+    font-family: Bree Serif;
+}
+
+.hidePass {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+
+.adminHeader {
+    height: 8vh;
+}
+
+.adminCont {
+    height: 92vh;
+}
+
+.adminCont2 {
+    margin-top: 70px;
+}
+
+.adminPara {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.adminHead {
+    color: green;
+}
+
+.addTaskBtn {
+    background-color: #4292dc;
+    border: 0px;
+    outline: none;
+    border-radius: 6px;
+    color: white;
+    height: 35px;
+}
+
+.adminContainer {
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.adminContainer2 {
+    background-image: url("https://img.freepik.com/premium-vector/abstract-background-3d-globe-sphere-dotted-world-map-futuristic-style_34645-1144.jpg?w=1060");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cardEl {
+    border: 0px;
+}
+
+.taskDashboardImage {
+    height: 350px;
+    width: 100%;
+}
+
+.iconEl {
+    border: 1px solid lightgray;
+    border-radius: 45%;
+}
+
+.adminBtn {
+    border: 0px;
+    background: #ff7a59;
+    color: white;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.homePanel {
+    list-style-type: none;
+    cursor: pointer;
+    font-family: Bree Serif;
+    font-size: 18px;
+}
+
+.homePanel li:hover {
+    color: #ff7a59;
+    text-decoration: underline;
+}
+
+.cnLogo {
+    font-family: "Trirong", sans-serif;
+    text-shadow: 3px 3px 3px #ababab;
+}
+
+.cardBody {
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.rightSideCont1 {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+.categoryPara {
+    background-color: red;
+    border-radius: 6px;
+    width: 80px;
+    height: 25px;
+}
+
+.categoryPara2 {
+    background-color: #ff7a59;
+    border-radius: 6px;
+    width: 80px;
+    height: 25px;
+}
+
+.cardDesc {
+    font-size: 15px;
+}
+
+.cardTitle {
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.imageEl {
+    height: 120px;
+    width: 100px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.dateEl {
+    font-size: 12px;
+}
+
+.unorderedList {
+    height: 100vh;
+    overflow: auto;
+}
+
+.unorderedList::-webkit-scrollbar {
+    display: none;
+}
+
+.navEl3 {
+    background-color: #fff;
+    height: 8vh;
+}
+
+.cont1 {
+    background-color: #4292dc;
+    height: 120px;
+    border-radius: 6px;
+}
+
+.adminPosts {
+    height: 100vh;
+    background-size: cover;
+}
+
+.tableImg {
+    height: 50px;
+    width: 50px;
+}
+
+.tableText {
+    font-size: 13px;
+}
+
+.updateBtn {
+    border: 0px;
+    background-color: green;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+.faviconImg {
+    border-radius: 50%;
+}
+
+.postCont2 {
+    width: 150px;
+    flex-wrap: wrap;
+    overflow: auto;
+}

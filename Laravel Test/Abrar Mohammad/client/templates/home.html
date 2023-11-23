@@ -1,0 +1,45 @@
+<div>
+    <user-header></user-header>
+    <div class="postCont2 d-flex flex-column align-items-center col-12 mt-5">
+        <div class="d-flex justify-content-around col-12 mb-5 postHomeCont">
+            <div class="cont1 col-6 col-md-2 d-flex justify-content-center align-items-center mb-3">
+                <div class="d-flex flex-column  align-items-center gap-2 justify-content-center">
+                    <h3 class="m-0 p-0 fw-semibold text-light font-monospace fs-6">Total Assigned Tasks</h3>
+                    <p class="m-0 p-0 fw-semibold text-light">{{totalTasks}}</p>
+                </div>
+            </div>
+            <div class="cont1 col-6 col-md-2 d-flex justify-content-center align-items-center mb-3">
+                <div class="d-flex align-items-center gap-5 justify-content-center">
+                    <div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+                        <h3 class="m-0 p-0 fw-semibold text-light font-monospace fs-6">Backlogs</h3>
+                        <p class="m-0 p-0 fw-semibold text-light">{{taskStatusCount}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont1 col-6 col-md-2 d-flex justify-content-center align-items-center mb-3">
+                <div class="d-flex align-items-center gap-5 justify-content-center">
+                    <div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+                        <h3 class="m-0 p-0 fw-semibold text-light font-monospace fs-6">Staging</h3>
+                        <p class="m-0 p-0 fw-semibold text-light">{{taskStagingCount}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont1 col-6 col-md-2 d-flex justify-content-center align-items-center mb-3">
+                <div class="d-flex align-items-center gap-5 justify-content-center">
+                    <div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+                        <h3 class="m-0 p-0 fw-semibold text-light font-monospace fs-6">Pre-prod</h3>
+                        <p class="m-0 p-0 fw-semibold text-light">{{taskPreCount}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont1 col-6 col-md-2 d-flex justify-content-center align-items-center mb-3">
+                <div class="d-flex align-items-center gap-5 justify-content-center">
+                    <div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+                        <h3 class="m-0 p-0 fw-semibold text-light font-monospace fs-6">Done/Pre-prod</h3>
+                        <p class="m-0 p-0 fw-semibold text-light">{{taskCompletedCount}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

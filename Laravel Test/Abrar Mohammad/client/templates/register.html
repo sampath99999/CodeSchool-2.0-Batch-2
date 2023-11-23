@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center align-items-center registerMainCont">
+    <div class="registerContainer shadow-lg d-flex justify-content-between align-items-center p-5">
+        <div class="column1 ps-3 col-md-6">
+            <div id="form" class="form">
+                <h2 class="fs-3 fw-semibold">Register with us</h2>
+                <div class="d-flex flex-column formEl mt-3">
+                    <input type="text" ng-model="username" placeholder="Username" ng-class="{'is-invalid': nameErrMsg}"
+                        ng-change="validateUserName()">
+                    <p class="m-0 text-danger errMsg">{{nameErrMsg}}</p>
+                </div>
+                <div class="d-flex flex-column formEl mt-3">
+                    <input type="text" ng-model="email" placeholder="Email" ng-class="{'is-invalid': emailErrMsg}"
+                        ng-change="validateEmail()">
+                    <p class="m-0 text-danger errMsg">{{emailErrMsg}}</p>
+                </div>
+                <div class="d-flex flex-column formEl mt-3">
+                    <input type="text" ng-model="mobile" placeholder="Mobile Number"
+                        ng-class="{'is-invalid': mobileErrMsg}" ng-change="validateMobile()" maxlength="10">
+                    <p class="m-0 text-danger errMsg">{{mobileErrMsg}}</p>
+                </div>
+                <div class="d-flex flex-column formEl mt-3">
+                    <input type="password" ng-model="password" placeholder="Password" ng-change="validatePassword()"
+                        ng-class="{'is-invalid': passwordErrMsg}">
+                    <p class="m-0 text-danger errMsg">{{passwordErrMsg}}</p>
+                </div>
+                <div class="d-flex flex-column formEl mt-3">
+                    <input type="password" ng-model="confirmPassword" ng-class="{'is-invalid': confirmPasswordErrMsg}"
+                        placeholder="Confirm Password" ng-change="validateConfirmPassword()">
+                    <p class="m-0 text-danger errMsg">{{confirmPasswordErrMsg}}</p>
+                </div>
+                <button class="registerBtn w-100 pe-2 ps-2 pt-1 pb-1" ng-click="register()">Register</button>
+                <div class="d-flex justify-content-center col-12 mt-1">
+                    <p class="m-0 routePara fw-bold" style="cursor: pointer;">Already have an account? <span
+                            class='m-0 fw-bold text-primary text-decoration-underline' ui-sref="login">Login</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="column2 d-none d-md-block">
+            <img src="https://i.ibb.co/k5NNz4F/pablo-sign-up.png" alt="pablo-sign-up" class='signupImage img-fluid'>
+        </div>
+    </div>
+</div>

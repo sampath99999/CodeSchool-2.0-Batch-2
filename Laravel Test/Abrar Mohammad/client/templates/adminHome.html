@@ -1,0 +1,50 @@
+<div class="adminContainer m-0 p-0">
+    <admin-header></admin-header>
+    <div class="d-flex flex-column align-items-center bg-secondary bg-opacity-10 adminCont">
+        <div
+            class="d-flex col-12 col-md-8 justify-content-center gap-5 align-items-center adminCont2 bg-white p-5 rounded shadow-lg">
+            <div class="postDesc col-md-4 d-none d-md-block">
+                <img src="https://img.freepik.com/free-vector/hand-drawn-business-planning-with-task-list_23-2149164275.jpg"
+                    class="taskDashboardImage" />
+            </div>
+            <div class="d-flex flex-column justify-content-center col-12 col-md-5 p-3 rounded">
+                <h1 class="fs-3 adminHead mb-4 d-flex justify-content-center col-12 text-success rounded p-2">
+                    <button class="hidePass d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-newspaper text-success" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
+                            <path
+                                d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+                        </svg>
+                        Create a Task
+                    </button>
+                </h1>
+                <div class="inputCont col-12 d-flex justify-content-between align-items-center">
+                    <input type="text" class="inputEl w-100" ng-model="task" placeholder="Task Name"
+                        ng-class="{'is-invalid': titleErr}" ng-change="validateTitle()" />
+                </div>
+                <p class="m-0 errMsg text-danger">{{titleErr}}</p>
+                <div class="mt-4 w-100 inputCont d-flex justify-content-between align-items-center">
+                    <textarea type="text" class="inputEl w-100" ng-model="description" placeholder='Task Changes'
+                        ng-class="{'is-invalid': descriptionErr}" ng-change="validateDescription()"
+                        style="height:80px;"></textarea>
+                </div>
+                <p class="m-0 errMsg text-danger">{{descriptionErr}}</p>
+                <select class="mt-2 w-100 mt-4 inputCont" style="height:40px;color:gray;" ng-model="employee">
+                    <option value="">Employees</option>
+                    <option ng-repeat="user in users" value="{{user.id}}">{{user.name}}
+                    </option>
+                </select>
+                <div class="mt-4 w-100 inputCont d-flex align-items-center">
+                    <input class="inputEl w-100 mt-2" type="date" style="height:45px;" ng-model="submissionDate" />
+                </div>
+                <button class="addTaskBtn w-100 font-monospace fw-semibold mt-4" ng-click="assignTask()">Assign
+                    Task</button>
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-outline-danger w-50 d-block d-md-none mt-3">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

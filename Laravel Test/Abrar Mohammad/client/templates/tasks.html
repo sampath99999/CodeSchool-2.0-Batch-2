@@ -1,0 +1,41 @@
+<div>
+    <task-header></task-header>
+    <div class="postCont d-flex flex-column align-items-center col-12 mt-5">
+        <div class="totalPosts col-10 table-responsive">
+            <table class="table table-bordered text-center align-items-center fw-semibold font-monospace">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Task Changes</th>
+                        <th>Deadline</th>
+                        <th>Update</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="task in Tasks" class="tableText fw-normal">
+                        <td>
+                            {{task.task_name}}
+                        </td>
+                        <td>{{task.task_changes}}</td>
+                        <td>{{task.task_submission_date}}</td>
+                        <td>
+                            <select class="form-select tableText fw-normal" aria-label="Default select example"
+                                ng-model="status" ng-change="updateStatus(task.id,status)">
+                                <option value="">Select</option>
+                                <option value="in_development">In Development</option>
+                                <option value="staging">Staging</option>
+                                <option value="pre-prod">Pre-prod</option>
+                                <option value="prod">Prod</option>
+                                <option value="done">Done</option>
+                            </select>
+                        </td>
+                        <td>
+                            {{task.get_tasks_status['task_status']}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

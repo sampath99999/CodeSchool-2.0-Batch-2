@@ -1,0 +1,79 @@
+<navbar></navbar>
+<div class="bg-black d-flex text-white p-2" style="height: 100vh">
+  <div class="col-1 d-flex flex-column align-items-center gap-3">
+    <i
+      class="fa-solid fa-pen p-2 bg-white text-black rounded-3 pointer"
+      ng-click="compose = compose == true ? false : true"
+    ></i>
+    <i class="fa-solid fa-inbox"></i>
+  </div>
+  <div class="col-10 p-3 bg-secondary bg-opacity-25 rounded-3">
+    <div class="d-flex gap-3 align-items-center">
+      <i class="fa-solid fa-inbox"></i>
+      <p class="m-0 fw-semibold">Primary</p>
+    </div>
+    <hr />
+    <div class="d-flex flex-column gap-2">
+      <div class="d-flex flex-column gap-1" ng-repeat="mail in mails">
+        <div
+          class="d-flex align-items-center col-12 gap-2 pointer"
+          ui-sref="mail({id:mail.id})"
+        >
+          <input type="checkbox" class="form-check-input" />
+          <p class="m-0 fw-bold col-3">{{mail.username}}</p>
+          <p class="m-0 fw-bold col-7">{{mail.subject}}</p>
+        </div>
+        <hr class="m-1" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-div col-5" ng-show="compose">
+  <div
+    class="message-head w-100 d-flex justify-content-between p-2 rounded-top align-items-center"
+  >
+    <p class="m-0 fw-semibold">New Message</p>
+    <i
+      class="fa-solid fa-xmark pointer"
+      ng-click="compose = compose == true ? false : true"
+    ></i>
+  </div>
+  <div class="bg-white p-2 px-3">
+    <div class="d-flex gap-2">
+      <label for="to" class="text-secondary">To</label>
+      <input type="text" ng-model="to" class="subject border border-0" />
+    </div>
+    <hr class="m-1" />
+    <div class="d-flex gap-2">
+      <input
+        type="text"
+        ng-model="subject"
+        class="subject border border-0"
+        placeholder="Subject"
+      />
+    </div>
+    <hr class="m-1" />
+    <div class="mb-3">
+      <textarea
+        class="subject border border-0"
+        ng-model="body"
+        rows="10"
+        cols="60"
+      ></textarea>
+    </div>
+    <div class="d-flex align-items-center gap-3 justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="btn btn-primary rounded-5 d-flex gap-2 align-items-center">
+          <p class="m-0" ng-click="send_email()">Send</p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <i class="fa-solid fa-paperclip pointer"></i>
+        <i class="fa-solid fa-image pointer"> </i>
+        <input type="file" class="form-control w-25" id="files" multiple />
+      </div>
+
+      <i class="fa-solid fa-trash me-0"></i>
+    </div>
+  </div>
+</div>

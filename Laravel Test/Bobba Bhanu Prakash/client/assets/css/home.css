@@ -1,0 +1,13 @@
+.logo {
+  height: 4rem;
+  width: 5rem;
+}
+.home {
+  height: 100vh !important;
+}
+.active {
+  background-color: white !important;
+  color: black !important;
+  border-top: 1px solid black !important;
+  border-bottom: 1px solid black !important;
+}

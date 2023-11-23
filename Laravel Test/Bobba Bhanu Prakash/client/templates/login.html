@@ -1,0 +1,49 @@
+<div class="login">
+  <div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0 login">
+      <div class="d-none d-md-flex col-md-8 p-0">
+        <img
+          class="img-fluid loginImg"
+          ng-src="https://cdn.kekastatic.net/login/v/M163_2023.11.20.1/images/login-image.jpg"
+        />
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark my-5">
+          <h3 class="d-flex justify-content-center mb-3">Sign In</h3>
+          <div class="row form-floating m-0 p-0 mb-3 text-dark">
+            <input
+              type="email"
+              ng-model="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+            <label for="email">Email</label>
+          </div>
+          <div class="text-danger" ng-show="emailErr">{{emailErr}}</div>
+          <div class="row form-floating m-0 p-0 mb-3 text-dark">
+            <input
+              type="password"
+              ng-model="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+            <label for="password">Password</label>
+          </div>
+          <div class="text-danger" ng-show="passwordErr">{{passwordErr}}</div>
+          <div class="d-flex justify-content-between">
+            <div>
+              <span>Not Register?</span>
+              <a ui-sref="register">Sign Up</a>
+            </div>
+            <div
+              class="btn btn-primary text-white m-0 px-3 py-1 float-end"
+              ng-click="login()"
+            >
+              Sign In
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

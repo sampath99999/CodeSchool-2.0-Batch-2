@@ -1,0 +1,92 @@
+<div class="container-fluid p-0 m-0">
+    <navbar></navbar>
+  
+    <div class="row p-0 m-0 home">
+      <div class="col-md-2 bg-primary p-0 m-0 border-end border-dark">
+        <div ng-repeat="navItem in navItems">
+          <div
+            class="w-100 border-bottom border-white text-white p-3"
+            ui-sref="{{navItem.state}}"
+            ui-sref-active="active"
+          >
+            {{navItem.name}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Request Leaves
+            </button>
+    
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Request Leaves</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      id="modalCloseBtn"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="fw-bolder mb-3">Available Leaves:{{availableLeaves}}</div>
+                    <input type="date" class="form-control" ng-model="selectedStartDate"  ng-class="{'is-invalid':startDateErr}" placeholder="From"/>
+                    <div class="text-danger" ng-show="emailErr">{{startDateErr}}</div>
+                    <input type="date" class="form-control" ng-model="selectedEndDate"  ng-class="{'is-invalid':endDateErr}" placeholder="To"/>
+                    <div class="text-danger" ng-show="nameErr">{{endDateErr}}</div>
+                    <input type="text" class="form-control" placeholder="Enter Reason" ng-class="{'is-invalid':reasonErr}"/>
+                    <div class="text-danger" ng-show="salaryErr">{{reasonErr}}</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        ng-click="requestLeaves()"
+                      >
+                        Request
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>S.NO</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="employee in employeeList">
+                    <td>{{$index+1}}</td>
+                    <td>{{leaves.start_date}}</td>
+                    <td>{{employee.end_date}}</td>
+                    <td>{{employee.reason}}</td>
+                    <td>{{employee.status}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

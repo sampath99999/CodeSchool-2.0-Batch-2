@@ -1,0 +1,129 @@
+<div class="container-fluid p-0">
+  <div class="row m-0">
+    <div class="col-12 p-0">
+      <header-directive></header-directive>
+    </div>
+    <div class="col-12 bg-success bg-opacity-25 bodyBg p-0 pt-3">
+      <div class="row d-flex gap-5 justify-content-center px-2">
+        <div class="shadow-lg rounded-1 col-10 col-sm-8 col-md-5 col-lg-3  p-0" ng-repeat="blog in blogList">
+          <div class="position-relative">
+            <div class="imgCard">
+              <img
+                ng-src="{{uploadsUrl}}{{blog['image_url']}}"
+                alt="blogImg"
+                class="image-fluid rounded-1"
+                height="200px"
+                width="100%"
+              />
+            </div>
+            <div class="px-2 d-flex flex-column gap-2">
+              <div class="d-flex justify-content-between">
+                <p class="m-0 text-capitalize text-black fw-bold">
+                  {{blog.author.name}}
+                </p>
+                <small class="m-0 text-secondary fw-semibold"
+                  >{{blog.created_at | date:'dd-MM-yyyy'}}</small
+                >
+              </div>
+              <h3 class="m-0">{{blog.title}}</h3>
+              <p
+                style="width: 80px; height: 5px"
+                class="bg-warning rounded-3 m-0"
+              ></p>
+              <p class="m-0">{{blog.description | limitTo:150}}</p>
+            </div>
+            <div
+              class="position-absolute d-flex flex-column align-items-center reactionCard text-white"
+            >
+              <i
+                class="fa-regular fa-heart reactionIcon fs-4"
+                ng-if="!blog.isLiked"
+                ng-click="blogLikeFun(blog.id,'insertLike')"
+              ></i>
+
+              <i
+                class="fa-solid fa-heart text-danger fs-4"
+                ng-if="blog.isLiked"
+                ng-click="blogLikeFun(blog.id,'deleteLike')"
+              ></i>
+              <small class="m-0 mb-2">{{blog.likes_count}}</small>
+              <!-- Button trigger modal -->
+              <i
+                class="fa-regular fa-comment reactionIcon fs-4"
+                data-bs-toggle="modal"
+                data-bs-target="#commentModal"
+                ng-click="commentFun(blog.id)"
+              ></i>
+              <small class="m-0">{{blog.comments_count}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="commentModal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Comments</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p ng-show="isCommentSectionEmpty" class="fs-1 fw-bold">
+            No comments!
+          </p>
+          <div ng-repeat="comment in commentList">
+            <div class="d-flex align-items-center  mb-2 gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-circle text-success  "
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path
+                  fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                />
+              </svg>
+              <div>
+                <p class="m-0 fw-semibold ">{{comment.user.name}}</p>
+                <small class="m-0">{{comment.comment}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="d-flex justify-content-between w-100 commentInput">
+            <input
+              type="text"
+              class="bg-transparent border-0 w-100"
+              placeholder="Comment here"
+              ng-model="comment"
+            />
+            <small class="m-0 text-info cursor" ng-click="commentPostFun()"
+              >Post</small
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="loginRegisterBg">
+  <div class="wrapper">
+    <h3>Registration Form</h3>
+    <div class="form">
+      <div class="input_field">
+        <input type="text" placeholder="Name" class="input" ng-change="nameValidation()" ng-model="name" />
+        <small class="m-0 text-warning" ng-show="nameErrMsg">*{{nameErrMsg}}</small>
+      </div>
+      <div class="input_field">
+        <input type="text" placeholder="Phone Number" maxlength="10" class="input" ng-change="phoneNumberValidation()" ng-model="phoneNumber" />
+        <small class="m-0 text-warning" ng-show="phoneNumberErrMsg">*{{phoneNumberErrMsg}}</small>
+      </div>
+      <div class="input_field">
+        <input type="text" placeholder="Email" class="input" ng-change="emailValidation()" ng-model="email" />
+        <small class="m-0 text-warning" ng-show="emailErrMsg">*{{emailErrMsg}}</small>
+      </div>
+      <div class="input_field">
+        <input type="text" placeholder="Password" class="input" ng-model="password" ng-change="passwordValidation()" />
+        <small class="m-0 text-warning" ng-show="passwordErrMsg">*{{passwordErrMsg}}</small>
+      </div>
+      <div class="input_field">
+        <input type="password" placeholder="Confirm Password" class="input" ng-change="confirmPasswordValidation()" ng-model="confirmPassword" />
+        <small class="m-0 text-warning" ng-show="confirmPasswordErrMsg">*{{confirmPasswordErrMsg}}</small>
+      </div>
+      <div class="btn w-100 text-white" ng-click="registerFun()">Register</div>
+      <p class="m-0 text-center mt-2 text-white ">Already have an account? <span ui-sref="login" class="text-warning">Login</span></p>
+    </div>
+  </div>
+</div>

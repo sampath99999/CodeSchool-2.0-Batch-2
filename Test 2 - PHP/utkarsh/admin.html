@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap cdn -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font awesome cdn -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- j query cdn -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <div class="headercontent d-flex justify-content-between mt-3 p-3">
+      <p>Tia</p>
+      <div class="d-flex">
+        <i class="fa-solid fa-bell" style="margin-right: 20px"></i>
+        <i class="fa-solid fa-user" style="margin-right: 20px"></i>
+      </div>
+    </div>
+    <hr style="margin-top: -10px" />
+    <div class="row">
+      <div class="col-2 p-3">
+        <ul>
+          <li style="padding: 10px">HR list</li>
+          <li style="padding: 10px">Employees list</li>
+          <li style="padding: 10px">Work Pending</li>
+          <li style="padding: 10px">Tasks Done</li>
+        </ul>
+      </div>
+      <div class="col-10">
+        <h3 class="text-success"><b>Welcome Admin!</b></h3>
+        <h4>Here are your updates so far</h4>
+        <br /><br />
+
+        <div class="row">
+          <div class="col-8">
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Employees performance</h5>
+                    <p class="card-text text-warning"><b>60%</b></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Hr's work</h5>
+                    <br />
+                    <p class="card-text text-danger"><b>5/10</b></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Your to do list</h5>
+                    <ul>
+                      <li><p class="card-text">meeting @ 7</p></li>
+                      <li><p class="card-text">factory visit</p></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-8"> <br><br>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">DOCUMENT</h5>
+                <br />
+                <p class="card-text">lLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor pulvinar turpis a ullamcorper. Morbi vel orci vitae quam aliquet pretium eget nec lorem. Duis leo purus, facilisis ut porta vitae, mollis ut magna. Mauris justo felis, iaculis a maximus sed, euismod a neque. Phasellus lorem nisi, viverra sed velit a, pellentesque dignissim augue. Sed sed orci sit amet nulla posuere sodales non et nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

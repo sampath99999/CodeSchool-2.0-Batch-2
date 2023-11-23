@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:wght@400;500;600;700;800&display=swap");
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+img {
+  width: 70vw;
+  height: 100vh;
+}
+h5 {
+  font-weight: 400;
+}
+.loginBody {
+  padding: 130px 40px 0px 0px;
+}
+.loginBody input {
+  width: 330px;
+}
+.loginBody button {
+  width: 330px;
+  background-color: #2986ce;
+  color: white;
+  height: 50px;
+}
+.loginBtn:hover {
+  background-color: #306e9e;
+  color: white;
+}

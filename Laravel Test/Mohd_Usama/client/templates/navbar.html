@@ -1,0 +1,49 @@
+<div class="container-fluid p-0 bg-black">
+  <div class="d-flex justify-content-around p-2 text-white align-items-center">
+    <div class="d-flex gap-2 col-2 justify-content-around align-items-center">
+      <i class="fa-solid fa-bars"></i>
+      <div class="col-6">
+        <img class="img-fluid" src="./assets/images/logo.png" alt="" ui-sref="root" />
+      </div>
+    </div>
+
+    <div
+      class="col-6 rounded-5 align-items-center px-3 input_color d-flex gap-3"
+    >
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        ng-model="search"
+        class="w-100 p-2 rounded-5 border border-0 search input_color text-white"
+        placeholder="Search mail"
+      />
+      <i class="fa-solid fa-filter"></i>
+    </div>
+    <div class="col-2 d-flex align-items-center justify-content-around">
+      <div class="p-1 py-0 border border-2 rounded-circle">
+        <i class="fa-solid fa-question"></i>
+      </div>
+      <i class="fa-solid fa-gear fs-5"></i>
+      <i class="fa-brands fa-figma fs-5"></i>
+      <div
+        class="bg-white py-2 text-black p-2 rounded-circle text-center pointer"
+      >
+        <div class="d-flex flex-column">
+          <p
+            class="m-0 dropdown dropdown-toggle"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+          >
+            M
+          </p>
+          <div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" ng-click="logout()">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

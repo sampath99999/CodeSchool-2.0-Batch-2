@@ -1,0 +1,233 @@
+<nav-bar></nav-bar>
+<div class="row homeBody d-flex justify-content-around">
+  <div class="col-12 col-md-2 card mb-1">
+    <h5 class="card-header">Current Time</h5>
+    <small class="p-0 m-0 text-secondary ">{{today}}</small>
+    <span id="clock" class="d-flex fs-3 ps-5 ">{{ currentTime }}</span>
+  </div>
+  <div class="col-12 col-md-2 card mb-1">
+    <h5 class="card-header">Add Income</h5>
+    <div class="card-body">
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#addIncome"
+      >
+        Add Income
+      </button>
+    </div>
+  </div>
+  <div class="col-12 col-md-2 card mb-1">
+    <h5 class="card-header">Add an Expense</h5>
+    <div class="card-body">
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#addExpense"
+      >
+        Add Expense
+      </button>
+    </div>
+  </div>
+  <div class="col-12 col-md-2 card mb-1">
+    <h5 class="card-header">This Month Income</h5>
+    <div class="card-body">
+      <h4 class="text-success text-center">
+        {{presentMonthIncome[0].income}}<i
+          class="fa-solid fa-arrow-trend-up ms-2"
+        ></i>
+      </h4>
+    </div>
+  </div>
+  <div class="col-12 col-md-2 card mb-1">
+    <h5 class="card-header">Amount Utilized</h5>
+    <div class="card-body">
+      <h4 class="text-danger text-center">
+        {{presentMonthExpense}}
+        <i class="fa-solid fa-arrow-trend-down ms-2"></i>
+      </h4>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 card mt-2 mt-md-5 mb-1">
+    <div class="card-header">
+      <h4>Income By Month</h4>
+    </div>
+    <div class="card-body">
+      <canvas id="incomeChart"></canvas>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 card mt-2 mt-md-5 mb-1" style="width: 25rem">
+    <div class="card-header">
+      <h4>Expenses This Month</h4>
+    </div>
+    <div class="card-body">
+      <canvas id="expenseChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+
+<div
+  class="modal fade"
+  id="addExpense"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content modalBg">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+          Add An Expense
+        </h1>
+      </div>
+
+      <div class="modal-body mt-3">
+        <div class="col-12">
+          <label for="month" class="form-label">Month</label>
+          <select
+            class="form-select"
+            ng-model="month"
+            ng-change="validateMonth()"
+            ng-class="{'is-invalid':monthErr}"
+          >
+            <option value="" selected>Month</option>
+            <option value="{{month}}" ng-repeat="month in months">
+              {{month}}
+            </option>
+          </select>
+          <p class="text-danger" ng-show="monthErr">{{monthErr}}</p>
+        </div>
+        <div class="col-12 mt-3">
+          <label for="Expense For" class="form-label">Expense For</label>
+          <input
+            type="text"
+            id="expenseFor"
+            class="form-control"
+            ng-model="expenseFor"
+            placeholder="BookMyShow"
+            ng-class="{'is-invalid':expenseForErr}"
+            ng-change="validateExpenseFor()"
+          />
+          <p class="text-danger" ng-show="expenseForErr">{{expenseForErr}}</p>
+        </div>
+        <div class="col-12 mt-3">
+          <label for="category" class="form-label">Category</label>
+          <select
+            class="form-select"
+            ng-model="category"
+            ng-change="validateCategory()"
+            ng-class="{'is-invalid':categoryErr}"
+          >
+            <option value="" selected>Category</option>
+            <option value="{{category.id}}" ng-repeat="category in categories">
+              {{category.expense_category}}
+            </option>
+          </select>
+          <p class="text-danger" ng-show="categoryErr">{{categoryErr}}</p>
+        </div>
+
+        <div class="col-12 mt-3">
+          <label for="expenseAmount" class="form-label">Expense Amount</label>
+          <input
+            type="text"
+            id="expenseAmount"
+            class="form-control"
+            ng-model="expenseAmount"
+            placeholder="1000"
+            ng-class="{'is-invalid':expenseAmountErr}"
+            ng-change="validateExpenseAmount()"
+          />
+          <p class="text-danger" ng-show="expenseAmountErr">
+            {{expenseAmountErr}}
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary closeModal"
+          data-bs-dismiss="modal"
+          ng-click="closeModal()"
+        >
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary text-white submit"
+          ng-click="addExpense()"
+        >
+          Add Expense
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="addIncome"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content modalBg">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Income</h1>
+      </div>
+
+      <div class="modal-body mt-3">
+        <div class="col-12">
+          <label for="month" class="form-label">Month</label>
+          <select
+            class="form-select"
+            ng-model="month"
+            ng-change="validateMonth()"
+            ng-class="{'is-invalid':monthErr}"
+          >
+            <option value="" selected>Month</option>
+            <option value="{{month}}" ng-repeat="month in months">
+              {{month}}
+            </option>
+          </select>
+          <p class="text-danger" ng-show="monthErr">{{monthErr}}</p>
+        </div>
+        <div class="col-12 mt-3">
+          <label for="Income" class="form-label">Income</label>
+          <input
+            type="text"
+            id="income"
+            class="form-control"
+            ng-model="income"
+            placeholder="50000"
+            ng-class="{'is-invalid':incomeErr}"
+            ng-change="validateIncome()"
+          />
+          <p class="text-danger" ng-show="incomeErr">{{incomeErr}}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary closeModal"
+          data-bs-dismiss="modal"
+          ng-click="closeModal()"
+        >
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary text-white submit"
+          ng-click="addIncome()"
+        >
+          Add Income
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

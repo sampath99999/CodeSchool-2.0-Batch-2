@@ -1,0 +1,5 @@
+const userApp = angular.module("userApp", ["ui.router"]);
+
+userApp.run(function ($rootScope) {
+  $rootScope.serverUrl = "http://127.0.0.1:8000/api/";
+});

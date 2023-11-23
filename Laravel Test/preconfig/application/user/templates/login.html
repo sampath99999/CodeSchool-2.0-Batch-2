@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-9 d-none d-md-block">
+    <img
+      src="https://cdn.kekastatic.net/login/v/M163_2023.11.08.2/images/login-image.jpg"
+      alt=""
+    />
+  </div>
+  <div class="col-12 col-md-3 loginBody ms-5 ms-md-0">
+    <h6 class="mb-3">Login to $Tracker</h6>
+    <div class="form-floating mb-2">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+        ng-model="email"
+        ng-class="{'is-invalid ':emailErr}"
+        ng-change="verifyEmail()"
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="text-danger mb-1" ng-show="emailErr">{{emailErr}}</div>
+    <div class="form-floating mb-2">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingInput"
+        placeholder="Password"
+        ng-model="password"
+        ng-class="{'is-invalid ':passwordErr}"
+        ng-change="verifyPassword()"
+      />
+      <label for="floatingInput">Password</label>
+    </div>
+    <div class="text-danger mb-1" ng-show="passwordErr">{{passwordErr}}</div>
+    <div class="d-grid">
+      <button class="btn mt-3 loginBtn" ng-click="login()">Login</button>
+    </div>
+    <div class="mt-3">
+      <small>Don't have an Account? <a ui-sref="register">Register</a></small>
+    </div>
+  </div>
+</div>

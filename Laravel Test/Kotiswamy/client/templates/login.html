@@ -1,0 +1,29 @@
+<div
+  class="bg-white bg-opacity-50 position-absolute h-100 w-100 d-flex justify-content-center align-items-center z-3"
+  ng-show="showLoader"
+>
+  <div class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<div class="loginRegisterBg">
+  <div class="wrapper">
+    <h3>Login Form</h3>
+    <div class="form">
+      <div class="input_field">
+        <input type="text" placeholder="Email" class="input" ng-change="emailValidation()" ng-model="email" />
+        <small class="m-0 text-warning" ng-show="emailErrMsg">*{{emailErrMsg}}</small>
+      </div>
+      <div class="input_field ">
+        <div class="input_field1 d-flex align-items-center p-0 pe-2">
+          <input type="{{passwordType}}" placeholder="Password" class="input bg-transparent" ng-model="password" ng-change="passwordValidation()" />
+          <i class="fa-solid fa-eye text-white" ng-show="showPassword" ng-click="showPasswordFun('text')"></i>
+          <i class="fa-solid fa-eye-slash text-white" ng-hide="showPassword" ng-click="showPasswordFun('password')"></i>
+        </div>
+        <small class="m-0 text-warning" ng-show="passwordErrMsg">*{{passwordErrMsg}}</small>
+      </div>
+      <div class="btn w-100 text-white" ng-click="loginFun()">Login</div>
+      <p class="m-0 text-center mt-2 text-white ">Don't have an account? <span ui-sref="register" class="text-warning">Register</span></p>
+    </div>
+  </div>
+</div>

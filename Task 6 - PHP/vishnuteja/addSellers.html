@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sellers</title>
+
+    <link href="addSellers.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/0e1ba3dc39.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-info-subtle">
+
+    <div class="header">
+        <h4 class="mt-2">Please enter seller details</h4>
+    </div>
+
+    <div class="productDetailsm w-50 ms-auto me-auto mt-5 bg-white  rounded">
+        <div>
+
+            <div class="sellerId item m-3 pt-2">
+                <label for="seller_id" class="form-label">Enter Seller Id <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" oninput="validateInput(event)" id="seller_id">
+                <p id="sellerIdErrorMessage" class="text-danger errorMsg"></p>
+            </div>
+
+            <div class="sellerName item m-3 pt-2">
+                <label for="seller_name" class="form-label">Enter Seller Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="seller_name">
+                <p id="sellerNameErrorMessage" class="text-danger errorMsg"></p>
+            </div>
+
+            <div class="productId item m-3 pt-2">
+                <label for="product_id" class="form-label">Enter Product Id <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" oninput="validateInput(event)" id="product_id">
+                <p id="productIdErrorMessage" class="text-danger errorMsg"></p>
+            </div>
+
+
+            <div class="mb-3 pb-4">
+                <button class="btn bg-primary text-white ms-5 mt-3 w-75" onclick="addSeller()">add seller</button>
+                <p id="addSellerErrorMessage" class="text-danger ms-5 mb-2 mt-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="addSellers.js"></script>
+</body>
+
+</html>

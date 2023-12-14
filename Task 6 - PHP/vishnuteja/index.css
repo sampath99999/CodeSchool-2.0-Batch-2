@@ -1,0 +1,17 @@
+
+
+.admin{
+    margin-left: 40%;
+}
+
+.login{
+    height: 50vh;
+}
+
+.email{
+    position: relative;
+}
+
+.email p{
+    position: absolute;
+}

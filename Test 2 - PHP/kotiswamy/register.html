@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <link rel="stylesheet" href="assets/css/register.css" />
+  <title>Document</title>
+</head>
+<body>
+  <div class="container-fluid bg-black registerBgContainer">
+    <div class="registerContainer row d-flex flex-column justify-content-center align-items-center h-100 ">
+      <div class="registerCard m-3 col-10 col-md-5 col-lg-4 d-flex flex-column justify-content-center text-white gap-3 text-center border border-2 border-white rounded-2 p-5">
+        <h1 class="registerHead">Register</h1>
+        <div class="form-floating">
+          <input
+            type="text"
+            placeholder="Enter Name"
+            id="nameEl"
+            name="name"
+            class="form-control bg-transparent text-white"
+          />
+          <label for="nameEl">Name</label>
+          <p class="m-0 text-danger text-start nameErr"></p>
+        </div>
+        <div class="form-floating">
+          <input
+            type="number"
+            placeholder="Enter Phone No"
+            id="phoneNoEl"
+            name="phone"
+            class="form-control bg-transparent text-white"
+            min="1"
+            max="9999999999"
+            oninput="validity.valid||(value='1')"
+          />
+          <label for="phoneNoEl">Phone No</label>
+          <p class="m-0 text-danger text-start phoneNoErr"></p>
+
+        </div>
+        <div class="form-floating">
+          <input
+            type="number"
+            placeholder="Enter Age"
+            id="ageEl"
+            name="age"
+            class="form-control bg-transparent text-white"
+            min="1"
+            oninput="validity.valid||(value='1')"
+          />
+          <label for="ageEl">Age</label>
+          <p class="m-0 text-danger text-start ageErr"></p>
+        </div>
+        
+        <div class="form-floating">
+          <input
+            type="email"
+            placeholder="Enter Email"
+            id="emailEl"
+            name="email"
+            class="form-control bg-transparent text-white"
+          />
+          <label for="emailEl">Email</label>
+          <p class="m-0 text-danger text-start emailErr"></p>
+        </div>
+        <div class="form-floating">
+          <input
+            type="text"
+            placeholder="Enter Password"
+            id="passwordEl"
+            name="userPassword"
+            class="form-control bg-transparent text-white"
+          />
+          <label for="passwordEl">Password</label>
+          <p class="m-0 text-danger text-start passwordErr"></p>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            placeholder="Enter Confrim Password"
+            id="confirmPasswordEl"
+            name="userPassword"
+            class="form-control bg-transparent text-white"
+          />
+          <label for="confirmPasswordEl">Confirm Password</label>
+          <p class="m-0 text-danger text-start confirmPasswordErr"></p>
+        </div>
+        <div class="radioCard">
+          <p class="m-0 text-start">Gender</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="maleEl" value="male" checked>
+              <label class="form-check-label" for="maleEl">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="femaleEl" value="female" >
+              <label class="form-check-label" for="femaleEl">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="otherEl" value="others"  >
+              <label class="form-check-label" for="otherEl">
+                Others
+              </label>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="signupBtn">Signup</button>
+        <p class="m-0 text-warning"> Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/register.js"></script>
+</body>
+</html>

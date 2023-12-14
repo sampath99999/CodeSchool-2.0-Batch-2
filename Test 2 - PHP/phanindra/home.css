@@ -1,0 +1,35 @@
+.chatpage-container{
+    background-color:rgb(128, 128, 128,.4);
+    height: 100vh;
+   
+}
+.chatpage{
+    width: 70%;
+    border-radius: 5px;
+}
+
+.navbar{
+    background-color: rgb(128, 128, 128,.7);
+
+}
+.chatpage-inner-container{
+    background-image: url("https://t3.ftcdn.net/jpg/03/27/51/56/240_F_327515607_Hcps04aaEc7Ki43d1XZPxwcv0ZaIaorh.jpg");
+    height: 70vh;
+    
+}
+.inputbox{
+    background-color: rgb(128, 128, 128,.7);
+}
+
+.blueMessageBox{
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 0px;
+    
+}
+
+.messageboxx{
+   width: 50%;
+}
+

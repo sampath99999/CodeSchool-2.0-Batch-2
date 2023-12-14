@@ -1,0 +1,16 @@
+.cards {
+  margin-top: 6rem;
+  gap: 6rem;
+}
+#navMenu,
+#sideBarMenu {
+  cursor: pointer;
+}
+@media only screen and (max-width: 1300px) {
+  #sideBar {
+    display: none;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+}

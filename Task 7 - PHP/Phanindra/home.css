@@ -1,0 +1,92 @@
+.bg-container{
+  height: 100vh;
+}
+
+
+.navbox{
+    background-color: black;
+}
+#dropdownItem{
+   padding-right: 100px;
+}
+
+.sidebar{
+    width: 15vw;
+  
+    display: flex;
+    flex-direction: column;
+    background: #111c43;  
+    background: #353535;
+    color: #fff;
+    
+}
+
+.sidebar {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    line-height: 2.5;
+    font-size: 13px;
+    color: #fff;
+    opacity: .8;
+  }
+  
+  .sidebar li:hover {
+    background-color: rgb(128, 128, 128, 0.4);
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #fff;
+   
+  }
+
+  .heading{
+    font-size: 22px;
+    padding: 10px;
+ 
+
+  }
+  .nav-item{
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  #tableContainer{
+    
+    overflow: auto;
+  }
+  .navcontainer{
+    width: 100%;
+  }
+  .searchInput{
+   border-radius: 5px;
+   width: 90%;
+   height: 40px;
+   border: none;
+   outline: none;
+  }
+ 
+  .input-box{
+    margin-bottom:15px;
+  }
+  .input-box input{
+    background-color:rgb(128, 128, 128,.9);
+
+  }
+
+  .input-box label{
+    margin-bottom: 5px;
+  }
+  .rightbox{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color:rgb(128, 128, 128,.4);
+  }
+
+  #moredetailsContainer{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+ 

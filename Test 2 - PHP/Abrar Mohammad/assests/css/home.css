@@ -1,0 +1,144 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.logoImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.amountCont {
+  width: 400px;
+}
+
+.chooseAmountCont {
+  width: 100%;
+}
+.donationAmountCont {
+  flex-wrap: wrap;
+  width: 250px;
+  margin-left: 80px;
+}
+.customVal {
+  width: 250px;
+}
+.selectEl {
+  width: 250px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
+.amountValue {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  cursor: pointer;
+}
+.upiEl {
+  width: 250px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: lightgray;
+  color: gray;
+  outline: none;
+}
+#creditCardEl {
+  width: 250px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: lightgray;
+  color: gray;
+  outline: none;
+}
+.name {
+  width: 250px;
+}
+.nameLabel {
+  text-align: left;
+}
+#paymentEl {
+  border-color: lightgray;
+  color: gray;
+}
+#causeEl {
+  color: gray;
+  border-color: lightgray;
+}
+#nextBtn {
+  width: 250px;
+}
+.boyImage {
+  height: 180px;
+  width: 100%;
+}
+.displayCont {
+  width: 400px;
+}
+.heading {
+  font-size: 30px;
+  text-align: center;
+  font-family: Bree Serif;
+  font-weight: bold;
+}
+.descPara {
+  color: gray;
+  font-family: sans-serif;
+}
+.sideBarCont {
+  background-color: #34eb6b;
+  width: 300px;
+  height: 100vh;
+}
+.unordered {
+  list-style-type: none;
+  width: 100%;
+}
+.unordered li {
+  cursor: pointer;
+}
+.unordered li:hover {
+  background-color: gray;
+}
+.dataCont {
+  width: 100%;
+}
+
+@media screen and (max-width: 776px) {
+  .donationCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .displayCont {
+    width: 100%;
+  }
+  .boyImage {
+    height: 180px;
+    width: 350px;
+  }
+  .donationData {
+    display: flex;
+    flex-direction: column;
+  }
+  .sideBarCont {
+    background-color: #34eb6b;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    height: 6vh;
+  }
+  .unordered {
+    display: flex;
+  }
+  .dataCont {
+    width: 100vw;
+    width: 500px;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,97 @@
+[06-Sep-2023 10:45:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 35
+[06-Sep-2023 10:45:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 44
+[06-Sep-2023 10:51:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 10:51:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 45
+[06-Sep-2023 10:54:48 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 10:54:48 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 45
+[06-Sep-2023 10:55:57 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 10:55:57 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 45
+[06-Sep-2023 10:58:42 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 10:58:42 Europe/Berlin] SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 5 parameters, but prepared statement "pdo_stmt_00000001" requires 0
+[06-Sep-2023 10:59:29 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 10:59:29 Europe/Berlin] SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 5 parameters, but prepared statement "pdo_stmt_00000001" requires 0
+[06-Sep-2023 11:00:54 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:00:54 Europe/Berlin] SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 5 parameters, but prepared statement "pdo_stmt_00000001" requires 0
+[06-Sep-2023 11:02:05 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:03:42 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:04:32 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:04:51 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:06:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:08:29 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:11:34 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:12:32 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:13:29 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:15:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:15:18 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:16:07 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:27:14 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:28:58 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:29:42 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:38:21 Europe/Berlin] PHP Warning:  Undefined variable $PDO in C:\xampp\htdocs\Blogs\api\getPosts.php on line 13
+[06-Sep-2023 11:38:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\Blogs\api\getPosts.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Blogs\api\getPosts.php on line 13
+[06-Sep-2023 11:40:14 Europe/Berlin] PHP Warning:  Undefined variable $PDO in C:\xampp\htdocs\Blogs\api\getPosts.php on line 13
+[06-Sep-2023 11:40:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\Blogs\api\getPosts.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Blogs\api\getPosts.php on line 13
+[06-Sep-2023 11:42:48 Europe/Berlin] PHP Warning:  Undefined variable $PDO in C:\xampp\htdocs\Blogs\api\getPosts.php on line 13
+[06-Sep-2023 11:42:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class name must be a valid object or a string in C:\xampp\htdocs\Blogs\api\getPosts.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Blogs\api\getPosts.php on line 13
+[06-Sep-2023 11:57:07 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:58:17 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:58:17 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 11:59:46 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 11:59:46 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 12:00:25 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:00:56 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:01:51 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:01:51 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 12:02:17 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:02:17 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 12:03:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:03:19 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 12:04:45 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:04:45 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 12:12:03 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:12:03 Europe/Berlin] SQLSTATE[22001]: String data, right truncated: 7 ERROR:  value too long for type character varying(250)
+[06-Sep-2023 12:15:05 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:17:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 12:20:32 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36
+[06-Sep-2023 13:19:28 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:19:54 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:20:23 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:20:39 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:20:54 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:21:43 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:22:01 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:22:04 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:22:46 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:22:50 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 13:22:52 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:14:56 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:30 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:30 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:31 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:32 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:32 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:33 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:33 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:33 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:33 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:33 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:34 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:34 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:34 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:34 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:19:34 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:21:33 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:21:48 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:22:14 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:22:15 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 14:22:17 Europe/Berlin] PHP Warning:  Undefined array key "category" in C:\xampp\htdocs\Blogs\api\getProductsByCategory.php on line 10
+[06-Sep-2023 15:10:44 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Blogs\api\posts.php on line 36

@@ -1,0 +1,44 @@
+
+.products-container{
+    height: 100vh;
+}
+.bg-container{
+    height: 100vh;
+}
+
+.white-box{
+    background-color: #fff;
+    height: 90%;
+    width: 80%;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+.products-head-container{
+    width: 94vw;
+    background-color: beige;
+    height: 80vh;
+   
+}
+.sidebar{
+    width:6vw;
+    margin-top: 20px;
+    padding-left: 15px;
+}
+.inputBox{
+    width: 60%;
+}
+.icon{
+    font-size: 25px;
+}
+
+#tableContainer{
+    overflow: auto;
+    height: 70vh;
+    
+}
+.table{
+    height: 10vh;
+}

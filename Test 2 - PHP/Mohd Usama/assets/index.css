@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#chatContainer {
+  max-height: 90vh;
+}
+
+.chat-messages {
+  max-height: calc(90vh - 100px);
+  overflow-y: scroll;
+}
+
+.message-box {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    max-width: 50%;
+    clear: both;
+  }
+
+
+.message-left {
+  background-color: #f0f0f0;
+  float: left;
+}
+.message-right {
+  background-color: #3498db;
+  float: right;
+}

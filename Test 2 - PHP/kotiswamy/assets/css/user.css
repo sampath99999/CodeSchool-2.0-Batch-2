@@ -1,0 +1,16 @@
+body{
+  font-family:sans-serif;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.postImg{
+  width: 100%;
+  height: 300px;
+}
+
+.navbar-toggler{
+  background-color: white;
+}

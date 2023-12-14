@@ -1,0 +1,86 @@
+.chatBgContainer {
+  height: 100vh;
+  width: 100vw;
+}
+.navBarContainer {
+  height: 10vh;
+}
+
+.navBarSideContainer {
+  width: 50vw !important;
+}
+
+.chatRightContainer {
+  width: 100vw !important;
+  margin-left: 0px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 991px) {
+  .chatRightContainerClick {
+    width: 80vw !important;
+    margin-left: 20vw !important;
+  }
+  .navBarSideContainer {
+    width: 20vw !important;
+  }
+}
+
+@media screen and (min-width: 766px) and (max-width:991px) {
+  .chatRightContainerClick {
+    width: 70vw !important;
+    margin-left: 30vw !important;
+  }
+  .navBarSideContainer {
+    width: 30vw !important;
+  }
+}
+
+.chatRightContainerClick {
+  width: 100vw;
+  margin-left: 0;
+  transition: all 0.5s ease;
+}
+
+.chatContainer {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/792/639/808/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg");
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.chatContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.sendContainer {
+  height: 10vh;
+}
+
+.chatCard {
+  width: 300px;
+}
+
+#msgInputEl {
+  outline: none;
+}
+
+#msgInputEl::placeholder{
+  color: white;
+}
+
+.msgSendBtn {
+  cursor: pointer;
+}
+
+.offcanvas-header p:hover {
+  margin: 0px;
+  display: block;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-left: 5px solid goldenrod;
+}
+
+#logoutBtn{
+  height: 5vh;
+}

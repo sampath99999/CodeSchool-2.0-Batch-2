@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/home.js"></script>
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <script
+      src="https://kit.fontawesome.com/313eaaf651.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>home</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row bg-secondary bg-opacity-50">
+        <nav class="d-flex justify-content-between w-100">
+          <div class="d-flex">
+            <div class="m-3 me-0 d-flex gap-2">
+              <img
+                class="img-fluid rounded-circle"
+                id="logo"
+                src="assets/images/logo.png"
+              />
+              <h1 class="text-white">EKART</h1>
+            </div>
+          </div>
+          <div class="d-flex float-end">
+            <div
+              class="d-flex bg-secondary rounded-2 m-2 p-2 p-md-1 text-white"
+            >
+              <div class="avatar-bg">
+                <img
+                  class="img-fluid rounded-circle"
+                  src="https://spruko.com/demo/ynex/dist/assets/images/faces/10.jpg"
+                  alt="User Image"
+                />
+              </div>
+              <div class="d-none d-md-block">
+                <p class="p-0 m-0" id="welcomeMsg"></p>
+                <p class="p-0 m-0" id="userEmail"></p>
+              </div>
+            </div>
+            <div class="d-md-flex bg-secondary rounded-2 m-2 p-2 text-white">
+              <div class="btn border-0 text-white" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="row" id="exceptNav">
+        <div class="col-2 p-0 d-none d-md-block">
+          <img
+            src="assets/images/Virat.jpg"
+            class="img-fluid"
+            id="viratImg"
+            alt="virat image"
+          />
+        </div>
+        <div class="m-5 col-10 m-md-0 col-md-10">
+          <div id="products"></div>
+          <div id="addBtn"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+CREATE TABLE
+    userdetails(
+        id serial PRIMARY KEY,
+        email varchar(255) not null,
+        password varchar(255) not null
+    );
+
+CREATE table
+    tokens(
+        id serial PRIMARY KEY,
+        token varchar(255) not null,
+        user_id int REFERENCES userdetails(id)
+    );
+
+INSERT INTO
+    userdetails(email, password)
+values (
+        'bhanu@gmail.com',
+        '8362a6558324dda06d7448bee8f943da'
+    );
+
+create table
+    donations(
+        id serial primary key,
+        amount numeric not null,
+        cause varchar(255) not null,
+        gift_to VARCHAR(255) not null
+    );
+
+select * from donations;

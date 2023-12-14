@@ -1,0 +1,6 @@
+input {
+  border: 1px solid black !important;
+}
+.form-control {
+  width: 100% !important;
+}

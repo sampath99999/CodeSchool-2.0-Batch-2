@@ -1,0 +1,8 @@
+.bg{
+    background: blue;
+    background: linear-gradient(to right ,#639DCB,#8FBCD9);
+}
+
+#progress-bar{
+    width: 100%;
+}
